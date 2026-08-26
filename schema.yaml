@@ -1,0 +1,345 @@
+# ============================================================================
+# Ontology schema — UN Regulation No. 154 Knowledge Graph
+# ============================================================================
+# Status: DRAFT — pending your review (task.md Phase 0, item 1).
+# Sources reconciled into this file:
+#   - Ontology_KG_Project_Plan.md §3 (frozen structural/extraction findings)
+#   - Knowledge Graph Architecture.png (your hand-drawn schema layout)
+# Where the two disagreed, the resolution taken is recorded inline as a
+# `# decision:` comment, and the open ones you haven't ruled on yet are
+# collected in `open_decisions` at the bottom of this file — read that
+# section first if you want the short version of what to push back on.
+# ============================================================================
+
+schema_version: "0.1.0-draft"
+
+# ----------------------------------------------------------------------------
+# Qualified ID scheme (plan §3.4) — solves numbering resetting at each Annex.
+# Every Clause, Table, Figure, ScopeParagraph and Area gets one of these as
+# its primary key.
+# ----------------------------------------------------------------------------
+qualified_id_scheme:
+  pattern: "<standard>.<version>.<division>.<local-number-path>"
+  examples:
+    - "REG154.04.BODY.6.3.2"                # main body, clause 6.3.2
+    - "REG154.04.ANNEX-B1.3.1.1"             # Annex B1, clause 3.1.1
+    - "REG154.04.ANNEX-B1.APP1.2.4"          # Appendix 1 to Annex B1, clause 2.4
+    - "REG154.04.APPENDIX-5.1.2"             # Appendix 5 to the Regulation, clause 1.2
+    - "REG154.04.ANNEX-B1.SCOPE"             # Annex B1's intro ScopeParagraph
+    - "REG154.04.ANNEX-B1.AREA.1"            # Annex B1's 1st scope Area
+
+# ----------------------------------------------------------------------------
+# Node types
+# ----------------------------------------------------------------------------
+node_types:
+
+  Standard:
+    represents: "The regulation itself — one node per document family."
+    properties:
+      document_name:   { type: string, required: true }        # diagram: Doc_title
+      standard_number:  { type: string, required: true }        # diagram: Doc_ref_no ("154")
+      region:           { type: string, required: true }        # diagram: Region Valid
+      regulatory_body:  { type: string, required: true }        # diagram: Regulatory Body
+      title:            { type: string, required: false }
+
+  Version:
+    represents: "A specific amendment series / revision of the Standard."
+    properties:
+      series_label:     { type: string, required: true }        # e.g. "04 series"
+      status:           { type: enum, values: [proposal, in_force, superseded], required: true }
+      date_label:       { type: string, required: false }       # diagram: "latest/date_label"
+      session_ref:      { type: string, required: false }       # e.g. "GRPE-93-29"
+      distribution_date: { type: string, required: false }
+    # decision: `supersedes` kept as a self-relationship (see relationship_types)
+    # rather than a property, so future multi-version ingestion (task.md Phase 0
+    # open question #3, still unanswered) doesn't require a schema change.
+
+  Division:
+    # decision: renamed from the diagram's `Hierarchy` — same role, but named
+    # to match plan §3.1, which introduced this node specifically to solve
+    # "numbering resets at each Annex/Appendix".
+    represents: "A top-level peer block: the Regulation body, an Appendix to the Regulation, an Annex, or an Appendix to an Annex."
+    properties:
+      qualified_id:     { type: string, required: true }        # e.g. "REG154.04.ANNEX-B1"
+      division_type:    { type: enum, values: [body, appendix, annex, annex_appendix], required: true }
+      code:             { type: string, required: true }        # e.g. "B1", "APP-3"
+      title:            { type: string, required: false }
+      page_start:       { type: int, required: false }
+      page_end:         { type: int, required: false }
+    # decision: dropped the diagram's `Sections` property — it's redundant
+    # with the HAS_SECTION/HAS_CHILD edges below and would drift out of sync.
+
+  ScopeParagraph:
+    # decision: kept as its own type per your clarification — this is the
+    # introductory paragraph of EACH Division (not just the document's top
+    # -level §1 Scope), stating what that Division covers. Plan doesn't have
+    # this as a separate type (its Paragraph is a label, not a type); kept
+    # here as an explicit, intentional divergence.
+    represents: "The introductory paragraph of a Division, describing what that section covers."
+    properties:
+      qualified_id:     { type: string, required: true }
+      body_text:        { type: text, required: true }
+      page_number:      { type: int, required: true }
+      paragraph_id:      { type: string, required: true }
+
+  Area:
+    # decision: kept as a distinct node type (child of ScopeParagraph),
+    # separate from the depth-derived Clause label of the same name below —
+    # see `label_rules.depth_labels` for the rename that avoids the collision.
+    represents: "A scope-based area of applicability declared in a Division's ScopeParagraph (e.g. which vehicle categories/components a section applies to)."
+    properties:
+      qualified_id:     { type: string, required: true }
+      area_name:        { type: string, required: true }
+      applicability:    { type: text, required: false }         # free text describing scope/applicability
+
+  Clause:
+    # decision: absorbs the diagram's `Subsection` node. Plan §2 point 2 is
+    # explicit that a fixed depth-tiered model breaks on this document (real
+    # numbering nests 7 levels deep, e.g. 3.10.15.1.) — one recursive node
+    # with depth-derived labels is required instead. The diagram's
+    # `Subsection` properties (Series_ref, Status: latest/date_label) were a
+    # copy-paste from Version and are dropped here as not belonging on a
+    # structural node.
+    represents: "Any numbered node in the document tree, at any depth. Recurses via HAS_CHILD."
+    properties:
+      qualified_id:     { type: string, required: true }
+      local_number:     { type: string, required: false }       # e.g. "6.3.2."
+      depth:            { type: int, required: true }
+      title:            { type: string, required: false }       # if it's a pure heading
+      body_text:        { type: text, required: false }
+      has_body:         { type: bool, required: true }
+      # Tracked-changes / audit properties (plan §6.1, §3.6) — decision:
+      # kept as audit-only properties rather than dropped (plan's
+      # recommended default for Phase 0 open question #2, still formally
+      # unconfirmed — see open_decisions below).
+      status:           { type: enum, values: [active, deleted], required: false, default: active }
+      superseded_text:  { type: text, required: false }         # retained text of deleted spans, never silently dropped
+      footnote_text:    { type: text, required: false }
+    labels:
+      # Applied on top of the base Clause node — see `label_rules` below.
+      - Section       # depth == 1
+      - Subsection     # depth == 2
+      - Provision      # depth >= 3  (renamed from the diagram's "Area" to avoid clashing with the Area node type)
+      - Paragraph      # has_body == true, regardless of depth (plan §3.2)
+
+  Attributes:
+    # decision: confirmed as an intentional v1 scope extension beyond the
+    # plan (plan §8 excludes structured/numeric content extraction — this
+    # walks that back deliberately per your answer). Modeled as a technical
+    # -parameter overlay hung off a Clause, not a structural depth tier.
+    represents: "A technical attribute/parameter that a Clause specifies (e.g. a named component or measurable characteristic)."
+    properties:
+      attribute_id:            { type: string, required: true }
+      associated_components:   { type: list<string>, required: false }
+      repetition:               { type: string, required: false }  # e.g. "per test cycle", "once"
+      relevance:                { type: string, required: false }
+
+  Constraints:
+    # decision: confirmed intentional extension alongside Attributes.
+    represents: "A concrete value/limit/indicator constraint, typically attached to an Attribute or directly to a Clause."
+    properties:
+      constraint_id:    { type: string, required: true }
+      value:            { type: string, required: true }
+      unit:             { type: string, required: false }
+      comparator:       { type: enum, values: ["<=", ">=", "<", ">", "=", "between"], required: false }
+      indicator:        { type: string, required: false }        # what is being constrained
+      source_clause:    { type: string, required: false }        # qualified_id, denormalized for convenience
+
+  Table:
+    represents: "A captioned table referenced elsewhere. v1 stores caption + defining clause only — not table contents (plan §3.6, §8)."
+    properties:
+      qualified_id:     { type: string, required: true }
+      caption_id:        { type: string, required: true }        # e.g. "Table A1/1"
+      caption:            { type: string, required: false }
+      division:           { type: string, required: false }       # denormalized division code
+      defining_clause:    { type: string, required: false }       # qualified_id of the clause that defines it
+
+  Figure:
+    represents: "A captioned figure referenced elsewhere. v1 stores caption + defining clause only."
+    properties:
+      qualified_id:     { type: string, required: true }
+      caption_id:        { type: string, required: true }        # e.g. "Figure 1"
+      caption:            { type: string, required: false }
+      division:           { type: string, required: false }
+      defining_clause:    { type: string, required: false }
+
+  Abbreviation:
+    # decision: typo fixed (diagram had "Abbriviations"). Kept minimal per
+    # your answer — deferring the plan's full Term model (§3.5 merge rule,
+    # DEFINES/MENTIONED_IN/SAME_AS - see Definition below and
+    # deferred_relationship_types). task.md Phase 3's reconciliation step
+    # and Phase 4's term-usage-linking still have no ontology target in v1.
+    represents: "A defined abbreviation or chemical symbol from §2 of the document."
+    properties:
+      surface_form:     { type: string, required: true }         # e.g. "NOVC-FCHV"
+      expansion:         { type: string, required: true }
+      category:          { type: string, required: false }        # e.g. "General abbreviations", "Chemical symbols"
+      source_clause:     { type: string, required: false }        # qualified_id of the §2.1/§2.2 clause the table lives under; added Phase 5 for HAS_ABBREVIATION
+
+  Definition:
+    # decision: added 2026-08-27 to unblock task.md Phase 3 — Abbreviation
+    # is explicitly scoped to §2 only, so §3 Definitions ("quoted term"
+    # means...) need a node of their own. Deliberately the same minimal
+    # shape as Abbreviation: no merge/reconciliation with Abbreviation
+    # entries (plan §3.5's NOVC-FCHV-style merge stays deferred), no
+    # DEFINES/MENTIONED_IN/SAME_AS edges. See deferred_relationship_types.
+    represents: "A defined term from §3 of the document (\"quoted term\" means ...)."
+    properties:
+      quoted_term:       { type: string, required: true }         # e.g. "Peripheral devices"
+      gloss:             { type: text, required: true }            # the "means ..." text
+      abbreviation:      { type: string, required: false }         # inline (ABBREV) if present, e.g. "NOVC-FCHV"
+      source_clause:     { type: string, required: false }         # qualified_id of the defining clause
+
+# ----------------------------------------------------------------------------
+# Label rules
+# ----------------------------------------------------------------------------
+label_rules:
+  depth_labels:
+    description: >
+      Applied to every Clause node based on its `depth` property, purely for
+      querying/visualization — the underlying node type is always Clause.
+    rules:
+      - { when: "depth == 1", label: Section }
+      - { when: "depth == 2", label: Subsection }
+      - { when: "depth >= 3", label: Provision }
+  paragraph_label:
+    description: >
+      Paragraph is NOT a depth tier — it's a second label applied to any
+      Clause where has_body == true, regardless of depth (plan §3.2). Most
+      leaf clauses get it; some depth-3/4 pure sub-headings do not.
+    rule: "has_body == true => add label Paragraph"
+
+# ----------------------------------------------------------------------------
+# Relationship types
+# ----------------------------------------------------------------------------
+relationship_types:
+
+  HAS_VERSION:
+    from: Standard
+    to: Version
+    notes: "One Standard has many Versions over time."
+
+  SUPERSEDES:
+    from: Version
+    to: Version
+    notes: "Self-relationship for multi-version ingestion (plan §3.1). Stub until task.md Phase 0 open question #3 is answered."
+
+  LAST_AMENDED_IN:
+    from: Clause
+    to: Version
+    # decision: this is the diagram's second "Has Version" edge (drawn
+    # directly from a Clause-level node to Version), renamed to avoid reusing
+    # the same relationship name for two different meanings — HAS_VERSION is
+    # reserved for the root Standard->Version containment edge. This one
+    # records which Version last touched a specific clause, independent of
+    # the containment path. Confirmed — see confirmed_decisions below.
+    notes: "Optional. Which Version last modified this specific Clause — useful for tracked-changes provenance."
+
+  HAS_DIVISION:
+    from: Version
+    to: Division
+
+  HAS_SCOPE:
+    from: Division
+    to: ScopeParagraph
+    notes: "Typically one per Division."
+
+  HAS_AREA:
+    from: ScopeParagraph
+    to: Area
+
+  HAS_SECTION:
+    from: Division
+    to: Clause
+    notes: "Top-level (depth 1) clause of a division."
+
+  HAS_CHILD:
+    from: Clause
+    to: Clause
+    notes: "Recursive containment, any depth."
+
+  HAS_ATTRIBUTE:
+    from: Clause
+    to: Attributes
+
+  HAS_CONSTRAINT:
+    from: [Clause, Attributes]
+    to: Constraints
+    notes: "A Constraint may attach directly to a Clause, or to one of its Attributes (diagram's 'Has Relation' edge)."
+
+  HAS_TABLE:
+    from: Clause
+    to: Table
+    # decision: split out of the diagram's overloaded "derived from" label
+    # (see open_decisions) so table/figure/attribute/constraint/abbreviation
+    # links stay independently filterable in queries.
+
+  HAS_FIGURE:
+    from: Clause
+    to: Figure
+
+  HAS_ABBREVIATION:
+    from: Clause
+    to: Abbreviation
+    notes: "The clause (within §2) that defines this abbreviation."
+
+  HAS_DEFINITION:
+    from: Clause
+    to: Definition
+    notes: "The clause (within §3) that defines this term."
+
+  REFERENCES:
+    from: Clause
+    to: [Clause, Division, Table, Figure]
+    # decision: collapsed the diagram's "References" and "Citations" edges
+    # into one relationship type, matching plan §3.3. Confirmed — see
+    # confirmed_decisions below.
+    properties:
+      status:    { type: enum, values: [resolved, unresolved], required: true }
+      raw_text:  { type: string, required: false }    # kept when unresolved, per plan §6.4 "never guess"
+    notes: "Resolved cross-reference, or an unresolved record for manual review — never a guessed link."
+
+# ----------------------------------------------------------------------------
+# Deferred (not implemented in this v1 schema — kept documented so extending
+# later doesn't require a breaking rename of the Abbreviation node).
+# ----------------------------------------------------------------------------
+deferred_relationship_types:
+  DEFINES:
+    from: "Clause:Paragraph"
+    to: Term
+    status: deferred
+    notes: "Plan §3.5 full Term model: one merged Term node (term_type incl. 'merged') replacing separate Abbreviation/Definition nodes, reachable via a single DEFINES edge instead of HAS_ABBREVIATION/HAS_DEFINITION. Deferred per your decision to keep the term model minimal."
+  MENTIONED_IN:
+    from: Term
+    to: "Clause:Paragraph"
+    status: deferred
+    notes: "Term-usage scanning (task.md Phase 4) — no node type to scan for beyond Abbreviation/Definition's own defining clause until this is built."
+  SAME_AS:
+    from: "Abbreviation | Definition"
+    to: "Abbreviation | Definition"
+    status: deferred
+    notes: "Would link an Abbreviation entry to its matching Definition entry (e.g. both for NOVC-FCHV) for human review, per plan §3.5. Deferred - Abbreviation and Definition stay two unconnected node types in v1."
+
+# ----------------------------------------------------------------------------
+# Decisions — confirmed by you on 2026-08-26 unless marked still open.
+# ----------------------------------------------------------------------------
+confirmed_decisions:
+  - id: term-model-deferral
+    decision: "Confirmed minimal — Abbreviation (§2) and Definition (§3, added 2026-08-27) as two separate, unconnected node types (surface_form/expansion/category and quoted_term/gloss/abbreviation respectively), no merge/reconciliation between them, no DEFINES/MENTIONED_IN/SAME_AS. Stays fully deferred for v1 (see deferred_relationship_types)."
+
+  - id: references-vs-citations
+    decision: "One REFERENCES relationship type only (no separate Citations)."
+
+  - id: last-amended-in-edge
+    decision: "LAST_AMENDED_IN (Clause -> Version) confirmed as intended — records which Version last touched a specific clause."
+
+  - id: tracked-changes-and-footnotes
+    decision: "Default approach confirmed — Clause carries status/superseded_text/footnote_text as audit-only properties. Resolves plan §9 open question #2 / task.md Phase 0 checklist item."
+
+  - id: graph-store-choice
+    decision: "NetworkX/JSON for now, no Neo4j server. Resolves plan §9 open question #1 / task.md Phase 0 checklist item. schema.yaml itself stays store-agnostic; this decision governs Phase 5's loader target, not the node/edge types here."
+
+open_decisions:
+  - id: prior-version-ingestion
+    default_taken: "SUPERSEDES stub included so the schema doesn't need to change later either way."
+    confirm: "Plan §9 open question #3, still open — doesn't block this file."
