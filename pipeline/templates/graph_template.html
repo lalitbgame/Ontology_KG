@@ -1,0 +1,568 @@
+<title>__PAGE_TITLE__</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  :root{
+    --bg:#f4f6f8;
+    --surface:#ffffff;
+    --surface-2:#eef1f4;
+    --border:#d8dee4;
+    --text:#182430;
+    --text-dim:#5b6b7a;
+    --text-faint:#8a97a3;
+    --accent:#2f6fb2;
+    --accent-soft:#8fb8dd;
+    --accent-wash:#e4edf6;
+    --ref:#b9791f;
+    --edge:#9aa4ad;
+    --edge-ref:#c99a4c;
+    --focus:#d1491f;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#10161d;
+      --surface:#181f27;
+      --surface-2:#1f2831;
+      --border:#2c3742;
+      --text:#e7edf3;
+      --text-dim:#96a5b3;
+      --text-faint:#697782;
+      --accent:#5b9bd9;
+      --accent-soft:#3c5b78;
+      --accent-wash:#1c2b38;
+      --ref:#d9a44f;
+      --edge:#47535f;
+      --edge-ref:#7a6237;
+      --focus:#e8703f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10161d;
+    --surface:#181f27;
+    --surface-2:#1f2831;
+    --border:#2c3742;
+    --text:#e7edf3;
+    --text-dim:#96a5b3;
+    --text-faint:#697782;
+    --accent:#5b9bd9;
+    --accent-soft:#3c5b78;
+    --accent-wash:#1c2b38;
+    --ref:#d9a44f;
+    --edge:#47535f;
+    --edge-ref:#7a6237;
+    --focus:#e8703f;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:11px 18px;
+    border-bottom:1px solid var(--border);
+    background:var(--surface);
+    flex:0 0 auto;
+    z-index:5;
+  }
+  .brand{
+    display:flex;
+    flex-direction:column;
+    line-height:1.15;
+    min-width:0;
+  }
+  .brand .doc{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    color:var(--text-faint);
+    text-transform:uppercase;
+  }
+  .brand .title{
+    font-size:16px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .searchwrap{
+    position:relative;
+    flex:0 1 300px;
+  }
+  .searchwrap input{
+    width:100%;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:7px 10px 7px 30px;
+    font-family:"IBM Plex Sans",sans-serif;
+    font-size:13px;
+    color:var(--text);
+  }
+  .searchwrap input:focus{
+    outline:2px solid var(--accent);
+    outline-offset:-1px;
+  }
+  .searchwrap svg{
+    position:absolute;
+    left:9px;
+    top:50%;
+    transform:translateY(-50%);
+    width:14px;
+    height:14px;
+    stroke:var(--text-faint);
+    pointer-events:none;
+  }
+  .legend{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    font-size:12px;
+    color:var(--text-dim);
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+  .legend .item{display:flex;align-items:center;gap:6px;}
+  .legend .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto;}
+  .legend .ln{width:18px;height:0;border-top:2px solid var(--edge);flex:0 0 auto;}
+  .legend .ln.ref{border-top:2px dashed var(--edge-ref);}
+  .spacer{flex:1 1 auto;}
+  .stats{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;
+    color:var(--text-faint);
+    flex:0 0 auto;
+  }
+  button.reset{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text-dim);
+    font-family:"IBM Plex Sans",sans-serif;
+    font-size:12px;
+    padding:6px 11px;
+    border-radius:6px;
+    cursor:pointer;
+    flex:0 0 auto;
+  }
+  button.reset:hover{color:var(--text);border-color:var(--text-faint);}
+  button.reset:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+
+  main{
+    position:relative;
+    flex:1 1 auto;
+    min-height:0;
+  }
+  svg#graph{
+    width:100%;
+    height:100%;
+    display:block;
+    cursor:grab;
+  }
+  svg#graph:active{cursor:grabbing;}
+
+  .node circle{
+    stroke:var(--bg);
+    stroke-width:1.4px;
+  }
+  .node text{
+    font-family:"IBM Plex Sans",sans-serif;
+    fill:var(--text);
+    pointer-events:none;
+    paint-order:stroke;
+    stroke:var(--bg);
+    stroke-width:3px;
+    stroke-linejoin:round;
+  }
+  .node.dim circle{opacity:.16;}
+  .node.dim text{opacity:.12;}
+  .node.hover circle,.node.match circle{stroke:var(--focus);stroke-width:2.5px;}
+  .node.selected circle{stroke:var(--focus);stroke-width:3px;}
+
+  .link{fill:none;}
+  .link.dim{opacity:.06;}
+
+  #tooltip{
+    position:absolute;
+    pointer-events:none;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:6px 9px;
+    font-size:12px;
+    color:var(--text-dim);
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    max-width:260px;
+    z-index:20;
+    display:none;
+  }
+  #tooltip .t-label{color:var(--text);font-weight:600;font-size:12.5px;}
+
+  #panel{
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:320px;
+    max-height:calc(100% - 28px);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    box-shadow:0 8px 28px rgba(0,0,0,.16);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:15;
+  }
+  #panel.open{display:flex;}
+  #panel .p-head{
+    padding:13px 14px 10px;
+    border-bottom:1px solid var(--border);
+    flex:0 0 auto;
+  }
+  #panel .p-kind{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:4px;
+  }
+  #panel .p-title{
+    font-size:15px;
+    font-weight:600;
+    line-height:1.3;
+  }
+  #panel .p-id{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    color:var(--text-faint);
+    margin-top:3px;
+  }
+  #panel .p-close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:none;
+    border:none;
+    color:var(--text-faint);
+    font-size:16px;
+    line-height:1;
+    cursor:pointer;
+    padding:4px;
+  }
+  #panel .p-close:hover{color:var(--text);}
+  #panel .p-body{
+    padding:12px 14px 14px;
+    overflow-y:auto;
+    font-size:13px;
+    line-height:1.55;
+    color:var(--text-dim);
+  }
+  #panel .p-section-label{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--text-faint);
+    margin:12px 0 6px;
+  }
+  #panel .p-section-label:first-child{margin-top:0;}
+  #panel .chiplist{display:flex;flex-wrap:wrap;gap:6px;}
+  #panel .chip{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:5px;
+    padding:3px 8px;
+    font-size:11.5px;
+    color:var(--text-dim);
+    cursor:pointer;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  #panel .chip:hover{border-color:var(--accent);color:var(--text);}
+  #panel .chip.ref{border-color:var(--edge-ref);}
+
+  #hint{
+    position:absolute;
+    left:14px;
+    bottom:14px;
+    font-size:11.5px;
+    color:var(--text-faint);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:6px 10px;
+    z-index:10;
+  }
+
+  ::-webkit-scrollbar{width:9px;height:9px;}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:5px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+</style>
+
+<header>
+  <div class="brand">
+    <div class="doc">__DOC_LABEL__</div>
+    <div class="title">__PAGE_TITLE__</div>
+  </div>
+  <div class="searchwrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input id="search" type="text" placeholder="Find a term or clause…" autocomplete="off">
+  </div>
+  <div class="legend">
+    <div class="item"><span class="dot" style="background:var(--accent)"></span>clause in scope</div>
+    <div class="item"><span class="dot" style="background:var(--accent-soft)"></span>referenced clause</div>
+    <div class="item"><span class="ln"></span>hierarchy</div>
+    <div class="item"><span class="ln ref"></span>cross-reference</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="stats" id="stats"></div>
+  <button class="reset" id="resetBtn">Reset view</button>
+</header>
+
+<main>
+  <svg id="graph"></svg>
+  <div id="tooltip"></div>
+  <div id="panel">
+    <button class="p-close" id="panelClose">&times;</button>
+    <div class="p-head">
+      <div class="p-kind" id="p-kind"></div>
+      <div class="p-title" id="p-title"></div>
+      <div class="p-id" id="p-id"></div>
+    </div>
+    <div class="p-body" id="p-body"></div>
+  </div>
+  <div id="hint">Scroll to zoom · drag canvas to pan · drag a node to reposition · click a node for details</div>
+</main>
+
+<script type="application/json" id="graph-data">__GRAPH_DATA__</script>
+<script>
+(function(){
+  const DATA = JSON.parse(document.getElementById('graph-data').textContent);
+  const nodesById = new Map(DATA.nodes.map(d => [d.id, d]));
+
+  const svg = d3.select('#graph');
+  const main = document.querySelector('main');
+
+  const zoomLayer = svg.append('g');
+  const linkLayer = zoomLayer.append('g').attr('class', 'links');
+  const nodeLayer = zoomLayer.append('g').attr('class', 'nodes');
+
+  const nodes = DATA.nodes.map(d => Object.assign({}, d));
+  const links = DATA.edges.map(d => Object.assign({}, d));
+
+  document.getElementById('stats').textContent =
+    nodes.length + ' nodes · ' + links.length + ' edges';
+
+  const maxDeg = d3.max(nodes, d => d.degree) || 1;
+  const rScale = d3.scaleSqrt().domain([1, maxDeg]).range([5, 30]).clamp(true);
+  const fontScale = d3.scaleSqrt().domain([1, maxDeg]).range([8.5, 15]).clamp(true);
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id)
+      .distance(l => l.kind === 'ref' ? 130 : 46)
+      .strength(l => l.kind === 'ref' ? 0.15 : 0.75))
+    .force('charge', d3.forceManyBody().strength(d => -60 - d.degree * 14))
+    .force('collide', d3.forceCollide().radius(d => rScale(d.degree) + 14))
+    .force('center', d3.forceCenter(0, 0))
+    .force('x', d3.forceX(0).strength(0.03))
+    .force('y', d3.forceY(0).strength(0.03));
+
+  const link = linkLayer.selectAll('line')
+    .data(links)
+    .join('line')
+    .attr('class', d => 'link ' + d.kind)
+    .attr('stroke', d => d.kind === 'ref' ? 'var(--edge-ref)' : 'var(--edge)')
+    .attr('stroke-width', d => d.kind === 'ref' ? 1.1 : 1)
+    .attr('stroke-dasharray', d => d.kind === 'ref' ? '3,3' : null)
+    .attr('opacity', d => d.kind === 'ref' ? 0.55 : 0.5);
+
+  const node = nodeLayer.selectAll('g.node')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'node')
+    .call(drag(sim));
+
+  node.append('circle')
+    .attr('r', d => rScale(d.degree))
+    .attr('fill', d => d.core ? 'var(--accent)' : 'var(--accent-soft)');
+
+  node.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', d => rScale(d.degree) + fontScale(d.degree) + 1)
+    .attr('font-size', d => fontScale(d.degree))
+    .attr('font-weight', d => d.degree > maxDeg * 0.4 ? 600 : 400)
+    .text(d => d.label);
+
+  const linkedNeighbors = new Map();
+  links.forEach(l => {
+    const s = typeof l.source === 'object' ? l.source.id : l.source;
+    const t = typeof l.target === 'object' ? l.target.id : l.target;
+    if (!linkedNeighbors.has(s)) linkedNeighbors.set(s, new Set());
+    if (!linkedNeighbors.has(t)) linkedNeighbors.set(t, new Set());
+    linkedNeighbors.get(s).add(t);
+    linkedNeighbors.get(t).add(s);
+  });
+
+  sim.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+  const zoom = d3.zoom().scaleExtent([0.15, 6]).on('zoom', ev => {
+    zoomLayer.attr('transform', ev.transform);
+  });
+  svg.call(zoom);
+
+  function initialFit(){
+    const width = main.clientWidth, height = main.clientHeight;
+    svg.attr('viewBox', [-width/2, -height/2, width, height]);
+  }
+  initialFit();
+  window.addEventListener('resize', initialFit);
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  });
+
+  // ---- tooltip ----
+  const tooltip = document.getElementById('tooltip');
+  node.on('mousemove', (ev, d) => {
+    tooltip.style.display = 'block';
+    tooltip.style.left = (ev.offsetX + 16) + 'px';
+    tooltip.style.top = (ev.offsetY + 12) + 'px';
+    tooltip.innerHTML = '<div class="t-label">' + escapeHtml(d.label) + '</div>' +
+      (d.local ? '<div>§' + escapeHtml(d.local) + ' · degree ' + d.degree + '</div>' : '<div>degree ' + d.degree + '</div>');
+  }).on('mouseleave', () => { tooltip.style.display = 'none'; })
+    .on('mouseenter', (ev, d) => highlight(d.id))
+    .on('mouseout', () => highlight(null));
+
+  function highlight(id){
+    if (!id){
+      node.classed('dim', false).classed('hover', false);
+      link.classed('dim', false);
+      return;
+    }
+    const neigh = linkedNeighbors.get(id) || new Set();
+    node.classed('dim', d => d.id !== id && !neigh.has(d.id));
+    node.classed('hover', d => d.id === id);
+    link.classed('dim', l => {
+      const s = typeof l.source === 'object' ? l.source.id : l.source;
+      const t = typeof l.target === 'object' ? l.target.id : l.target;
+      return s !== id && t !== id;
+    });
+  }
+
+  // ---- click -> detail panel ----
+  const panel = document.getElementById('panel');
+  node.on('click', (ev, d) => { ev.stopPropagation(); openPanel(d); node.classed('selected', n => n.id === d.id); });
+  document.getElementById('panelClose').addEventListener('click', closePanel);
+  svg.on('click', closePanel);
+
+  function closePanel(){ panel.classList.remove('open'); node.classed('selected', false); }
+
+  function openPanel(d){
+    panel.classList.add('open');
+    const kindLabels = (d.labels || []).join(' · ') || (d.core ? 'Clause' : 'Referenced clause');
+    document.getElementById('p-kind').textContent = d.term ? 'Definition · ' + kindLabels : kindLabels;
+    document.getElementById('p-title').textContent = d.label;
+    document.getElementById('p-id').textContent = d.id;
+    const body = document.getElementById('p-body');
+    body.innerHTML = '';
+
+    if (d.text){
+      const p = document.createElement('div');
+      p.textContent = d.text;
+      body.appendChild(p);
+    } else {
+      const p = document.createElement('div');
+      p.style.color = 'var(--text-faint)';
+      p.textContent = 'No extracted text for this node.';
+      body.appendChild(p);
+    }
+
+    const neighIds = Array.from(linkedNeighbors.get(d.id) || []);
+    if (neighIds.length){
+      const label = document.createElement('div');
+      label.className = 'p-section-label';
+      label.textContent = 'Connected (' + neighIds.length + ')';
+      body.appendChild(label);
+      const list = document.createElement('div');
+      list.className = 'chiplist';
+      neighIds.forEach(nid => {
+        const n = nodesById.get(nid);
+        if (!n) return;
+        const chip = document.createElement('div');
+        const isRef = links.some(l => {
+          const s = typeof l.source === 'object' ? l.source.id : l.source;
+          const t = typeof l.target === 'object' ? l.target.id : l.target;
+          return l.kind === 'ref' && ((s === d.id && t === nid) || (t === d.id && s === nid));
+        });
+        chip.className = 'chip' + (isRef ? ' ref' : '');
+        chip.textContent = n.label;
+        chip.title = n.id;
+        chip.addEventListener('click', () => {
+          openPanel(n);
+          node.classed('selected', nn => nn.id === n.id);
+          focusNode(n);
+        });
+        list.appendChild(chip);
+      });
+      body.appendChild(list);
+    }
+  }
+
+  function focusNode(d){
+    const scale = 1.6;
+    const t = d3.zoomIdentity.translate(-d.x * scale, -d.y * scale).scale(scale);
+    svg.transition().duration(500).call(zoom.transform, t);
+  }
+
+  // ---- search ----
+  const search = document.getElementById('search');
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    if (!q){ node.classed('match', false); node.classed('dim', false); return; }
+    let firstMatch = null;
+    node.each(function(d){
+      const hit = d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q);
+      if (hit && !firstMatch) firstMatch = d;
+      d._match = hit;
+    });
+    node.classed('match', d => d._match);
+    node.classed('dim', d => !d._match);
+    link.classed('dim', true);
+    if (firstMatch) focusNode(firstMatch);
+  });
+
+  function drag(simulation){
+    function started(ev, d){
+      if (!ev.active) simulation.alphaTarget(0.25).restart();
+      d.fx = d.x; d.fy = d.y;
+    }
+    function dragged(ev, d){ d.fx = ev.x; d.fy = ev.y; }
+    function ended(ev, d){
+      if (!ev.active) simulation.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    }
+    return d3.drag().on('start', started).on('drag', dragged).on('end', ended);
+  }
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  setTimeout(() => sim.alpha(0.6).restart(), 50);
+})();
+</script>

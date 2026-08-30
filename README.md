@@ -7,9 +7,10 @@ between clauses. See `Ontology_KG_Project_Plan.md` for the full design
 rationale and `schema.yaml` for the frozen ontology.
 
 **Status:** Phases 0–5 of `task.md` are done, plus an interactive HTML
-viewer (a Phase 7 item, built ahead of schedule). Phase 6 (formal QA) and
-the rest of Phase 7 (Cypher-style query pack, static subgraph exports)
-are not done yet — see [What's not done yet](#whats-not-done-yet).
+viewer and static/interactive subgraph illustrations (Phase 7 items, built
+ahead of schedule). Phase 6 (formal QA) and the rest of Phase 7 (a
+Cypher-style query pack) are not done yet — see
+[What's not done yet](#whats-not-done-yet).
 
 ## What's in the graph
 
@@ -46,10 +47,13 @@ pipeline/                   One script per phase, run in order
   phase4_references.py        clauses.jsonl -> references.jsonl (cross-ref resolution)
   phase5_assemble.py          -> nodes.jsonl, edges.jsonl, graph.pickle, graph.graphml
   build_viz_data.py           -> viz_data.json (feeds kg_explorer.html; not a numbered phase)
+  kg_illustrate.py            Renders a chosen branch as a static PNG + interactive HTML graph
+  templates/graph_template.html  D3 force-graph template kg_illustrate.py fills in
 
 output/                     Every generated artifact (see below), plus:
   PHASE1_2_NOTES.md            Implementation notes: bugs found & fixed, known limitations
   kg_explorer.html             Self-contained interactive graph viewer — open in a browser
+  kg_illustration_*.png/.html  Per-branch illustrations from kg_illustrate.py (see below)
 
 tests/                      unittest suite: per-phase unit tests + one real-PDF integration test
 ```
@@ -122,6 +126,36 @@ list(g.out_edges("REG154.04.BODY.2.1", data=True))  # e.g. HAS_ABBREVIATION targ
 `output/graph.graphml` opens the same graph in Gephi or any GraphML-
 compatible tool.
 
+## Illustrating a branch of the graph
+
+The full graph (~4,000 nodes) is too dense to label legibly in one picture,
+so `pipeline/kg_illustrate.py` renders one branch at a time — a section,
+annex, or appendix — as a force-directed node-link diagram (blue nodes
+sized by degree, gray edges for clause containment, dashed amber edges for
+cross-references), styled after `KG_illustration_example.jpg`.
+
+```bash
+# List every top-level component (Body, each Annex, each Appendix) with
+# its total descendant count, to find a scope that's a sane size:
+.venv/bin/python pipeline/kg_illustrate.py --list
+
+# Drill into one component's subsections for something smaller/readable:
+.venv/bin/python pipeline/kg_illustrate.py --list-under REG154.04.ANNEX-B8
+
+# Render both a static PNG and an interactive HTML for a chosen root:
+.venv/bin/python pipeline/kg_illustrate.py --root REG154.04.ANNEX-B8.1
+```
+
+Useful flags: `--out-name` (output filename stem), `--title` (override the
+auto-generated title), `--no-refs` (drop the one-hop cross-reference
+periphery), `--no-static` / `--no-html` (render just one form). Output
+lands in `output/kg_illustration_<slug>.png` / `.html`.
+
+The interactive HTML (D3, zoom/pan, drag, search, click-for-detail panel)
+is a self-contained file — open it directly in a browser, no server
+needed (it does pull D3 and its fonts from a CDN, so it needs internet
+access the first time it renders).
+
 ## Tests
 
 ```bash
@@ -144,9 +178,10 @@ after a break.
   changes spot-checking (N/A — see below), and term/reference-precision
   sampling are all still open. `output/PHASE1_2_NOTES.md` has informal
   findings from building Phases 1–5, but nothing at Phase 6's rigor yet.
-- **Query pack and static subgraph exports** (rest of Phase 7) — not
-  written. `kg_explorer.html` covers interactive exploration instead of a
-  Neo4j Browser/Bloom setup, since there's no Neo4j in this project.
+- **Query pack** (rest of Phase 7) — not written. `kg_explorer.html`
+  covers interactive exploration and `kg_illustrate.py` covers per-branch
+  diagrams instead of a Neo4j Browser/Bloom setup, since there's no Neo4j
+  in this project.
 - **Tracked-changes tagging** was investigated and found not applicable —
   this particular PDF carries no detectable insertion/deletion markup (see
   `output/PHASE1_2_NOTES.md`'s Phase 0 spike write-up). Every clause is
