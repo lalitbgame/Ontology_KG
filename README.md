@@ -55,6 +55,10 @@ output/                     Every generated artifact (see below), plus:
   kg_explorer.html             Self-contained interactive graph viewer — open in a browser
   kg_illustration_*.png/.html  Per-branch illustrations from kg_illustrate.py (see below)
 
+app/                        Requirement -> structured prompt Streamlit app (see below)
+  kg_retrieval.py              No-LLM search + prompt-building logic (Streamlit-independent)
+  streamlit_app.py             The Streamlit UI itself
+
 tests/                      unittest suite: per-phase unit tests + one real-PDF integration test
 ```
 
@@ -125,6 +129,36 @@ list(g.out_edges("REG154.04.BODY.2.1", data=True))  # e.g. HAS_ABBREVIATION targ
 
 `output/graph.graphml` opens the same graph in Gephi or any GraphML-
 compatible tool.
+
+## Requirement → structured prompt app
+
+`app/streamlit_app.py` is a small Streamlit UI for a specific workflow: type
+a requirement keyword/phrase (e.g. "battery durability"), and it searches
+`output/nodes.jsonl`/`output/edges.jsonl` and assembles a structured,
+citation-backed context block — Area of Requirement → Requirement Hierarchy
+→ Citation Paragraphs, plus the abbreviations/definitions/cross-references
+attached to each match — ready to paste into an LLM prompt.
+
+**No LLM, embeddings, or NER is used anywhere in this app** — retrieval is
+plain whole-word/substring keyword matching over the graph plus a
+`parent_id` walk for the hierarchy, same determinism constraint as the rest
+of the pipeline. It only builds the prompt text; sending it to a model is
+a separate step, not wired up here.
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+The retrieval/prompt-building logic lives in `app/kg_retrieval.py` and has
+no Streamlit dependency, so it's importable/testable on its own:
+
+```python
+from app.kg_retrieval import load_graph, search, build_structured_prompt
+
+g = load_graph()
+matches = search(g, "battery durability", max_results=5)
+print(build_structured_prompt(g, "battery durability", matches))
+```
 
 ## Illustrating a branch of the graph
 
