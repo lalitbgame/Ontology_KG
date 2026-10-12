@@ -1,0 +1,96 @@
+# UNECE Regulation (1958 Agreement) - e.g. UN Regulation No. 154 (WLTP).
+# Layout: decimal clauses in a numbering column; divisions are
+# "Annex <L><n>[a]", "Annex X - Appendix N", "Appendix N" in large bold type.
+family: unece_regulation
+description: "UN Regulation annexed to the 1958 Agreement (UNECE WP.29)"
+
+detect:
+  any:
+    - 'ECE/TRANS/WP\.29'
+    - 'UN Regulation No\.? ?\d+'
+    - 'Uniform provisions concerning'
+    - '1958 Agreement'
+    - 'series of amendments'
+  min_score: 2
+
+metadata:
+  number: 'UN Regulation No\.? ?(\d+)'
+  series: '(\d{2}) series of amendments'
+  title: '(UN Regulation No\.? ?\d+[^.]{0,80})'
+  doc_id: 'UNR{number}.{series}'
+  self_id: 'EXT:UNR-{number}'
+  kind: un_regulation
+
+layout:
+  chem_normalize: true
+  header_min_share: 0.6
+  footnote_marker: superscript
+
+structure:
+  initial: {id: BODY, unit_type: Body, label: null}
+  levels:
+    - name: annex_appendix
+      unit_type: Appendix
+      match: '^Annex\s+(?P<annex>[A-Z]\d+[a-z]?)\s*-\s*Appendix\s+(?P<num>\d+)$'
+      style: heading
+      id: 'ANNEX-{annex}.APP{num}'
+      scope: root
+      parent: [root]
+      title: next
+      label: '{num}'
+    - name: annex
+      unit_type: Annex
+      match: '^Annex\s+(?P<num>[A-Z]\d+[a-z]?)$'
+      style: heading
+      id: 'ANNEX-{num}'
+      scope: root
+      parent: [root]
+      title: next
+      label: '{num}'
+    - name: appendix
+      unit_type: Appendix
+      match: '^Appendix\s+(?P<num>\d+)$'
+      style: heading
+      id: 'APPENDIX-{num}'
+      scope: root
+      parent: [root]
+      title: next
+      label: '{num}'
+    # Test-report templates split into "Part I / II / III", each restarting
+    # its clause numbering (Annex A1 Appendix 1).
+    - name: part
+      unit_type: Part
+      match: '^Part\s+(?P<num>[IVX]+)$'
+      style: any
+      id: 'PART-{num}'
+      scope: parent
+      parent: [annex_appendix, annex, appendix]
+      within: [annex_appendix, annex, appendix]
+      label: '{num}'
+  decimal:
+    enabled: true
+    unit_type: Clause
+    max_top_level: 300
+  labels:
+    decimal_by_depth: [Section, Subsection, Provision]
+
+terms:
+  definition_sections: ['^Definitions?\b', '^Terms and definitions']
+  abbreviation_sections: ['^Abbreviations', '^General abbreviations', '^Chemical symbols', '^Symbols']
+  scope_patterns: ['For the purposes? of this (Annex|Appendix|Regulation|paragraph)']
+
+references:
+  self_words: ['this Regulation']
+  default_scope: division
+
+equations:
+  math_fonts: ['CambriaMath', 'Cambria Math', 'SymbolMT', 'Symbol', 'MT-Extra']
+  glossary_trigger: '^(?:[Ww]here|[Ww]herein|[Aa]nd)\s*:?\s*$|^[Ww]here\s*:'
+
+viz:
+  root_label: 'UN Regulation No. 154 — 04 series'
+  groups:
+    - {label: 'Appendices to the Regulation', match: '^APPENDIX-'}
+    - {label: 'Annexes Part A', match: '^ANNEX-A'}
+    - {label: 'Annexes Part B', match: '^ANNEX-B'}
+    - {label: 'Annexes Part C', match: '^ANNEX-C'}

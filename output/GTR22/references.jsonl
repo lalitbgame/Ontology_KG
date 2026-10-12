@@ -1,0 +1,31 @@
+{"from": "GTR22.FRONT", "to": null, "kind": "article", "status": "unresolved", "raw_text": "Article 6", "qualifier": null, "scope": null}
+{"from": "GTR22.RATIONALE.31", "to": "GTR22.RATIONALE.32", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 32", "qualifier": null, "scope": "default"}
+{"from": "GTR22.RATIONALE.31", "to": "GTR22.RATIONALE.33", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 33", "qualifier": null, "scope": "default"}
+{"from": "GTR22.RATIONALE.31", "to": "GTR22.RATIONALE.34", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 34", "qualifier": null, "scope": "default"}
+{"from": "GTR22.RATIONALE.31", "to": "GTR22.RATIONALE.35", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 35", "qualifier": null, "scope": "default"}
+{"from": "GTR22.RATIONALE.31", "to": "GTR22.RATIONALE.36", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 36", "qualifier": null, "scope": "default"}
+{"from": "GTR22.RATIONALE.31", "to": "GTR22.RATIONALE.37", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 37", "qualifier": null, "scope": "default"}
+{"from": "GTR22.RATIONALE.35", "to": "GTR22.RATIONALE.SEC-D.FIG-I/1", "kind": "figure", "status": "resolved", "raw_text": "Figure I/1", "qualifier": null, "scope": null}
+{"from": "GTR22.RATIONALE.36", "to": "GTR22.RATIONALE.SEC-D.FIG-I/2", "kind": "figure", "status": "resolved", "raw_text": "Figure I/2", "qualifier": null, "scope": null}
+{"from": "GTR22.RATIONALE.43", "to": "GTR22.RATIONALE.SEC-D.FIG-I/3", "kind": "figure", "status": "resolved", "raw_text": "Figure I/3", "qualifier": null, "scope": null}
+{"from": "GTR22.RATIONALE.47", "to": "GTR22.ANNEX-1", "kind": "annex", "status": "resolved", "raw_text": "Annex 1", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.3.4", "to": "GTR22.ANNEX-3", "kind": "annex", "status": "resolved", "raw_text": "Annex 3", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.3.5", "to": "GTR22.ANNEX-3", "kind": "annex", "status": "resolved", "raw_text": "Annex 3", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.3.7", "to": "GTR22.ANNEX-3", "kind": "annex", "status": "resolved", "raw_text": "Annex 3", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.3.8", "to": "GTR22.ANNEX-3", "kind": "annex", "status": "resolved", "raw_text": "Annex 3", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.3.17", "to": "GTR22.BODY.6.3.2", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 6.3.2.", "qualifier": " of this GTR", "scope": "self"}
+{"from": "GTR22.BODY.3.20", "to": "GTR22.ANNEX-2", "kind": "annex", "status": "resolved", "raw_text": "Annex 2", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.5.2", "to": "GTR22.BODY.5.2.EQ-1", "kind": "equation", "status": "resolved", "raw_text": "the equation below", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.5.2", "to": "GTR22.BODY.6.4.2", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 6.4.2.", "qualifier": null, "scope": "default"}
+{"from": "GTR22.BODY.5.2", "to": "GTR22.BODY.TABLE-1", "kind": "table", "status": "resolved", "raw_text": "Table 1", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.5.2", "to": "GTR22.BODY.TABLE-2", "kind": "table", "status": "resolved", "raw_text": "Table 2", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.6.2", "to": "GTR22.BODY.5.2", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 5.2.", "qualifier": null, "scope": "default"}
+{"from": "GTR22.BODY.6.3.1", "to": "GTR22.BODY.5.2", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 5.2.", "qualifier": null, "scope": "default"}
+{"from": "GTR22.BODY.6.3.3", "to": "GTR22.ANNEX-1", "kind": "annex", "status": "resolved", "raw_text": "Annex 1", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.6.3.3", "to": "GTR22.BODY.TABLE-3", "kind": "table", "status": "resolved", "raw_text": "Table 3", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.6.4.1", "to": "GTR22.ANNEX-2", "kind": "annex", "status": "resolved", "raw_text": "Annex 2", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.6.5", "to": "GTR22.BODY.FIG-1", "kind": "figure", "status": "resolved", "raw_text": "Figure 1", "qualifier": null, "scope": null}
+{"from": "GTR22.BODY.6.5", "to": "GTR22.BODY.FIG-2", "kind": "figure", "status": "resolved", "raw_text": "Figure 2", "qualifier": null, "scope": null}
+{"from": "GTR22.ANNEX-3.1", "to": "GTR22.BODY.6.3.2", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 6.3.2.", "qualifier": " of this GTR", "scope": "self"}
+{"from": "GTR22.ANNEX-3.1", "to": "GTR22.ANNEX-3.2", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 2.", "qualifier": null, "scope": "default"}
+{"from": "GTR22.ANNEX-3.1", "to": "GTR22.ANNEX-3.3", "kind": "paragraph", "status": "resolved", "raw_text": "paragraph 3.", "qualifier": null, "scope": "default"}

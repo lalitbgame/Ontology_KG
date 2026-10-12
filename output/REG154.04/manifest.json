@@ -1,0 +1,438 @@
+{
+  "doc_id": "REG154.04",
+  "source_file": "154-04 without 1C 1.pdf",
+  "sha256": "49f3ed2b24884b1a35b6302e3b7550cca45556355963a08e78e8385d7b9c006c",
+  "profile": "unece_regulation",
+  "registry_confirmed": true,
+  "registry_entry": {
+    "file": "154-04 without 1C 1.pdf",
+    "doc_id": "REG154.04",
+    "profile": "unece_regulation",
+    "self_ids": [
+      "EXT:UNR-154",
+      "EXT:ECE.TRANS.WP29.GRPE.2025.15"
+    ],
+    "metadata": {
+      "title": "UN Regulation No. 154 (WLTP), 04 series of amendments (GRPE working document)",
+      "number": "154",
+      "series": "04",
+      "issuer": "UNECE WP.29 / GRPE",
+      "region": "UNECE 1958 Agreement Contracting Parties"
+    }
+  },
+  "page_count": 668,
+  "metadata": {
+    "number": "154",
+    "series": "04",
+    "title": "UN Regulation No. 154 (WLTP), 04 series of amendments (GRPE working document)",
+    "issuer": "UNECE WP.29 / GRPE",
+    "region": "UNECE 1958 Agreement Contracting Parties"
+  },
+  "outline": [],
+  "pipeline_commit": "7420169",
+  "run_at": "2026-10-12T19:28:37",
+  "phases": {
+    "phase1_extract": {
+      "header_footer_signatures": [
+        "#",
+        "ece/trans/wp.#/grpe/#/#"
+      ],
+      "lines": 50981,
+      "header_footer_lines_stripped": 1357,
+      "footnote_lines": 175,
+      "needs_ocr_pages": []
+    },
+    "phase1b_regions": {
+      "counts": {
+        "toc": 3,
+        "figure": 92,
+        "equation": 545,
+        "table": 391,
+        "layout_table": 66
+      },
+      "captioned_tables": 123,
+      "image_equations": 2,
+      "glossaries": 144
+    },
+    "phase2_parse": {
+      "units": 3756,
+      "unit_types": {
+        "Body": 1,
+        "Clause": 3697,
+        "Appendix": 37,
+        "Annex": 18,
+        "Part": 3
+      },
+      "orphans": 0,
+      "dedupe_merges": 15,
+      "merges": [
+        {
+          "qualified_id": "REG154.04.BODY.5.9",
+          "pages": [
+            22,
+            24
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.BODY.6.3.11",
+          "pages": [
+            30,
+            39
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.BODY.6.10.1",
+          "pages": [
+            30,
+            46
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-A2.2",
+          "pages": [
+            164,
+            165
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-A2.0.1",
+          "pages": [
+            164,
+            166
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-A2.1",
+          "pages": [
+            164,
+            166
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-A2.2",
+          "pages": [
+            164,
+            167
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-A2.3",
+          "pages": [
+            165,
+            180
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-B4.4.2.1.4",
+          "pages": [
+            289,
+            307
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-C1.APP3.1",
+          "pages": [
+            599,
+            605
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-C1.APP3.2",
+          "pages": [
+            599,
+            605
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-C1.APP3.2.1",
+          "pages": [
+            599,
+            605
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-C1.APP3.2.2",
+          "pages": [
+            600,
+            605
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-C1.APP3.3",
+          "pages": [
+            600,
+            605
+          ]
+        },
+        {
+          "qualified_id": "REG154.04.ANNEX-C4.APP3.1",
+          "pages": [
+            641,
+            644
+          ]
+        }
+      ],
+      "warnings": {
+        "depth_jump": 39
+      },
+      "footnotes": 48,
+      "anchors": 1028,
+      "divisions": [
+        "ANNEX-A1",
+        "ANNEX-A1.APP1",
+        "ANNEX-A1.APP2",
+        "ANNEX-A1.APP3",
+        "ANNEX-A1.APP4",
+        "ANNEX-A2",
+        "ANNEX-A2.APP1",
+        "ANNEX-A2.APP2",
+        "ANNEX-A2.APP3",
+        "ANNEX-A2.APP4",
+        "ANNEX-A2.APP5",
+        "ANNEX-A2.APP6",
+        "ANNEX-A3",
+        "ANNEX-B1",
+        "ANNEX-B10",
+        "ANNEX-B10.APP1",
+        "ANNEX-B10.APP2",
+        "ANNEX-B2",
+        "ANNEX-B3",
+        "ANNEX-B4",
+        "ANNEX-B5",
+        "ANNEX-B6",
+        "ANNEX-B6.APP1",
+        "ANNEX-B6.APP2",
+        "ANNEX-B6.APP3",
+        "ANNEX-B6a",
+        "ANNEX-B6b",
+        "ANNEX-B7",
+        "ANNEX-B8",
+        "ANNEX-B8.APP1",
+        "ANNEX-B8.APP2",
+        "ANNEX-B8.APP3",
+        "ANNEX-B8.APP4",
+        "ANNEX-B8.APP5",
+        "ANNEX-B8.APP6",
+        "ANNEX-B8.APP7",
+        "ANNEX-B8.APP8",
+        "ANNEX-B8.APP9",
+        "ANNEX-B9",
+        "ANNEX-C1",
+        "ANNEX-C1.APP2",
+        "ANNEX-C1.APP3",
+        "ANNEX-C4",
+        "ANNEX-C4.APP1",
+        "ANNEX-C4.APP2",
+        "ANNEX-C4.APP3",
+        "ANNEX-C4.APP4",
+        "ANNEX-C5",
+        "ANNEX-C5.APP1",
+        "APPENDIX-1",
+        "APPENDIX-2",
+        "APPENDIX-3",
+        "APPENDIX-4",
+        "APPENDIX-5",
+        "APPENDIX-6",
+        "BODY"
+      ]
+    },
+    "phase3_terms": {
+      "definitions": 184,
+      "abbreviations": 185,
+      "abbreviations_by_source": {
+        "table": 116,
+        "definition": 20,
+        "inline": 49
+      },
+      "definition_imports": [
+        {
+          "unit_id": "REG154.04.APPENDIX-5.2",
+          "text": "definitions in Paragraph 3 of this Regulation, the following definitions apply"
+        },
+        {
+          "unit_id": "REG154.04.ANNEX-B4.2.1",
+          "text": "definitions given in ISO 3833:1977 \"Road vehicles -- Types -- Terms and definitions\" shall apply"
+        }
+      ],
+      "defined_by_reference": 4
+    },
+    "phase3b_equations": {
+      "equations": 535,
+      "variables": 1265,
+      "parse_status": {
+        "parsed": 278,
+        "partial": 255,
+        "image_only": 2
+      },
+      "kinds": {
+        "equation": 408,
+        "decision_rule": 15,
+        "inequality": 33,
+        "expression": 79
+      },
+      "with_glossary": 143,
+      "with_lhs": 322,
+      "depends_on_edges": 920,
+      "crops": 535,
+      "numeric_fragments_dropped": 11
+    },
+    "phase3c_tables": {
+      "tables": 358,
+      "captioned_tables": 90,
+      "caption_only_tables": 10,
+      "figures": 72
+    },
+    "phase4a_external": {
+      "external_docs": 95,
+      "by_kind": {
+        "standard": 81,
+        "un_gtr": 2,
+        "un_regulation": 9,
+        "unece_agreement": 1,
+        "unece_document": 2
+      },
+      "provisions": 7,
+      "citations": 288,
+      "roles": {
+        "cites": 245,
+        "replaces": 3,
+        "requirement_source": 36,
+        "definition_source": 4
+      },
+      "document_edges": {},
+      "self_citations_filtered": 34,
+      "back_references": 0
+    },
+    "phase4_references": {
+      "references": 2992,
+      "resolved": 2802,
+      "rate": 0.936,
+      "by_kind": {
+        "annex": {
+          "resolved": 440,
+          "total": 482,
+          "rate": 0.913
+        },
+        "paragraph": {
+          "resolved": 1591,
+          "total": 1702,
+          "rate": 0.935
+        },
+        "figure": {
+          "resolved": 85,
+          "total": 102,
+          "rate": 0.833
+        },
+        "appendix": {
+          "resolved": 213,
+          "total": 219,
+          "rate": 0.973
+        },
+        "table": {
+          "resolved": 244,
+          "total": 253,
+          "rate": 0.964
+        },
+        "equation": {
+          "resolved": 229,
+          "total": 234,
+          "rate": 0.979
+        }
+      },
+      "masked_external_spans": 113
+    },
+    "phase5_assemble": {
+      "nodes": 6507,
+      "edges": 12744,
+      "node_types": {
+        "Standard": 1,
+        "Document": 1,
+        "Body": 1,
+        "Clause": 3697,
+        "Appendix": 37,
+        "Annex": 18,
+        "Part": 3,
+        "Definition": 184,
+        "Abbreviation": 185,
+        "Footnote": 48,
+        "Table": 358,
+        "Figure": 72,
+        "Variable": 1265,
+        "Equation": 535,
+        "ExternalDocument": 95,
+        "ExternalProvision": 7
+      },
+      "edge_types": {
+        "HAS_VERSION": 1,
+        "HAS_DIVISION": 56,
+        "HAS_CHILD": 3700,
+        "HAS_DEFINITION": 184,
+        "HAS_ABBREVIATION": 185,
+        "HAS_FOOTNOTE": 48,
+        "HAS_TABLE": 358,
+        "HAS_FIGURE": 72,
+        "HAS_EQUATION": 535,
+        "DEFINES": 321,
+        "USES": 2598,
+        "DEPENDS_ON": 920,
+        "USES_TABLE": 9,
+        "DESCRIBED_AS": 418,
+        "SAME_TERM_AS": 242,
+        "REFERENCES": 2802,
+        "HAS_PROVISION": 7,
+        "CITES": 288
+      },
+      "dropped_edges": 0,
+      "dropped_examples": [],
+      "duplicate_node_ids": []
+    },
+    "phase6_qa": {
+      "invariants_passed": 7,
+      "invariants": 7,
+      "expectations_passed": 30,
+      "expectations": 30,
+      "failed_expectations": [],
+      "coverage": 1.0
+    }
+  },
+  "layout": {
+    "body_size": 9.8,
+    "body_font": "TimesNewRomanPSMT",
+    "text_left": [
+      170,
+      199,
+      114
+    ],
+    "number_columns": [
+      [
+        114,
+        2909
+      ],
+      [
+        156,
+        1082
+      ],
+      [
+        394,
+        1054
+      ],
+      [
+        513,
+        1012
+      ]
+    ]
+  },
+  "timings": {
+    "phase1_extract": 5.97,
+    "phase1b_regions": 50.25,
+    "phase2_parse": 0.58,
+    "phase3_terms": 1.56,
+    "phase3b_equations": 10.41,
+    "phase3c_tables": 0.05,
+    "phase4a_external": 0.36,
+    "phase4_references": 0.29,
+    "phase5_assemble": 1.01,
+    "phase6_qa": 0.54,
+    "build_viz_data": 0.42
+  }
+}

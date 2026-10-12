@@ -4,22 +4,22 @@ for any branch of the ontology, rooted at a given clause/annex/appendix id.
 
 Usage
 -----
-  # See every top-level component (Body, each Annex, each Appendix) with
-  # its total descendant count, to pick a scope that's a reasonable size:
-  python pipeline/kg_illustrate.py --list
+  # See every top-level component (Body, each Annex, each Appendix, each
+  # Article/Chapter...) with its total descendant count:
+  python -m pipeline.kg_illustrate --doc REG154.04 --list
 
   # Drill into the subsections of one component to find a smaller scope:
-  python pipeline/kg_illustrate.py --list-under REG154.04.ANNEX-B8
+  python -m pipeline.kg_illustrate --doc REG154.04 --list-under REG154.04.ANNEX-B8
 
-  # Generate both outputs for a chosen root:
-  python pipeline/kg_illustrate.py --root REG154.04.ANNEX-B8.1
+  # Generate both outputs for a chosen root (any document):
+  python -m pipeline.kg_illustrate --doc REG154.04 --root REG154.04.ANNEX-B8.1
+  python -m pipeline.kg_illustrate --doc EU2024-1257 --root EU2024-1257.CH-II
 
   # Static PNG only, custom output name:
-  python pipeline/kg_illustrate.py --root REG154.04.BODY.6 --no-html --out-name specs_and_tests
+  python -m pipeline.kg_illustrate --doc REG154.04 --root REG154.04.BODY.6 --no-html --out-name specs_and_tests
 
-Outputs land in output/kg_illustration_<slug>.png and
-output/kg_illustration_<slug>.html, where <slug> is derived from --root
-(or set explicitly with --out-name).
+Outputs land in output/<doc_id>/kg_illustration_<slug>.png and .html, where
+<slug> is derived from --root (or set explicitly with --out-name).
 """
 import argparse
 import collections
@@ -30,29 +30,31 @@ from pathlib import Path
 
 PIPELINE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = PIPELINE_DIR.parent
-NODES_PATH = PROJECT_DIR / "output" / "nodes.jsonl"
-EDGES_PATH = PROJECT_DIR / "output" / "edges.jsonl"
 TEMPLATE_PATH = PIPELINE_DIR / "templates" / "graph_template.html"
-OUTPUT_DIR = PROJECT_DIR / "output"
-
-DOC_LABEL_DEFAULT = "UN Reg. No. 154 (WLTP) · Rev.04"
+OUTPUT_ROOT = PROJECT_DIR / "output"
+DEFAULT_DOC = "REG154.04"
 
 
 # --------------------------------------------------------------------------
 # Data loading
 # --------------------------------------------------------------------------
 
-def load_graph_data():
+def load_graph_data(doc_dir):
     nodes = {}
-    with open(NODES_PATH) as f:
+    with open(doc_dir / "nodes.jsonl", encoding="utf-8") as f:
         for line in f:
             d = json.loads(line)
             nodes[d["id"]] = d
     edges = []
-    with open(EDGES_PATH) as f:
+    with open(doc_dir / "edges.jsonl", encoding="utf-8") as f:
         for line in f:
             edges.append(json.loads(line))
     return nodes, edges
+
+
+def doc_label_of(nodes):
+    doc = next((d for d in nodes.values() if d.get("type") == "Document"), {})
+    return doc.get("title") or doc.get("doc_id") or "Knowledge graph"
 
 
 def build_indexes(edges, nodes):
@@ -61,7 +63,7 @@ def build_indexes(edges, nodes):
     definitions = {}   # clause_id -> quoted_term
     def_gloss = {}      # clause_id -> gloss text
     for e in edges:
-        if e["type"] == "HAS_CHILD":
+        if e["type"] in ("HAS_CHILD", "HAS_DIVISION"):
             has_child[e["from"]].append(e["to"])
         elif e["type"] == "REFERENCES":
             references.append(e)
@@ -91,7 +93,8 @@ def descendant_ids(root, has_child):
 # --------------------------------------------------------------------------
 
 def cmd_list(nodes, has_child):
-    roots = [d for d in nodes.values() if "DivisionRoot" in d.get("labels", [])]
+    doc = next((i for i, d in nodes.items() if d.get("type") == "Document"), None)
+    roots = [nodes[i] for i in has_child.get(doc, [])]
     rows = [(len(descendant_ids(d["id"], has_child)), d["id"]) for d in roots]
     rows.sort(reverse=True)
     print(f"{'nodes':>6}  component id")
@@ -115,7 +118,7 @@ def cmd_list_under(nodes, has_child, under):
     print("-" * 90)
     for n, r in rows:
         d = nodes[r]
-        heading = (d.get("body_text") or "").strip().replace("\n", " ")[:55]
+        heading = (d.get("title") or d.get("body_text") or "").strip().replace("\n", " ")[:55]
         print(f"{n:6d}  {r:40s}{heading}")
 
 
@@ -149,23 +152,20 @@ def short_label(node_id, nodes, definitions):
     if d is None:
         return node_id.split(".")[-1]
     local = d.get("local_number")
-    if node_id.startswith("REG154.04.ANNEX-"):
-        rest = node_id[len("REG154.04.ANNEX-"):]
-        annex_id = rest.split(".")[0]
-        if "." in rest:
-            return f"Annex {annex_id} §{local}" if local else f"Annex {annex_id}"
-        return f"Annex {annex_id}"
-    if node_id.startswith("REG154.04.APPENDIX-"):
-        return "Appendix " + node_id[len("REG154.04.APPENDIX-"):]
-    if local:
-        return f"§{local}"
+    if d.get("level") == "decimal" and local:
+        div = (d.get("division") or "").replace("ANNEX-", "Annex ").replace("APPENDIX-", "Appendix ")
+        return f"{div} §{local}" if div and not div.startswith(("BODY", "RATIONALE")) else f"§{local}"
+    if d.get("type") and d.get("local_label"):
+        return f"{d['type']} {d['local_label']}"
+    if d.get("type"):
+        return d["type"]
     return node_id.split(".")[-1]
 
 
 def human_title(root, nodes):
     label = short_label(root, nodes, {})
     d = nodes.get(root, {})
-    heading = (d.get("body_text") or "").strip().replace("\n", " ")
+    heading = (d.get("title") or d.get("body_text") or "").strip().replace("\n", " ")
     if heading:
         cut = heading[:48]
         if len(heading) > 48:
@@ -174,10 +174,10 @@ def human_title(root, nodes):
     return label
 
 
-def slugify(root):
+def slugify(root, doc_id):
     tail = root
-    if tail.startswith("REG154.04."):
-        tail = tail[len("REG154.04."):]
+    if tail.startswith(doc_id + "."):
+        tail = tail[len(doc_id) + 1:]
     tail = tail.lower().replace("annex-", "annex").replace("appendix-", "appendix")
     tail = re.sub(r"[^a-z0-9]+", "-", tail).strip("-")
     return tail or "graph"
@@ -318,8 +318,9 @@ def render_html(payload, doc_label, title, out_path):
 def main():
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--doc", default=DEFAULT_DOC, help="doc_id of the graph (output/<doc_id>/)")
     parser.add_argument("--root", help="Node id to root the illustration at "
-                                        "(e.g. REG154.04.ANNEX-B8.1, REG154.04.BODY.6)")
+                                        "(e.g. REG154.04.ANNEX-B8.1, EU2024-1257.ART-4)")
     parser.add_argument("--list", action="store_true",
                          help="List every top-level component (Body/Annex/Appendix) "
                               "with its total descendant count, then exit")
@@ -331,11 +332,16 @@ def main():
     parser.add_argument("--no-html", action="store_true", help="Skip the interactive HTML render")
     parser.add_argument("--out-name", help="Output filename stem (default: derived from --root)")
     parser.add_argument("--title", help="Override the human-readable title used in both outputs")
-    parser.add_argument("--doc-label", default=DOC_LABEL_DEFAULT,
-                         help="Small eyebrow label shown above the title in the HTML header")
+    parser.add_argument("--doc-label", default=None,
+                         help="Small eyebrow label shown above the title in the HTML header "
+                              "(default: the document's title)")
     args = parser.parse_args()
 
-    nodes, edges = load_graph_data()
+    out_dir = OUTPUT_ROOT / args.doc
+    if not (out_dir / "nodes.jsonl").exists():
+        raise SystemExit(f"No graph for {args.doc!r} at {out_dir} - run `python -m pipeline.run --doc {args.doc}` first.")
+    nodes, edges = load_graph_data(out_dir)
+    doc_label = args.doc_label or doc_label_of(nodes)
     has_child, references, definitions, def_gloss = build_indexes(edges, nodes)
 
     if args.list:
@@ -359,13 +365,13 @@ def main():
               f"Consider --list-under {args.root} to find a smaller subsection, "
               f"or pass --no-refs to drop the reference periphery.")
 
-    slug = args.out_name or slugify(args.root)
+    slug = args.out_name or slugify(args.root, args.doc)
     title = args.title or human_title(args.root, nodes)
 
     if not args.no_static:
-        render_static(payload, title, OUTPUT_DIR / f"kg_illustration_{slug}.png")
+        render_static(payload, title, out_dir / f"kg_illustration_{slug}.png")
     if not args.no_html:
-        render_html(payload, args.doc_label, title, OUTPUT_DIR / f"kg_illustration_{slug}.html")
+        render_html(payload, doc_label, title, out_dir / f"kg_illustration_{slug}.html")
 
 
 if __name__ == "__main__":

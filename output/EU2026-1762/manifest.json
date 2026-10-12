@@ -1,0 +1,307 @@
+{
+  "doc_id": "EU2026-1762",
+  "source_file": "OJ_L_202601762_EN_TXT.pdf",
+  "sha256": "65eaa351070952e7fa371b77b66b6d4c6ae26a78233d5fb718ab61f88d223889",
+  "profile": "eu_oj_act",
+  "registry_confirmed": true,
+  "registry_entry": {
+    "file": "OJ_L_202601762_EN_TXT.pdf",
+    "doc_id": "EU2026-1762",
+    "profile": "eu_oj_act",
+    "self_ids": [
+      "EXT:EU.REG.2026-1762"
+    ],
+    "metadata": {
+      "title": "Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)",
+      "number": "2026/1762",
+      "issuer": "European Commission",
+      "region": "European Union"
+    }
+  },
+  "page_count": 17,
+  "metadata": {
+    "number": "2026/1762",
+    "title": "Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)",
+    "date": "13 July 2026",
+    "issuer": "European Commission",
+    "region": "European Union"
+  },
+  "outline": [
+    [
+      1,
+      "Commission Implementing Regulation (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1",
+      1
+    ],
+    [
+      2,
+      "ANNEX I TEST REPORTS REFERRED TO IN ARTICLE 4",
+      5
+    ],
+    [
+      2,
+      "Appendix 1 Brake Corner Emission Family Test Report",
+      6
+    ],
+    [
+      2,
+      "Appendix 2 Individual Friction Braking Share Coefficient (c-factor) Test Report",
+      7
+    ],
+    [
+      2,
+      "Appendix 3 Vehicle Type Compliance Demonstration Report",
+      8
+    ],
+    [
+      2,
+      "ANNEX II TYPE-APPROVAL",
+      9
+    ],
+    [
+      2,
+      "Appendix 1 Model Information Document No relating to the EU type-approval of brake systems",
+      10
+    ],
+    [
+      2,
+      "Appendix 2 MODEL OF EU TYPE-APPROVAL CERTIFICATE (Maximum format: A4 (210 × 297 mm))",
+      11
+    ],
+    [
+      2,
+      "ANNEX III TEST PROCEDURES",
+      13
+    ],
+    [
+      2,
+      "Appendix 1 WLTP-Brake Cycle Events",
+      14
+    ],
+    [
+      2,
+      "Appendix 2 WLTP-Brake Cycle Brake Events",
+      15
+    ],
+    [
+      2,
+      "Appendix 3 Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients",
+      16
+    ],
+    [
+      2,
+      "ANNEX IV TRANSPARENCY LIST",
+      17
+    ]
+  ],
+  "pipeline_commit": "7420169",
+  "run_at": "2026-10-12T19:29:57",
+  "phases": {
+    "phase1_extract": {
+      "header_footer_signatures": [
+        "#/#",
+        "eli: http://data.europa.eu/eli/reg_impl/#/#/oj",
+        "en",
+        "oj l, #.#.#"
+      ],
+      "lines": 363,
+      "header_footer_lines_stripped": 68,
+      "footnote_lines": 30,
+      "needs_ocr_pages": []
+    },
+    "phase1b_regions": {
+      "counts": {
+        "table": 2
+      },
+      "captioned_tables": 2,
+      "image_equations": 0,
+      "glossaries": 0
+    },
+    "phase2_parse": {
+      "units": 61,
+      "unit_types": {
+        "Preamble": 1,
+        "Recital": 7,
+        "Body": 1,
+        "Article": 9,
+        "Point": 2,
+        "ArticleParagraph": 9,
+        "Annex": 4,
+        "Clause": 20,
+        "Appendix": 8
+      },
+      "orphans": 0,
+      "dedupe_merges": 0,
+      "merges": [],
+      "warnings": {},
+      "footnotes": 10,
+      "anchors": 2,
+      "divisions": [
+        "ANNEX-I",
+        "ANNEX-II",
+        "ANNEX-III",
+        "ANNEX-IV",
+        "BODY",
+        "PREAMBLE"
+      ]
+    },
+    "phase3_terms": {
+      "definitions": 0,
+      "abbreviations": 1,
+      "abbreviations_by_source": {
+        "inline": 1
+      },
+      "definition_imports": [],
+      "defined_by_reference": 0
+    },
+    "phase3b_equations": {
+      "equations": 0,
+      "variables": 0,
+      "parse_status": {},
+      "kinds": {},
+      "with_glossary": 0,
+      "with_lhs": 0,
+      "depends_on_edges": 0,
+      "crops": 0,
+      "numeric_fragments_dropped": 0
+    },
+    "phase3c_tables": {
+      "tables": 2,
+      "captioned_tables": 2,
+      "caption_only_tables": 0,
+      "figures": 0
+    },
+    "phase4a_external": {
+      "external_docs": 18,
+      "by_kind": {
+        "ec_regulation": 3,
+        "eu_directive": 2,
+        "eu_regulation": 10,
+        "treaty": 1,
+        "un_regulation": 2
+      },
+      "provisions": 46,
+      "citations": 96,
+      "roles": {
+        "implements": 9,
+        "legal_basis": 1,
+        "amends": 13,
+        "repeals": 4,
+        "cites": 33,
+        "requirement_source": 29,
+        "definition_source": 7
+      },
+      "document_edges": {
+        "IMPLEMENTS": 1,
+        "LEGAL_BASIS": 1
+      },
+      "self_citations_filtered": 0,
+      "back_references": 8
+    },
+    "phase4_references": {
+      "references": 23,
+      "resolved": 22,
+      "rate": 0.957,
+      "by_kind": {
+        "article": {
+          "resolved": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "annex": {
+          "resolved": 11,
+          "total": 11,
+          "rate": 1.0
+        },
+        "appendix": {
+          "resolved": 3,
+          "total": 3,
+          "rate": 1.0
+        },
+        "paragraph": {
+          "resolved": 0,
+          "total": 1,
+          "rate": 0.0
+        }
+      },
+      "masked_external_spans": 60
+    },
+    "phase5_assemble": {
+      "nodes": 140,
+      "edges": 241,
+      "node_types": {
+        "Standard": 1,
+        "Document": 1,
+        "Preamble": 1,
+        "Recital": 7,
+        "Body": 1,
+        "Article": 9,
+        "Point": 2,
+        "ArticleParagraph": 9,
+        "Annex": 4,
+        "Clause": 20,
+        "Appendix": 8,
+        "Abbreviation": 1,
+        "Footnote": 10,
+        "Table": 2,
+        "ExternalDocument": 18,
+        "ExternalProvision": 46
+      },
+      "edge_types": {
+        "HAS_VERSION": 1,
+        "HAS_DIVISION": 6,
+        "HAS_CHILD": 55,
+        "HAS_ABBREVIATION": 1,
+        "HAS_FOOTNOTE": 10,
+        "HAS_TABLE": 2,
+        "REFERENCES": 22,
+        "HAS_PROVISION": 46,
+        "CITES": 96,
+        "IMPLEMENTS": 1,
+        "LEGAL_BASIS": 1
+      },
+      "dropped_edges": 0,
+      "dropped_examples": [],
+      "duplicate_node_ids": []
+    },
+    "phase6_qa": {
+      "invariants_passed": 7,
+      "invariants": 7,
+      "expectations_passed": 56,
+      "expectations": 56,
+      "failed_expectations": [],
+      "coverage": 0.992
+    }
+  },
+  "layout": {
+    "body_size": 9.6,
+    "body_font": "EUAlbertina-Regu",
+    "text_left": [
+      68,
+      91,
+      81
+    ],
+    "number_columns": [
+      [
+        68,
+        49
+      ],
+      [
+        513,
+        1
+      ]
+    ]
+  },
+  "timings": {
+    "phase1_extract": 0.08,
+    "phase1b_regions": 0.54,
+    "phase2_parse": 0.01,
+    "phase3_terms": 0.02,
+    "phase3b_equations": 0.01,
+    "phase3c_tables": 0.0,
+    "phase4a_external": 0.03,
+    "phase4_references": 0.0,
+    "phase5_assemble": 0.02,
+    "phase6_qa": 0.01,
+    "build_viz_data": 0.01
+  }
+}

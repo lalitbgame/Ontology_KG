@@ -1,92 +1,94 @@
-"""Unit tests for pipeline/phase4_references.py - synthetic data, no PDF needed."""
+"""Unit tests for pipeline/phase4_references.py - synthetic units."""
 import unittest
 
 from pipeline import phase4_references as p4
 
 
-def clause(qualified_id, division, body_text):
-    return {"qualified_id": qualified_id, "division": division, "body_text": body_text}
+def U(qid, unit_type="Clause", parent=None, label=None, number=None, body="", level=None):
+    return {"qualified_id": qid, "unit_type": unit_type, "parent_id": parent, "local_label": label,
+            "local_number": number, "level": level or ("decimal" if number else unit_type.lower()),
+            "body_text": body, "title": None}
 
 
-class AnnexBase(unittest.TestCase):
-    def test_extracts_the_annex_code(self):
-        self.assertEqual(p4.annex_base("ANNEX-B6.APP1"), "B6")
-        self.assertEqual(p4.annex_base("ANNEX-B6"), "B6")
-        self.assertIsNone(p4.annex_base("BODY"))
-        self.assertIsNone(p4.annex_base("APPENDIX-5"))
+def resolve(units, masks=None, tables=(), equations=()):
+    idx = p4.Index("D", units, list(tables), [], list(equations), {})
+    refs = p4.extract(idx, units, masks or {})
+    return [(r["raw_text"], r["to"]) for r in refs]
 
 
-class ResolveAppendix(unittest.TestCase):
-    def test_explicit_to_annex_wins(self):
-        self.assertEqual(p4.resolve_appendix("BODY", "4", "B8"), "ANNEX-B8.APP4")
+class Eu(unittest.TestCase):
+    def units(self, body):
+        return [U("D.BODY", "Body"), U("D.ART-4", "Article", "D.BODY", "4"),
+                U("D.ART-4.2", "ArticleParagraph", "D.ART-4", "2"),
+                U("D.ART-5", "Article", "D.BODY", "5"),
+                U("D.ART-5.1", "ArticleParagraph", "D.ART-5", "1", body=body),
+                U("D.ART-5.2", "ArticleParagraph", "D.ART-5", "2"),
+                U("D.ANNEX-IV", "Annex", None, "IV"),
+                U("D.ANNEX-II", "Annex", None, "II"), U("D.ANNEX-II.APP-2", "Appendix", "D.ANNEX-II", "2")]
 
-    def test_bare_appendix_inside_an_annex_means_that_annexs_own_appendix(self):
-        self.assertEqual(p4.resolve_appendix("ANNEX-B6", "1", None), "ANNEX-B6.APP1")
-        self.assertEqual(p4.resolve_appendix("ANNEX-B6.APP2", "1", None), "ANNEX-B6.APP1")
+    def test_article_with_paragraph(self):
+        self.assertIn(("Article 4(2)", "D.ART-4.2"), resolve(self.units("as set out in Article 4(2), the")))
 
-    def test_bare_appendix_outside_any_annex_means_appendix_to_the_regulation(self):
-        self.assertEqual(p4.resolve_appendix("BODY", "5", None), "APPENDIX-5")
-        self.assertEqual(p4.resolve_appendix("APPENDIX-2", "5", None), "APPENDIX-5")
+    def test_roman_annex_list(self):
+        r = resolve(self.units("set out in Annexes II and IV"))
+        self.assertIn(("Annex II", "D.ANNEX-II"), r)
+        self.assertIn(("Annex IV", "D.ANNEX-IV"), r)
 
+    def test_appendix_to_annex(self):
+        self.assertIn(("Appendix 2 to Annex II", "D.ANNEX-II.APP-2"),
+                      resolve(self.units("the model set out in Appendix 2 to Annex II to this Regulation")))
 
-class ResolveParagraphScope(unittest.TestCase):
-    def test_of_this_regulation_overrides_to_body(self):
-        self.assertEqual(p4.resolve_paragraph_scope("ANNEX-B1", " of this Regulation."), "BODY")
+    def test_paragraph_inside_an_article_means_that_article(self):
+        self.assertIn(("paragraph 2", "D.ART-5.2"), resolve(self.units("referred to in paragraph 2, the")))
 
-    def test_of_named_annex_overrides(self):
-        self.assertEqual(p4.resolve_paragraph_scope("BODY", " of Annex B6;"), "ANNEX-B6")
-
-    def test_of_appendix_to_annex_overrides(self):
-        self.assertEqual(p4.resolve_paragraph_scope("BODY", " of Appendix 4 to Annex B8."), "ANNEX-B8.APP4")
-
-    def test_no_cue_defaults_to_referencing_clauses_own_division(self):
-        self.assertEqual(p4.resolve_paragraph_scope("ANNEX-B6", " and some other text."), "ANNEX-B6")
+    def test_masked_external_span_is_not_resolved(self):
+        body = "in accordance with Annex IV to Implementing Regulation (EU) 2020/683"
+        masks = {"D.ART-5.1": [(19, 70, "EXT:EU.REG.2020-683")]}
+        self.assertEqual(resolve(self.units(body), masks), [])
 
 
-class ExtractReferences(unittest.TestCase):
-    def test_resolved_paragraph_reference(self):
-        clauses = [
-            clause("REG154.04.BODY.6.1", "BODY", 'see paragraph 6.2. for details.'),
-            clause("REG154.04.BODY.6.2", "BODY", 'Target clause.'),
-        ]
-        refs = p4.extract_references(clauses)
-        para_refs = [r for r in refs if r["raw_text"].startswith("paragraph")]
-        self.assertEqual(len(para_refs), 1)
-        self.assertEqual(para_refs[0]["status"], "resolved")
-        self.assertEqual(para_refs[0]["to"], "REG154.04.BODY.6.2")
+class Unece(unittest.TestCase):
+    def units(self, body):
+        return [U("D.BODY", "Body"), U("D.BODY.3", parent="D.BODY", number="3"),
+                U("D.BODY.3.2", parent="D.BODY.3", number="3.2"),
+                U("D.BODY.6", parent="D.BODY", number="6"),
+                U("D.ANNEX-B6", "Annex", None, "B6"), U("D.ANNEX-B6.1", parent="D.ANNEX-B6", number="1"),
+                U("D.ANNEX-B6.2", parent="D.ANNEX-B6", number="2", body=body),
+                U("D.ANNEX-B6.APP1", "Appendix", None, "1"), U("D.APPENDIX-1", "Appendix", None, "1"),
+                U("D.ANNEX-B8", "Annex", None, "B8"), U("D.ANNEX-B8.APP2", "Appendix", None, "2"),
+                U("D.ANNEX-B8.APP2.3", parent="D.ANNEX-B8.APP2", number="3")]
 
-    def test_unresolved_reference_keeps_raw_text_and_null_target(self):
-        clauses = [clause("REG154.04.BODY.6.1", "BODY", 'see paragraph 9.9.9. for details.')]
-        refs = p4.extract_references(clauses)
-        self.assertEqual(len(refs), 1)
-        self.assertEqual(refs[0]["status"], "unresolved")
-        self.assertIsNone(refs[0]["to"])
-        self.assertEqual(refs[0]["raw_text"], "paragraph 9.9.9.")
+    def test_default_scope_is_own_division(self):
+        self.assertIn(("paragraph 1.", "D.ANNEX-B6.1"), resolve(self.units("as in paragraph 1. above")))
 
-    def test_table_and_figure_references_are_always_unresolved(self):
-        clauses = [clause("REG154.04.BODY.6.1", "BODY",
-                           'see Table A1/1 and Figure 1 for details.')]
-        refs = p4.extract_references(clauses)
-        self.assertEqual(len(refs), 2)
-        self.assertTrue(all(r["status"] == "unresolved" and r["to"] is None for r in refs))
+    def test_of_this_regulation(self):
+        self.assertIn(("paragraph 3.2.", "D.BODY.3.2"), resolve(self.units("see paragraph 3.2. of this Regulation")))
 
-    def test_table_reference_stops_at_punctuation_not_swept_into_next_word(self):
-        clauses = [clause("REG154.04.BODY.6.1", "BODY", 'see Table 1B) for the limits.')]
-        refs = p4.extract_references(clauses)
-        self.assertEqual(refs[0]["raw_text"], "Table 1B")
+    def test_of_appendix_to_annex(self):
+        self.assertIn(("paragraph 3.", "D.ANNEX-B8.APP2.3"),
+                      resolve(self.units("according to paragraph 3. of Appendix 2 to Annex B8")))
 
-    def test_bare_annex_mention_resolves_to_its_division_root(self):
-        clauses = [
-            clause("REG154.04.BODY.6.1", "BODY", 'as specified in Annex B6.'),
-            clause("REG154.04.ANNEX-B6", "ANNEX-B6", ""),
-        ]
-        refs = p4.extract_references(clauses)
-        annex_refs = [r for r in refs if r["raw_text"].startswith("Annex")]
-        self.assertEqual(annex_refs[0]["to"], "REG154.04.ANNEX-B6")
+    def test_bare_appendix_inside_annex_is_that_annexs_appendix(self):
+        self.assertIn(("Appendix 1", "D.ANNEX-B6.APP1"), resolve(self.units("as described in Appendix 1")))
 
-    def test_empty_body_text_is_skipped(self):
-        clauses = [clause("REG154.04.BODY.6.1", "BODY", "")]
-        self.assertEqual(p4.extract_references(clauses), [])
+    def test_missing_target_is_unresolved_never_guessed(self):
+        self.assertIn(("paragraph 9.9.", None), resolve(self.units("see paragraph 9.9. of this Regulation")))
+
+    def test_table_in_same_division(self):
+        tables = [{"id": "D.ANNEX-B6.TABLE-A6/1", "caption_id": "Table A6/1", "defining_unit": "D.ANNEX-B6.1"}]
+        self.assertIn(("Table A6/1", "D.ANNEX-B6.TABLE-A6/1"), resolve(self.units("listed in Table A6/1"), tables=tables))
+
+    def test_equation_in_paragraph(self):
+        eqs = [{"id": "D.BODY.3.2.EQ-1", "unit_id": "D.BODY.3.2"}]
+        r = resolve(self.units("using the equation in paragraph 3.2. of this Regulation"), equations=eqs)
+        self.assertIn(("equation in paragraph 3.2.", "D.BODY.3.2.EQ-1"), r)
+
+
+class Ranges(unittest.TestCase):
+    def test_range_expands_over_existing_siblings(self):
+        ids, is_range = p4.expand_paragraph_ids("32. to 35.")
+        self.assertTrue(is_range)
+        self.assertEqual(ids, ["32", "33", "34", "35"])
 
 
 if __name__ == "__main__":

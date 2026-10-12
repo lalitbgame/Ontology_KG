@@ -1,0 +1,3365 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d72" for="edge" attr.name="resolved_level" attr.type="string" />
+  <key id="d71" for="edge" attr.name="kind" attr.type="string" />
+  <key id="d70" for="edge" attr.name="via" attr.type="string" />
+  <key id="d69" for="edge" attr.name="sentence" attr.type="string" />
+  <key id="d68" for="edge" attr.name="raw_text" attr.type="string" />
+  <key id="d67" for="edge" attr.name="role" attr.type="string" />
+  <key id="d66" for="edge" attr.name="type" attr.type="string" />
+  <key id="d65" for="node" attr.name="raw_text" attr.type="string" />
+  <key id="d64" for="node" attr.name="label" attr.type="string" />
+  <key id="d63" for="node" attr.name="locator" attr.type="string" />
+  <key id="d62" for="node" attr.name="external_doc" attr.type="string" />
+  <key id="d61" for="node" attr.name="year" attr.type="string" />
+  <key id="d60" for="node" attr.name="metadata_source" attr.type="string" />
+  <key id="d59" for="node" attr.name="corpus_doc_id" attr.type="string" />
+  <key id="d58" for="node" attr.name="in_corpus" attr.type="boolean" />
+  <key id="d57" for="node" attr.name="first_cited_in" attr.type="string" />
+  <key id="d56" for="node" attr.name="mention_count" attr.type="long" />
+  <key id="d55" for="node" attr.name="aliases" attr.type="string" />
+  <key id="d54" for="node" attr.name="eli" attr.type="string" />
+  <key id="d53" for="node" attr.name="oj_ref" attr.type="string" />
+  <key id="d52" for="node" attr.name="adoption_date" attr.type="string" />
+  <key id="d51" for="node" attr.name="subtype" attr.type="string" />
+  <key id="d50" for="node" attr.name="year" attr.type="long" />
+  <key id="d49" for="node" attr.name="doc_kind" attr.type="string" />
+  <key id="d48" for="node" attr.name="ext_id" attr.type="string" />
+  <key id="d47" for="node" attr.name="regions" attr.type="string" />
+  <key id="d46" for="node" attr.name="caption_only" attr.type="boolean" />
+  <key id="d45" for="node" attr.name="flow_text" attr.type="string" />
+  <key id="d44" for="node" attr.name="cell_text" attr.type="string" />
+  <key id="d43" for="node" attr.name="pages" attr.type="string" />
+  <key id="d42" for="node" attr.name="defining_unit" attr.type="string" />
+  <key id="d41" for="node" attr.name="caption" attr.type="string" />
+  <key id="d40" for="node" attr.name="caption_id" attr.type="string" />
+  <key id="d39" for="node" attr.name="unit_id" attr.type="string" />
+  <key id="d38" for="node" attr.name="text" attr.type="string" />
+  <key id="d37" for="node" attr.name="marker" attr.type="string" />
+  <key id="d36" for="node" attr.name="occurrences" attr.type="long" />
+  <key id="d35" for="node" attr.name="source_clause" attr.type="string" />
+  <key id="d34" for="node" attr.name="source" attr.type="string" />
+  <key id="d33" for="node" attr.name="category" attr.type="string" />
+  <key id="d32" for="node" attr.name="expansion" attr.type="string" />
+  <key id="d31" for="node" attr.name="surface_form" attr.type="string" />
+  <key id="d30" for="node" attr.name="is_form" attr.type="boolean" />
+  <key id="d29" for="node" attr.name="division" attr.type="string" />
+  <key id="d28" for="node" attr.name="normative" attr.type="boolean" />
+  <key id="d27" for="node" attr.name="local_number" attr.type="string" />
+  <key id="d26" for="node" attr.name="has_body" attr.type="boolean" />
+  <key id="d25" for="node" attr.name="footnote_text" attr.type="string" />
+  <key id="d24" for="node" attr.name="body_text" attr.type="string" />
+  <key id="d23" for="node" attr.name="page_end" attr.type="long" />
+  <key id="d22" for="node" attr.name="page" attr.type="long" />
+  <key id="d21" for="node" attr.name="depth" attr.type="long" />
+  <key id="d20" for="node" attr.name="local_label" attr.type="string" />
+  <key id="d19" for="node" attr.name="parent_id" attr.type="string" />
+  <key id="d18" for="node" attr.name="level" attr.type="string" />
+  <key id="d17" for="node" attr.name="unit_type" attr.type="string" />
+  <key id="d16" for="node" attr.name="registry_confirmed" attr.type="boolean" />
+  <key id="d15" for="node" attr.name="page_count" attr.type="long" />
+  <key id="d14" for="node" attr.name="sha256" attr.type="string" />
+  <key id="d13" for="node" attr.name="source_file" attr.type="string" />
+  <key id="d12" for="node" attr.name="issuer" attr.type="string" />
+  <key id="d11" for="node" attr.name="date" attr.type="string" />
+  <key id="d10" for="node" attr.name="series" attr.type="string" />
+  <key id="d9" for="node" attr.name="number" attr.type="string" />
+  <key id="d8" for="node" attr.name="title" attr.type="string" />
+  <key id="d7" for="node" attr.name="labels" attr.type="string" />
+  <key id="d6" for="node" attr.name="family" attr.type="string" />
+  <key id="d5" for="node" attr.name="regulatory_body" attr.type="string" />
+  <key id="d4" for="node" attr.name="region" attr.type="string" />
+  <key id="d3" for="node" attr.name="standard_number" attr.type="string" />
+  <key id="d2" for="node" attr.name="document_name" attr.type="string" />
+  <key id="d1" for="node" attr.name="doc_id" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="EU2026-1762.STANDARD">
+      <data key="d0">Standard</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d2">Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)</data>
+      <data key="d3">2026/1762</data>
+      <data key="d4">European Union</data>
+      <data key="d5">European Commission</data>
+      <data key="d6">eu_oj_act</data>
+    </node>
+    <node id="EU2026-1762">
+      <data key="d0">Document</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d7">["Document", "Version"]</data>
+      <data key="d8">Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)</data>
+      <data key="d9">2026/1762</data>
+      <data key="d10" />
+      <data key="d11">13 July 2026</data>
+      <data key="d12">European Commission</data>
+      <data key="d4">European Union</data>
+      <data key="d6">eu_oj_act</data>
+      <data key="d13">OJ_L_202601762_EN_TXT.pdf</data>
+      <data key="d14">65eaa351070952e7fa371b77b66b6d4c6ae26a78233d5fb718ab61f88d223889</data>
+      <data key="d15">17</data>
+      <data key="d16">True</data>
+    </node>
+    <node id="EU2026-1762.PREAMBLE">
+      <data key="d0">Preamble</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Preamble</data>
+      <data key="d18">initial</data>
+      <data key="d19" />
+      <data key="d20" />
+      <data key="d21">0</data>
+      <data key="d22">0</data>
+      <data key="d23">0</data>
+      <data key="d8" />
+      <data key="d24">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Treaty on the Functioning of the European Union, Having regard to Regulation (EU) 2024/1257 of the European Parliament and of the Council of 24 April 2024 on typeapproval of motor vehicles and engines and of systems, components and separate technical units intended for such vehicles, with respect to their emissions and battery durability (Euro 7), amending Regulation (EU) 2018/858 of the European Parliament and of the Council and repealing Regulations (EC) No 715/2007 and (EC) No 595/2009 of the European Parliament and of the Council, Commission Regulation (EU) No 582/2011, Commission Regulation (EU) 2017/1151, Commission Regulation (EU) 2017/2400 and Commission Implementing Regulation (EU) 2022/1362 (1), and in particular Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof, Whereas:</data>
+      <data key="d25">OJ L, 2024/1257, 8.5.2024, ELI: http://data.europa.eu/eli/reg/2024/1257/oj.</data>
+      <data key="d26">True</data>
+      <data key="d7">["Preamble", "Paragraph"]</data>
+      <data key="d27" />
+      <data key="d28">True</data>
+      <data key="d29">PREAMBLE</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-1">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">1</data>
+      <data key="d21">1</data>
+      <data key="d22">0</data>
+      <data key="d23">0</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">This Regulation aims at setting the technical requirements necessary for the emission type-approval of brake systems for vehicles that are to be designated as ‘Euro 7’ vehicles, ‘Euro 7G’ vehicles, ‘Euro 7ext’ vehicles or ‘Euro 7Gext’ vehicles in accordance with Articles 4 and 5 of Regulation (EU) 2024/1257 and using friction braking, which involves a combination of dry friction materials and a mating brake disc or brake drum or using some form of friction braking in their service. Such technical requirements should be based on the work performed in the United Nations World Forum for Harmonization of Vehicle Regulations (2) (UN WP.29) and more specifically UN Regulation No 179 (3).</data>
+      <data key="d25">In the case of a UN Regulation the series of amendments indicated reflects the version that has been published in the Official Journal of the European Union. Supplements to the series of amendments indicated in the Official Journal publication shall apply irrespective of publication in the Official Journal of the European Union. New series of amendments adopted after the series of amendments indicated in the Official Journal publication shall be accepted as an alternative. UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).</data>
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">RECITAL-1</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-2">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">2</data>
+      <data key="d21">1</data>
+      <data key="d22">0</data>
+      <data key="d23">0</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">To reduce testing costs and administrative burdens for manufacturers, thereby enhancing the competitiveness of the Union’s automotive industry while maintaining its high environmental and safety standards, streamlined testing procedures, methodologies, and checks should be established. To avoid redundant testing and ensure consistency with global best practices, it is appropriate to align with internationally harmonised technical requirements, tests, and methodologies arising from UN Regulations No 83 (4) and No 179.</data>
+      <data key="d25">UN Regulation No 83 – Uniform provisions concerning the approval of vehicles with regard to the emission of pollutants according to engine fuel requirements [2026/1086] (OJ L, 2026/1086, 29.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1086/oj).</data>
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">RECITAL-2</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-3">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">3</data>
+      <data key="d21">1</data>
+      <data key="d22">0</data>
+      <data key="d23">0</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">The testing procedures for brake system emissions should include the contribution of friction brakes under varied operating conditions, in order to ensure that real-world emissions are accurately reflected, thereby protecting health and the environment while providing legal certainty for manufacturers. In order to encourage innovation while ensuring the achievement of stringent emission standards, the testing procedures for brake emissions should also take into account different brake materials and technologies, including regenerative and hybrid braking systems. Official Journal of the European Union L series 22.7.2026</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">3</data>
+      <data key="d29">RECITAL-3</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-4">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">4</data>
+      <data key="d21">1</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">The roles and responsibilities of manufacturers, type-approval authorities, and market surveillance authorities should be set out to ensure effective enforcement of brake particle emission standards, enhance legal certainty for economic operators, and guarantee the proper functioning of the internal market. That should include documentation obligations for brake system performance over the vehicles’ lifetime, compliance with emission limits, and the use of standardised templates, including the Model Information Document, the EU Type-Approval Certificate for declarations of compliance, as laid down in Annex V to Regulation (EU) 2024/1257, as well as applicable test reports. Those test reports should cover type-approval, and in-service conformity testing – including procedures detailed in UN Regulations No 83 and No 179. This should reduce administrative burdens and minimise compliance costs, thereby supporting both innovation and rigorous environmental protection.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">4</data>
+      <data key="d29">RECITAL-4</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-5">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">5</data>
+      <data key="d21">1</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">In order to allow sufficient time for manufacturers and approval authorities to adapt to the new requirements laid down in Article 7(2) and Annex IV, the application of Article 7(2) and Annex IV shall be deferred. Those provisions shall therefore apply from 18 months after the entry into force of this Regulation.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">5</data>
+      <data key="d29">RECITAL-5</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-6">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">6</data>
+      <data key="d21">1</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">Whenever the measures provided for in this Regulation entail the processing of personal data, that processing should be carried out in accordance with Regulations (EU) 2016/679 (5) and (EU) 2018/1725 (6) of the European Parliament and of the Council, as well as the relevant national law in accordance with those Regulations.</data>
+      <data key="d25">Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L 119, 4.5.2016, p. 1, ELI: http://data.europa.eu/eli/reg/2016/679/oj). Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39, ELI: http://data. europa.eu/eli/reg/2018/1725/oj).</data>
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">6</data>
+      <data key="d29">RECITAL-6</data>
+    </node>
+    <node id="EU2026-1762.RECITAL-7">
+      <data key="d0">Recital</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Recital</data>
+      <data key="d18">recital</data>
+      <data key="d19">EU2026-1762.PREAMBLE</data>
+      <data key="d20">7</data>
+      <data key="d21">1</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">False</data>
+      <data key="d8" />
+      <data key="d24">The measures provided for in this Regulation are in accordance with the opinion of the Technical Committee – Motor vehicles (TCMV),</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Recital", "Paragraph"]</data>
+      <data key="d27">7</data>
+      <data key="d29">RECITAL-7</data>
+    </node>
+    <node id="EU2026-1762.BODY">
+      <data key="d0">Body</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Body</data>
+      <data key="d18">enacting</data>
+      <data key="d19" />
+      <data key="d20" />
+      <data key="d21">0</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">True</data>
+      <data key="d8">HAS ADOPTED THIS REGULATION:</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Body"]</data>
+      <data key="d27" />
+      <data key="d29">BODY</data>
+    </node>
+    <node id="EU2026-1762.ART-1">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">1</data>
+      <data key="d21">1</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">True</data>
+      <data key="d8">Scope</data>
+      <data key="d24">This Regulation applies to the emission type-approval with regard to brake systems of the motor vehicles belonging to the following vehicle categories:</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Article", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ART-1</data>
+    </node>
+    <node id="EU2026-1762.ART-1.PT-1">
+      <data key="d0">Point</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Point</data>
+      <data key="d18">point</data>
+      <data key="d19">EU2026-1762.ART-1</data>
+      <data key="d20">1</data>
+      <data key="d21">2</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">M1 and N1;</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Point", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ART-1</data>
+    </node>
+    <node id="EU2026-1762.ART-1.PT-2">
+      <data key="d0">Point</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Point</data>
+      <data key="d18">point</data>
+      <data key="d19">EU2026-1762.ART-1</data>
+      <data key="d20">2</data>
+      <data key="d21">2</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">N2 designated as ‘Euro 7ext’ and ‘Euro 7Gext’ in accordance with Article 5 of Regulation (EU) 2024/1257.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Point", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ART-1</data>
+    </node>
+    <node id="EU2026-1762.ART-2">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">2</data>
+      <data key="d21">1</data>
+      <data key="d22">1</data>
+      <data key="d23">1</data>
+      <data key="d28">True</data>
+      <data key="d8">Requirements for emission type-approval as regards the brake system</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Article"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ART-2</data>
+    </node>
+    <node id="EU2026-1762.ART-2.1">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-2</data>
+      <data key="d20">1</data>
+      <data key="d21">2</data>
+      <data key="d22">1</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">For the purposes of emission type-approval under Article 4(2) of Regulation (EU) 2024/1257, the manufacturer shall demonstrate that the brake system complies with all of the following: (a) the combination of brake corner emission families on a front and rear axle forms part of the same vehicle type with regard to brake emissions, as defined in paragraph 3.0 of UN Regulation No 179; (b) the brake system meets the requirements set out in: (i) Annexes I, II and III to this Regulation; (ii) paragraphs 7 and 8 of UN Regulation No 179.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ART-2</data>
+    </node>
+    <node id="EU2026-1762.ART-2.2">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-2</data>
+      <data key="d20">2</data>
+      <data key="d21">2</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">The manufacturer shall test the brake system in accordance with Annex III.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ART-2</data>
+    </node>
+    <node id="EU2026-1762.ART-3">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">3</data>
+      <data key="d21">1</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8">Application for emission type-approval of a brake system</data>
+      <data key="d24">The manufacturer shall submit to the granting type-approval authority an application for emission type-approval of a brake system under Article 14(1) of Regulation (EU) 2024/1257 and Table 11 of Annex V thereto, drawn up in accordance with the model information document set out in Appendix 1 of Annex II to this Regulation.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Article", "Paragraph"]</data>
+      <data key="d27">3</data>
+      <data key="d29">ART-3</data>
+    </node>
+    <node id="EU2026-1762.ART-4">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">4</data>
+      <data key="d21">1</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8">Administrative provisions for emission type-approval of a brake system</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Article"]</data>
+      <data key="d27">4</data>
+      <data key="d29">ART-4</data>
+    </node>
+    <node id="EU2026-1762.ART-4.1">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-4</data>
+      <data key="d20">1</data>
+      <data key="d21">2</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">For the purpose of testing in accordance with Articles 7(1) and 10(1) of Regulation (EU) 2024/1257, manufacturers, the technical services and the granting type-approval authorities shall use the templates and models, test procedures and test reports set out in Annexes I, II and III to this Regulation.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ART-4</data>
+    </node>
+    <node id="EU2026-1762.ART-4.2">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-4</data>
+      <data key="d20">2</data>
+      <data key="d21">2</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">For the purpose of granting an emission type-approval in accordance with Article 10(1) of Regulation (EU) 2024/1257 and issuing the corresponding certificate, the approval authority shall use the model set out in Appendix 2 to Annex II to this Regulation.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ART-4</data>
+    </node>
+    <node id="EU2026-1762.ART-4.3">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-4</data>
+      <data key="d20">3</data>
+      <data key="d21">2</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">The granting type-approval authority shall assign an emission type-approval number in accordance with Annex IV to Commission Implementing Regulation (EU) 2020/683 (7) and the sub-character table set out in Table 4 of Annex I to Commission Implementing Regulation (EU) 2025/1706 (8).</data>
+      <data key="d25">Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles (OJ L 163, 26.5.2020, p. 1, ELI: http://data.europa.eu/eli/reg_impl/2020/683/oj). Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).</data>
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">3</data>
+      <data key="d29">ART-4</data>
+    </node>
+    <node id="EU2026-1762.ART-5">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">5</data>
+      <data key="d21">1</data>
+      <data key="d22">2</data>
+      <data key="d23">2</data>
+      <data key="d28">True</data>
+      <data key="d8">Amendments to emission type-approvals</data>
+      <data key="d24">When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.</data>
+      <data key="d25">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/eli/reg/2018/858/oj).</data>
+      <data key="d26">True</data>
+      <data key="d7">["Article", "Paragraph"]</data>
+      <data key="d27">5</data>
+      <data key="d29">ART-5</data>
+    </node>
+    <node id="EU2026-1762.ART-6">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">6</data>
+      <data key="d21">1</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8">Conformity of production</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Article"]</data>
+      <data key="d27">6</data>
+      <data key="d29">ART-6</data>
+    </node>
+    <node id="EU2026-1762.ART-6.1">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-6</data>
+      <data key="d20">1</data>
+      <data key="d21">2</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">When applying tests at conformity of production in accordance with Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257, manufacturers and granting type-approval authorities shall comply with the requirements laid down in paragraph 10 of UN Regulation No 179.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ART-6</data>
+    </node>
+    <node id="EU2026-1762.ART-6.2">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-6</data>
+      <data key="d20">2</data>
+      <data key="d21">2</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">Approval authorities shall check the conformity of production on the basis of the description in the type-approval certificate set out in Appendix 2 to Annex II.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ART-6</data>
+    </node>
+    <node id="EU2026-1762.ART-7">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">7</data>
+      <data key="d21">1</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8">In-service conformity</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Article"]</data>
+      <data key="d27">7</data>
+      <data key="d29">ART-7</data>
+    </node>
+    <node id="EU2026-1762.ART-7.1">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-7</data>
+      <data key="d20">1</data>
+      <data key="d21">2</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">When performing tests to verify the share of individual friction braking in approvals where friction share braking coefficients have been measured according to Annex 5 to UN Regulation No 179 for in-service conformity purposes on an optional basis in accordance with Annex V to Regulation (EU) 2024/1257, Member States and recognised third parties shall apply the in-service conformity requirements set out in Annex 12 to UN Regulation No 83.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ART-7</data>
+    </node>
+    <node id="EU2026-1762.ART-7.2">
+      <data key="d0">ArticleParagraph</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">ArticleParagraph</data>
+      <data key="d18">article_paragraph</data>
+      <data key="d19">EU2026-1762.ART-7</data>
+      <data key="d20">2</data>
+      <data key="d21">2</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">For type-approved brake systems in accordance with Article 3, the manufacturer shall upload to the electronic platform for in-service conformity (ISC) all the in-service conformity related data referred to under Annexes 4 and 12 to UN Regulation No 83 as well as meet the specific requirements for transparency list applying to brake particle emission in Annex IV.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["ArticleParagraph", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ART-7</data>
+    </node>
+    <node id="EU2026-1762.ART-8">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">8</data>
+      <data key="d21">1</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8">Manipulation devices and manipulation strategies for brake systems</data>
+      <data key="d24">The requirement on the absence of manipulation devices and strategies related to brake systems laid down in Article 4(5) of Regulation (EU) 2024/1257 shall be complied with if the documentation provided by the manufacturer for type approval purposes in accordance with paragraph 4.4 of UN Regulation No 179 regarding emission-increase braking functions, as defined in point 3.7.19 of UN Regulation No 179, is approved by the granting type-approval authority.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Article", "Paragraph"]</data>
+      <data key="d27">8</data>
+      <data key="d29">ART-8</data>
+    </node>
+    <node id="EU2026-1762.ART-9">
+      <data key="d0">Article</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Article</data>
+      <data key="d18">article</data>
+      <data key="d19">EU2026-1762.BODY</data>
+      <data key="d20">9</data>
+      <data key="d21">1</data>
+      <data key="d22">3</data>
+      <data key="d23">3</data>
+      <data key="d28">True</data>
+      <data key="d8">Entry into force</data>
+      <data key="d24">This Regulation shall enter into force on the day following that of its publication in the Official Journal of the European Union.. It shall apply from that date. However, Article 7, point (2) and Annex IV shall apply 18 months after the date of entry into force of this Regulation. This Regulation shall be binding in its entirety and directly applicable in all Member States. Done at Brussels, 13 July 2026. For the Commission The President Ursula VON DER LEYEN</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Article", "Paragraph"]</data>
+      <data key="d27">9</data>
+      <data key="d29">ART-9</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I">
+      <data key="d0">Annex</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Annex</data>
+      <data key="d18">annex</data>
+      <data key="d19" />
+      <data key="d20">I</data>
+      <data key="d21">0</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8">TEST REPORTS REFERRED TO IN ARTICLE 4</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Annex"]</data>
+      <data key="d27">I</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I</data>
+      <data key="d20">1</data>
+      <data key="d27">1</data>
+      <data key="d21">1</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8">INTRODUCTION</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.1.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I.1</data>
+      <data key="d20">1.1</data>
+      <data key="d27">1.1</data>
+      <data key="d21">2</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">This Annex lays down the general and technical requirements for test reports relating to brake particle emissions.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.2">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I</data>
+      <data key="d20">2</data>
+      <data key="d27">2</data>
+      <data key="d21">1</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8">GENERAL REQUIREMENTS</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.2.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I.2</data>
+      <data key="d20">2.1</data>
+      <data key="d27">2.1</data>
+      <data key="d21">2</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">UN Regulation No 179 (1) shall apply to test reports referred to in Article 4(1).</data>
+      <data key="d25">UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).</data>
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.2.2">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I.2</data>
+      <data key="d20">2.2</data>
+      <data key="d27">2.2</data>
+      <data key="d21">2</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">The information specified in Annex 1 to UN Regulation No 179, shall be included at the various stages of the brake emission approval as described in Figure A1/1 thereof (‘Overview of the different reports during brake emission approval’).</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.3">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I</data>
+      <data key="d20">3</data>
+      <data key="d27">3</data>
+      <data key="d21">1</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8">TECHNICAL REQUIREMENTS</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.3.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-I.3</data>
+      <data key="d20">3.1</data>
+      <data key="d27">3.1</data>
+      <data key="d21">2</data>
+      <data key="d22">4</data>
+      <data key="d23">4</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">The test reports issued by the granting type-approval authority and the technical service responsible for conducting the tests under Article 4(1) of this Regulation shall comply with the requirements set out in this Annex.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.APP-1">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-I</data>
+      <data key="d20">1</data>
+      <data key="d21">1</data>
+      <data key="d22">5</data>
+      <data key="d23">5</data>
+      <data key="d28">True</data>
+      <data key="d8">Brake Corner Emission Family Test Report</data>
+      <data key="d24">Appendix 1 of Annex 1 to UN Regulation No 179 shall apply to the brake corner emission family test report. The brake corner emission family test report shall be repeated for both the front and the rear axle.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.APP-2">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-I</data>
+      <data key="d20">2</data>
+      <data key="d21">1</data>
+      <data key="d22">6</data>
+      <data key="d23">6</data>
+      <data key="d28">True</data>
+      <data key="d8">Individual Friction Braking Share Coefficient (c-factor) Test Report</data>
+      <data key="d24">Appendix 2 of Annex 1 to UN Regulation No 179 shall apply to individual friction braking share coefficient (c-factor) test report. The individual friction braking share coefficient (c-factor) test report shall be repeated as applicable for each individual vehicle measurement.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-I.APP-3">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-I</data>
+      <data key="d20">3</data>
+      <data key="d21">1</data>
+      <data key="d22">7</data>
+      <data key="d23">7</data>
+      <data key="d28">True</data>
+      <data key="d8">Vehicle Type Compliance Demonstration Report</data>
+      <data key="d24">Appendix 3 of Annex 1 to UN Regulation No 179 shall apply to vehicle type compliance demonstration report.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">3</data>
+      <data key="d29">ANNEX-I</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II">
+      <data key="d0">Annex</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Annex</data>
+      <data key="d18">annex</data>
+      <data key="d19" />
+      <data key="d20">II</data>
+      <data key="d21">0</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8">TYPE-APPROVAL</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Annex"]</data>
+      <data key="d27">II</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II</data>
+      <data key="d20">1</data>
+      <data key="d27">1</data>
+      <data key="d21">1</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8">INTRODUCTION</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.1.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II.1</data>
+      <data key="d20">1.1</data>
+      <data key="d27">1.1</data>
+      <data key="d21">2</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">This Annex lays down the general and technical requirements applicable to the emission type-approval of brake systems.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.2">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II</data>
+      <data key="d20">2</data>
+      <data key="d27">2</data>
+      <data key="d21">1</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8">GENERAL REQUIREMENTS</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.2.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II.2</data>
+      <data key="d20">2.1</data>
+      <data key="d27">2.1</data>
+      <data key="d21">2</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">Paragraphs 4 and 7 of UN Regulation No 179 shall apply to emission type-approval of brake systems referred to in Article 4(1).</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.3">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II</data>
+      <data key="d20">3</data>
+      <data key="d27">3</data>
+      <data key="d21">1</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8">TECHNICAL REQUIREMENTS</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.3.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II.3</data>
+      <data key="d20">3.1</data>
+      <data key="d27">3.1</data>
+      <data key="d21">2</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">Paragraph 8 of UN Regulation No 179 shall apply to the technical requirements for the emission type-approval of brake systems.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.3.2">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-II.3</data>
+      <data key="d20">3.2</data>
+      <data key="d27">3.2</data>
+      <data key="d21">2</data>
+      <data key="d22">8</data>
+      <data key="d23">8</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">The emission type-approval procedure of brake systems shall comply with the requirements set out in the Appendices to this Annex.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.APP-1">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-II</data>
+      <data key="d20">1</data>
+      <data key="d21">1</data>
+      <data key="d22">9</data>
+      <data key="d23">9</data>
+      <data key="d28">True</data>
+      <data key="d8">Model Information Document No relating to the EU type-approval of brake systems</data>
+      <data key="d24">This Model Information Document relating to EU type-approval of brake systems shall reflect the Model Information Document template and information laid down in Annex 1 to UN Regulation No 179. The information laid down in Annex 1 to UN Regulation No 179, where applicable, shall be supplied in triplicate and include a list of contents. Any drawings shall be supplied in appropriate scale and in sufficient detail on size A4 or on a folder of A4 format. Photographs, if any, shall show sufficient detail.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-II.APP-2">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-II</data>
+      <data key="d20">2</data>
+      <data key="d21">1</data>
+      <data key="d22">10</data>
+      <data key="d23">11</data>
+      <data key="d28">True</data>
+      <data key="d8">MODEL OF EU TYPE-APPROVAL CERTIFICATE</data>
+      <data key="d24">(Maximum format: A4 (210 × 297 mm)) EU TYPE-APPROVAL CERTIFICATE FOR BRAKE SYSTEMS Stamp of administration Communication concerning the: — EU type-approval (1), — extension of EU type-approval (1), — refusal of EU type-approval (1), — withdrawal of EU type-approval (1). EU type-approval number: ... Reason for extension: ... SECTION I 0.1. Make (trade name of manufacturer): ... 0.2. Type: ... 0.2.1. Commercial name(s) (if available): ... 0.3. Means of identification of type if marked on the vehicle (2) 0.3.1. Location of that marking: ... 0.4. Category of vehicle (3) 0.5. Name and address of manufacturer: ... 0.8. Name(s) and address(es) of assembly plant(s): ... 0.9. If applicable, name and address of manufacturer’s representative (5): ... SECTION II 0. Brake corner emission family identifier(s) as defined in paragraph 7 of UN Regulation No 179 1. Additional information (where applicable): 2. Technical service responsible for issuing the vehicle type compliance demonstration report: ... 3. Date of vehicle type compliance demonstration report: ... 4. Number of vehicle type compliance demonstration report: ... 5. Remarks (if any): 6. Place: ... 7. Date: ... 8. Signature: ... Explanatory Notes (1) Delete what is not applicable (there are cases where nothing needs to be deleted when more than one entry is applicable). (2) If the means of identification of type contains characters not relevant to describe the vehicle, component or separate technical unit types covered by this information, such characters shall be represented in the documentation by the symbol ‘?’ (e.g. ABC??123??). (3) As defined in Article 4 of Regulation (EU) 2018/858. (4) As defined in Article 3(24) of Regulation (EU) 2018/858. (5) ‘Manufacturer’s representative’ as defined in Article 3(41) of Regulation (EU) 2018/858</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d30">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ANNEX-II</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III">
+      <data key="d0">Annex</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Annex</data>
+      <data key="d18">annex</data>
+      <data key="d19" />
+      <data key="d20">III</data>
+      <data key="d21">0</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8">TEST PROCEDURES</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Annex"]</data>
+      <data key="d27">III</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-III</data>
+      <data key="d20">1</data>
+      <data key="d27">1</data>
+      <data key="d21">1</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8">INTRODUCTION</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.1.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-III.1</data>
+      <data key="d20">1.1</data>
+      <data key="d27">1.1</data>
+      <data key="d21">2</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">This Annex lays down the general and technical requirements for test procedures relating to brake particle emissions.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.2">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-III</data>
+      <data key="d20">2</data>
+      <data key="d27">2</data>
+      <data key="d21">1</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8">GENERAL REQUIREMENTS</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.2.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-III.2</data>
+      <data key="d20">2.1</data>
+      <data key="d27">2.1</data>
+      <data key="d21">2</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">UN Regulation No 179 shall apply to the test procedures referred to in Article 4(1).</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.3">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-III</data>
+      <data key="d20">3</data>
+      <data key="d27">3</data>
+      <data key="d21">1</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8">TECHNICAL REQUIREMENTS</data>
+      <data key="d24" />
+      <data key="d25" />
+      <data key="d26">False</data>
+      <data key="d7">["Section"]</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.3.1">
+      <data key="d0">Clause</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Clause</data>
+      <data key="d18">decimal</data>
+      <data key="d19">EU2026-1762.ANNEX-III.3</data>
+      <data key="d20">3.1</data>
+      <data key="d27">3.1</data>
+      <data key="d21">2</data>
+      <data key="d22">12</data>
+      <data key="d23">12</data>
+      <data key="d28">True</data>
+      <data key="d8" />
+      <data key="d24">The test procedures and methodologies shall comply with the requirements set out in the Appendices to this Annex.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Subsection", "Paragraph"]</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.APP-1">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-III</data>
+      <data key="d20">1</data>
+      <data key="d21">1</data>
+      <data key="d22">13</data>
+      <data key="d23">13</data>
+      <data key="d28">True</data>
+      <data key="d8">WLTP-Brake Cycle Events</data>
+      <data key="d24">WLTP-Brake Cycle Events shall reflect the WLTP-Brake Cycle Procedure in accordance with Appendix 1 of Annex 4 to UN Regulation No 179.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">1</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.APP-2">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-III</data>
+      <data key="d20">2</data>
+      <data key="d21">1</data>
+      <data key="d22">14</data>
+      <data key="d23">14</data>
+      <data key="d28">True</data>
+      <data key="d8">WLTP-Brake Cycle Brake Events</data>
+      <data key="d24">WLTP-Brake Cycle Events shall reflect the WLTP-Brake Cycle Brake Events Procedure in accordance with Appendix 2 of Annex 4 to UN Regulation No 179.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">2</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-III.APP-3">
+      <data key="d0">Appendix</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Appendix</data>
+      <data key="d18">appendix</data>
+      <data key="d19">EU2026-1762.ANNEX-III</data>
+      <data key="d20">3</data>
+      <data key="d21">1</data>
+      <data key="d22">15</data>
+      <data key="d23">15</data>
+      <data key="d28">True</data>
+      <data key="d8">Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients</data>
+      <data key="d24">Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients shall reflect the Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients in accordance with Annex 5 to UN Regulation No 179.</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Appendix", "Paragraph"]</data>
+      <data key="d27">3</data>
+      <data key="d29">ANNEX-III</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-IV">
+      <data key="d0">Annex</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d17">Annex</data>
+      <data key="d18">annex</data>
+      <data key="d19" />
+      <data key="d20">IV</data>
+      <data key="d21">0</data>
+      <data key="d22">16</data>
+      <data key="d23">16</data>
+      <data key="d28">True</data>
+      <data key="d8">TRANSPARENCY LIST</data>
+      <data key="d24">[TABLE:EU2026-1762.ANNEX-IV.TABLE-1] 1 2 3 4 [TABLE:EU2026-1762.ANNEX-IV.TABLE-2] Field Type of data Description Brake Corner Emission (‘BCE’) ID front axle text As defined in paragraph 7.2 of UN Regulation BCE ID rear axle text As defined in paragraph 7.2 of UN Regulation No 179</data>
+      <data key="d25" />
+      <data key="d26">True</data>
+      <data key="d7">["Annex", "Paragraph"]</data>
+      <data key="d27">IV</data>
+      <data key="d29">ANNEX-IV</data>
+    </node>
+    <node id="EU2026-1762.ABBR:ISC">
+      <data key="d0">Abbreviation</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d31">ISC</data>
+      <data key="d32">in-service conformity</data>
+      <data key="d33">Inline</data>
+      <data key="d34">inline</data>
+      <data key="d35">EU2026-1762.ART-7.2</data>
+      <data key="d36">1</data>
+    </node>
+    <node id="EU2026-1762.FN-1-p0">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">1</data>
+      <data key="d38">OJ L, 2024/1257, 8.5.2024, ELI: http://data.europa.eu/eli/reg/2024/1257/oj.</data>
+      <data key="d22">0</data>
+      <data key="d39">EU2026-1762.PREAMBLE</data>
+    </node>
+    <node id="EU2026-1762.FN-2">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">2</data>
+      <data key="d38">In the case of a UN Regulation the series of amendments indicated reflects the version that has been published in the Official Journal of the European Union. Supplements to the series of amendments indicated in the Official Journal publication shall apply irrespective of publication in the Official Journal of the European Union. New series of amendments adopted after the series of amendments indicated in the Official Journal publication shall be accepted as an alternative.</data>
+      <data key="d22">0</data>
+      <data key="d39">EU2026-1762.RECITAL-1</data>
+    </node>
+    <node id="EU2026-1762.FN-3">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">3</data>
+      <data key="d38">UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).</data>
+      <data key="d22">0</data>
+      <data key="d39">EU2026-1762.RECITAL-1</data>
+    </node>
+    <node id="EU2026-1762.FN-4">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">4</data>
+      <data key="d38">UN Regulation No 83 – Uniform provisions concerning the approval of vehicles with regard to the emission of pollutants according to engine fuel requirements [2026/1086] (OJ L, 2026/1086, 29.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1086/oj).</data>
+      <data key="d22">0</data>
+      <data key="d39">EU2026-1762.RECITAL-2</data>
+    </node>
+    <node id="EU2026-1762.FN-5">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">5</data>
+      <data key="d38">Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L 119, 4.5.2016, p. 1, ELI: http://data.europa.eu/eli/reg/2016/679/oj).</data>
+      <data key="d22">1</data>
+      <data key="d39">EU2026-1762.RECITAL-6</data>
+    </node>
+    <node id="EU2026-1762.FN-6">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">6</data>
+      <data key="d38">Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39, ELI: http://data. europa.eu/eli/reg/2018/1725/oj).</data>
+      <data key="d22">1</data>
+      <data key="d39">EU2026-1762.RECITAL-6</data>
+    </node>
+    <node id="EU2026-1762.FN-7">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">7</data>
+      <data key="d38">Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles (OJ L 163, 26.5.2020, p. 1, ELI: http://data.europa.eu/eli/reg_impl/2020/683/oj).</data>
+      <data key="d22">2</data>
+      <data key="d39">EU2026-1762.ART-4.3</data>
+    </node>
+    <node id="EU2026-1762.FN-8">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">8</data>
+      <data key="d38">Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).</data>
+      <data key="d22">2</data>
+      <data key="d39">EU2026-1762.ART-4.3</data>
+    </node>
+    <node id="EU2026-1762.FN-9">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">9</data>
+      <data key="d38">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/eli/reg/2018/858/oj).</data>
+      <data key="d22">2</data>
+      <data key="d39">EU2026-1762.ART-5</data>
+    </node>
+    <node id="EU2026-1762.FN-1-p4">
+      <data key="d0">Footnote</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d37">1</data>
+      <data key="d38">UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).</data>
+      <data key="d22">4</data>
+      <data key="d39">EU2026-1762.ANNEX-I.2.1</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-IV.TABLE-1">
+      <data key="d0">Table</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d40">Table 1</data>
+      <data key="d41">Transparency list 1 for brake systems</data>
+      <data key="d42">EU2026-1762.ANNEX-IV</data>
+      <data key="d29">ANNEX-IV</data>
+      <data key="d43">[16]</data>
+      <data key="d28">True</data>
+      <data key="d44">Brake Corner Emission | text | -- | As referred to in paragraph 7.2 of UN Regulation No 179
+(‘BCE’) ID front axle
+BCE ID rear axle | text | -- | As referred to in paragraph 7.2 of UN Regulation No 179
+Friction braking share | number -- | As referred to in paragraphs 7.1 and 7.2 of UN Regulation
+coefficient (c-factor) | No 179
+Laboratory settings | text | -- | As referred to in paragraph 7.1.3 and paragraph 8 of UN
+Regulation No 179</data>
+      <data key="d45">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regulation No 179</data>
+      <data key="d46">False</data>
+      <data key="d22">16</data>
+      <data key="d47">[{"region_id": "p16-r1", "page": 16, "bbox": [86.5, 172.5, 527.2, 274.6]}]</data>
+    </node>
+    <node id="EU2026-1762.ANNEX-IV.TABLE-2">
+      <data key="d0">Table</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d40">Table 2</data>
+      <data key="d41">Transparency list 2 for brake systems</data>
+      <data key="d42">EU2026-1762.ANNEX-IV</data>
+      <data key="d29">ANNEX-IV</data>
+      <data key="d43">[16]</data>
+      <data key="d28">True</data>
+      <data key="d44">No 179</data>
+      <data key="d45">No 179</data>
+      <data key="d46">False</data>
+      <data key="d22">16</data>
+      <data key="d47">[{"region_id": "p16-r2", "page": 16, "bbox": [324.4, 336.8, 373.8, 382.0]}]</data>
+    </node>
+    <node id="EU2026-1762/EXT:EC.REG.45-2001">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EC.REG.45-2001</data>
+      <data key="d49">ec_regulation</data>
+      <data key="d9">45/2001</data>
+      <data key="d50">2001</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Regulation (EC) No 45/2001"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.RECITAL-6</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EC.REG.595-2009">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EC.REG.595-2009</data>
+      <data key="d49">ec_regulation</data>
+      <data key="d9">595/2009</data>
+      <data key="d50">2009</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["(EC) No 595/2009"]</data>
+      <data key="d56">2</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EC.REG.715-2007">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EC.REG.715-2007</data>
+      <data key="d49">ec_regulation</data>
+      <data key="d9">715/2007</data>
+      <data key="d50">2007</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Regulations (EC) No 715/2007"]</data>
+      <data key="d56">2</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EC.DIR.1995-46">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EC.DIR.1995-46</data>
+      <data key="d49">eu_directive</data>
+      <data key="d9">1995/46</data>
+      <data key="d50">1995</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Directive 95/46/EC"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.RECITAL-6</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EC.DIR.2007-46">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EC.DIR.2007-46</data>
+      <data key="d49">eu_directive</data>
+      <data key="d9">2007/46</data>
+      <data key="d50">2007</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Directive 2007/46/EC"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.ART-5</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2016-679">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2016-679</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2016/679</data>
+      <data key="d50">2016</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8">Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)</data>
+      <data key="d52">27 April 2016</data>
+      <data key="d53">OJ L 119, 4.5.2016, p. 1</data>
+      <data key="d54">http://data.europa.eu/eli/reg/2016/679/oj</data>
+      <data key="d55">["Regulations (EU) 2016/679", "Regulation (EU) 2016/679"]</data>
+      <data key="d56">2</data>
+      <data key="d57">EU2026-1762.RECITAL-6</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-5", "eli": "EU2026-1762.FN-5", "adoption_date": "EU2026-1762.FN-5", "title": "EU2026-1762.FN-5"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2017-1151">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2017-1151</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2017/1151</data>
+      <data key="d50">2017</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Commission Regulation (EU) 2017/1151"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2017-2400">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2017-2400</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2017/2400</data>
+      <data key="d50">2017</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Commission Regulation (EU) 2017/2400"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-1725">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-1725</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2018/1725</data>
+      <data key="d50">2018</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8">Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC</data>
+      <data key="d52">23 October 2018</data>
+      <data key="d53">OJ L 295, 21.11.2018, p. 39</data>
+      <data key="d54">http://data.europa.eu/eli/reg/2018/1725/oj</data>
+      <data key="d55">["(EU) 2018/1725", "Regulation (EU) 2018/1725"]</data>
+      <data key="d56">2</data>
+      <data key="d57">EU2026-1762.RECITAL-6</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-6", "eli": "EU2026-1762.FN-6", "adoption_date": "EU2026-1762.FN-6", "title": "EU2026-1762.FN-6"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2018/858</data>
+      <data key="d50">2018</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC</data>
+      <data key="d52">30 May 2018</data>
+      <data key="d53">OJ L 151, 14.6.2018, p. 1</data>
+      <data key="d54">http://data.europa.eu/eli/reg/2018/858/oj</data>
+      <data key="d55">["Regulation (EU) 2018/858"]</data>
+      <data key="d56">7</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-9", "eli": "EU2026-1762.FN-9", "adoption_date": "EU2026-1762.FN-9", "title": "EU2026-1762.FN-9"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2020-683">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2020-683</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2020/683</data>
+      <data key="d50">2020</data>
+      <data key="d51">implementing</data>
+      <data key="d12">European Union</data>
+      <data key="d8">Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles</data>
+      <data key="d52">15 April 2020</data>
+      <data key="d53">OJ L 163, 26.5.2020, p. 1</data>
+      <data key="d54">http://data.europa.eu/eli/reg_impl/2020/683/oj</data>
+      <data key="d55">["Commission Implementing Regulation (EU) 2020/683", "Implementing Regulation (EU) 2020/683"]</data>
+      <data key="d56">3</data>
+      <data key="d57">EU2026-1762.ART-4.3</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-7", "eli": "EU2026-1762.FN-7", "adoption_date": "EU2026-1762.FN-7", "title": "EU2026-1762.FN-7"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2022-1362">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2022-1362</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2022/1362</data>
+      <data key="d50">2022</data>
+      <data key="d51">implementing</data>
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Commission Implementing Regulation (EU) 2022/1362"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2024/1257</data>
+      <data key="d50">2024</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Regulation (EU) 2024/1257"]</data>
+      <data key="d56">15</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">True</data>
+      <data key="d59">EU2024-1257</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2025-1706">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2025-1706</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">2025/1706</data>
+      <data key="d50">2025</data>
+      <data key="d51">implementing</data>
+      <data key="d12">European Union</data>
+      <data key="d8">Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683</data>
+      <data key="d52">25 July 2025</data>
+      <data key="d53">OJ L, 2025/1706, 5.9.2025</data>
+      <data key="d54">http://data.europa.eu/eli/reg_impl/2025/1706/oj</data>
+      <data key="d55">["Commission Implementing Regulation (EU) 2025/1706"]</data>
+      <data key="d56">2</data>
+      <data key="d57">EU2026-1762.ART-4.3</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-8", "eli": "EU2026-1762.FN-8", "adoption_date": "EU2026-1762.FN-8", "title": "EU2026-1762.FN-8"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.582-2011">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.582-2011</data>
+      <data key="d49">eu_regulation</data>
+      <data key="d9">582/2011</data>
+      <data key="d50">2011</data>
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Commission Regulation (EU) No 582/2011"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:TFEU">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:TFEU</data>
+      <data key="d49">treaty</data>
+      <data key="d9" />
+      <data key="d61" />
+      <data key="d51" />
+      <data key="d12">European Union</data>
+      <data key="d8" />
+      <data key="d52" />
+      <data key="d53" />
+      <data key="d54" />
+      <data key="d55">["Treaty on the Functioning of the European Union"]</data>
+      <data key="d56">1</data>
+      <data key="d57">EU2026-1762.PREAMBLE</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179</data>
+      <data key="d49">un_regulation</data>
+      <data key="d9">179</data>
+      <data key="d61" />
+      <data key="d51" />
+      <data key="d12">UNECE WP.29 (1958 Agreement)</data>
+      <data key="d8">Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions</data>
+      <data key="d52" />
+      <data key="d53">OJ L, 2026/1044, 18.5.2026</data>
+      <data key="d54">http://data.europa.eu/eli/reg/2026/1044/oj</data>
+      <data key="d55">["UN Regulation No 179", "No 179"]</data>
+      <data key="d56">32</data>
+      <data key="d57">EU2026-1762.RECITAL-1</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-3", "eli": "EU2026-1762.FN-3", "title": "EU2026-1762.FN-3"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-83">
+      <data key="d0">ExternalDocument</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-83</data>
+      <data key="d49">un_regulation</data>
+      <data key="d9">83</data>
+      <data key="d61" />
+      <data key="d51" />
+      <data key="d12">UNECE WP.29 (1958 Agreement)</data>
+      <data key="d8">Uniform provisions concerning the approval of vehicles with regard to the emission of pollutants according to engine fuel requirements</data>
+      <data key="d52" />
+      <data key="d53">OJ L, 2026/1086, 29.5.2026</data>
+      <data key="d54">http://data.europa.eu/eli/reg/2026/1086/oj</data>
+      <data key="d55">["UN Regulations No 83", "UN Regulation No 83"]</data>
+      <data key="d56">5</data>
+      <data key="d57">EU2026-1762.RECITAL-2</data>
+      <data key="d58">False</data>
+      <data key="d59" />
+      <data key="d60">{"oj_ref": "EU2026-1762.FN-4", "eli": "EU2026-1762.FN-4", "title": "EU2026-1762.FN-4"}</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858#ART-27">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858#ART-27</data>
+      <data key="d62">EXT:EU.REG.2018-858</data>
+      <data key="d63">[["article", "27"]]</data>
+      <data key="d64">Article 27</data>
+      <data key="d65">Articles 27, 33 and 34 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858#ART-3.24">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858#ART-3.24</data>
+      <data key="d62">EXT:EU.REG.2018-858</data>
+      <data key="d63">[["article", "3"], ["paragraph", "24"]]</data>
+      <data key="d64">Article 3, paragraph 24</data>
+      <data key="d65">Article 3(24) of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858#ART-3.41">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858#ART-3.41</data>
+      <data key="d62">EXT:EU.REG.2018-858</data>
+      <data key="d63">[["article", "3"], ["paragraph", "41"]]</data>
+      <data key="d64">Article 3, paragraph 41</data>
+      <data key="d65">Article 3(41) of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858#ART-33">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858#ART-33</data>
+      <data key="d62">EXT:EU.REG.2018-858</data>
+      <data key="d63">[["article", "33"]]</data>
+      <data key="d64">Article 33</data>
+      <data key="d65">Articles 27, 33 and 34 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858#ART-34">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858#ART-34</data>
+      <data key="d62">EXT:EU.REG.2018-858</data>
+      <data key="d63">[["article", "34"]]</data>
+      <data key="d64">Article 34</data>
+      <data key="d65">Articles 27, 33 and 34 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2018-858#ART-4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2018-858#ART-4</data>
+      <data key="d62">EXT:EU.REG.2018-858</data>
+      <data key="d63">[["article", "4"]]</data>
+      <data key="d64">Article 4</data>
+      <data key="d65">Article 4 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2020-683#ANNEX-IV">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2020-683#ANNEX-IV</data>
+      <data key="d62">EXT:EU.REG.2020-683</data>
+      <data key="d63">[["annex", "IV"]]</data>
+      <data key="d64">Annex IV</data>
+      <data key="d65">Annex IV to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ANNEX-V</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["annex", "V"]]</data>
+      <data key="d64">Annex V</data>
+      <data key="d65">Annex V to</data>
+      <data key="d56">2</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["annex", "V"], ["table", "11"]]</data>
+      <data key="d64">Annex V, Table 11</data>
+      <data key="d65">Table 11 of Annex V</data>
+      <data key="d56">2</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["annex", "V"], ["table", "12"]]</data>
+      <data key="d64">Annex V, Table 12</data>
+      <data key="d65">Annex V, Tables 11 and 12 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-10.1</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "10"], ["paragraph", "1"]]</data>
+      <data key="d64">Article 10, paragraph 1</data>
+      <data key="d65">Articles 7(1) and 10(1) of</data>
+      <data key="d56">2</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.1</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "1"]]</data>
+      <data key="d64">Article 14, paragraph 1</data>
+      <data key="d65">Article 14(1) of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.3.PT-i">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.3.PT-i</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "3"], ["point", "i"]]</data>
+      <data key="d64">Article 14, paragraph 3, point i</data>
+      <data key="d65">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-a">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.4.PT-a</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "4"], ["point", "a"]]</data>
+      <data key="d64">Article 14, paragraph 4, point a</data>
+      <data key="d65">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-q">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.4.PT-q</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "4"], ["point", "q"]]</data>
+      <data key="d64">Article 14, paragraph 4, point q</data>
+      <data key="d65">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-s">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.4.PT-s</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "4"], ["point", "s"]]</data>
+      <data key="d64">Article 14, paragraph 4, point s</data>
+      <data key="d65">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-u">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.4.PT-u</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "4"], ["point", "u"]]</data>
+      <data key="d64">Article 14, paragraph 4, point u</data>
+      <data key="d65">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-v">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-14.4.PT-v</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "14"], ["paragraph", "4"], ["point", "v"]]</data>
+      <data key="d64">Article 14, paragraph 4, point v</data>
+      <data key="d65">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-4</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "4"]]</data>
+      <data key="d64">Article 4</data>
+      <data key="d65">Articles 4 and 5 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-4.2">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-4.2</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "4"], ["paragraph", "2"]]</data>
+      <data key="d64">Article 4, paragraph 2</data>
+      <data key="d65">Article 4(2) of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-4.5">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-4.5</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "4"], ["paragraph", "5"]]</data>
+      <data key="d64">Article 4, paragraph 5</data>
+      <data key="d65">Article 4(5) of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-5">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-5</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "5"]]</data>
+      <data key="d64">Article 5</data>
+      <data key="d65">Articles 4 and 5 of</data>
+      <data key="d56">2</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2024-1257#ART-7.1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2024-1257#ART-7.1</data>
+      <data key="d62">EXT:EU.REG.2024-1257</data>
+      <data key="d63">[["article", "7"], ["paragraph", "1"]]</data>
+      <data key="d64">Article 7, paragraph 1</data>
+      <data key="d65">Articles 7(1) and 10(1) of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4</data>
+      <data key="d62">EXT:EU.REG.2025-1706</data>
+      <data key="d63">[["annex", "I"], ["table", "4"]]</data>
+      <data key="d64">Annex I, Table 4</data>
+      <data key="d65">Table 4 of Annex I to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#10">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#10</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "10"]]</data>
+      <data key="d64">paragraph 10</data>
+      <data key="d65">paragraph 10 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#3.0">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#3.0</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "3.0"]]</data>
+      <data key="d64">paragraph 3.0</data>
+      <data key="d65">paragraph 3.0 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#4</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "4"]]</data>
+      <data key="d64">paragraph 4</data>
+      <data key="d65">Paragraphs 4 and 7 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#4.4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#4.4</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "4.4"]]</data>
+      <data key="d64">paragraph 4.4</data>
+      <data key="d65">paragraph 4.4 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#7">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#7</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "7"]]</data>
+      <data key="d64">paragraph 7</data>
+      <data key="d65">paragraphs 7 and 8 of</data>
+      <data key="d56">3</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#7.1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#7.1</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "7.1"]]</data>
+      <data key="d64">paragraph 7.1</data>
+      <data key="d65">paragraphs 7.1 and 7.2 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#7.1.3">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#7.1.3</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "7.1.3"]]</data>
+      <data key="d64">paragraph 7.1.3</data>
+      <data key="d65">paragraph 7.1.3 and paragraph 8 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#7.2">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#7.2</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "7.2"]]</data>
+      <data key="d64">paragraph 7.2</data>
+      <data key="d65">paragraph 7.2 of</data>
+      <data key="d56">4</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#8">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#8</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "8"]]</data>
+      <data key="d64">paragraph 8</data>
+      <data key="d65">paragraphs 7 and 8 of</data>
+      <data key="d56">3</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#9.1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#9.1</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "9.1"]]</data>
+      <data key="d64">paragraph 9.1</data>
+      <data key="d65">paragraphs 9.1 and 9.4 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#9.4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#9.4</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["paragraph", "9.4"]]</data>
+      <data key="d64">paragraph 9.4</data>
+      <data key="d65">paragraphs 9.1 and 9.4 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-1</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "1"]]</data>
+      <data key="d64">Annex 1</data>
+      <data key="d65">Annex 1 to</data>
+      <data key="d56">3</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-1.APP-1</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "1"], ["appendix", "1"]]</data>
+      <data key="d64">Annex 1, Appendix 1</data>
+      <data key="d65">Appendix 1 of Annex 1 to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-2">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-1.APP-2</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "1"], ["appendix", "2"]]</data>
+      <data key="d64">Annex 1, Appendix 2</data>
+      <data key="d65">Appendix 2 of Annex 1 to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-3">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-1.APP-3</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "1"], ["appendix", "3"]]</data>
+      <data key="d64">Annex 1, Appendix 3</data>
+      <data key="d65">Appendix 3 of Annex 1 to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-4.APP-1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-4.APP-1</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "4"], ["appendix", "1"]]</data>
+      <data key="d64">Annex 4, Appendix 1</data>
+      <data key="d65">Appendix 1 of Annex 4 to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-4.APP-2">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-4.APP-2</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "4"], ["appendix", "2"]]</data>
+      <data key="d64">Annex 4, Appendix 2</data>
+      <data key="d65">Appendix 2 of Annex 4 to</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#ANNEX-5">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#ANNEX-5</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["annex", "5"]]</data>
+      <data key="d64">Annex 5</data>
+      <data key="d65">Annex 5 to</data>
+      <data key="d56">2</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#FIGURE-A1/1">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#FIGURE-A1/1</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["figure", "A1/1"]]</data>
+      <data key="d64">Figure A1/1</data>
+      <data key="d65">Figure A1/1</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-179#PT-3.7.19">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-179#PT-3.7.19</data>
+      <data key="d62">EXT:UNR-179</data>
+      <data key="d63">[["point", "3.7.19"]]</data>
+      <data key="d64">point 3.7.19</data>
+      <data key="d65">point 3.7.19 of</data>
+      <data key="d56">1</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-83#ANNEX-12">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-83#ANNEX-12</data>
+      <data key="d62">EXT:UNR-83</data>
+      <data key="d63">[["annex", "12"]]</data>
+      <data key="d64">Annex 12</data>
+      <data key="d65">Annex 12 to</data>
+      <data key="d56">2</data>
+    </node>
+    <node id="EU2026-1762/EXT:UNR-83#ANNEX-4">
+      <data key="d0">ExternalProvision</data>
+      <data key="d1">EU2026-1762</data>
+      <data key="d48">EXT:UNR-83#ANNEX-4</data>
+      <data key="d62">EXT:UNR-83</data>
+      <data key="d63">[["annex", "4"]]</data>
+      <data key="d64">Annex 4</data>
+      <data key="d65">Annexes 4 and 12 to</data>
+      <data key="d56">1</data>
+    </node>
+    <edge source="EU2026-1762.STANDARD" target="EU2026-1762" id="0">
+      <data key="d66">HAS_VERSION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762.PREAMBLE" id="0">
+      <data key="d66">HAS_DIVISION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762.BODY" id="0">
+      <data key="d66">HAS_DIVISION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762.ANNEX-I" id="0">
+      <data key="d66">HAS_DIVISION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762.ANNEX-II" id="0">
+      <data key="d66">HAS_DIVISION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762.ANNEX-III" id="0">
+      <data key="d66">HAS_DIVISION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762.ANNEX-IV" id="0">
+      <data key="d66">HAS_DIVISION</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762/EXT:EU.REG.2024-1257" id="0">
+      <data key="d66">IMPLEMENTS</data>
+      <data key="d67">implements</data>
+      <data key="d68">Regulation (EU) 2024/1257</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">title</data>
+    </edge>
+    <edge source="EU2026-1762" target="EU2026-1762/EXT:TFEU" id="0">
+      <data key="d66">LEGAL_BASIS</data>
+      <data key="d67">legal_basis</data>
+      <data key="d68">Treaty on the Functioning of the European Union</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">title</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-4" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-5" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-6" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.RECITAL-7" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762.FN-1-p0" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Regulation (EU) 2024/1257</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Regulation (EU) 2024/1257</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:TFEU" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">legal_basis</data>
+      <data key="d68">Treaty on the Functioning of the European Union</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2018-858" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Regulation (EU) 2018/858</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EC.REG.715-2007" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Regulations (EC) No 715/2007</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EC.REG.595-2009" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">(EC) No 595/2009</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.582-2011" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">repeals</data>
+      <data key="d68">Commission Regulation (EU) No 582/2011</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2017-1151" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">repeals</data>
+      <data key="d68">Commission Regulation (EU) 2017/1151</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2017-2400" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Commission Regulation (EU) 2017/2400</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2022-1362" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Commission Implementing Regulation (EU) 2022/1362 (1)</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.3.PT-i" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-a" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-q" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-s" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-u" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.PREAMBLE" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-v" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof</data>
+      <data key="d69">COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Trea</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-1" target="EU2026-1762.FN-2" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-1" target="EU2026-1762.FN-3" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-1" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Articles 4 and 5 of Regulation (EU) 2024/1257</data>
+      <data key="d69">This Regulation aims at setting the technical requirements necessary for the emission type-approval of brake systems for vehicles that are to be designated as ‘Euro 7’ vehicles, ‘Euro 7G’ vehicles, ‘Euro 7ext’ vehicles or ‘Euro 7Gext’ vehicles in accordance with Articles 4 and 5 of Regulation (EU) 2024/1257 and using friction braking, which involves a combination of dry friction materials and a ma</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-1" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-5" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Articles 4 and 5 of Regulation (EU) 2024/1257</data>
+      <data key="d69">This Regulation aims at setting the technical requirements necessary for the emission type-approval of brake systems for vehicles that are to be designated as ‘Euro 7’ vehicles, ‘Euro 7G’ vehicles, ‘Euro 7ext’ vehicles or ‘Euro 7Gext’ vehicles in accordance with Articles 4 and 5 of Regulation (EU) 2024/1257 and using friction braking, which involves a combination of dry friction materials and a ma</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-1" target="EU2026-1762/EXT:UNR-179" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">UN Regulation No 179 (3)</data>
+      <data key="d69">Such technical requirements should be based on the work performed in the United Nations World Forum for Harmonization of Vehicle Regulations (2) (UN WP.29) and more specifically UN Regulation No 179 (3).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-1" target="EU2026-1762/EXT:UNR-179" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">UN Regulation No 179</data>
+      <data key="d69">UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-2" target="EU2026-1762.FN-4" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-2" target="EU2026-1762/EXT:UNR-83" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">UN Regulations No 83 (4)</data>
+      <data key="d69">To avoid redundant testing and ensure consistency with global best practices, it is appropriate to align with internationally harmonised technical requirements, tests, and methodologies arising from UN Regulations No 83 (4) and No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-2" target="EU2026-1762/EXT:UNR-83" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">UN Regulation No 83</data>
+      <data key="d69">UN Regulation No 83 – Uniform provisions concerning the approval of vehicles with regard to the emission of pollutants according to engine fuel requirements [2026/1086] (OJ L, 2026/1086, 29.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1086/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-2" target="EU2026-1762/EXT:UNR-179" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">No 179</data>
+      <data key="d69">To avoid redundant testing and ensure consistency with global best practices, it is appropriate to align with internationally harmonised technical requirements, tests, and methodologies arising from UN Regulations No 83 (4) and No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-4" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex V to Regulation (EU) 2024/1257</data>
+      <data key="d69">That should include documentation obligations for brake system performance over the vehicles’ lifetime, compliance with emission limits, and the use of standardised templates, including the Model Information Document, the EU Type-Approval Certificate for declarations of compliance, as laid down in Annex V to Regulation (EU) 2024/1257, as well as applicable test reports.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-4" target="EU2026-1762/EXT:UNR-83" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">UN Regulations No 83</data>
+      <data key="d69">Those test reports should cover type-approval, and in-service conformity testing – including procedures detailed in UN Regulations No 83 and No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-4" target="EU2026-1762/EXT:UNR-179" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">No 179</data>
+      <data key="d69">Those test reports should cover type-approval, and in-service conformity testing – including procedures detailed in UN Regulations No 83 and No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-5" target="EU2026-1762.ART-7.2" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 7(2)</data>
+      <data key="d72">paragraph</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-5" target="EU2026-1762.ART-7.2" id="1">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 7(2)</data>
+      <data key="d72">paragraph</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-5" target="EU2026-1762.ANNEX-IV" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex IV</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-5" target="EU2026-1762.ANNEX-IV" id="1">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex IV</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762.FN-5" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762.FN-6" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762/EXT:EU.REG.2016-679" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Regulations (EU) 2016/679 (5)</data>
+      <data key="d69">Whenever the measures provided for in this Regulation entail the processing of personal data, that processing should be carried out in accordance with Regulations (EU) 2016/679 (5) and (EU) 2018/1725 (6) of the European Parliament and of the Council, as well as the relevant national law in accordance with those Regulations.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762/EXT:EU.REG.2016-679" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Regulation (EU) 2016/679</data>
+      <data key="d69">Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L 119, 4.5.2016, p. 1, ELI: http://data.europa.eu/eli/reg/2016/679/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762/EXT:EU.REG.2018-1725" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">(EU) 2018/1725 (6)</data>
+      <data key="d69">Whenever the measures provided for in this Regulation entail the processing of personal data, that processing should be carried out in accordance with Regulations (EU) 2016/679 (5) and (EU) 2018/1725 (6) of the European Parliament and of the Council, as well as the relevant national law in accordance with those Regulations.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762/EXT:EU.REG.2018-1725" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Regulation (EU) 2018/1725</data>
+      <data key="d69">Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39, ELI: http://data. europa.eu/el</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762/EXT:EC.DIR.1995-46" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">repeals</data>
+      <data key="d68">Directive 95/46/EC</data>
+      <data key="d69">Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L 119, 4.5.2016, p. 1, ELI: http://data.europa.eu/eli/reg/2016/679/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.RECITAL-6" target="EU2026-1762/EXT:EC.REG.45-2001" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">repeals</data>
+      <data key="d68">Regulation (EC) No 45/2001</data>
+      <data key="d69">Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39, ELI: http://data. europa.eu/el</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-4" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-5" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-6" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-7" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-8" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.BODY" target="EU2026-1762.ART-9" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-1" target="EU2026-1762.ART-1.PT-1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-1" target="EU2026-1762.ART-1.PT-2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-1.PT-2" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-5" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Article 5 of Regulation (EU) 2024/1257</data>
+      <data key="d69">N2 designated as ‘Euro 7ext’ and ‘Euro 7Gext’ in accordance with Article 5 of Regulation (EU) 2024/1257.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2" target="EU2026-1762.ART-2.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2" target="EU2026-1762.ART-2.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762.ANNEX-I" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex I</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762.ANNEX-II" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex II</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762.ANNEX-III" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex III</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-4.2" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Article 4(2) of Regulation (EU) 2024/1257</data>
+      <data key="d69">For the purposes of emission type-approval under Article 4(2) of Regulation (EU) 2024/1257, the manufacturer shall demonstrate that the brake system complies with all of the following: (a) the combination of brake corner emission families on a front and rear axle forms part of the same vehicle type with regard to brake emissions, as defined in paragraph 3.0 of UN Regulation No 179;</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762/EXT:UNR-179#3.0" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">paragraph 3.0 of UN Regulation No 179</data>
+      <data key="d69">For the purposes of emission type-approval under Article 4(2) of Regulation (EU) 2024/1257, the manufacturer shall demonstrate that the brake system complies with all of the following: (a) the combination of brake corner emission families on a front and rear axle forms part of the same vehicle type with regard to brake emissions, as defined in paragraph 3.0 of UN Regulation No 179;</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762/EXT:UNR-179#7" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraphs 7 and 8 of UN Regulation No 179</data>
+      <data key="d69">(ii) paragraphs 7 and 8 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.1" target="EU2026-1762/EXT:UNR-179#8" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraphs 7 and 8 of UN Regulation No 179</data>
+      <data key="d69">(ii) paragraphs 7 and 8 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-2.2" target="EU2026-1762.ANNEX-III" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex III</data>
+    </edge>
+    <edge source="EU2026-1762.ART-3" target="EU2026-1762.ANNEX-II.APP-1" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">appendix</data>
+      <data key="d68">Appendix 1 of Annex II</data>
+    </edge>
+    <edge source="EU2026-1762.ART-3" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Article 14(1) of Regulation (EU) 2024/1257</data>
+      <data key="d69">The manufacturer shall submit to the granting type-approval authority an application for emission type-approval of a brake system under Article 14(1) of Regulation (EU) 2024/1257 and Table 11 of Annex V thereto, drawn up in accordance with the model information document set out in Appendix 1 of Annex II to this Regulation.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-3" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Table 11 of Annex V thereto</data>
+      <data key="d69">The manufacturer shall submit to the granting type-approval authority an application for emission type-approval of a brake system under Article 14(1) of Regulation (EU) 2024/1257 and Table 11 of Annex V thereto, drawn up in accordance with the model information document set out in Appendix 1 of Annex II to this Regulation.</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4" target="EU2026-1762.ART-4.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4" target="EU2026-1762.ART-4.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4" target="EU2026-1762.ART-4.3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.1" target="EU2026-1762.ANNEX-I" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex I</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.1" target="EU2026-1762.ANNEX-II" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex II</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.1" target="EU2026-1762.ANNEX-III" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex III</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.1" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-7.1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Articles 7(1) and 10(1) of Regulation (EU) 2024/1257</data>
+      <data key="d69">For the purpose of testing in accordance with Articles 7(1) and 10(1) of Regulation (EU) 2024/1257, manufacturers, the technical services and the granting type-approval authorities shall use the templates and models, test procedures and test reports set out in Annexes I, II and III to this Regulation.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.1" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Articles 7(1) and 10(1) of Regulation (EU) 2024/1257</data>
+      <data key="d69">For the purpose of testing in accordance with Articles 7(1) and 10(1) of Regulation (EU) 2024/1257, manufacturers, the technical services and the granting type-approval authorities shall use the templates and models, test procedures and test reports set out in Annexes I, II and III to this Regulation.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.2" target="EU2026-1762.ANNEX-II.APP-2" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">appendix</data>
+      <data key="d68">Appendix 2 to Annex II</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.2" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Article 10(1) of Regulation (EU) 2024/1257</data>
+      <data key="d69">For the purpose of granting an emission type-approval in accordance with Article 10(1) of Regulation (EU) 2024/1257 and issuing the corresponding certificate, the approval authority shall use the model set out in Appendix 2 to Annex II to this Regulation.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762.FN-7" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762.FN-8" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2020-683#ANNEX-IV" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Annex IV to Commission Implementing Regulation (EU) 2020/683 (7)</data>
+      <data key="d69">The granting type-approval authority shall assign an emission type-approval number in accordance with Annex IV to Commission Implementing Regulation (EU) 2020/683 (7) and the sub-character table set out in Table 4 of Annex I to Commission Implementing Regulation (EU) 2025/1706 (8).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Table 4 of Annex I to Commission Implementing Regulation (EU) 2025/1706 (8)</data>
+      <data key="d69">The granting type-approval authority shall assign an emission type-approval number in accordance with Annex IV to Commission Implementing Regulation (EU) 2020/683 (7) and the sub-character table set out in Table 4 of Annex I to Commission Implementing Regulation (EU) 2025/1706 (8).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2020-683" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Commission Implementing Regulation (EU) 2020/683</data>
+      <data key="d69">Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles (OJ L 163, 26.5.2020, p. 1, ELI: http://</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2020-683" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Implementing Regulation (EU) 2020/683</data>
+      <data key="d69">Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2018-858" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Regulation (EU) 2018/858</data>
+      <data key="d69">Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles (OJ L 163, 26.5.2020, p. 1, ELI: http://</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2025-1706" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Commission Implementing Regulation (EU) 2025/1706</data>
+      <data key="d69">Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-4.3" target="EU2026-1762/EXT:EU.REG.2024-1257" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">implements</data>
+      <data key="d68">Regulation (EU) 2024/1257</data>
+      <data key="d69">Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762.FN-9" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EU.REG.2018-858#ART-27" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Articles 27, 33 and 34 of Regulation (EU) 2018/858</data>
+      <data key="d69">When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EU.REG.2018-858#ART-33" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Articles 27, 33 and 34 of Regulation (EU) 2018/858</data>
+      <data key="d69">When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EU.REG.2018-858#ART-34" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Articles 27, 33 and 34 of Regulation (EU) 2018/858</data>
+      <data key="d69">When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:UNR-179#9.1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraphs 9.1 and 9.4 of UN Regulation No 179</data>
+      <data key="d69">When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:UNR-179#9.4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraphs 9.1 and 9.4 of UN Regulation No 179</data>
+      <data key="d69">When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EU.REG.2018-858" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Regulation (EU) 2018/858</data>
+      <data key="d69">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/el</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EC.REG.715-2007" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Regulations (EC) No 715/2007</data>
+      <data key="d69">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/el</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EC.REG.595-2009" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">(EC) No 595/2009</data>
+      <data key="d69">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/el</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-5" target="EU2026-1762/EXT:EC.DIR.2007-46" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">amends</data>
+      <data key="d68">Directive 2007/46/EC</data>
+      <data key="d69">Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/el</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ART-6" target="EU2026-1762.ART-6.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-6" target="EU2026-1762.ART-6.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-6.1" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257</data>
+      <data key="d69">When applying tests at conformity of production in accordance with Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257, manufacturers and granting type-approval authorities shall comply with the requirements laid down in paragraph 10 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-6.1" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257</data>
+      <data key="d69">When applying tests at conformity of production in accordance with Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257, manufacturers and granting type-approval authorities shall comply with the requirements laid down in paragraph 10 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-6.1" target="EU2026-1762/EXT:UNR-179#10" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">paragraph 10 of UN Regulation No 179</data>
+      <data key="d69">When applying tests at conformity of production in accordance with Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257, manufacturers and granting type-approval authorities shall comply with the requirements laid down in paragraph 10 of UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-6.2" target="EU2026-1762.ANNEX-II.APP-2" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">appendix</data>
+      <data key="d68">Appendix 2 to Annex II</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7" target="EU2026-1762.ART-7.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7" target="EU2026-1762.ART-7.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.1" target="EU2026-1762/EXT:UNR-179#ANNEX-5" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex 5 to UN Regulation No 179</data>
+      <data key="d69">When performing tests to verify the share of individual friction braking in approvals where friction share braking coefficients have been measured according to Annex 5 to UN Regulation No 179 for in-service conformity purposes on an optional basis in accordance with Annex V to Regulation (EU) 2024/1257, Member States and recognised third parties shall apply the in-service conformity requirements s</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.1" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex V to Regulation (EU) 2024/1257</data>
+      <data key="d69">When performing tests to verify the share of individual friction braking in approvals where friction share braking coefficients have been measured according to Annex 5 to UN Regulation No 179 for in-service conformity purposes on an optional basis in accordance with Annex V to Regulation (EU) 2024/1257, Member States and recognised third parties shall apply the in-service conformity requirements s</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.1" target="EU2026-1762/EXT:UNR-83#ANNEX-12" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex 12 to UN Regulation No 83</data>
+      <data key="d69">When performing tests to verify the share of individual friction braking in approvals where friction share braking coefficients have been measured according to Annex 5 to UN Regulation No 179 for in-service conformity purposes on an optional basis in accordance with Annex V to Regulation (EU) 2024/1257, Member States and recognised third parties shall apply the in-service conformity requirements s</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.2" target="EU2026-1762.ABBR:ISC" id="0">
+      <data key="d66">HAS_ABBREVIATION</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.2" target="EU2026-1762.ART-3" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 3</data>
+      <data key="d72">article</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.2" target="EU2026-1762.ANNEX-IV" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex IV</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.2" target="EU2026-1762/EXT:UNR-83#ANNEX-4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Annexes 4 and 12 to UN Regulation No 83</data>
+      <data key="d69">For type-approved brake systems in accordance with Article 3, the manufacturer shall upload to the electronic platform for in-service conformity (ISC) all the in-service conformity related data referred to under Annexes 4 and 12 to UN Regulation No 83 as well as meet the specific requirements for transparency list applying to brake particle emission in Annex IV.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-7.2" target="EU2026-1762/EXT:UNR-83#ANNEX-12" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Annexes 4 and 12 to UN Regulation No 83</data>
+      <data key="d69">For type-approved brake systems in accordance with Article 3, the manufacturer shall upload to the electronic platform for in-service conformity (ISC) all the in-service conformity related data referred to under Annexes 4 and 12 to UN Regulation No 83 as well as meet the specific requirements for transparency list applying to brake particle emission in Annex IV.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-8" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-4.5" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Article 4(5) of Regulation (EU) 2024/1257</data>
+      <data key="d69">The requirement on the absence of manipulation devices and strategies related to brake systems laid down in Article 4(5) of Regulation (EU) 2024/1257 shall be complied with if the documentation provided by the manufacturer for type approval purposes in accordance with paragraph 4.4 of UN Regulation No 179 regarding emission-increase braking functions, as defined in point 3.7.19 of UN Regulation No</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-8" target="EU2026-1762/EXT:UNR-179#4.4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">paragraph 4.4 of UN Regulation No 179</data>
+      <data key="d69">The requirement on the absence of manipulation devices and strategies related to brake systems laid down in Article 4(5) of Regulation (EU) 2024/1257 shall be complied with if the documentation provided by the manufacturer for type approval purposes in accordance with paragraph 4.4 of UN Regulation No 179 regarding emission-increase braking functions, as defined in point 3.7.19 of UN Regulation No</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-8" target="EU2026-1762/EXT:UNR-179#PT-3.7.19" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">point 3.7.19 of UN Regulation No 179</data>
+      <data key="d69">The requirement on the absence of manipulation devices and strategies related to brake systems laid down in Article 4(5) of Regulation (EU) 2024/1257 shall be complied with if the documentation provided by the manufacturer for type approval purposes in accordance with paragraph 4.4 of UN Regulation No 179 regarding emission-increase braking functions, as defined in point 3.7.19 of UN Regulation No</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ART-9" target="EU2026-1762.ART-7" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 7, point (2)</data>
+      <data key="d72">article+inline_point</data>
+    </edge>
+    <edge source="EU2026-1762.ART-9" target="EU2026-1762.ANNEX-IV" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">annex</data>
+      <data key="d68">Annex IV</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I" target="EU2026-1762.ANNEX-I.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I" target="EU2026-1762.ANNEX-I.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I" target="EU2026-1762.ANNEX-I.3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I" target="EU2026-1762.ANNEX-I.APP-1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I" target="EU2026-1762.ANNEX-I.APP-2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I" target="EU2026-1762.ANNEX-I.APP-3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.1" target="EU2026-1762.ANNEX-I.1.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2" target="EU2026-1762.ANNEX-I.2.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2" target="EU2026-1762.ANNEX-I.2.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2.1" target="EU2026-1762.FN-1-p4" id="0">
+      <data key="d66">HAS_FOOTNOTE</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2.1" target="EU2026-1762.ART-4.1" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 4(1)</data>
+      <data key="d72">paragraph</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2.1" target="EU2026-1762/EXT:UNR-179" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">UN Regulation No 179 (1)</data>
+      <data key="d69">UN Regulation No 179 (1) shall apply to test reports referred to in Article 4(1).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2.1" target="EU2026-1762/EXT:UNR-179" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">UN Regulation No 179</data>
+      <data key="d69">UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).</data>
+      <data key="d70">footnote</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2.2" target="EU2026-1762/EXT:UNR-179#ANNEX-1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Annex 1 to UN Regulation No 179</data>
+      <data key="d69">The information specified in Annex 1 to UN Regulation No 179, shall be included at the various stages of the brake emission approval as described in Figure A1/1 thereof (‘Overview of the different reports during brake emission approval’).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.2.2" target="EU2026-1762/EXT:UNR-179#FIGURE-A1/1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Figure A1/1 thereof</data>
+      <data key="d69">The information specified in Annex 1 to UN Regulation No 179, shall be included at the various stages of the brake emission approval as described in Figure A1/1 thereof (‘Overview of the different reports during brake emission approval’).</data>
+      <data key="d70">back_reference</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.3" target="EU2026-1762.ANNEX-I.3.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.3.1" target="EU2026-1762.ART-4.1" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 4(1)</data>
+      <data key="d72">paragraph</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.APP-1" target="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Appendix 1 of Annex 1 to UN Regulation No 179</data>
+      <data key="d69">Appendix 1 of Annex 1 to UN Regulation No 179 shall apply to the brake corner emission family test report.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.APP-2" target="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-2" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Appendix 2 of Annex 1 to UN Regulation No 179</data>
+      <data key="d69">Appendix 2 of Annex 1 to UN Regulation No 179 shall apply to individual friction braking share coefficient (c-factor) test report.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-I.APP-3" target="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-3" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Appendix 3 of Annex 1 to UN Regulation No 179</data>
+      <data key="d69">Appendix 3 of Annex 1 to UN Regulation No 179 shall apply to vehicle type compliance demonstration report.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II" target="EU2026-1762.ANNEX-II.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II" target="EU2026-1762.ANNEX-II.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II" target="EU2026-1762.ANNEX-II.3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II" target="EU2026-1762.ANNEX-II.APP-1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II" target="EU2026-1762.ANNEX-II.APP-2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.1" target="EU2026-1762.ANNEX-II.1.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.2" target="EU2026-1762.ANNEX-II.2.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.2.1" target="EU2026-1762.ART-4.1" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 4(1)</data>
+      <data key="d72">paragraph</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.2.1" target="EU2026-1762/EXT:UNR-179#4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Paragraphs 4 and 7 of UN Regulation No 179</data>
+      <data key="d69">Paragraphs 4 and 7 of UN Regulation No 179 shall apply to emission type-approval of brake systems referred to in Article 4(1).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.2.1" target="EU2026-1762/EXT:UNR-179#7" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Paragraphs 4 and 7 of UN Regulation No 179</data>
+      <data key="d69">Paragraphs 4 and 7 of UN Regulation No 179 shall apply to emission type-approval of brake systems referred to in Article 4(1).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.3" target="EU2026-1762.ANNEX-II.3.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.3" target="EU2026-1762.ANNEX-II.3.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.3.1" target="EU2026-1762/EXT:UNR-179#8" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Paragraph 8 of UN Regulation No 179</data>
+      <data key="d69">Paragraph 8 of UN Regulation No 179 shall apply to the technical requirements for the emission type-approval of brake systems.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.APP-1" target="EU2026-1762/EXT:UNR-179#ANNEX-1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex 1 to UN Regulation No 179</data>
+      <data key="d69">This Model Information Document relating to EU type-approval of brake systems shall reflect the Model Information Document template and information laid down in Annex 1 to UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.APP-1" target="EU2026-1762/EXT:UNR-179#ANNEX-1" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">Annex 1 to UN Regulation No 179</data>
+      <data key="d69">The information laid down in Annex 1 to UN Regulation No 179, where applicable, shall be supplied in triplicate and include a list of contents.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.APP-2" target="EU2026-1762/EXT:UNR-179#7" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">paragraph 7 of UN Regulation No 179</data>
+      <data key="d69">Brake corner emission family identifier(s) as defined in paragraph 7 of UN Regulation No 179 1.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.APP-2" target="EU2026-1762/EXT:EU.REG.2018-858#ART-4" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">Article 4 of Regulation (EU) 2018/858</data>
+      <data key="d69">(3) As defined in Article 4 of Regulation (EU) 2018/858.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.APP-2" target="EU2026-1762/EXT:EU.REG.2018-858#ART-3.24" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">Article 3(24) of Regulation (EU) 2018/858</data>
+      <data key="d69">(4) As defined in Article 3(24) of Regulation (EU) 2018/858.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-II.APP-2" target="EU2026-1762/EXT:EU.REG.2018-858#ART-3.41" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">Article 3(41) of Regulation (EU) 2018/858</data>
+      <data key="d69">(5) ‘Manufacturer’s representative’ as defined in Article 3(41) of Regulation (EU) 2018/858</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III" target="EU2026-1762.ANNEX-III.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III" target="EU2026-1762.ANNEX-III.2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III" target="EU2026-1762.ANNEX-III.3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III" target="EU2026-1762.ANNEX-III.APP-1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III" target="EU2026-1762.ANNEX-III.APP-2" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III" target="EU2026-1762.ANNEX-III.APP-3" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.1" target="EU2026-1762.ANNEX-III.1.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.2" target="EU2026-1762.ANNEX-III.2.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.2.1" target="EU2026-1762.ART-4.1" id="0">
+      <data key="d66">REFERENCES</data>
+      <data key="d71">article</data>
+      <data key="d68">Article 4(1)</data>
+      <data key="d72">paragraph</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.2.1" target="EU2026-1762/EXT:UNR-179" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">UN Regulation No 179</data>
+      <data key="d69">UN Regulation No 179 shall apply to the test procedures referred to in Article 4(1).</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.3" target="EU2026-1762.ANNEX-III.3.1" id="0">
+      <data key="d66">HAS_CHILD</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.APP-1" target="EU2026-1762/EXT:UNR-179#ANNEX-4.APP-1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Appendix 1 of Annex 4 to UN Regulation No 179</data>
+      <data key="d69">WLTP-Brake Cycle Events shall reflect the WLTP-Brake Cycle Procedure in accordance with Appendix 1 of Annex 4 to UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.APP-2" target="EU2026-1762/EXT:UNR-179#ANNEX-4.APP-2" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Appendix 2 of Annex 4 to UN Regulation No 179</data>
+      <data key="d69">WLTP-Brake Cycle Events shall reflect the WLTP-Brake Cycle Brake Events Procedure in accordance with Appendix 2 of Annex 4 to UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-III.APP-3" target="EU2026-1762/EXT:UNR-179#ANNEX-5" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">requirement_source</data>
+      <data key="d68">Annex 5 to UN Regulation No 179</data>
+      <data key="d69">Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients shall reflect the Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients in accordance with Annex 5 to UN Regulation No 179.</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762.ANNEX-IV.TABLE-1" id="0">
+      <data key="d66">HAS_TABLE</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762.ANNEX-IV.TABLE-2" id="0">
+      <data key="d66">HAS_TABLE</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#7.2" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">definition_source</data>
+      <data key="d68">paragraph 7.2 of UN Regulation No 179</data>
+      <data key="d69">[TABLE:EU2026-1762.ANNEX-IV.TABLE-1] 1 2 3 4 [TABLE:EU2026-1762.ANNEX-IV.TABLE-2] Field Type of data Description Brake Corner Emission (‘BCE’) ID front axle text As defined in paragraph 7.2 of UN Regulation BCE ID rear axle text As defined in paragraph 7.2 of UN Regulation No 179</data>
+      <data key="d70">direct</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#7.2" id="1">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraph 7.2 of UN Regulation No 179</data>
+      <data key="d69">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regula</data>
+      <data key="d70">table</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#7.2" id="2">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraph 7.2 of UN Regulation No 179</data>
+      <data key="d69">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regula</data>
+      <data key="d70">table</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#7.2" id="3">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraphs 7.1 and 7.2 of UN Regulation No 179</data>
+      <data key="d69">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regula</data>
+      <data key="d70">table</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#7.1" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraphs 7.1 and 7.2 of UN Regulation No 179</data>
+      <data key="d69">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regula</data>
+      <data key="d70">table</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#7.1.3" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraph 7.1.3 and paragraph 8 of UN Regulation No 179</data>
+      <data key="d69">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regula</data>
+      <data key="d70">table</data>
+    </edge>
+    <edge source="EU2026-1762.ANNEX-IV" target="EU2026-1762/EXT:UNR-179#8" id="0">
+      <data key="d66">CITES</data>
+      <data key="d67">cites</data>
+      <data key="d68">paragraph 7.1.3 and paragraph 8 of UN Regulation No 179</data>
+      <data key="d69">Brake Corner Emission (‘BCE’) ID front axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 BCE ID rear axle text -- As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share coefficient (c-factor) number -- As referred to in paragraphs 7.1 and 7.2 of UN Regulation No 179 Laboratory settings text -- As referred to in paragraph 7.1.3 and paragraph 8 of UN Regula</data>
+      <data key="d70">table</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2018-858" target="EU2026-1762/EXT:EU.REG.2018-858#ART-27" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2018-858" target="EU2026-1762/EXT:EU.REG.2018-858#ART-3.24" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2018-858" target="EU2026-1762/EXT:EU.REG.2018-858#ART-3.41" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2018-858" target="EU2026-1762/EXT:EU.REG.2018-858#ART-33" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2018-858" target="EU2026-1762/EXT:EU.REG.2018-858#ART-34" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2018-858" target="EU2026-1762/EXT:EU.REG.2018-858#ART-4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2020-683" target="EU2026-1762/EXT:EU.REG.2020-683#ANNEX-IV" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.3.PT-i" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-a" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-q" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-s" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-u" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-v" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-4.2" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-4.5" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-5" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2024-1257" target="EU2026-1762/EXT:EU.REG.2024-1257#ART-7.1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:EU.REG.2025-1706" target="EU2026-1762/EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#10" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#3.0" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#4.4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#7" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#7.1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#7.1.3" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#7.2" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#8" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#9.1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#9.4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-2" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-1.APP-3" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-4.APP-1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-4.APP-2" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#ANNEX-5" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#FIGURE-A1/1" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-179" target="EU2026-1762/EXT:UNR-179#PT-3.7.19" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-83" target="EU2026-1762/EXT:UNR-83#ANNEX-12" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+    <edge source="EU2026-1762/EXT:UNR-83" target="EU2026-1762/EXT:UNR-83#ANNEX-4" id="0">
+      <data key="d66">HAS_PROVISION</data>
+    </edge>
+  </graph>
+</graphml>

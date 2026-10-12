@@ -1,0 +1,1028 @@
+{"region_id": "p10-r1", "kind": "figure", "unit_id": "REG154.04.BODY.3.1.18", "page": 10, "node_id": "REG154.04.BODY.FIG-1", "caption_id": "Figure 1"}
+{"region_id": "p18-r1", "kind": "equation", "unit_id": "REG154.04.BODY.3.10.11", "page": 18, "node_id": "REG154.04.BODY.3.10.11.EQ-1", "caption_id": null}
+{"region_id": "p28-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.2", "page": 28, "node_id": "REG154.04.BODY.6.2.TABLE-U1", "caption_id": null}
+{"region_id": "p37-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.3.10", "page": 37, "node_id": "REG154.04.BODY.TABLE-1A", "caption_id": "Table 1A"}
+{"region_id": "p38-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.3.10", "page": 38, "node_id": "REG154.04.BODY.TABLE-1B", "caption_id": "Table 1B"}
+{"region_id": "p40-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.6.2", "page": 40, "node_id": "REG154.04.BODY.TABLE-2", "caption_id": "Table 2"}
+{"region_id": "p41-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.7.2", "page": 41, "node_id": "REG154.04.BODY.TABLE-3a", "caption_id": "Table 3a"}
+{"region_id": "p42-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.7.2", "page": 42, "node_id": "REG154.04.BODY.TABLE-3b", "caption_id": "Table 3b"}
+{"region_id": "p45-r1", "kind": "table", "unit_id": "REG154.04.BODY.6.8.2", "page": 45, "node_id": "REG154.04.BODY.TABLE-4B", "caption_id": "Table 4B"}
+{"region_id": "p45-r2", "kind": "table", "unit_id": "REG154.04.BODY.6.8.2", "page": 45, "node_id": "REG154.04.BODY.TABLE-4A", "caption_id": "Table 4A"}
+{"region_id": "p45-r3", "kind": "table", "unit_id": "REG154.04.BODY.6.8.2", "page": 45, "node_id": "REG154.04.BODY.TABLE-4B", "caption_id": "Table 4B"}
+{"region_id": "p48-r1", "kind": "table", "unit_id": "REG154.04.BODY.7.4.1", "page": 48, "node_id": "REG154.04.BODY.7.4.1.TABLE-U1", "caption_id": null}
+{"region_id": "p51-r1", "kind": "table", "unit_id": "REG154.04.BODY.8.1.2", "page": 51, "node_id": "REG154.04.BODY.TABLE-8/1", "caption_id": "Table 8/1"}
+{"region_id": "p51-r2", "kind": "table", "unit_id": "REG154.04.BODY.8.1.2", "page": 51, "node_id": "REG154.04.BODY.TABLE-8/2", "caption_id": "Table 8/2"}
+{"region_id": "p56-r1", "kind": "figure", "unit_id": "REG154.04.BODY.8.2.3.2", "page": 56, "node_id": "REG154.04.BODY.FIG-8/1", "caption_id": "Figure 8/1"}
+{"region_id": "p65-r1", "kind": "table", "unit_id": "REG154.04.APPENDIX-1.7", "page": 65, "node_id": "REG154.04.APPENDIX-1.7.TABLE-U1", "caption_id": null}
+{"region_id": "p66-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.1", "page": 66, "node_id": "REG154.04.APPENDIX-2.2.1.1.EQ-1", "caption_id": null}
+{"region_id": "p66-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.1", "page": 66, "node_id": "REG154.04.APPENDIX-2.2.1.1.EQ-2", "caption_id": null}
+{"region_id": "p66-r3", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.1", "page": 66, "node_id": "REG154.04.APPENDIX-2.2.1.1.EQ-3", "caption_id": null}
+{"region_id": "p66-r4", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.1", "page": 66, "node_id": "REG154.04.APPENDIX-2.2.1.1.EQ-4", "caption_id": null}
+{"region_id": "p67-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 67, "node_id": "REG154.04.APPENDIX-2.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p68-r1", "kind": "table", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 68, "node_id": "REG154.04.APPENDIX-2.TABLE-A2/1", "caption_id": "Table A2/1"}
+{"region_id": "p69-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 69, "node_id": "REG154.04.APPENDIX-2.2.1.2.EQ-2", "caption_id": null}
+{"region_id": "p69-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 69, "node_id": "REG154.04.APPENDIX-2.2.1.2.EQ-3", "caption_id": null}
+{"region_id": "p69-r3", "kind": "table", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 69, "node_id": "REG154.04.APPENDIX-2.TABLE-A2/2", "caption_id": "Table A2/2"}
+{"region_id": "p69-r4", "kind": "table", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 69, "node_id": "REG154.04.APPENDIX-2.TABLE-A2/2", "caption_id": "Table A2/2"}
+{"region_id": "p70-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 70, "node_id": "REG154.04.APPENDIX-2.2.1.2.EQ-4", "caption_id": null}
+{"region_id": "p70-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 70, "node_id": "REG154.04.APPENDIX-2.2.1.2.EQ-5", "caption_id": null}
+{"region_id": "p70-r3", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.2.1.2", "page": 70, "node_id": "REG154.04.APPENDIX-2.2.1.2.EQ-6", "caption_id": null}
+{"region_id": "p70-r4", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.1.1", "page": 70, "node_id": "REG154.04.APPENDIX-2.3.1.1.EQ-1", "caption_id": null}
+{"region_id": "p70-r5", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.1.1", "page": 70, "node_id": "REG154.04.APPENDIX-2.3.1.1.EQ-2", "caption_id": null}
+{"region_id": "p70-r6", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.1.2", "page": 70, "node_id": "REG154.04.APPENDIX-2.3.1.2.EQ-1", "caption_id": null}
+{"region_id": "p71-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.1.2", "page": 71, "node_id": "REG154.04.APPENDIX-2.3.1.2.EQ-2", "caption_id": null}
+{"region_id": "p71-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.2.1", "page": 71, "node_id": "REG154.04.APPENDIX-2.3.2.1.EQ-1", "caption_id": null}
+{"region_id": "p71-r3", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.2.2", "page": 71, "node_id": "REG154.04.APPENDIX-2.3.2.2.EQ-1", "caption_id": null}
+{"region_id": "p71-r4", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.2.3", "page": 71, "node_id": "REG154.04.APPENDIX-2.3.2.3.EQ-1", "caption_id": null}
+{"region_id": "p72-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p72-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.3.3.1.EQ-2", "caption_id": null}
+{"region_id": "p72-r3", "kind": "table", "unit_id": "REG154.04.APPENDIX-2.3.3.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.TABLE-A2/3", "caption_id": "Table A2/3"}
+{"region_id": "p72-r4", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.3.3.2.1.EQ-1", "caption_id": null}
+{"region_id": "p72-r5", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.3.3.2.1.EQ-2", "caption_id": null}
+{"region_id": "p72-r6", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.3.3.2.1.EQ-3", "caption_id": null}
+{"region_id": "p72-r7", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.1", "page": 72, "node_id": "REG154.04.APPENDIX-2.3.3.2.1.EQ-4", "caption_id": null}
+{"region_id": "p73-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.1", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.1.EQ-5", "caption_id": null}
+{"region_id": "p73-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.1", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.1.EQ-6", "caption_id": null}
+{"region_id": "p73-r3", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.2", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.2.EQ-1", "caption_id": null}
+{"region_id": "p73-r4", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.2", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.2.EQ-2", "caption_id": null}
+{"region_id": "p73-r5", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.2", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.2.EQ-3", "caption_id": null}
+{"region_id": "p73-r6", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.2", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.2.EQ-4", "caption_id": null}
+{"region_id": "p73-r7", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.3.2.2", "page": 73, "node_id": "REG154.04.APPENDIX-2.3.3.2.2.EQ-5", "caption_id": null}
+{"region_id": "p74-r1", "kind": "table", "unit_id": "REG154.04.APPENDIX-2.3.4", "page": 74, "node_id": "REG154.04.APPENDIX-2.3.4.TABLE-U1", "caption_id": null}
+{"region_id": "p75-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.4", "page": 75, "node_id": "REG154.04.APPENDIX-2.3.4.EQ-1", "caption_id": null}
+{"region_id": "p75-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-2.3.4", "page": 75, "node_id": "REG154.04.APPENDIX-2.3.4.EQ-2", "caption_id": null}
+{"region_id": "p77-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.9", "page": 77, "node_id": "REG154.04.APPENDIX-3.1.9.EQ-1", "caption_id": null}
+{"region_id": "p78-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.9.1", "page": 78, "node_id": "REG154.04.APPENDIX-3.1.9.1.EQ-1", "caption_id": null}
+{"region_id": "p78-r2", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.9.1", "page": 78, "node_id": "REG154.04.APPENDIX-3.1.9.1.EQ-2", "caption_id": null}
+{"region_id": "p78-r3", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.9.1", "page": 78, "node_id": "REG154.04.APPENDIX-3.1.9.1.EQ-3", "caption_id": null}
+{"region_id": "p78-r4", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.10", "page": 78, "node_id": "REG154.04.APPENDIX-3.1.10.EQ-1", "caption_id": null}
+{"region_id": "p78-r5", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.11", "page": 78, "node_id": "REG154.04.APPENDIX-3.1.11.EQ-1", "caption_id": null}
+{"region_id": "p79-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-3.1.12", "page": 79, "node_id": "REG154.04.APPENDIX-3.1.12.EQ-1", "caption_id": null}
+{"region_id": "p85-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-5.4.2", "page": 85, "node_id": "REG154.04.APPENDIX-5.4.2.EQ-1", "caption_id": null}
+{"region_id": "p86-r1", "kind": "equation", "unit_id": "REG154.04.APPENDIX-5.4.2", "page": 86, "node_id": "REG154.04.APPENDIX-5.4.2.EQ-2", "caption_id": null}
+{"region_id": "p111-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.3.5.7.1", "page": 111, "node_id": "REG154.04.ANNEX-A1.3.5.7.1.TABLE-U1", "caption_id": null}
+{"region_id": "p118-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I", "page": 118, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.TABLE-U1", "caption_id": null}
+{"region_id": "p118-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I", "page": 118, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.TABLE-U2", "caption_id": null}
+{"region_id": "p119-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1", "page": 119, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p119-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.1", "page": 119, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p119-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.2", "page": 119, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p119-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.4", "page": 119, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p119-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.4", "page": 119, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.4.TABLE-U2", "caption_id": null}
+{"region_id": "p120-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.4", "page": 120, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.4.TABLE-U3", "caption_id": null}
+{"region_id": "p120-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.5", "page": 120, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.5.TABLE-U1", "caption_id": null}
+{"region_id": "p120-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.6", "page": 120, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.6.TABLE-U1", "caption_id": null}
+{"region_id": "p120-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.7", "page": 120, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.7.TABLE-U1", "caption_id": null}
+{"region_id": "p121-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.8", "page": 121, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.8.TABLE-U1", "caption_id": null}
+{"region_id": "p121-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.8", "page": 121, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.8.TABLE-U2", "caption_id": null}
+{"region_id": "p121-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.9", "page": 121, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.9.TABLE-U1", "caption_id": null}
+{"region_id": "p121-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.10", "page": 121, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.10.TABLE-U1", "caption_id": null}
+{"region_id": "p122-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.11", "page": 122, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.11.TABLE-U1", "caption_id": null}
+{"region_id": "p122-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.12", "page": 122, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.1.12.TABLE-U1", "caption_id": null}
+{"region_id": "p122-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.1", "page": 122, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p122-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.2", "page": 122, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p122-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.3", "page": 122, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p122-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.4", "page": 122, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p123-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.4", "page": 123, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.2.4.TABLE-U2", "caption_id": null}
+{"region_id": "p123-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.1", "page": 123, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p123-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.2", "page": 123, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.2.TABLE-U1", "caption_id": null}
+{"region_id": "p124-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.3", "page": 124, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.3.TABLE-U1", "caption_id": null}
+{"region_id": "p124-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.4", "page": 124, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.3.4.TABLE-U1", "caption_id": null}
+{"region_id": "p124-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.1", "page": 124, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.1.TABLE-U1", "caption_id": null}
+{"region_id": "p124-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.2", "page": 124, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.2.TABLE-U1", "caption_id": null}
+{"region_id": "p124-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.3", "page": 124, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.3.TABLE-U1", "caption_id": null}
+{"region_id": "p124-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.4", "page": 124, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.1.4.4.TABLE-U1", "caption_id": null}
+{"region_id": "p125-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1", "page": 125, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p125-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1", "page": 125, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p125-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1", "page": 125, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p126-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1", "page": 126, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1.TABLE-U2", "caption_id": null}
+{"region_id": "p126-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1", "page": 126, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1.TABLE-U3", "caption_id": null}
+{"region_id": "p126-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1", "page": 126, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.1.TABLE-U4", "caption_id": null}
+{"region_id": "p126-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.2", "page": 126, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p126-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.2", "page": 126, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p127-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.3", "page": 127, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p127-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1", "page": 127, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p127-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1", "page": 127, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1.TABLE-U2", "caption_id": null}
+{"region_id": "p128-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1.TABLE-U3", "caption_id": null}
+{"region_id": "p128-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1.TABLE-U4", "caption_id": null}
+{"region_id": "p128-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.1.EQ-1", "caption_id": null}
+{"region_id": "p128-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.2", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p128-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.2", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.2.TABLE-U2", "caption_id": null}
+{"region_id": "p128-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.3", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p128-r7", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.1", "page": 128, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p129-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.1", "page": 129, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.1.TABLE-U2", "caption_id": null}
+{"region_id": "p129-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.2", "page": 129, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.2.TABLE-U1", "caption_id": null}
+{"region_id": "p129-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.2", "page": 129, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.2.TABLE-U2", "caption_id": null}
+{"region_id": "p129-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.3", "page": 129, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.3.TABLE-U1", "caption_id": null}
+{"region_id": "p130-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.4", "page": 130, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.3.4.TABLE-U1", "caption_id": null}
+{"region_id": "p130-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.1", "page": 130, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p130-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.1", "page": 130, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.1.TABLE-U2", "caption_id": null}
+{"region_id": "p130-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.2", "page": 130, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p130-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.2", "page": 130, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p131-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.3", "page": 131, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p131-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.4", "page": 131, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p131-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.2", "page": 131, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.2.TABLE-U1", "caption_id": null}
+{"region_id": "p131-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.2", "page": 131, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.2.TABLE-U2", "caption_id": null}
+{"region_id": "p131-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.3", "page": 131, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.3.TABLE-U1", "caption_id": null}
+{"region_id": "p132-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.3", "page": 132, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.3.TABLE-U2", "caption_id": null}
+{"region_id": "p132-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.3", "page": 132, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.4.3.TABLE-U3", "caption_id": null}
+{"region_id": "p132-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.1", "page": 132, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p132-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.1", "page": 132, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.1.TABLE-U2", "caption_id": null}
+{"region_id": "p132-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.2", "page": 132, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p132-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.2", "page": 132, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p133-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.3", "page": 133, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p133-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.3", "page": 133, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.3.TABLE-U2", "caption_id": null}
+{"region_id": "p133-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.4", "page": 133, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p133-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.4", "page": 133, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.4.TABLE-U2", "caption_id": null}
+{"region_id": "p133-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.5", "page": 133, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.5.TABLE-U1", "caption_id": null}
+{"region_id": "p133-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.5", "page": 133, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.1.5.TABLE-U2", "caption_id": null}
+{"region_id": "p134-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 134, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U1", "caption_id": null}
+{"region_id": "p134-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 134, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U2", "caption_id": null}
+{"region_id": "p134-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 134, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U3", "caption_id": null}
+{"region_id": "p134-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 134, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U4", "caption_id": null}
+{"region_id": "p135-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 135, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U5", "caption_id": null}
+{"region_id": "p135-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 135, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U6", "caption_id": null}
+{"region_id": "p135-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 135, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U7", "caption_id": null}
+{"region_id": "p135-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 135, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U8", "caption_id": null}
+{"region_id": "p135-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2", "page": 135, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.1.5.2.TABLE-U9", "caption_id": null}
+{"region_id": "p136-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.4", "page": 136, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p136-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.4", "page": 136, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p136-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.5", "page": 136, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.5.TABLE-U1", "caption_id": null}
+{"region_id": "p136-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.7", "page": 136, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.7.TABLE-U1", "caption_id": null}
+{"region_id": "p136-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.8", "page": 136, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.8.TABLE-U1", "caption_id": null}
+{"region_id": "p136-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.11", "page": 136, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.11.TABLE-U1", "caption_id": null}
+{"region_id": "p137-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.12", "page": 137, "node_id": "REG154.04.ANNEX-A1.APP1.PART-I.2.12.TABLE-U1", "caption_id": null}
+{"region_id": "p138-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II", "page": 138, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.TABLE-U1", "caption_id": null}
+{"region_id": "p138-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II", "page": 138, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.TABLE-U2", "caption_id": null}
+{"region_id": "p138-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1", "page": 138, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p138-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.1", "page": 138, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p138-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.2", "page": 138, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p139-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.2", "page": 139, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p139-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.3", "page": 139, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p139-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.5", "page": 139, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.5.TABLE-U1", "caption_id": null}
+{"region_id": "p140-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.6", "page": 140, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.6.TABLE-U1", "caption_id": null}
+{"region_id": "p140-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.7", "page": 140, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.7.TABLE-U1", "caption_id": null}
+{"region_id": "p140-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.8", "page": 140, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.8.TABLE-U1", "caption_id": null}
+{"region_id": "p141-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.8", "page": 141, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.8.TABLE-U2", "caption_id": null}
+{"region_id": "p141-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.8", "page": 141, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.8.TABLE-U3", "caption_id": null}
+{"region_id": "p141-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.9", "page": 141, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.9.TABLE-U1", "caption_id": null}
+{"region_id": "p141-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.10", "page": 141, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.10.TABLE-U1", "caption_id": null}
+{"region_id": "p141-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.12", "page": 141, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.1.12.TABLE-U1", "caption_id": null}
+{"region_id": "p142-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.1", "page": 142, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p142-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.2", "page": 142, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p142-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.3", "page": 142, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p142-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.4", "page": 142, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p143-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.4", "page": 143, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.1.2.4.TABLE-U2", "caption_id": null}
+{"region_id": "p143-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2", "page": 143, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.TABLE-U1", "caption_id": null}
+{"region_id": "p143-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.1", "page": 143, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p143-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.1.1", "page": 143, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p144-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.1.2", "page": 144, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p144-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.2", "page": 144, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p144-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.2.1", "page": 144, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p144-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.2.2", "page": 144, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p145-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.3", "page": 145, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p145-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.4", "page": 145, "node_id": "REG154.04.ANNEX-A1.APP1.PART-II.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p145-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III", "page": 145, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.TABLE-U1", "caption_id": null}
+{"region_id": "p145-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III", "page": 145, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.TABLE-U2", "caption_id": null}
+{"region_id": "p146-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1", "page": 146, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p146-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.1", "page": 146, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p146-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.2", "page": 146, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p146-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.3", "page": 146, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p146-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.4", "page": 146, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p146-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.5", "page": 146, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.5.TABLE-U1", "caption_id": null}
+{"region_id": "p147-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.5", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.1.5.TABLE-U2", "caption_id": null}
+{"region_id": "p147-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.1", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p147-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.2", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p147-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.3", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p147-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.4", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.1.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p147-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.TABLE-U1", "caption_id": null}
+{"region_id": "p147-r7", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.1", "page": 147, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p148-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.1", "page": 148, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.1.TABLE-U2", "caption_id": null}
+{"region_id": "p148-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.1", "page": 148, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.1.EQ-1", "caption_id": null}
+{"region_id": "p148-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.2", "page": 148, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p148-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.2", "page": 148, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.2.EQ-1", "caption_id": null}
+{"region_id": "p149-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.3", "page": 149, "node_id": "REG154.04.ANNEX-A1.APP1.PART-III.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p150-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2", "page": 150, "node_id": "REG154.04.ANNEX-A1.APP2.TABLE-U1", "caption_id": null}
+{"region_id": "p150-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2", "page": 150, "node_id": "REG154.04.ANNEX-A1.APP2.TABLE-U2", "caption_id": null}
+{"region_id": "p150-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.1", "page": 150, "node_id": "REG154.04.ANNEX-A1.APP2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p150-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1", "page": 150, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p150-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.1", "page": 150, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p151-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.1", "page": 151, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.1.TABLE-U2", "caption_id": null}
+{"region_id": "p151-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.2", "page": 151, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p151-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.2", "page": 151, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p151-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.3", "page": 151, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p151-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.3", "page": 151, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.3.TABLE-U2", "caption_id": null}
+{"region_id": "p152-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.3", "page": 152, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.3.TABLE-U3", "caption_id": null}
+{"region_id": "p152-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.4", "page": 152, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p152-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.1.4", "page": 152, "node_id": "REG154.04.ANNEX-A1.APP2.2.1.4.TABLE-U2", "caption_id": null}
+{"region_id": "p152-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.1", "page": 152, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p152-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.1", "page": 152, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.1.TABLE-U2", "caption_id": null}
+{"region_id": "p152-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.2", "page": 152, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p153-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.2", "page": 153, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.2.TABLE-U2", "caption_id": null}
+{"region_id": "p153-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.3", "page": 153, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p153-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.3", "page": 153, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.3.TABLE-U2", "caption_id": null}
+{"region_id": "p153-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.4", "page": 153, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p153-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.2.4", "page": 153, "node_id": "REG154.04.ANNEX-A1.APP2.2.2.4.TABLE-U2", "caption_id": null}
+{"region_id": "p154-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.3.1", "page": 154, "node_id": "REG154.04.ANNEX-A1.APP2.2.3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p154-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 154, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.TABLE-U1", "caption_id": null}
+{"region_id": "p154-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 154, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.TABLE-U2", "caption_id": null}
+{"region_id": "p155-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 155, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.TABLE-U3", "caption_id": null}
+{"region_id": "p155-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 155, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.TABLE-U4", "caption_id": null}
+{"region_id": "p155-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 155, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.EQ-1", "caption_id": null}
+{"region_id": "p156-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 156, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.TABLE-U5", "caption_id": null}
+{"region_id": "p157-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 157, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.TABLE-U6", "caption_id": null}
+{"region_id": "p157-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-A1.APP2.2.4.1", "page": 157, "node_id": "REG154.04.ANNEX-A1.APP2.2.4.1.EQ-2", "caption_id": null}
+{"region_id": "p158-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-A1.APP3", "page": 158, "node_id": "REG154.04.ANNEX-A1.APP3.EQ-1", "caption_id": null}
+{"region_id": "p159-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP3", "page": 159, "node_id": "REG154.04.ANNEX-A1.APP3.TABLE-U1", "caption_id": null}
+{"region_id": "p160-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP3", "page": 160, "node_id": "REG154.04.ANNEX-A1.APP3.TABLE-U2", "caption_id": null}
+{"region_id": "p161-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4", "page": 161, "node_id": "REG154.04.ANNEX-A1.APP4.TABLE-U1", "caption_id": null}
+{"region_id": "p161-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4", "page": 161, "node_id": "REG154.04.ANNEX-A1.APP4.TABLE-U2", "caption_id": null}
+{"region_id": "p161-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.1", "page": 161, "node_id": "REG154.04.ANNEX-A1.APP4.1.TABLE-U1", "caption_id": null}
+{"region_id": "p161-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.1.1", "page": 161, "node_id": "REG154.04.ANNEX-A1.APP4.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p161-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.1.2", "page": 161, "node_id": "REG154.04.ANNEX-A1.APP4.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p161-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.1.4", "page": 161, "node_id": "REG154.04.ANNEX-A1.APP4.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p162-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.1.4", "page": 162, "node_id": "REG154.04.ANNEX-A1.APP4.1.4.TABLE-U2", "caption_id": null}
+{"region_id": "p162-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.1", "page": 162, "node_id": "REG154.04.ANNEX-A1.APP4.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p162-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.2", "page": 162, "node_id": "REG154.04.ANNEX-A1.APP4.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p162-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.2", "page": 162, "node_id": "REG154.04.ANNEX-A1.APP4.2.2.TABLE-U2", "caption_id": null}
+{"region_id": "p162-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3", "page": 162, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p162-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.1", "page": 162, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p163-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.2", "page": 163, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.2.TABLE-U1", "caption_id": null}
+{"region_id": "p163-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.3", "page": 163, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.3.TABLE-U1", "caption_id": null}
+{"region_id": "p163-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.4", "page": 163, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.4.TABLE-U1", "caption_id": null}
+{"region_id": "p163-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.5", "page": 163, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.5.TABLE-U1", "caption_id": null}
+{"region_id": "p163-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.5", "page": 163, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.5.TABLE-U2", "caption_id": null}
+{"region_id": "p163-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A1.APP4.2.3.6", "page": 163, "node_id": "REG154.04.ANNEX-A1.APP4.2.3.6.TABLE-U1", "caption_id": null}
+{"region_id": "p167-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.1.13.3", "page": 167, "node_id": "REG154.04.ANNEX-A2.1.13.3.TABLE-U1", "caption_id": null}
+{"region_id": "p168-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.1", "page": 168, "node_id": "REG154.04.ANNEX-A2.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p168-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.1", "page": 168, "node_id": "REG154.04.ANNEX-A2.2.1.TABLE-U2", "caption_id": null}
+{"region_id": "p169-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.1", "page": 169, "node_id": "REG154.04.ANNEX-A2.2.1.TABLE-U3", "caption_id": null}
+{"region_id": "p169-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.1", "page": 169, "node_id": "REG154.04.ANNEX-A2.2.1.TABLE-U4", "caption_id": null}
+{"region_id": "p170-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.1.1.4", "page": 170, "node_id": "REG154.04.ANNEX-A2.2.5.1.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p171-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.1.2.4", "page": 171, "node_id": "REG154.04.ANNEX-A2.2.5.1.2.4.TABLE-U1", "caption_id": null}
+{"region_id": "p172-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.1.3.4", "page": 172, "node_id": "REG154.04.ANNEX-A2.2.5.1.3.4.TABLE-U1", "caption_id": null}
+{"region_id": "p172-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.1.4.1", "page": 172, "node_id": "REG154.04.ANNEX-A2.2.5.1.4.1.TABLE-U1", "caption_id": null}
+{"region_id": "p172-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.2.1.1.2.3", "page": 172, "node_id": "REG154.04.ANNEX-A2.2.5.2.1.1.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p173-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.2.1.2.2.3", "page": 173, "node_id": "REG154.04.ANNEX-A2.2.5.2.1.2.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p175-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.2.3", "page": 175, "node_id": "REG154.04.ANNEX-A2.2.5.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p176-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.1.2.2.3", "page": 176, "node_id": "REG154.04.ANNEX-A2.2.5.3.1.2.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p177-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.4", "page": 177, "node_id": "REG154.04.ANNEX-A2.2.5.3.4.TABLE-U1", "caption_id": null}
+{"region_id": "p177-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.4", "page": 177, "node_id": "REG154.04.ANNEX-A2.2.5.3.4.TABLE-U2", "caption_id": null}
+{"region_id": "p177-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.4", "page": 177, "node_id": "REG154.04.ANNEX-A2.2.5.3.4.TABLE-U3", "caption_id": null}
+{"region_id": "p178-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.5", "page": 178, "node_id": "REG154.04.ANNEX-A2.2.5.3.5.TABLE-U1", "caption_id": null}
+{"region_id": "p178-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.5", "page": 178, "node_id": "REG154.04.ANNEX-A2.2.5.3.5.TABLE-U2", "caption_id": null}
+{"region_id": "p178-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.5", "page": 178, "node_id": "REG154.04.ANNEX-A2.2.5.3.5.TABLE-U3", "caption_id": null}
+{"region_id": "p178-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.7.1", "page": 178, "node_id": "REG154.04.ANNEX-A2.2.5.3.7.1.TABLE-U1", "caption_id": null}
+{"region_id": "p179-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.7.2", "page": 179, "node_id": "REG154.04.ANNEX-A2.2.5.3.7.2.TABLE-U1", "caption_id": null}
+{"region_id": "p179-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.7.3", "page": 179, "node_id": "REG154.04.ANNEX-A2.2.5.3.7.3.TABLE-U1", "caption_id": null}
+{"region_id": "p179-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.8.1", "page": 179, "node_id": "REG154.04.ANNEX-A2.2.5.3.8.1.TABLE-U1", "caption_id": null}
+{"region_id": "p179-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.8.1", "page": 179, "node_id": "REG154.04.ANNEX-A2.2.5.3.8.1.TABLE-U2", "caption_id": null}
+{"region_id": "p179-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.8.2", "page": 179, "node_id": "REG154.04.ANNEX-A2.2.5.3.8.2.TABLE-U1", "caption_id": null}
+{"region_id": "p180-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.3.8.2", "page": 180, "node_id": "REG154.04.ANNEX-A2.2.5.3.8.2.TABLE-U2", "caption_id": null}
+{"region_id": "p180-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.4", "page": 180, "node_id": "REG154.04.ANNEX-A2.2.5.4.TABLE-U1", "caption_id": null}
+{"region_id": "p180-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.4", "page": 180, "node_id": "REG154.04.ANNEX-A2.2.5.4.TABLE-U2", "caption_id": null}
+{"region_id": "p180-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.2.5.4", "page": 180, "node_id": "REG154.04.ANNEX-A2.2.5.4.TABLE-U3", "caption_id": null}
+{"region_id": "p188-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A2.APP6", "page": 188, "node_id": "REG154.04.ANNEX-A2.APP6.TABLE-U1", "caption_id": null}
+{"region_id": "p190-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-A3", "page": 190, "node_id": "REG154.04.ANNEX-A3.TABLE-A3/1", "caption_id": "Table A3/1"}
+{"region_id": "p192-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.2.1", "page": 192, "node_id": "REG154.04.ANNEX-B1.2.1.EQ-1", "caption_id": null}
+{"region_id": "p194-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.4", "page": 194, "node_id": "REG154.04.ANNEX-B1.FIG-A1/1", "caption_id": "Figure A1/1"}
+{"region_id": "p195-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.4", "page": 195, "node_id": "REG154.04.ANNEX-B1.FIG-A1/2a", "caption_id": "Figure A1/2a"}
+{"region_id": "p196-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.4", "page": 196, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/1", "caption_id": "Table A1/1"}
+{"region_id": "p200-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.4", "page": 200, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/2a", "caption_id": "Table A1/2a"}
+{"region_id": "p203-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.4", "page": 203, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/2b", "caption_id": "Table A1/2b"}
+{"region_id": "p207-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.5", "page": 207, "node_id": "REG154.04.ANNEX-B1.FIG-A1/3", "caption_id": "Figure A1/3"}
+{"region_id": "p207-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.5", "page": 207, "node_id": "REG154.04.ANNEX-B1.FIG-A1/4", "caption_id": "Figure A1/4"}
+{"region_id": "p208-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.5", "page": 208, "node_id": "REG154.04.ANNEX-B1.FIG-A1/5", "caption_id": "Figure A1/5"}
+{"region_id": "p208-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.5", "page": 208, "node_id": "REG154.04.ANNEX-B1.FIG-A1/6", "caption_id": "Figure A1/6"}
+{"region_id": "p209-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.5", "page": 209, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/3", "caption_id": "Table A1/3"}
+{"region_id": "p213-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.5", "page": 213, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/4", "caption_id": "Table A1/4"}
+{"region_id": "p216-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.5", "page": 216, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/5", "caption_id": "Table A1/5"}
+{"region_id": "p219-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.5", "page": 219, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/6", "caption_id": "Table A1/6"}
+{"region_id": "p221-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.6", "page": 221, "node_id": "REG154.04.ANNEX-B1.FIG-A1/7", "caption_id": "Figure A1/7"}
+{"region_id": "p221-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.6", "page": 221, "node_id": "REG154.04.ANNEX-B1.FIG-A1/8", "caption_id": "Figure A1/8"}
+{"region_id": "p222-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.6", "page": 222, "node_id": "REG154.04.ANNEX-B1.FIG-A1/9", "caption_id": "Figure A1/9"}
+{"region_id": "p222-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.6", "page": 222, "node_id": "REG154.04.ANNEX-B1.FIG-A1/10", "caption_id": "Figure A1/10"}
+{"region_id": "p223-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.6", "page": 223, "node_id": "REG154.04.ANNEX-B1.FIG-A1/11", "caption_id": "Figure A1/11"}
+{"region_id": "p223-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.6", "page": 223, "node_id": "REG154.04.ANNEX-B1.FIG-A1/12", "caption_id": "Figure A1/12"}
+{"region_id": "p224-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.6", "page": 224, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/7", "caption_id": "Table A1/7"}
+{"region_id": "p228-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.6", "page": 228, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/8", "caption_id": "Table A1/8"}
+{"region_id": "p231-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.6", "page": 231, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/9", "caption_id": "Table A1/9"}
+{"region_id": "p234-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.6", "page": 234, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/10", "caption_id": "Table A1/10"}
+{"region_id": "p237-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.6", "page": 237, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/11", "caption_id": "Table A1/11"}
+{"region_id": "p240-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.6", "page": 240, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/12", "caption_id": "Table A1/12"}
+{"region_id": "p242-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.7", "page": 242, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/13", "caption_id": "Table A1/13"}
+{"region_id": "p243-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.8.2.1", "page": 243, "node_id": "REG154.04.ANNEX-B1.FIG-A1/14", "caption_id": "Figure A1/14"}
+{"region_id": "p243-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.1", "page": 243, "node_id": "REG154.04.ANNEX-B1.8.2.1.EQ-1", "caption_id": null}
+{"region_id": "p243-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.8.2.1", "page": 243, "node_id": "REG154.04.ANNEX-B1.8.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p244-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.1", "page": 244, "node_id": "REG154.04.ANNEX-B1.8.2.1.EQ-2", "caption_id": null}
+{"region_id": "p244-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.1", "page": 244, "node_id": "REG154.04.ANNEX-B1.8.2.1.EQ-3", "caption_id": null}
+{"region_id": "p244-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.1", "page": 244, "node_id": "REG154.04.ANNEX-B1.8.2.1.EQ-4", "caption_id": null}
+{"region_id": "p244-r4", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.8.2.2", "page": 244, "node_id": "REG154.04.ANNEX-B1.FIG-A1/15", "caption_id": "Figure A1/15"}
+{"region_id": "p244-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.2", "page": 244, "node_id": "REG154.04.ANNEX-B1.8.2.2.EQ-1", "caption_id": null}
+{"region_id": "p244-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.8.2.2", "page": 244, "node_id": "REG154.04.ANNEX-B1.8.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p245-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.2", "page": 245, "node_id": "REG154.04.ANNEX-B1.8.2.2.EQ-2", "caption_id": null}
+{"region_id": "p245-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.2", "page": 245, "node_id": "REG154.04.ANNEX-B1.8.2.2.EQ-3", "caption_id": null}
+{"region_id": "p245-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.2", "page": 245, "node_id": "REG154.04.ANNEX-B1.8.2.2.EQ-4", "caption_id": null}
+{"region_id": "p245-r5", "kind": "figure", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 245, "node_id": "REG154.04.ANNEX-B1.FIG-A1/16", "caption_id": "Figure A1/16"}
+{"region_id": "p245-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 245, "node_id": "REG154.04.ANNEX-B1.8.2.3.EQ-1", "caption_id": null}
+{"region_id": "p245-r6", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 245, "node_id": "REG154.04.ANNEX-B1.8.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p246-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.2.3.EQ-2", "caption_id": null}
+{"region_id": "p246-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.2.3.EQ-3", "caption_id": null}
+{"region_id": "p246-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.2.3.EQ-4", "caption_id": null}
+{"region_id": "p246-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.2.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.2.3.EQ-5", "caption_id": null}
+{"region_id": "p246-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-1", "caption_id": null}
+{"region_id": "p246-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-2", "caption_id": null}
+{"region_id": "p246-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-3", "caption_id": null}
+{"region_id": "p246-r8", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-4", "caption_id": null}
+{"region_id": "p246-r9", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-5", "caption_id": null}
+{"region_id": "p246-r10", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-6", "caption_id": null}
+{"region_id": "p246-r11", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-7", "caption_id": null}
+{"region_id": "p246-r12", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 246, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-8", "caption_id": null}
+{"region_id": "p247-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 247, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-9", "caption_id": null}
+{"region_id": "p247-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 247, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-10", "caption_id": null}
+{"region_id": "p247-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 247, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-11", "caption_id": null}
+{"region_id": "p247-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.8.3", "page": 247, "node_id": "REG154.04.ANNEX-B1.8.3.EQ-12", "caption_id": null}
+{"region_id": "p248-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.9.2.1.1", "page": 248, "node_id": "REG154.04.ANNEX-B1.9.2.1.1.EQ-1", "caption_id": null}
+{"region_id": "p248-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B1.9.2.1.1", "page": 248, "node_id": "REG154.04.ANNEX-B1.TABLE-A1/8", "caption_id": "Table A1/8"}
+{"region_id": "p248-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.9.2.1.2", "page": 248, "node_id": "REG154.04.ANNEX-B1.9.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p248-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.9.2.1.3", "page": 248, "node_id": "REG154.04.ANNEX-B1.9.2.1.3.EQ-1", "caption_id": null}
+{"region_id": "p248-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.9.2.2.1", "page": 248, "node_id": "REG154.04.ANNEX-B1.9.2.2.1.EQ-1", "caption_id": null}
+{"region_id": "p249-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.9.2.2.2", "page": 249, "node_id": "REG154.04.ANNEX-B1.9.2.2.2.EQ-1", "caption_id": null}
+{"region_id": "p249-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B1.9.2.2.3", "page": 249, "node_id": "REG154.04.ANNEX-B1.9.2.2.3.EQ-1", "caption_id": null}
+{"region_id": "p254-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.2", "page": 254, "node_id": "REG154.04.ANNEX-B2.2.EQ-1", "caption_id": null}
+{"region_id": "p254-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B2.2", "page": 254, "node_id": "REG154.04.ANNEX-B2.FIG-A2/1a", "caption_id": "Figure A2/1a"}
+{"region_id": "p254-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.2", "page": 254, "node_id": "REG154.04.ANNEX-B2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p255-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B2.2", "page": 255, "node_id": "REG154.04.ANNEX-B2.FIG-A2/1b", "caption_id": "Figure A2/1b"}
+{"region_id": "p255-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.2", "page": 255, "node_id": "REG154.04.ANNEX-B2.2.TABLE-U2", "caption_id": null}
+{"region_id": "p256-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.1", "page": 256, "node_id": "REG154.04.ANNEX-B2.3.1.EQ-1", "caption_id": null}
+{"region_id": "p257-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.1", "page": 257, "node_id": "REG154.04.ANNEX-B2.3.1.EQ-2", "caption_id": null}
+{"region_id": "p257-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.1", "page": 257, "node_id": "REG154.04.ANNEX-B2.3.1.EQ-3", "caption_id": null}
+{"region_id": "p257-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.2", "page": 257, "node_id": "REG154.04.ANNEX-B2.3.2.EQ-1", "caption_id": null}
+{"region_id": "p257-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.2", "page": 257, "node_id": "REG154.04.ANNEX-B2.3.2.EQ-2", "caption_id": null}
+{"region_id": "p257-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.2", "page": 257, "node_id": "REG154.04.ANNEX-B2.3.2.EQ-3", "caption_id": null}
+{"region_id": "p257-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.2", "page": 257, "node_id": "REG154.04.ANNEX-B2.3.2.EQ-4", "caption_id": null}
+{"region_id": "p258-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.4", "page": 258, "node_id": "REG154.04.ANNEX-B2.3.4.EQ-1", "caption_id": null}
+{"region_id": "p258-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.3.4", "page": 258, "node_id": "REG154.04.ANNEX-B2.TABLE-A2/1", "caption_id": "Table A2/1"}
+{"region_id": "p259-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B2.3.5", "page": 259, "node_id": "REG154.04.ANNEX-B2.3.5.EQ-1", "caption_id": null}
+{"region_id": "p262-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.4", "page": 262, "node_id": "REG154.04.ANNEX-B2.TABLE-A2/2", "caption_id": "Table A2/2"}
+{"region_id": "p262-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.4", "page": 262, "node_id": "REG154.04.ANNEX-B2.TABLE-A2/3", "caption_id": "Table A2/3"}
+{"region_id": "p262-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.4", "page": 262, "node_id": "REG154.04.ANNEX-B2.TABLE-A2/4", "caption_id": "Table A2/4"}
+{"region_id": "p262-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.4", "page": 262, "node_id": "REG154.04.ANNEX-B2.TABLE-A2/5", "caption_id": "Table A2/5"}
+{"region_id": "p263-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B2.4", "page": 263, "node_id": "REG154.04.ANNEX-B2.TABLE-A2/6", "caption_id": "Table A2/6"}
+{"region_id": "p267-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.3.1", "page": 267, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/1", "caption_id": "Table A3/1"}
+{"region_id": "p268-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.3.3", "page": 268, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/3", "caption_id": "Table A3/3"}
+{"region_id": "p269-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.3.6", "page": 269, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/6a", "caption_id": "Table A3/6a"}
+{"region_id": "p270-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.3.6", "page": 270, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/6b", "caption_id": "Table A3/6b"}
+{"region_id": "p271-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.3.6", "page": 271, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/6b", "caption_id": "Table A3/6b"}
+{"region_id": "p272-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.3.7", "page": 272, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/7", "caption_id": "Table A3/7"}
+{"region_id": "p273-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.4.1", "page": 273, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/8", "caption_id": "Table A3/8"}
+{"region_id": "p274-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.4.2.1", "page": 274, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/9", "caption_id": "Table A3/9"}
+{"region_id": "p274-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.4.2.3", "page": 274, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/11", "caption_id": "Table A3/11"}
+{"region_id": "p275-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.4.2.4", "page": 275, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/12", "caption_id": "Table A3/12"}
+{"region_id": "p276-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.5.1", "page": 276, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/14", "caption_id": "Table A3/14"}
+{"region_id": "p277-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.5.4", "page": 277, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/17", "caption_id": "Table A3/17"}
+{"region_id": "p278-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.5.4", "page": 278, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/18", "caption_id": "Table A3/18"}
+{"region_id": "p279-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.6.1", "page": 279, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/18", "caption_id": "Table A3/18"}
+{"region_id": "p280-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B3.7", "page": 280, "node_id": "REG154.04.ANNEX-B3.TABLE-A3/19", "caption_id": "Table A3/19"}
+{"region_id": "p283-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B4.3.2.3", "page": 283, "node_id": "REG154.04.ANNEX-B4.FIG-A4/1", "caption_id": "Figure A4/1"}
+{"region_id": "p283-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.3.2.3", "page": 283, "node_id": "REG154.04.ANNEX-B4.3.2.3.EQ-1", "caption_id": null}
+{"region_id": "p283-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.3.2.4", "page": 283, "node_id": "REG154.04.ANNEX-B4.3.2.4.EQ-1", "caption_id": null}
+{"region_id": "p284-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.0.02", "page": 284, "node_id": "REG154.04.ANNEX-B4.0.02.EQ-1", "caption_id": null}
+{"region_id": "p284-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.0.02", "page": 284, "node_id": "REG154.04.ANNEX-B4.0.02.EQ-2", "caption_id": null}
+{"region_id": "p284-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.3.2.9", "page": 284, "node_id": "REG154.04.ANNEX-B4.3.2.9.EQ-1", "caption_id": null}
+{"region_id": "p284-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.3.2.9", "page": 284, "node_id": "REG154.04.ANNEX-B4.3.2.9.EQ-2", "caption_id": null}
+{"region_id": "p284-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.3.2.10", "page": 284, "node_id": "REG154.04.ANNEX-B4.3.2.10.EQ-1", "caption_id": null}
+{"region_id": "p288-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.2.1.2.3.4", "page": 288, "node_id": "REG154.04.ANNEX-B4.4.2.1.2.3.4.EQ-1", "caption_id": null}
+{"region_id": "p288-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.2.1.3", "page": 288, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/1", "caption_id": "Table A4/1"}
+{"region_id": "p288-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.2.1.3", "page": 288, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/1", "caption_id": "Table A4/1"}
+{"region_id": "p291-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.2.2.1", "page": 291, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/2", "caption_id": "Table A4/2"}
+{"region_id": "p292-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.2.2.3.1", "page": 292, "node_id": "REG154.04.ANNEX-B4.4.2.2.3.1.EQ-1", "caption_id": null}
+{"region_id": "p293-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.2.4.1.2", "page": 293, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/3", "caption_id": "Table A4/3"}
+{"region_id": "p294-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.2", "page": 294, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.2.EQ-1", "caption_id": null}
+{"region_id": "p294-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.2", "page": 294, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.2.EQ-2", "caption_id": null}
+{"region_id": "p294-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.2", "page": 294, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.2.EQ-3", "caption_id": null}
+{"region_id": "p295-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.2", "page": 295, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.2.EQ-4", "caption_id": null}
+{"region_id": "p295-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.2", "page": 295, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.2.EQ-5", "caption_id": null}
+{"region_id": "p295-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.2", "page": 295, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/4", "caption_id": "Table A4/4"}
+{"region_id": "p295-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.4", "page": 295, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.4.EQ-1", "caption_id": null}
+{"region_id": "p295-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.4", "page": 295, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.4.EQ-2", "caption_id": null}
+{"region_id": "p295-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.4", "page": 295, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.4.EQ-3", "caption_id": null}
+{"region_id": "p296-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.4", "page": 296, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.4.EQ-4", "caption_id": null}
+{"region_id": "p296-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.1.4.4", "page": 296, "node_id": "REG154.04.ANNEX-B4.4.3.1.4.4.EQ-5", "caption_id": null}
+{"region_id": "p298-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5", "page": 298, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/5", "caption_id": "Table A4/5"}
+{"region_id": "p298-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5", "page": 298, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/5", "caption_id": "Table A4/5"}
+{"region_id": "p298-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5", "page": 298, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.EQ-1", "caption_id": null}
+{"region_id": "p299-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.1", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.1.EQ-1", "caption_id": null}
+{"region_id": "p299-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.1", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.1.EQ-2", "caption_id": null}
+{"region_id": "p299-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.2", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.2.EQ-1", "caption_id": null}
+{"region_id": "p299-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.3", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.3.EQ-1", "caption_id": null}
+{"region_id": "p299-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.3", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.3.EQ-2", "caption_id": null}
+{"region_id": "p299-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.4", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.4.EQ-1", "caption_id": null}
+{"region_id": "p299-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.5.4", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.5.4.EQ-2", "caption_id": null}
+{"region_id": "p299-r8", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.6", "page": 299, "node_id": "REG154.04.ANNEX-B4.4.3.2.6.EQ-1", "caption_id": null}
+{"region_id": "p300-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.6.2", "page": 300, "node_id": "REG154.04.ANNEX-B4.4.3.2.6.2.EQ-1", "caption_id": null}
+{"region_id": "p300-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.6.3", "page": 300, "node_id": "REG154.04.ANNEX-B4.4.3.2.6.3.EQ-1", "caption_id": null}
+{"region_id": "p300-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.6.7", "page": 300, "node_id": "REG154.04.ANNEX-B4.4.3.2.6.7.EQ-1", "caption_id": null}
+{"region_id": "p301-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.3.2.6.10", "page": 301, "node_id": "REG154.04.ANNEX-B4.4.3.2.6.10.EQ-1", "caption_id": null}
+{"region_id": "p302-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.4.4.2.4", "page": 302, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/6", "caption_id": "Table A4/6"}
+{"region_id": "p302-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.1", "page": 302, "node_id": "REG154.04.ANNEX-B4.4.4.3.1.EQ-1", "caption_id": null}
+{"region_id": "p302-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.1", "page": 302, "node_id": "REG154.04.ANNEX-B4.4.4.3.1.EQ-2", "caption_id": null}
+{"region_id": "p303-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.1", "page": 303, "node_id": "REG154.04.ANNEX-B4.4.4.3.1.EQ-3", "caption_id": null}
+{"region_id": "p303-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.1", "page": 303, "node_id": "REG154.04.ANNEX-B4.4.4.3.1.EQ-4", "caption_id": null}
+{"region_id": "p303-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.2", "page": 303, "node_id": "REG154.04.ANNEX-B4.4.4.3.2.EQ-1", "caption_id": null}
+{"region_id": "p303-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.2", "page": 303, "node_id": "REG154.04.ANNEX-B4.4.4.3.2.EQ-2", "caption_id": null}
+{"region_id": "p303-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.2", "page": 303, "node_id": "REG154.04.ANNEX-B4.4.4.3.2.EQ-3", "caption_id": null}
+{"region_id": "p303-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.4.3.2", "page": 303, "node_id": "REG154.04.ANNEX-B4.4.4.3.2.EQ-4", "caption_id": null}
+{"region_id": "p304-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.5.1", "page": 304, "node_id": "REG154.04.ANNEX-B4.4.5.1.EQ-1", "caption_id": null}
+{"region_id": "p304-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.5.2", "page": 304, "node_id": "REG154.04.ANNEX-B4.4.5.2.EQ-1", "caption_id": null}
+{"region_id": "p304-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.5.3.1.1", "page": 304, "node_id": "REG154.04.ANNEX-B4.4.5.3.1.1.EQ-1", "caption_id": null}
+{"region_id": "p305-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.5.4", "page": 305, "node_id": "REG154.04.ANNEX-B4.4.5.4.EQ-1", "caption_id": null}
+{"region_id": "p305-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.5.5.1", "page": 305, "node_id": "REG154.04.ANNEX-B4.4.5.5.1.EQ-1", "caption_id": null}
+{"region_id": "p306-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.4.5.5.2.1", "page": 306, "node_id": "REG154.04.ANNEX-B4.4.5.5.2.1.EQ-1", "caption_id": null}
+{"region_id": "p307-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.1.1", "page": 307, "node_id": "REG154.04.ANNEX-B4.5.1.1.EQ-1", "caption_id": null}
+{"region_id": "p307-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.1.1", "page": 307, "node_id": "REG154.04.ANNEX-B4.5.1.1.EQ-2", "caption_id": null}
+{"region_id": "p308-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.1.2", "page": 308, "node_id": "REG154.04.ANNEX-B4.5.1.2.EQ-1", "caption_id": null}
+{"region_id": "p308-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.1.2", "page": 308, "node_id": "REG154.04.ANNEX-B4.5.1.2.EQ-2", "caption_id": null}
+{"region_id": "p309-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.2.2", "page": 309, "node_id": "REG154.04.ANNEX-B4.5.2.2.EQ-1", "caption_id": null}
+{"region_id": "p309-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.2.2", "page": 309, "node_id": "REG154.04.ANNEX-B4.5.2.2.EQ-2", "caption_id": null}
+{"region_id": "p309-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.5.2.2", "page": 309, "node_id": "REG154.04.ANNEX-B4.5.2.2.EQ-3", "caption_id": null}
+{"region_id": "p310-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.2.4", "page": 310, "node_id": "REG154.04.ANNEX-B4.6.2.4.EQ-1", "caption_id": null}
+{"region_id": "p310-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.2.4", "page": 310, "node_id": "REG154.04.ANNEX-B4.6.2.4.EQ-2", "caption_id": null}
+{"region_id": "p313-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.5.2.1", "page": 313, "node_id": "REG154.04.ANNEX-B4.6.5.2.1.EQ-1", "caption_id": null}
+{"region_id": "p313-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.5.2.1", "page": 313, "node_id": "REG154.04.ANNEX-B4.6.5.2.1.EQ-2", "caption_id": null}
+{"region_id": "p313-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.5.2.1", "page": 313, "node_id": "REG154.04.ANNEX-B4.6.5.2.1.EQ-3", "caption_id": null}
+{"region_id": "p314-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.5.2.3.3", "page": 314, "node_id": "REG154.04.ANNEX-B4.6.5.2.3.3.EQ-1", "caption_id": null}
+{"region_id": "p315-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.6.3", "page": 315, "node_id": "REG154.04.ANNEX-B4.6.6.3.EQ-1", "caption_id": null}
+{"region_id": "p316-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.6.3", "page": 316, "node_id": "REG154.04.ANNEX-B4.6.6.3.EQ-2", "caption_id": null}
+{"region_id": "p316-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.1", "page": 316, "node_id": "REG154.04.ANNEX-B4.6.7.1.EQ-1", "caption_id": null}
+{"region_id": "p316-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.2.1", "page": 316, "node_id": "REG154.04.ANNEX-B4.6.7.2.1.EQ-1", "caption_id": null}
+{"region_id": "p317-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.2.1", "page": 317, "node_id": "REG154.04.ANNEX-B4.6.7.2.1.EQ-2", "caption_id": null}
+{"region_id": "p317-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.2.1", "page": 317, "node_id": "REG154.04.ANNEX-B4.6.7.2.1.EQ-3", "caption_id": null}
+{"region_id": "p317-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.2.1", "page": 317, "node_id": "REG154.04.ANNEX-B4.6.7.2.1.EQ-4", "caption_id": null}
+{"region_id": "p317-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.2.2", "page": 317, "node_id": "REG154.04.ANNEX-B4.6.7.2.2.EQ-1", "caption_id": null}
+{"region_id": "p317-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.7.3", "page": 317, "node_id": "REG154.04.ANNEX-B4.6.7.3.EQ-1", "caption_id": null}
+{"region_id": "p318-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.8", "page": 318, "node_id": "REG154.04.ANNEX-B4.6.8.EQ-1", "caption_id": null}
+{"region_id": "p318-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.8.1", "page": 318, "node_id": "REG154.04.ANNEX-B4.6.8.1.EQ-1", "caption_id": null}
+{"region_id": "p318-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.6.8.2", "page": 318, "node_id": "REG154.04.ANNEX-B4.6.8.2.EQ-1", "caption_id": null}
+{"region_id": "p320-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B4.7.3.4.1", "page": 320, "node_id": "REG154.04.ANNEX-B4.TABLE-A4/7", "caption_id": "Table A4/7"}
+{"region_id": "p321-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.7.3.4.3.3", "page": 321, "node_id": "REG154.04.ANNEX-B4.7.3.4.3.3.EQ-1", "caption_id": null}
+{"region_id": "p321-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.1", "page": 321, "node_id": "REG154.04.ANNEX-B4.8.1.1.EQ-1", "caption_id": null}
+{"region_id": "p322-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.1", "page": 322, "node_id": "REG154.04.ANNEX-B4.8.1.1.EQ-2", "caption_id": null}
+{"region_id": "p322-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.1", "page": 322, "node_id": "REG154.04.ANNEX-B4.8.1.1.EQ-3", "caption_id": null}
+{"region_id": "p322-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.3.1", "page": 322, "node_id": "REG154.04.ANNEX-B4.8.1.3.1.EQ-1", "caption_id": null}
+{"region_id": "p322-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.3.2", "page": 322, "node_id": "REG154.04.ANNEX-B4.8.1.3.2.EQ-1", "caption_id": null}
+{"region_id": "p323-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.3.3", "page": 323, "node_id": "REG154.04.ANNEX-B4.8.1.3.3.EQ-1", "caption_id": null}
+{"region_id": "p323-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.3.3", "page": 323, "node_id": "REG154.04.ANNEX-B4.8.1.3.3.EQ-2", "caption_id": null}
+{"region_id": "p323-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.3.4.1.2", "page": 323, "node_id": "REG154.04.ANNEX-B4.8.1.3.4.1.2.EQ-1", "caption_id": null}
+{"region_id": "p323-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.4", "page": 323, "node_id": "REG154.04.ANNEX-B4.8.1.4.EQ-1", "caption_id": null}
+{"region_id": "p324-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.4", "page": 324, "node_id": "REG154.04.ANNEX-B4.8.1.4.EQ-2", "caption_id": null}
+{"region_id": "p324-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.4", "page": 324, "node_id": "REG154.04.ANNEX-B4.8.1.4.EQ-3", "caption_id": null}
+{"region_id": "p324-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.1.4", "page": 324, "node_id": "REG154.04.ANNEX-B4.8.1.4.EQ-4", "caption_id": null}
+{"region_id": "p324-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.1", "page": 324, "node_id": "REG154.04.ANNEX-B4.8.2.1.EQ-1", "caption_id": null}
+{"region_id": "p324-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.1", "page": 324, "node_id": "REG154.04.ANNEX-B4.8.2.1.EQ-2", "caption_id": null}
+{"region_id": "p324-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.1", "page": 324, "node_id": "REG154.04.ANNEX-B4.8.2.1.EQ-3", "caption_id": null}
+{"region_id": "p325-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.3.1", "page": 325, "node_id": "REG154.04.ANNEX-B4.8.2.3.1.EQ-1", "caption_id": null}
+{"region_id": "p325-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.3.2", "page": 325, "node_id": "REG154.04.ANNEX-B4.8.2.3.2.EQ-1", "caption_id": null}
+{"region_id": "p325-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.3.3", "page": 325, "node_id": "REG154.04.ANNEX-B4.8.2.3.3.EQ-1", "caption_id": null}
+{"region_id": "p326-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.3.3", "page": 326, "node_id": "REG154.04.ANNEX-B4.8.2.3.3.EQ-2", "caption_id": null}
+{"region_id": "p326-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.4.1.1", "page": 326, "node_id": "REG154.04.ANNEX-B4.8.2.4.1.1.EQ-1", "caption_id": null}
+{"region_id": "p326-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.4.3", "page": 326, "node_id": "REG154.04.ANNEX-B4.8.2.4.3.EQ-1", "caption_id": null}
+{"region_id": "p326-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B4.8.2.4.3", "page": 326, "node_id": "REG154.04.ANNEX-B4.8.2.4.3.EQ-2", "caption_id": null}
+{"region_id": "p328-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.1.1.2", "page": 328, "node_id": "REG154.04.ANNEX-B5.FIG-A5/1", "caption_id": "Figure A5/1"}
+{"region_id": "p328-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.1.1.2", "page": 328, "node_id": "REG154.04.ANNEX-B5.FIG-A5/2", "caption_id": "Figure A5/2"}
+{"region_id": "p335-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.3.6", "page": 335, "node_id": "REG154.04.ANNEX-B5.FIG-A5/3", "caption_id": "Figure A5/3"}
+{"region_id": "p336-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.3.6.3.2", "page": 336, "node_id": "REG154.04.ANNEX-B5.FIG-A5/4", "caption_id": "Figure A5/4"}
+{"region_id": "p336-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.3.6.4.1", "page": 336, "node_id": "REG154.04.ANNEX-B5.FIG-A5/5", "caption_id": "Figure A5/5"}
+{"region_id": "p336-r3", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.3.6.4.2", "page": 336, "node_id": "REG154.04.ANNEX-B5.FIG-A5/5", "caption_id": "Figure A5/5"}
+{"region_id": "p336-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.3.3.6.4.3", "page": 336, "node_id": "REG154.04.ANNEX-B5.3.3.6.4.3.TABLE-U1", "caption_id": null}
+{"region_id": "p338-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.4.2.4", "page": 338, "node_id": "REG154.04.ANNEX-B5.FIG-A5/6", "caption_id": "Figure A5/6"}
+{"region_id": "p339-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.2.5.3", "page": 339, "node_id": "REG154.04.ANNEX-B5.3.4.2.5.3.EQ-1", "caption_id": null}
+{"region_id": "p339-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.2.5.4", "page": 339, "node_id": "REG154.04.ANNEX-B5.3.4.2.5.4.EQ-1", "caption_id": null}
+{"region_id": "p339-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.2.5.4", "page": 339, "node_id": "REG154.04.ANNEX-B5.3.4.2.5.4.EQ-2", "caption_id": null}
+{"region_id": "p339-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.3.1", "page": 339, "node_id": "REG154.04.ANNEX-B5.3.4.3.1.EQ-1", "caption_id": null}
+{"region_id": "p341-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.4.3.3", "page": 341, "node_id": "REG154.04.ANNEX-B5.FIG-A5/7", "caption_id": "Figure A5/7"}
+{"region_id": "p341-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.3.3.3.1", "page": 341, "node_id": "REG154.04.ANNEX-B5.3.4.3.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p342-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.4.2.1", "page": 342, "node_id": "REG154.04.ANNEX-B5.3.4.4.2.1.EQ-1", "caption_id": null}
+{"region_id": "p342-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.4.2.1", "page": 342, "node_id": "REG154.04.ANNEX-B5.3.4.4.2.1.EQ-2", "caption_id": null}
+{"region_id": "p342-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.4.2.1", "page": 342, "node_id": "REG154.04.ANNEX-B5.3.4.4.2.1.EQ-3", "caption_id": null}
+{"region_id": "p342-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.4.2.1", "page": 342, "node_id": "REG154.04.ANNEX-B5.3.4.4.2.1.EQ-4", "caption_id": null}
+{"region_id": "p343-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.4.5.2", "page": 343, "node_id": "REG154.04.ANNEX-B5.FIG-A5/8", "caption_id": "Figure A5/8"}
+{"region_id": "p343-r3", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.3.4.5.7.1", "page": 343, "node_id": "REG154.04.ANNEX-B5.FIG-A5/8", "caption_id": "Figure A5/8"}
+{"region_id": "p343-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.3.4.5.7.3", "page": 343, "node_id": "REG154.04.ANNEX-B5.3.4.5.7.3.TABLE-U1", "caption_id": null}
+{"region_id": "p344-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.3.4.5.8", "page": 344, "node_id": "REG154.04.ANNEX-B5.3.4.5.8.EQ-1", "caption_id": null}
+{"region_id": "p347-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.4.1.5.1", "page": 347, "node_id": "REG154.04.ANNEX-B5.FIG-A5/9", "caption_id": "Figure A5/9"}
+{"region_id": "p348-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.4.1.5.3.5", "page": 348, "node_id": "REG154.04.ANNEX-B5.FIG-A5/10", "caption_id": "Figure A5/10"}
+{"region_id": "p349-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.4.2.1.1.2", "page": 349, "node_id": "REG154.04.ANNEX-B5.FIG-A5/11", "caption_id": "Figure A5/11"}
+{"region_id": "p351-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.4.2.1.2.11", "page": 351, "node_id": "REG154.04.ANNEX-B5.FIG-A5/12", "caption_id": "Figure A5/12"}
+{"region_id": "p354-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.4.2.2.2", "page": 354, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/1", "caption_id": "Table A5/1"}
+{"region_id": "p354-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.2.2.4", "page": 354, "node_id": "REG154.04.ANNEX-B5.4.2.2.4.EQ-1", "caption_id": null}
+{"region_id": "p354-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.2.2.4", "page": 354, "node_id": "REG154.04.ANNEX-B5.4.2.2.4.EQ-2", "caption_id": null}
+{"region_id": "p357-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.3", "page": 357, "node_id": "REG154.04.ANNEX-B5.4.3.1.3.3.EQ-1", "caption_id": null}
+{"region_id": "p357-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.3", "page": 357, "node_id": "REG154.04.ANNEX-B5.4.3.1.3.3.EQ-2", "caption_id": null}
+{"region_id": "p357-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.3", "page": 357, "node_id": "REG154.04.ANNEX-B5.4.3.1.3.3.EQ-3", "caption_id": null}
+{"region_id": "p358-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.3", "page": 358, "node_id": "REG154.04.ANNEX-B5.4.3.1.3.3.EQ-4", "caption_id": null}
+{"region_id": "p358-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.3.1", "page": 358, "node_id": "REG154.04.ANNEX-B5.4.3.1.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p359-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.4", "page": 359, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/2", "caption_id": "Table A5/2"}
+{"region_id": "p359-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.4", "page": 359, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/2a", "caption_id": "Table A5/2a"}
+{"region_id": "p359-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.4.3.1.3.4", "page": 359, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/2b", "caption_id": "Table A5/2b"}
+{"region_id": "p360-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.4.3.1.4", "page": 360, "node_id": "REG154.04.ANNEX-B5.FIG-A5/14a", "caption_id": "Figure A5/14a"}
+{"region_id": "p360-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.4.3.1.4", "page": 360, "node_id": "REG154.04.ANNEX-B5.FIG-A5/14b", "caption_id": "Figure A5/14b"}
+{"region_id": "p361-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.5.1", "page": 361, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/3", "caption_id": "Table A5/3"}
+{"region_id": "p362-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.5.1", "page": 362, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/4", "caption_id": "Table A5/4"}
+{"region_id": "p362-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.5.1", "page": 362, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/5", "caption_id": "Table A5/5"}
+{"region_id": "p363-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.4.3.2", "page": 363, "node_id": "REG154.04.ANNEX-B5.5.4.3.2.EQ-1", "caption_id": null}
+{"region_id": "p363-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.4.3.2", "page": 363, "node_id": "REG154.04.ANNEX-B5.5.4.3.2.EQ-2", "caption_id": null}
+{"region_id": "p363-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.4.3.2", "page": 363, "node_id": "REG154.04.ANNEX-B5.5.4.3.2.EQ-3", "caption_id": null}
+{"region_id": "p364-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.5.5.1.5", "page": 364, "node_id": "REG154.04.ANNEX-B5.FIG-A5/15", "caption_id": "Figure A5/15"}
+{"region_id": "p364-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.5.1.7", "page": 364, "node_id": "REG154.04.ANNEX-B5.5.5.1.7.EQ-1", "caption_id": null}
+{"region_id": "p364-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B5.5.5.1.7", "page": 364, "node_id": "REG154.04.ANNEX-B5.TABLE-A5/3", "caption_id": "Table A5/3"}
+{"region_id": "p365-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.5.7.1.1", "page": 365, "node_id": "REG154.04.ANNEX-B5.FIG-A5/16", "caption_id": "Figure A5/16"}
+{"region_id": "p365-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B5.5.7.1.1", "page": 365, "node_id": "REG154.04.ANNEX-B5.FIG-A5/17", "caption_id": "Figure A5/17"}
+{"region_id": "p367-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.7.2.2", "page": 367, "node_id": "REG154.04.ANNEX-B5.5.7.2.2.EQ-1", "caption_id": null}
+{"region_id": "p368-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.7.2.2", "page": 368, "node_id": "REG154.04.ANNEX-B5.5.7.2.2.EQ-2", "caption_id": null}
+{"region_id": "p368-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.7.2.2", "page": 368, "node_id": "REG154.04.ANNEX-B5.5.7.2.2.EQ-3", "caption_id": null}
+{"region_id": "p368-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.7.2.2", "page": 368, "node_id": "REG154.04.ANNEX-B5.5.7.2.2.EQ-4", "caption_id": null}
+{"region_id": "p368-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B5.5.7.2.2", "page": 368, "node_id": "REG154.04.ANNEX-B5.5.7.2.2.EQ-5", "caption_id": null}
+{"region_id": "p371-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.1.2.1.4", "page": 371, "node_id": "REG154.04.ANNEX-B6.1.1.2.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p371-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.1.1.2.1.4", "page": 371, "node_id": "REG154.04.ANNEX-B6.1.1.2.1.4.EQ-1", "caption_id": null}
+{"region_id": "p372-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.1.2", "page": 372, "node_id": "REG154.04.ANNEX-B6.FIG-A6/1", "caption_id": "Figure A6/1"}
+{"region_id": "p374-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 374, "node_id": "REG154.04.ANNEX-B6.TABLE-A6/1", "caption_id": "Table A6/1"}
+{"region_id": "p375-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 375, "node_id": "REG154.04.ANNEX-B6.FIG-A6/1", "caption_id": "Figure A6/1"}
+{"region_id": "p376-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 376, "node_id": "REG154.04.ANNEX-B6.TABLE-A6/2", "caption_id": "Table A6/2"}
+{"region_id": "p376-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 376, "node_id": "REG154.04.ANNEX-B6.TABLE-A6/2", "caption_id": "Table A6/2"}
+{"region_id": "p376-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 376, "node_id": "REG154.04.ANNEX-B6.TABLE-A6/2", "caption_id": "Table A6/2"}
+{"region_id": "p377-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 377, "node_id": "REG154.04.ANNEX-B6.TABLE-A6/2", "caption_id": "Table A6/2"}
+{"region_id": "p377-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.1.2.3.9", "page": 377, "node_id": "REG154.04.ANNEX-B6.1.2.3.9.TABLE-U1", "caption_id": null}
+{"region_id": "p377-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.1.2.4.1.1", "page": 377, "node_id": "REG154.04.ANNEX-B6.1.2.4.1.1.EQ-1", "caption_id": null}
+{"region_id": "p378-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.2.1.2", "page": 378, "node_id": "REG154.04.ANNEX-B6.2.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p380-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.2.2.2.1.2", "page": 380, "node_id": "REG154.04.ANNEX-B6.2.2.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p381-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.2.3.2.2", "page": 381, "node_id": "REG154.04.ANNEX-B6.2.3.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p381-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.2.3.2.2", "page": 381, "node_id": "REG154.04.ANNEX-B6.FIG-A6/2", "caption_id": "Figure A6/2"}
+{"region_id": "p382-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.2.3.2.2.1", "page": 382, "node_id": "REG154.04.ANNEX-B6.FIG-A6/3", "caption_id": "Figure A6/3"}
+{"region_id": "p382-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.2.3.2.3", "page": 382, "node_id": "REG154.04.ANNEX-B6.2.3.2.3.TABLE-U1", "caption_id": null}
+{"region_id": "p383-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.2.3.2.4", "page": 383, "node_id": "REG154.04.ANNEX-B6.FIG-A6/4", "caption_id": "Figure A6/4"}
+{"region_id": "p384-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.2.3.2.4", "page": 384, "node_id": "REG154.04.ANNEX-B6.FIG-A6/5", "caption_id": "Figure A6/5"}
+{"region_id": "p386-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.2.4.2.4.4", "page": 386, "node_id": "REG154.04.ANNEX-B6.FIG-A6/5a", "caption_id": "Figure A6/5a"}
+{"region_id": "p391-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.2.6.8.3.1.3", "page": 391, "node_id": "REG154.04.ANNEX-B6.2.6.8.3.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p391-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.2.6.8.3.1.4", "page": 391, "node_id": "REG154.04.ANNEX-B6.2.6.8.3.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p391-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.2.6.8.3.2", "page": 391, "node_id": "REG154.04.ANNEX-B6.2.6.8.3.2.TABLE-U1", "caption_id": null}
+{"region_id": "p392-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.2.6.8.3.2", "page": 392, "node_id": "REG154.04.ANNEX-B6.FIG-A6/6", "caption_id": "Figure A6/6"}
+{"region_id": "p400-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.EQ-1", "caption_id": null}
+{"region_id": "p400-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.EQ-2", "caption_id": null}
+{"region_id": "p400-r4", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.FIG-A6", "caption_id": "Figure A6"}
+{"region_id": "p400-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p400-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.EQ-3", "caption_id": null}
+{"region_id": "p400-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.EQ-4", "caption_id": null}
+{"region_id": "p400-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.1.EQ-1", "caption_id": null}
+{"region_id": "p400-r8", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1.1", "page": 400, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.1.EQ-2", "caption_id": null}
+{"region_id": "p401-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.1.1", "page": 401, "node_id": "REG154.04.ANNEX-B6.APP1.3.1.1.EQ-3", "caption_id": null}
+{"region_id": "p401-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.2", "page": 401, "node_id": "REG154.04.ANNEX-B6.APP1.3.2.EQ-1", "caption_id": null}
+{"region_id": "p401-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.2", "page": 401, "node_id": "REG154.04.ANNEX-B6.APP1.3.2.EQ-2", "caption_id": null}
+{"region_id": "p401-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.2", "page": 401, "node_id": "REG154.04.ANNEX-B6.APP1.3.2.EQ-3", "caption_id": null}
+{"region_id": "p401-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.2", "page": 401, "node_id": "REG154.04.ANNEX-B6.APP1.3.2.EQ-4", "caption_id": null}
+{"region_id": "p402-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP1.3.2", "page": 402, "node_id": "REG154.04.ANNEX-B6.APP1.3.2.EQ-5", "caption_id": null}
+{"region_id": "p402-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6.APP1.3.2", "page": 402, "node_id": "REG154.04.ANNEX-B6.APP1.FIG-A6", "caption_id": "Figure A6"}
+{"region_id": "p404-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.1", "page": 404, "node_id": "REG154.04.ANNEX-B6.APP2.1.EQ-1", "caption_id": null}
+{"region_id": "p405-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.APP2.3.4.2", "page": 405, "node_id": "REG154.04.ANNEX-B6.APP2.TABLE-A6", "caption_id": "Table A6"}
+{"region_id": "p405-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.3.4.2", "page": 405, "node_id": "REG154.04.ANNEX-B6.APP2.3.4.2.EQ-1", "caption_id": null}
+{"region_id": "p406-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.4.1", "page": 406, "node_id": "REG154.04.ANNEX-B6.APP2.4.1.EQ-1", "caption_id": null}
+{"region_id": "p406-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.4.1", "page": 406, "node_id": "REG154.04.ANNEX-B6.APP2.4.1.EQ-2", "caption_id": null}
+{"region_id": "p406-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.4.4", "page": 406, "node_id": "REG154.04.ANNEX-B6.APP2.4.4.EQ-1", "caption_id": null}
+{"region_id": "p406-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.4.5", "page": 406, "node_id": "REG154.04.ANNEX-B6.APP2.4.5.EQ-1", "caption_id": null}
+{"region_id": "p406-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP2.4.5", "page": 406, "node_id": "REG154.04.ANNEX-B6.APP2.4.5.EQ-2", "caption_id": null}
+{"region_id": "p407-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.APP2.4.5", "page": 407, "node_id": "REG154.04.ANNEX-B6.APP2.TABLE-A6", "caption_id": "Table A6"}
+{"region_id": "p407-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B6.APP2.4.5.1", "page": 407, "node_id": "REG154.04.ANNEX-B6.APP2.TABLE-A6", "caption_id": "Table A6"}
+{"region_id": "p408-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6.APP3.2", "page": 408, "node_id": "REG154.04.ANNEX-B6.APP3.2.EQ-1", "caption_id": null}
+{"region_id": "p415-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.1", "page": 415, "node_id": "REG154.04.ANNEX-B6b.3.1.EQ-1", "caption_id": null}
+{"region_id": "p416-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.1", "page": 416, "node_id": "REG154.04.ANNEX-B6b.3.1.EQ-2", "caption_id": null}
+{"region_id": "p416-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.4", "page": 416, "node_id": "REG154.04.ANNEX-B6b.3.4.EQ-1", "caption_id": null}
+{"region_id": "p416-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.5", "page": 416, "node_id": "REG154.04.ANNEX-B6b.3.5.EQ-1", "caption_id": null}
+{"region_id": "p416-r4", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6b.3.6", "page": 416, "node_id": "REG154.04.ANNEX-B6b.FIG-A6b", "caption_id": "Figure A6b"}
+{"region_id": "p417-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B6b.3.6", "page": 417, "node_id": "REG154.04.ANNEX-B6b.FIG-A6b/1", "caption_id": "Figure A6b/1"}
+{"region_id": "p417-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B6b.3.11", "page": 417, "node_id": "REG154.04.ANNEX-B6b.3.11.TABLE-U1", "caption_id": null}
+{"region_id": "p418-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.11", "page": 418, "node_id": "REG154.04.ANNEX-B6b.3.11.EQ-1", "caption_id": null}
+{"region_id": "p418-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.12", "page": 418, "node_id": "REG154.04.ANNEX-B6b.3.12.EQ-1", "caption_id": null}
+{"region_id": "p418-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B6b.3.14", "page": 418, "node_id": "REG154.04.ANNEX-B6b.3.14.EQ-1", "caption_id": null}
+{"region_id": "p421-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B7.1.4", "page": 421, "node_id": "REG154.04.ANNEX-B7.TABLE-A7/1", "caption_id": "Table A7/1"}
+{"region_id": "p421-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.1.4", "page": 421, "node_id": "REG154.04.ANNEX-B7.1.4.EQ-1", "caption_id": null}
+{"region_id": "p422-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B7.1.4", "page": 422, "node_id": "REG154.04.ANNEX-B7.TABLE-A7/1", "caption_id": "Table A7/1"}
+{"region_id": "p422-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.1.4", "page": 422, "node_id": "REG154.04.ANNEX-B7.1.4.EQ-2", "caption_id": null}
+{"region_id": "p424-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B7.1.4", "page": 424, "node_id": "REG154.04.ANNEX-B7.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p425-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B7.1.4", "page": 425, "node_id": "REG154.04.ANNEX-B7.1.4.TABLE-U2", "caption_id": null}
+{"region_id": "p425-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.2.2.1", "page": 425, "node_id": "REG154.04.ANNEX-B7.2.2.1.EQ-1", "caption_id": null}
+{"region_id": "p425-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.2.2.1.1", "page": 425, "node_id": "REG154.04.ANNEX-B7.2.2.1.1.EQ-1", "caption_id": null}
+{"region_id": "p425-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.1.2", "page": 425, "node_id": "REG154.04.ANNEX-B7.3.1.2.EQ-1", "caption_id": null}
+{"region_id": "p426-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.1.2", "page": 426, "node_id": "REG154.04.ANNEX-B7.3.1.2.EQ-2", "caption_id": null}
+{"region_id": "p426-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.1.2", "page": 426, "node_id": "REG154.04.ANNEX-B7.3.1.2.EQ-3", "caption_id": null}
+{"region_id": "p426-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.1.2", "page": 426, "node_id": "REG154.04.ANNEX-B7.3.1.2.EQ-4", "caption_id": null}
+{"region_id": "p426-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.1.2", "page": 426, "node_id": "REG154.04.ANNEX-B7.3.1.2.EQ-5", "caption_id": null}
+{"region_id": "p426-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.1.3", "page": 426, "node_id": "REG154.04.ANNEX-B7.3.1.3.EQ-1", "caption_id": null}
+{"region_id": "p426-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1", "page": 426, "node_id": "REG154.04.ANNEX-B7.3.2.1.EQ-1", "caption_id": null}
+{"region_id": "p427-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1", "page": 427, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.EQ-1", "caption_id": null}
+{"region_id": "p427-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.1", "page": 427, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.1.EQ-1", "caption_id": null}
+{"region_id": "p428-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.1", "page": 428, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.1.EQ-2", "caption_id": null}
+{"region_id": "p428-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.2", "page": 428, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.2.EQ-1", "caption_id": null}
+{"region_id": "p428-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.1", "page": 428, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.1.EQ-1", "caption_id": null}
+{"region_id": "p429-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.2", "page": 429, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.2.EQ-1", "caption_id": null}
+{"region_id": "p429-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.2", "page": 429, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.2.EQ-2", "caption_id": null}
+{"region_id": "p429-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.3.1", "page": 429, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p430-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.3.2", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.3.2.EQ-1", "caption_id": null}
+{"region_id": "p430-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.4", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.4.EQ-1", "caption_id": null}
+{"region_id": "p430-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.3.4", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.3.4.EQ-2", "caption_id": null}
+{"region_id": "p430-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.4", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.4.EQ-1", "caption_id": null}
+{"region_id": "p430-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.4", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.4.EQ-2", "caption_id": null}
+{"region_id": "p430-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.1.4", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.1.4.EQ-3", "caption_id": null}
+{"region_id": "p430-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.2", "page": 430, "node_id": "REG154.04.ANNEX-B7.3.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p431-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.1.2", "page": 431, "node_id": "REG154.04.ANNEX-B7.3.2.1.2.EQ-2", "caption_id": null}
+{"region_id": "p431-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.2.1", "page": 431, "node_id": "REG154.04.ANNEX-B7.3.2.2.1.EQ-1", "caption_id": null}
+{"region_id": "p432-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.2.3", "page": 432, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.2.3.EQ-1", "caption_id": null}
+{"region_id": "p434-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.3.2", "page": 434, "node_id": "REG154.04.ANNEX-B7.FIG-A7/1a", "caption_id": "Figure A7/1a"}
+{"region_id": "p434-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.3.3", "page": 434, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.3.3.EQ-1", "caption_id": null}
+{"region_id": "p435-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4", "page": 435, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4.EQ-1", "caption_id": null}
+{"region_id": "p435-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4", "page": 435, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4.EQ-2", "caption_id": null}
+{"region_id": "p435-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4", "page": 435, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4.EQ-3", "caption_id": null}
+{"region_id": "p435-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4", "page": 435, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4.EQ-4", "caption_id": null}
+{"region_id": "p435-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4", "page": 435, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4.EQ-5", "caption_id": null}
+{"region_id": "p436-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.2.4.EQ-6", "caption_id": null}
+{"region_id": "p436-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.3", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.3.EQ-1", "caption_id": null}
+{"region_id": "p436-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.3", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.3.EQ-2", "caption_id": null}
+{"region_id": "p436-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.3", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.3.EQ-3", "caption_id": null}
+{"region_id": "p436-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.4", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.4.EQ-1", "caption_id": null}
+{"region_id": "p436-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.4", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.4.EQ-2", "caption_id": null}
+{"region_id": "p436-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.4", "page": 436, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.4.EQ-3", "caption_id": null}
+{"region_id": "p437-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.5", "page": 437, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.5.EQ-1", "caption_id": null}
+{"region_id": "p437-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.5", "page": 437, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.5.EQ-2", "caption_id": null}
+{"region_id": "p437-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.5", "page": 437, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.5.EQ-3", "caption_id": null}
+{"region_id": "p437-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.5", "page": 437, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.5.EQ-4", "caption_id": null}
+{"region_id": "p437-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.5", "page": 437, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.5.EQ-5", "caption_id": null}
+{"region_id": "p437-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.3.2.5", "page": 437, "node_id": "REG154.04.ANNEX-B7.3.2.3.2.5.EQ-6", "caption_id": null}
+{"region_id": "p439-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.4.1.1.2.3", "page": 439, "node_id": "REG154.04.ANNEX-B7.3.2.4.1.1.2.3.EQ-1", "caption_id": null}
+{"region_id": "p440-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.5.1.1", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.2.5.1.1.EQ-1", "caption_id": null}
+{"region_id": "p440-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.5.1.2", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.2.5.1.2.EQ-1", "caption_id": null}
+{"region_id": "p440-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.5.1.3", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.2.5.1.3.EQ-1", "caption_id": null}
+{"region_id": "p440-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.5.2", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.2.5.2.EQ-1", "caption_id": null}
+{"region_id": "p440-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.2.5.2", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.2.5.2.EQ-2", "caption_id": null}
+{"region_id": "p440-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.1", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p440-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.1", "page": 440, "node_id": "REG154.04.ANNEX-B7.3.3.1.EQ-2", "caption_id": null}
+{"region_id": "p441-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.1.1", "page": 441, "node_id": "REG154.04.ANNEX-B7.3.3.1.1.EQ-1", "caption_id": null}
+{"region_id": "p441-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.1.1", "page": 441, "node_id": "REG154.04.ANNEX-B7.3.3.1.1.EQ-2", "caption_id": null}
+{"region_id": "p441-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.1.1", "page": 441, "node_id": "REG154.04.ANNEX-B7.3.3.1.1.EQ-3", "caption_id": null}
+{"region_id": "p441-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.1.1", "page": 441, "node_id": "REG154.04.ANNEX-B7.3.3.1.1.EQ-4", "caption_id": null}
+{"region_id": "p441-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.2", "page": 441, "node_id": "REG154.04.ANNEX-B7.3.3.2.EQ-1", "caption_id": null}
+{"region_id": "p441-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.3.3.2", "page": 441, "node_id": "REG154.04.ANNEX-B7.3.3.2.EQ-2", "caption_id": null}
+{"region_id": "p442-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.4", "page": 442, "node_id": "REG154.04.ANNEX-B7.4.EQ-1", "caption_id": null}
+{"region_id": "p442-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.4", "page": 442, "node_id": "REG154.04.ANNEX-B7.4.EQ-2", "caption_id": null}
+{"region_id": "p442-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.4", "page": 442, "node_id": "REG154.04.ANNEX-B7.4.EQ-3", "caption_id": null}
+{"region_id": "p443-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.5", "page": 443, "node_id": "REG154.04.ANNEX-B7.5.EQ-1", "caption_id": null}
+{"region_id": "p443-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.5", "page": 443, "node_id": "REG154.04.ANNEX-B7.5.EQ-2", "caption_id": null}
+{"region_id": "p443-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.5", "page": 443, "node_id": "REG154.04.ANNEX-B7.5.EQ-3", "caption_id": null}
+{"region_id": "p444-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.3", "page": 444, "node_id": "REG154.04.ANNEX-B7.6.3.EQ-1", "caption_id": null}
+{"region_id": "p444-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.5", "page": 444, "node_id": "REG154.04.ANNEX-B7.6.5.EQ-1", "caption_id": null}
+{"region_id": "p445-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.6.1", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.6.1.EQ-1", "caption_id": null}
+{"region_id": "p445-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.6.1", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.6.1.EQ-2", "caption_id": null}
+{"region_id": "p445-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.7", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.7.EQ-1", "caption_id": null}
+{"region_id": "p445-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.12", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.12.EQ-1", "caption_id": null}
+{"region_id": "p445-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.12", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.12.EQ-2", "caption_id": null}
+{"region_id": "p445-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.12", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.12.EQ-3", "caption_id": null}
+{"region_id": "p445-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.6.13", "page": 445, "node_id": "REG154.04.ANNEX-B7.6.13.EQ-1", "caption_id": null}
+{"region_id": "p446-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B7.6.13", "page": 446, "node_id": "REG154.04.ANNEX-B7.TABLE-A7/2", "caption_id": "Table A7/2"}
+{"region_id": "p448-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B7.7.4.2.3", "page": 448, "node_id": "REG154.04.ANNEX-B7.FIG-A7/1", "caption_id": "Figure A7/1"}
+{"region_id": "p448-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B7.7.4.2.3", "page": 448, "node_id": "REG154.04.ANNEX-B7.FIG-A7/2", "caption_id": "Figure A7/2"}
+{"region_id": "p449-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B7.7.4.3.3", "page": 449, "node_id": "REG154.04.ANNEX-B7.FIG-A7/3", "caption_id": "Figure A7/3"}
+{"region_id": "p449-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B7.7.4.3.3", "page": 449, "node_id": "REG154.04.ANNEX-B7.FIG-A7/4", "caption_id": "Figure A7/4"}
+{"region_id": "p449-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.8", "page": 449, "node_id": "REG154.04.ANNEX-B7.8.EQ-1", "caption_id": null}
+{"region_id": "p450-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B7.8", "page": 450, "node_id": "REG154.04.ANNEX-B7.8.EQ-2", "caption_id": null}
+{"region_id": "p451-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.1.1", "page": 451, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/1", "caption_id": "Table A8/1"}
+{"region_id": "p451-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.1.1", "page": 451, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/1", "caption_id": "Table A8/1"}
+{"region_id": "p451-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.1.1", "page": 451, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/2", "caption_id": "Table A8/2"}
+{"region_id": "p454-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.3.2.2.4", "page": 454, "node_id": "REG154.04.ANNEX-B8.FIG-A8/1", "caption_id": "Figure A8/1"}
+{"region_id": "p455-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.3.2.4.5.2", "page": 455, "node_id": "REG154.04.ANNEX-B8.3.2.4.5.2.EQ-1", "caption_id": null}
+{"region_id": "p455-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.3.2.4.5.2", "page": 455, "node_id": "REG154.04.ANNEX-B8.3.2.4.5.2.EQ-2", "caption_id": null}
+{"region_id": "p458-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.3.4.1", "page": 458, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/3", "caption_id": "Table A8/3"}
+{"region_id": "p460-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.3.4.4.2.1", "page": 460, "node_id": "REG154.04.ANNEX-B8.FIG-A8/2", "caption_id": "Figure A8/2"}
+{"region_id": "p461-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.3.4.4.2.1.2", "page": 461, "node_id": "REG154.04.ANNEX-B8.3.4.4.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p461-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.3.4.4.2.1.3", "page": 461, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/4", "caption_id": "Table A8/4"}
+{"region_id": "p462-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.3.5", "page": 462, "node_id": "REG154.04.ANNEX-B8.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p464-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/5", "caption_id": "Table A8/5"}
+{"region_id": "p464-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-1", "caption_id": null}
+{"region_id": "p464-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-2", "caption_id": null}
+{"region_id": "p464-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-3", "caption_id": null}
+{"region_id": "p464-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-4", "caption_id": null}
+{"region_id": "p464-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-5", "caption_id": null}
+{"region_id": "p464-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-6", "caption_id": null}
+{"region_id": "p464-r8", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 464, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-7", "caption_id": null}
+{"region_id": "p465-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 465, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/5", "caption_id": "Table A8/5"}
+{"region_id": "p465-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 465, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-8", "caption_id": null}
+{"region_id": "p465-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 465, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-9", "caption_id": null}
+{"region_id": "p465-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 465, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-10", "caption_id": null}
+{"region_id": "p465-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 465, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-11", "caption_id": null}
+{"region_id": "p466-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 466, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-12", "caption_id": null}
+{"region_id": "p466-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 466, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-13", "caption_id": null}
+{"region_id": "p466-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 466, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-14", "caption_id": null}
+{"region_id": "p466-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 466, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-15", "caption_id": null}
+{"region_id": "p466-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 466, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-16", "caption_id": null}
+{"region_id": "p467-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 467, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p467-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 467, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-17", "caption_id": null}
+{"region_id": "p467-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.1", "page": 467, "node_id": "REG154.04.ANNEX-B8.4.1.1.1.EQ-18", "caption_id": null}
+{"region_id": "p467-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.2", "page": 467, "node_id": "REG154.04.ANNEX-B8.4.1.1.2.EQ-1", "caption_id": null}
+{"region_id": "p468-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.2", "page": 468, "node_id": "REG154.04.ANNEX-B8.4.1.1.2.EQ-2", "caption_id": null}
+{"region_id": "p468-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.3", "page": 468, "node_id": "REG154.04.ANNEX-B8.4.1.1.3.EQ-1", "caption_id": null}
+{"region_id": "p468-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.4", "page": 468, "node_id": "REG154.04.ANNEX-B8.4.1.1.4.EQ-1", "caption_id": null}
+{"region_id": "p468-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.5", "page": 468, "node_id": "REG154.04.ANNEX-B8.4.1.1.5.EQ-1", "caption_id": null}
+{"region_id": "p469-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.1.5", "page": 469, "node_id": "REG154.04.ANNEX-B8.4.1.1.5.EQ-2", "caption_id": null}
+{"region_id": "p469-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.2", "page": 469, "node_id": "REG154.04.ANNEX-B8.4.1.2.EQ-1", "caption_id": null}
+{"region_id": "p469-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.2", "page": 469, "node_id": "REG154.04.ANNEX-B8.4.1.2.EQ-2", "caption_id": null}
+{"region_id": "p469-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.3.1.1", "page": 469, "node_id": "REG154.04.ANNEX-B8.4.1.3.1.1.EQ-1", "caption_id": null}
+{"region_id": "p470-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.3.1.1", "page": 470, "node_id": "REG154.04.ANNEX-B8.4.1.3.1.1.EQ-2", "caption_id": null}
+{"region_id": "p470-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.3.1.2", "page": 470, "node_id": "REG154.04.ANNEX-B8.4.1.3.1.2.EQ-1", "caption_id": null}
+{"region_id": "p470-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.3.1.2", "page": 470, "node_id": "REG154.04.ANNEX-B8.4.1.3.1.2.EQ-2", "caption_id": null}
+{"region_id": "p470-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.3.2", "page": 470, "node_id": "REG154.04.ANNEX-B8.4.1.3.2.EQ-1", "caption_id": null}
+{"region_id": "p471-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.1.3.3", "page": 471, "node_id": "REG154.04.ANNEX-B8.4.1.3.3.EQ-1", "caption_id": null}
+{"region_id": "p472-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.2.1.1", "page": 472, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/6", "caption_id": "Table A8/6"}
+{"region_id": "p472-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.1", "page": 472, "node_id": "REG154.04.ANNEX-B8.4.2.1.1.EQ-1", "caption_id": null}
+{"region_id": "p472-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.2.1.1", "page": 472, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/5", "caption_id": "Table A8/5"}
+{"region_id": "p473-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.2.1.1", "page": 473, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/5", "caption_id": "Table A8/5"}
+{"region_id": "p474-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 474, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/7", "caption_id": "Table A8/7"}
+{"region_id": "p474-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 474, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.1.EQ-1", "caption_id": null}
+{"region_id": "p475-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 475, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/7", "caption_id": "Table A8/7"}
+{"region_id": "p475-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 475, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.1.EQ-2", "caption_id": null}
+{"region_id": "p475-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 475, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.1.EQ-3", "caption_id": null}
+{"region_id": "p475-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 475, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.1.EQ-4", "caption_id": null}
+{"region_id": "p476-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.1", "page": 476, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/7", "caption_id": "Table A8/7"}
+{"region_id": "p476-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.2", "page": 476, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.2.EQ-1", "caption_id": null}
+{"region_id": "p476-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.3", "page": 476, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.3.EQ-1", "caption_id": null}
+{"region_id": "p476-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.4", "page": 476, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.4.EQ-1", "caption_id": null}
+{"region_id": "p477-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.4", "page": 477, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.4.EQ-2", "caption_id": null}
+{"region_id": "p477-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.1.2.5", "page": 477, "node_id": "REG154.04.ANNEX-B8.4.2.1.2.5.EQ-1", "caption_id": null}
+{"region_id": "p477-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 477, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-1", "caption_id": null}
+{"region_id": "p478-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-2", "caption_id": null}
+{"region_id": "p478-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-3", "caption_id": null}
+{"region_id": "p478-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-4", "caption_id": null}
+{"region_id": "p478-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-5", "caption_id": null}
+{"region_id": "p478-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-6", "caption_id": null}
+{"region_id": "p478-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-7", "caption_id": null}
+{"region_id": "p478-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 478, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-8", "caption_id": null}
+{"region_id": "p479-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.2", "page": 479, "node_id": "REG154.04.ANNEX-B8.4.2.2.EQ-9", "caption_id": null}
+{"region_id": "p479-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 479, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-1", "caption_id": null}
+{"region_id": "p479-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 479, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-2", "caption_id": null}
+{"region_id": "p479-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 479, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-3", "caption_id": null}
+{"region_id": "p479-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 479, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-4", "caption_id": null}
+{"region_id": "p479-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 479, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-5", "caption_id": null}
+{"region_id": "p480-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 480, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-6", "caption_id": null}
+{"region_id": "p480-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.2.3", "page": 480, "node_id": "REG154.04.ANNEX-B8.4.2.3.EQ-7", "caption_id": null}
+{"region_id": "p480-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3", "page": 480, "node_id": "REG154.04.ANNEX-B8.4.3.EQ-1", "caption_id": null}
+{"region_id": "p480-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3", "page": 480, "node_id": "REG154.04.ANNEX-B8.4.3.EQ-2", "caption_id": null}
+{"region_id": "p481-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3", "page": 481, "node_id": "REG154.04.ANNEX-B8.4.3.EQ-3", "caption_id": null}
+{"region_id": "p481-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3", "page": 481, "node_id": "REG154.04.ANNEX-B8.4.3.EQ-4", "caption_id": null}
+{"region_id": "p481-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.1", "page": 481, "node_id": "REG154.04.ANNEX-B8.4.3.1.EQ-1", "caption_id": null}
+{"region_id": "p481-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.1", "page": 481, "node_id": "REG154.04.ANNEX-B8.4.3.1.EQ-2", "caption_id": null}
+{"region_id": "p481-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.1", "page": 481, "node_id": "REG154.04.ANNEX-B8.4.3.1.EQ-3", "caption_id": null}
+{"region_id": "p482-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.1", "page": 482, "node_id": "REG154.04.ANNEX-B8.4.3.1.EQ-4", "caption_id": null}
+{"region_id": "p482-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.2", "page": 482, "node_id": "REG154.04.ANNEX-B8.4.3.2.EQ-1", "caption_id": null}
+{"region_id": "p482-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.3.1", "page": 482, "node_id": "REG154.04.ANNEX-B8.4.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p483-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.3.2", "page": 483, "node_id": "REG154.04.ANNEX-B8.4.3.3.2.EQ-1", "caption_id": null}
+{"region_id": "p483-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.4.2", "page": 483, "node_id": "REG154.04.ANNEX-B8.4.3.4.2.EQ-1", "caption_id": null}
+{"region_id": "p484-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.4.3", "page": 484, "node_id": "REG154.04.ANNEX-B8.4.3.4.3.EQ-1", "caption_id": null}
+{"region_id": "p484-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.3.4.4", "page": 484, "node_id": "REG154.04.ANNEX-B8.4.3.4.4.EQ-1", "caption_id": null}
+{"region_id": "p485-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.1.2.2", "page": 485, "node_id": "REG154.04.ANNEX-B8.4.4.1.2.2.EQ-1", "caption_id": null}
+{"region_id": "p485-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.1.2.2", "page": 485, "node_id": "REG154.04.ANNEX-B8.4.4.1.2.2.EQ-2", "caption_id": null}
+{"region_id": "p485-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.1.2.2", "page": 485, "node_id": "REG154.04.ANNEX-B8.4.4.1.2.2.EQ-3", "caption_id": null}
+{"region_id": "p486-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.1.2.2", "page": 486, "node_id": "REG154.04.ANNEX-B8.4.4.1.2.2.EQ-4", "caption_id": null}
+{"region_id": "p486-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.1.2.2", "page": 486, "node_id": "REG154.04.ANNEX-B8.4.4.1.2.2.EQ-5", "caption_id": null}
+{"region_id": "p486-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.1.2.2", "page": 486, "node_id": "REG154.04.ANNEX-B8.4.4.1.2.2.EQ-6", "caption_id": null}
+{"region_id": "p486-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.1", "page": 486, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.1.EQ-1", "caption_id": null}
+{"region_id": "p486-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.1", "page": 486, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.1.EQ-2", "caption_id": null}
+{"region_id": "p487-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.1", "page": 487, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.1.EQ-3", "caption_id": null}
+{"region_id": "p487-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.1", "page": 487, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.1.EQ-4", "caption_id": null}
+{"region_id": "p487-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.2", "page": 487, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p487-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.2", "page": 487, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.2.EQ-2", "caption_id": null}
+{"region_id": "p488-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.2", "page": 488, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.2.EQ-3", "caption_id": null}
+{"region_id": "p488-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.3", "page": 488, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.3.EQ-1", "caption_id": null}
+{"region_id": "p488-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.3", "page": 488, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.3.EQ-2", "caption_id": null}
+{"region_id": "p488-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.3", "page": 488, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.3.EQ-3", "caption_id": null}
+{"region_id": "p488-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.3", "page": 488, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.3.EQ-4", "caption_id": null}
+{"region_id": "p489-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.1.3", "page": 489, "node_id": "REG154.04.ANNEX-B8.4.4.2.1.3.EQ-5", "caption_id": null}
+{"region_id": "p489-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 489, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-1", "caption_id": null}
+{"region_id": "p489-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 489, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-2", "caption_id": null}
+{"region_id": "p489-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 489, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-3", "caption_id": null}
+{"region_id": "p490-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-4", "caption_id": null}
+{"region_id": "p490-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-5", "caption_id": null}
+{"region_id": "p490-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-6", "caption_id": null}
+{"region_id": "p490-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.1", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.1.EQ-7", "caption_id": null}
+{"region_id": "p490-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.2", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.2.EQ-1", "caption_id": null}
+{"region_id": "p490-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.2", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.2.EQ-2", "caption_id": null}
+{"region_id": "p490-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.2", "page": 490, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.2.EQ-3", "caption_id": null}
+{"region_id": "p491-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.3", "page": 491, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.3.EQ-1", "caption_id": null}
+{"region_id": "p491-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.3", "page": 491, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.3.EQ-2", "caption_id": null}
+{"region_id": "p491-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.2.2.3", "page": 491, "node_id": "REG154.04.ANNEX-B8.4.4.2.2.3.EQ-3", "caption_id": null}
+{"region_id": "p491-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.1", "page": 491, "node_id": "REG154.04.ANNEX-B8.4.4.4.1.EQ-1", "caption_id": null}
+{"region_id": "p492-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.1", "page": 492, "node_id": "REG154.04.ANNEX-B8.4.4.4.1.EQ-2", "caption_id": null}
+{"region_id": "p492-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.1", "page": 492, "node_id": "REG154.04.ANNEX-B8.4.4.4.1.EQ-3", "caption_id": null}
+{"region_id": "p492-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.2", "page": 492, "node_id": "REG154.04.ANNEX-B8.4.4.4.2.EQ-1", "caption_id": null}
+{"region_id": "p493-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.2", "page": 493, "node_id": "REG154.04.ANNEX-B8.4.4.4.2.EQ-2", "caption_id": null}
+{"region_id": "p493-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.2", "page": 493, "node_id": "REG154.04.ANNEX-B8.4.4.4.2.EQ-3", "caption_id": null}
+{"region_id": "p493-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.2", "page": 493, "node_id": "REG154.04.ANNEX-B8.4.4.4.2.EQ-4", "caption_id": null}
+{"region_id": "p494-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.4.2", "page": 494, "node_id": "REG154.04.ANNEX-B8.4.4.4.2.EQ-5", "caption_id": null}
+{"region_id": "p494-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.5", "page": 494, "node_id": "REG154.04.ANNEX-B8.4.4.5.EQ-1", "caption_id": null}
+{"region_id": "p494-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.5", "page": 494, "node_id": "REG154.04.ANNEX-B8.4.4.5.EQ-2", "caption_id": null}
+{"region_id": "p495-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.5", "page": 495, "node_id": "REG154.04.ANNEX-B8.4.4.5.EQ-3", "caption_id": null}
+{"region_id": "p495-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.1", "page": 495, "node_id": "REG154.04.ANNEX-B8.4.4.6.1.EQ-1", "caption_id": null}
+{"region_id": "p495-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.1", "page": 495, "node_id": "REG154.04.ANNEX-B8.4.4.6.1.EQ-2", "caption_id": null}
+{"region_id": "p495-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.4.6.1", "page": 495, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/7", "caption_id": "Table A8/7"}
+{"region_id": "p495-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.1", "page": 495, "node_id": "REG154.04.ANNEX-B8.4.4.6.1.EQ-3", "caption_id": null}
+{"region_id": "p496-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.1", "page": 496, "node_id": "REG154.04.ANNEX-B8.4.4.6.1.EQ-4", "caption_id": null}
+{"region_id": "p496-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.2", "page": 496, "node_id": "REG154.04.ANNEX-B8.4.4.6.2.EQ-1", "caption_id": null}
+{"region_id": "p496-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.2", "page": 496, "node_id": "REG154.04.ANNEX-B8.4.4.6.2.EQ-2", "caption_id": null}
+{"region_id": "p497-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.2", "page": 497, "node_id": "REG154.04.ANNEX-B8.4.4.6.2.EQ-3", "caption_id": null}
+{"region_id": "p497-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.6.2", "page": 497, "node_id": "REG154.04.ANNEX-B8.4.4.6.2.EQ-4", "caption_id": null}
+{"region_id": "p497-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.7", "page": 497, "node_id": "REG154.04.ANNEX-B8.4.4.7.EQ-1", "caption_id": null}
+{"region_id": "p498-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.7", "page": 498, "node_id": "REG154.04.ANNEX-B8.4.4.7.EQ-2", "caption_id": null}
+{"region_id": "p498-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.7", "page": 498, "node_id": "REG154.04.ANNEX-B8.4.4.7.EQ-3", "caption_id": null}
+{"region_id": "p498-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.7", "page": 498, "node_id": "REG154.04.ANNEX-B8.4.4.7.EQ-4", "caption_id": null}
+{"region_id": "p499-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.4.7", "page": 499, "node_id": "REG154.04.ANNEX-B8.4.4.7.EQ-5", "caption_id": null}
+{"region_id": "p499-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.1", "page": 499, "node_id": "REG154.04.ANNEX-B8.4.5.1.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p499-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.2", "page": 499, "node_id": "REG154.04.ANNEX-B8.4.5.1.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p499-r4", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.2", "page": 499, "node_id": "REG154.04.ANNEX-B8.FIG-A8/3", "caption_id": "Figure A8/3"}
+{"region_id": "p500-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.3", "page": 500, "node_id": "REG154.04.ANNEX-B8.FIG-A8/4", "caption_id": "Figure A8/4"}
+{"region_id": "p500-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.4", "page": 500, "node_id": "REG154.04.ANNEX-B8.4.5.1.1.4.TABLE-U1", "caption_id": null}
+{"region_id": "p501-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.5", "page": 501, "node_id": "REG154.04.ANNEX-B8.FIG-A8/5", "caption_id": "Figure A8/5"}
+{"region_id": "p502-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.5", "page": 502, "node_id": "REG154.04.ANNEX-B8.FIG-A8/6", "caption_id": "Figure A8/6"}
+{"region_id": "p502-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.5.1.1.5", "page": 502, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9", "caption_id": "Table A8/9"}
+{"region_id": "p503-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.3.1", "page": 503, "node_id": "REG154.04.ANNEX-B8.4.5.3.1.EQ-1", "caption_id": null}
+{"region_id": "p503-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.3.2", "page": 503, "node_id": "REG154.04.ANNEX-B8.4.5.3.2.EQ-1", "caption_id": null}
+{"region_id": "p503-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.4.1", "page": 503, "node_id": "REG154.04.ANNEX-B8.4.5.4.1.EQ-1", "caption_id": null}
+{"region_id": "p504-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.4.1", "page": 504, "node_id": "REG154.04.ANNEX-B8.4.5.4.1.EQ-2", "caption_id": null}
+{"region_id": "p504-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.4.2", "page": 504, "node_id": "REG154.04.ANNEX-B8.4.5.4.2.EQ-1", "caption_id": null}
+{"region_id": "p504-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.4.3", "page": 504, "node_id": "REG154.04.ANNEX-B8.4.5.4.3.EQ-1", "caption_id": null}
+{"region_id": "p505-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.4.3", "page": 505, "node_id": "REG154.04.ANNEX-B8.4.5.4.3.EQ-2", "caption_id": null}
+{"region_id": "p505-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.1.1", "page": 505, "node_id": "REG154.04.ANNEX-B8.4.5.5.1.1.EQ-1", "caption_id": null}
+{"region_id": "p505-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.1.2", "page": 505, "node_id": "REG154.04.ANNEX-B8.4.5.5.1.2.EQ-1", "caption_id": null}
+{"region_id": "p505-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.1.2", "page": 505, "node_id": "REG154.04.ANNEX-B8.4.5.5.1.2.EQ-2", "caption_id": null}
+{"region_id": "p506-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.1.2", "page": 506, "node_id": "REG154.04.ANNEX-B8.4.5.5.1.2.EQ-3", "caption_id": null}
+{"region_id": "p506-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.1.3", "page": 506, "node_id": "REG154.04.ANNEX-B8.4.5.5.1.3.EQ-1", "caption_id": null}
+{"region_id": "p507-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.2", "page": 507, "node_id": "REG154.04.ANNEX-B8.4.5.5.2.EQ-1", "caption_id": null}
+{"region_id": "p507-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.2", "page": 507, "node_id": "REG154.04.ANNEX-B8.4.5.5.2.EQ-2", "caption_id": null}
+{"region_id": "p507-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.2", "page": 507, "node_id": "REG154.04.ANNEX-B8.4.5.5.2.EQ-3", "caption_id": null}
+{"region_id": "p508-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.5.3", "page": 508, "node_id": "REG154.04.ANNEX-B8.4.5.5.3.EQ-1", "caption_id": null}
+{"region_id": "p508-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.6.1", "page": 508, "node_id": "REG154.04.ANNEX-B8.4.5.6.1.EQ-1", "caption_id": null}
+{"region_id": "p509-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.6.2", "page": 509, "node_id": "REG154.04.ANNEX-B8.4.5.6.2.EQ-1", "caption_id": null}
+{"region_id": "p509-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.6.3", "page": 509, "node_id": "REG154.04.ANNEX-B8.4.5.6.3.EQ-1", "caption_id": null}
+{"region_id": "p509-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.7.1", "page": 509, "node_id": "REG154.04.ANNEX-B8.4.5.7.1.EQ-1", "caption_id": null}
+{"region_id": "p510-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.7.1", "page": 510, "node_id": "REG154.04.ANNEX-B8.4.5.7.1.EQ-2", "caption_id": null}
+{"region_id": "p510-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.7.1", "page": 510, "node_id": "REG154.04.ANNEX-B8.4.5.7.1.EQ-3", "caption_id": null}
+{"region_id": "p510-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.7.2", "page": 510, "node_id": "REG154.04.ANNEX-B8.4.5.7.2.EQ-1", "caption_id": null}
+{"region_id": "p510-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.7.2", "page": 510, "node_id": "REG154.04.ANNEX-B8.4.5.7.2.EQ-2", "caption_id": null}
+{"region_id": "p511-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.5.7.3", "page": 511, "node_id": "REG154.04.ANNEX-B8.4.5.7.3.EQ-1", "caption_id": null}
+{"region_id": "p512-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.1", "page": 512, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/8", "caption_id": "Table A8/8"}
+{"region_id": "p517-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.1", "page": 517, "node_id": "REG154.04.ANNEX-B8.4.6.1.TABLE-U1", "caption_id": null}
+{"region_id": "p518-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 518, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9", "caption_id": "Table A8/9"}
+{"region_id": "p520-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 520, "node_id": "REG154.04.ANNEX-B8.4.6.2.TABLE-U1", "caption_id": null}
+{"region_id": "p520-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 520, "node_id": "REG154.04.ANNEX-B8.4.6.2.EQ-1", "caption_id": null}
+{"region_id": "p521-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 521, "node_id": "REG154.04.ANNEX-B8.4.6.2.EQ-2", "caption_id": null}
+{"region_id": "p522-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 522, "node_id": "REG154.04.ANNEX-B8.4.6.2.TABLE-U2", "caption_id": null}
+{"region_id": "p522-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 522, "node_id": "REG154.04.ANNEX-B8.4.6.2.EQ-3", "caption_id": null}
+{"region_id": "p523-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.2", "page": 523, "node_id": "REG154.04.ANNEX-B8.4.6.2.TABLE-U3", "caption_id": null}
+{"region_id": "p524-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.1", "page": 524, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9a", "caption_id": "Table A8/9a"}
+{"region_id": "p527-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.1", "page": 527, "node_id": "REG154.04.ANNEX-B8.4.6.3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p528-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 528, "node_id": "REG154.04.ANNEX-B8.4.6.3.2.EQ-1", "caption_id": null}
+{"region_id": "p528-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 528, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9b", "caption_id": "Table A8/9b"}
+{"region_id": "p529-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 529, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9b", "caption_id": "Table A8/9b"}
+{"region_id": "p530-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 530, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9b", "caption_id": "Table A8/9b"}
+{"region_id": "p531-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 531, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9b", "caption_id": "Table A8/9b"}
+{"region_id": "p532-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 532, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9b", "caption_id": "Table A8/9b"}
+{"region_id": "p532-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 532, "node_id": "REG154.04.ANNEX-B8.4.6.3.2.EQ-2", "caption_id": null}
+{"region_id": "p533-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.6.3.2", "page": 533, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/9b", "caption_id": "Table A8/9b"}
+{"region_id": "p534-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.7.1", "page": 534, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/10", "caption_id": "Table A8/10"}
+{"region_id": "p536-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.7.1", "page": 536, "node_id": "REG154.04.ANNEX-B8.4.7.1.TABLE-U1", "caption_id": null}
+{"region_id": "p536-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.7.1", "page": 536, "node_id": "REG154.04.ANNEX-B8.4.7.1.EQ-1", "caption_id": null}
+{"region_id": "p536-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.7.1", "page": 536, "node_id": "REG154.04.ANNEX-B8.4.7.1.EQ-2", "caption_id": null}
+{"region_id": "p537-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.7.1", "page": 537, "node_id": "REG154.04.ANNEX-B8.4.7.1.TABLE-U2", "caption_id": null}
+{"region_id": "p538-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.7.2", "page": 538, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/11", "caption_id": "Table A8/11"}
+{"region_id": "p540-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.7.2", "page": 540, "node_id": "REG154.04.ANNEX-B8.4.7.2.TABLE-U1", "caption_id": null}
+{"region_id": "p540-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.7.2", "page": 540, "node_id": "REG154.04.ANNEX-B8.4.7.2.EQ-1", "caption_id": null}
+{"region_id": "p540-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.7.2", "page": 540, "node_id": "REG154.04.ANNEX-B8.4.7.2.EQ-2", "caption_id": null}
+{"region_id": "p541-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.7.2", "page": 541, "node_id": "REG154.04.ANNEX-B8.4.7.2.TABLE-U2", "caption_id": null}
+{"region_id": "p542-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.4.8.1", "page": 542, "node_id": "REG154.04.ANNEX-B8.TABLE-A8/12", "caption_id": "Table A8/12"}
+{"region_id": "p542-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.1", "page": 542, "node_id": "REG154.04.ANNEX-B8.4.8.1.EQ-1", "caption_id": null}
+{"region_id": "p542-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.2", "page": 542, "node_id": "REG154.04.ANNEX-B8.4.8.2.EQ-1", "caption_id": null}
+{"region_id": "p542-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.2", "page": 542, "node_id": "REG154.04.ANNEX-B8.4.8.2.EQ-2", "caption_id": null}
+{"region_id": "p543-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.3", "page": 543, "node_id": "REG154.04.ANNEX-B8.4.8.3.EQ-1", "caption_id": null}
+{"region_id": "p543-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.3", "page": 543, "node_id": "REG154.04.ANNEX-B8.4.8.3.EQ-2", "caption_id": null}
+{"region_id": "p543-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.4", "page": 543, "node_id": "REG154.04.ANNEX-B8.4.8.4.EQ-1", "caption_id": null}
+{"region_id": "p543-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.4", "page": 543, "node_id": "REG154.04.ANNEX-B8.4.8.4.EQ-2", "caption_id": null}
+{"region_id": "p543-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.4.8.4", "page": 543, "node_id": "REG154.04.ANNEX-B8.4.8.4.EQ-3", "caption_id": null}
+{"region_id": "p544-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.1.1", "page": 544, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p544-r3", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.1.2", "page": 544, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p544-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP1.1.3", "page": 544, "node_id": "REG154.04.ANNEX-B8.APP1.1.3.TABLE-U1", "caption_id": null}
+{"region_id": "p545-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.1.3", "page": 545, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p546-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.1.4", "page": 546, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p547-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.2", "page": 547, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p547-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.3.1", "page": 547, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p548-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.3.2", "page": 548, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p548-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP1.4", "page": 548, "node_id": "REG154.04.ANNEX-B8.APP1.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p549-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP2.1.1.3", "page": 549, "node_id": "REG154.04.ANNEX-B8.APP2.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p549-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.1.2", "page": 549, "node_id": "REG154.04.ANNEX-B8.APP2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p550-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.1.2.1", "page": 550, "node_id": "REG154.04.ANNEX-B8.APP2.1.2.1.EQ-1", "caption_id": null}
+{"region_id": "p550-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.1.2.2", "page": 550, "node_id": "REG154.04.ANNEX-B8.APP2.1.2.2.EQ-1", "caption_id": null}
+{"region_id": "p550-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.1.2.2", "page": 550, "node_id": "REG154.04.ANNEX-B8.APP2.1.2.2.EQ-2", "caption_id": null}
+{"region_id": "p550-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP2.1.2.2", "page": 550, "node_id": "REG154.04.ANNEX-B8.APP2.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p551-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.2", "page": 551, "node_id": "REG154.04.ANNEX-B8.APP2.2.2.EQ-1", "caption_id": null}
+{"region_id": "p551-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.2", "page": 551, "node_id": "REG154.04.ANNEX-B8.APP2.2.2.EQ-2", "caption_id": null}
+{"region_id": "p551-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.2", "page": 551, "node_id": "REG154.04.ANNEX-B8.APP2.2.2.EQ-3", "caption_id": null}
+{"region_id": "p552-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.3.1", "page": 552, "node_id": "REG154.04.ANNEX-B8.APP2.2.3.1.EQ-1", "caption_id": null}
+{"region_id": "p552-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.3.1", "page": 552, "node_id": "REG154.04.ANNEX-B8.APP2.2.3.1.EQ-2", "caption_id": null}
+{"region_id": "p553-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.3.1", "page": 553, "node_id": "REG154.04.ANNEX-B8.APP2.2.3.1.EQ-3", "caption_id": null}
+{"region_id": "p553-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.3.2", "page": 553, "node_id": "REG154.04.ANNEX-B8.APP2.2.3.2.EQ-1", "caption_id": null}
+{"region_id": "p553-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.2.3.2", "page": 553, "node_id": "REG154.04.ANNEX-B8.APP2.2.3.2.EQ-2", "caption_id": null}
+{"region_id": "p554-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP2.3.1", "page": 554, "node_id": "REG154.04.ANNEX-B8.APP2.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p556-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP2.3.2", "page": 556, "node_id": "REG154.04.ANNEX-B8.APP2.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p556-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP2.3.2.2.2", "page": 556, "node_id": "REG154.04.ANNEX-B8.APP2.3.2.2.2.EQ-1", "caption_id": null}
+{"region_id": "p559-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP3.3.3", "page": 559, "node_id": "REG154.04.ANNEX-B8.APP3.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p562-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP5.2", "page": 562, "node_id": "REG154.04.ANNEX-B8.APP5.2.EQ-1", "caption_id": null}
+{"region_id": "p562-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP5.2", "page": 562, "node_id": "REG154.04.ANNEX-B8.APP5.2.EQ-2", "caption_id": null}
+{"region_id": "p562-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP5.2", "page": 562, "node_id": "REG154.04.ANNEX-B8.APP5.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p562-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP5.2", "page": 562, "node_id": "REG154.04.ANNEX-B8.APP5.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p565-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP6.2.3", "page": 565, "node_id": "REG154.04.ANNEX-B8.APP6.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p567-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP6.3.3", "page": 567, "node_id": "REG154.04.ANNEX-B8.APP6.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p569-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP6.4.3", "page": 569, "node_id": "REG154.04.ANNEX-B8.APP6.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p570-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP7.2.1.5.1", "page": 570, "node_id": "REG154.04.ANNEX-B8.APP7.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p570-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP7.2.1.5.2", "page": 570, "node_id": "REG154.04.ANNEX-B8.APP7.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p571-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP7.2.1.5.2", "page": 571, "node_id": "REG154.04.ANNEX-B8.APP7.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p571-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP7.2.1.5.3", "page": 571, "node_id": "REG154.04.ANNEX-B8.APP7.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p571-r3", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP7.2.2.2", "page": 571, "node_id": "REG154.04.ANNEX-B8.APP7.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p571-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP7.2.2.6", "page": 571, "node_id": "REG154.04.ANNEX-B8.APP7.2.2.6.EQ-1", "caption_id": null}
+{"region_id": "p572-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP7.3", "page": 572, "node_id": "REG154.04.ANNEX-B8.APP7.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p572-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B8.APP7.3", "page": 572, "node_id": "REG154.04.ANNEX-B8.APP7.FIG-A8", "caption_id": "Figure A8"}
+{"region_id": "p573-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP7.3.2.1", "page": 573, "node_id": "REG154.04.ANNEX-B8.APP7.TABLE-A8", "caption_id": "Table A8"}
+{"region_id": "p574-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP7.3.3.1", "page": 574, "node_id": "REG154.04.ANNEX-B8.APP7.3.3.1.EQ-1", "caption_id": null}
+{"region_id": "p575-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP7.3.3.2", "page": 575, "node_id": "REG154.04.ANNEX-B8.APP7.3.3.2.EQ-1", "caption_id": null}
+{"region_id": "p576-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.1.1", "page": 576, "node_id": "REG154.04.ANNEX-B8.APP8.1.1.EQ-1", "caption_id": null}
+{"region_id": "p576-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.1.1", "page": 576, "node_id": "REG154.04.ANNEX-B8.APP8.1.1.EQ-2", "caption_id": null}
+{"region_id": "p576-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.1.1", "page": 576, "node_id": "REG154.04.ANNEX-B8.APP8.1.1.EQ-3", "caption_id": null}
+{"region_id": "p577-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B8.APP8.1.2", "page": 577, "node_id": "REG154.04.ANNEX-B8.APP8.TABLE-A8/10", "caption_id": "Table A8/10"}
+{"region_id": "p577-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.2.1", "page": 577, "node_id": "REG154.04.ANNEX-B8.APP8.2.1.EQ-1", "caption_id": null}
+{"region_id": "p577-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.2.1", "page": 577, "node_id": "REG154.04.ANNEX-B8.APP8.2.1.EQ-2", "caption_id": null}
+{"region_id": "p578-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.2.2", "page": 578, "node_id": "REG154.04.ANNEX-B8.APP8.2.2.EQ-1", "caption_id": null}
+{"region_id": "p578-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.2.2", "page": 578, "node_id": "REG154.04.ANNEX-B8.APP8.2.2.EQ-2", "caption_id": null}
+{"region_id": "p578-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP8.2.2", "page": 578, "node_id": "REG154.04.ANNEX-B8.APP8.2.2.EQ-3", "caption_id": null}
+{"region_id": "p579-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP9", "page": 579, "node_id": "REG154.04.ANNEX-B8.APP9.EQ-1", "caption_id": null}
+{"region_id": "p579-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP9", "page": 579, "node_id": "REG154.04.ANNEX-B8.APP9.EQ-2", "caption_id": null}
+{"region_id": "p579-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP9", "page": 579, "node_id": "REG154.04.ANNEX-B8.APP9.EQ-3", "caption_id": null}
+{"region_id": "p579-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-B8.APP9", "page": 579, "node_id": "REG154.04.ANNEX-B8.APP9.EQ-4", "caption_id": null}
+{"region_id": "p581-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-B10.1", "page": 581, "node_id": "REG154.04.ANNEX-B10.1.TABLE-U1", "caption_id": null}
+{"region_id": "p587-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B10.5.9", "page": 587, "node_id": "REG154.04.ANNEX-B10.FIG-B10", "caption_id": "Figure B10"}
+{"region_id": "p588-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B10.5.9.6", "page": 588, "node_id": "REG154.04.ANNEX-B10.FIG-B10/1", "caption_id": "Figure B10/1"}
+{"region_id": "p588-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-B10.5.9.6", "page": 588, "node_id": "REG154.04.ANNEX-B10.FIG-B10/1", "caption_id": "Figure B10/1"}
+{"region_id": "p588-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B10.6.1.1", "page": 588, "node_id": "REG154.04.ANNEX-B10.6.1.1.EQ-1", "caption_id": null}
+{"region_id": "p589-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B10.6.1.1", "page": 589, "node_id": "REG154.04.ANNEX-B10.6.1.1.EQ-2", "caption_id": null}
+{"region_id": "p589-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-B10.6.1.1", "page": 589, "node_id": "REG154.04.ANNEX-B10.6.1.1.EQ-3", "caption_id": null}
+{"region_id": "p589-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-B10.6.1.1", "page": 589, "node_id": "REG154.04.ANNEX-B10.6.1.1.EQ-4", "caption_id": null}
+{"region_id": "p590-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-B10.6.1.1", "page": 590, "node_id": "REG154.04.ANNEX-B10.6.1.1.EQ-5", "caption_id": null}
+{"region_id": "p590-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-B10.6.1.3", "page": 590, "node_id": "REG154.04.ANNEX-B10.TABLE-A10/1", "caption_id": "Table A10/1"}
+{"region_id": "p592-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-B10.APP1.1", "page": 592, "node_id": "REG154.04.ANNEX-B10.APP1.FIG-B10", "caption_id": "Figure B10"}
+{"region_id": "p595-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.1.2", "page": 595, "node_id": "REG154.04.ANNEX-C1.TABLE-1", "caption_id": "Table 1"}
+{"region_id": "p596-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.1.2", "page": 596, "node_id": "REG154.04.ANNEX-C1.TABLE-2", "caption_id": "Table 2"}
+{"region_id": "p596-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.1.2", "page": 596, "node_id": "REG154.04.ANNEX-C1.1.2.EQ-1", "caption_id": null}
+{"region_id": "p599-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.2.1.1", "page": 599, "node_id": "REG154.04.ANNEX-C1.APP3.2.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p599-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.2.1.2", "page": 599, "node_id": "REG154.04.ANNEX-C1.APP3.2.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p599-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.2.1.2", "page": 599, "node_id": "REG154.04.ANNEX-C1.APP3.2.1.2.EQ-1", "caption_id": null}
+{"region_id": "p600-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.2.1.2", "page": 600, "node_id": "REG154.04.ANNEX-C1.APP3.2.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p600-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.2.2.1", "page": 600, "node_id": "REG154.04.ANNEX-C1.APP3.2.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p600-r3", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.2.2.2", "page": 600, "node_id": "REG154.04.ANNEX-C1.APP3.2.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p600-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 600, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.TABLE-U1", "caption_id": null}
+{"region_id": "p600-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 600, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-1", "caption_id": null}
+{"region_id": "p601-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 601, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-2", "caption_id": null}
+{"region_id": "p601-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 601, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-3", "caption_id": null}
+{"region_id": "p601-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 601, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-4", "caption_id": null}
+{"region_id": "p601-r5", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 601, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-5", "caption_id": null}
+{"region_id": "p602-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-6", "caption_id": null}
+{"region_id": "p602-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-7", "caption_id": null}
+{"region_id": "p602-r4", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.1", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.1.EQ-8", "caption_id": null}
+{"region_id": "p602-r5", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.2", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.2.TABLE-U1", "caption_id": null}
+{"region_id": "p602-r6", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.2", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.2.EQ-1", "caption_id": null}
+{"region_id": "p602-r7", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.2", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.2.EQ-2", "caption_id": null}
+{"region_id": "p602-r8", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.2", "page": 602, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.2.EQ-3", "caption_id": null}
+{"region_id": "p603-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.3.1.2", "page": 603, "node_id": "REG154.04.ANNEX-C1.APP3.3.1.2.TABLE-U2", "caption_id": null}
+{"region_id": "p603-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.3.2.1", "page": 603, "node_id": "REG154.04.ANNEX-C1.APP3.3.2.1.TABLE-U1", "caption_id": null}
+{"region_id": "p603-r3", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.3.2.1", "page": 603, "node_id": "REG154.04.ANNEX-C1.APP3.3.2.1.EQ-1", "caption_id": null}
+{"region_id": "p603-r4", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.3.2.2", "page": 603, "node_id": "REG154.04.ANNEX-C1.APP3.3.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p612-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-C1.APP3.5.1", "page": 612, "node_id": "REG154.04.ANNEX-C1.APP3.FIG-C3/1", "caption_id": "Figure C3/1"}
+{"region_id": "p612-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-C1.APP3.5.1.1", "page": 612, "node_id": "REG154.04.ANNEX-C1.APP3.FIG-C3/2", "caption_id": "Figure C3/2"}
+{"region_id": "p614-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-C1.APP3.5.2", "page": 614, "node_id": "REG154.04.ANNEX-C1.APP3.FIG-C3/3", "caption_id": "Figure C3/3"}
+{"region_id": "p614-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.5.2.2", "page": 614, "node_id": "REG154.04.ANNEX-C1.APP3.5.2.2.TABLE-U1", "caption_id": null}
+{"region_id": "p615-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.5.2.5", "page": 615, "node_id": "REG154.04.ANNEX-C1.APP3.5.2.5.EQ-1", "caption_id": null}
+{"region_id": "p617-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-C1.APP3.6.4", "page": 617, "node_id": "REG154.04.ANNEX-C1.APP3.FIG-C3/4", "caption_id": "Figure C3/4"}
+{"region_id": "p617-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.6.4", "page": 617, "node_id": "REG154.04.ANNEX-C1.APP3.6.4.TABLE-U1", "caption_id": null}
+{"region_id": "p621-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.6.5.9.1", "page": 621, "node_id": "REG154.04.ANNEX-C1.APP3.TABLE-C3/1", "caption_id": "Table C3/1"}
+{"region_id": "p623-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.6.6.1.5.1", "page": 623, "node_id": "REG154.04.ANNEX-C1.APP3.6.6.1.5.1.EQ-1", "caption_id": null}
+{"region_id": "p625-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.6.6.2", "page": 625, "node_id": "REG154.04.ANNEX-C1.APP3.TABLE-C3/2", "caption_id": "Table C3/2"}
+{"region_id": "p626-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C1.APP3.6.6.2", "page": 626, "node_id": "REG154.04.ANNEX-C1.APP3.TABLE-C3/2", "caption_id": "Table C3/2"}
+{"region_id": "p626-r2", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.7.1", "page": 626, "node_id": "REG154.04.ANNEX-C1.APP3.7.1.EQ-1", "caption_id": null}
+{"region_id": "p627-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-C1.APP3.7.1.1", "page": 627, "node_id": "REG154.04.ANNEX-C1.APP3.7.1.1.EQ-1", "caption_id": null}
+{"region_id": "p634-r1", "kind": "equation", "unit_id": "REG154.04.ANNEX-C4.7.1", "page": 634, "node_id": "REG154.04.ANNEX-C4.7.1.EQ-1", "caption_id": null}
+{"region_id": "p636-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C4.APP1.2.3", "page": 636, "node_id": "REG154.04.ANNEX-C4.APP1.TABLE-C4", "caption_id": "Table C4"}
+{"region_id": "p637-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-C4.APP1.2.3", "page": 637, "node_id": "REG154.04.ANNEX-C4.APP1.FIG-C4", "caption_id": "Figure C4"}
+{"region_id": "p639-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-C4.APP1.4.1.4", "page": 639, "node_id": "REG154.04.ANNEX-C4.APP1.FIG-C4", "caption_id": "Figure C4"}
+{"region_id": "p639-r2", "kind": "figure", "unit_id": "REG154.04.ANNEX-C4.APP1.4.1.7", "page": 639, "node_id": "REG154.04.ANNEX-C4.APP1.FIG-C4", "caption_id": "Figure C4"}
+{"region_id": "p644-r1", "kind": "table", "unit_id": "REG154.04.ANNEX-C4.APP3.1", "page": 644, "node_id": "REG154.04.ANNEX-C4.APP3.1.TABLE-U1", "caption_id": null}
+{"region_id": "p644-r2", "kind": "table", "unit_id": "REG154.04.ANNEX-C4.APP3.2", "page": 644, "node_id": "REG154.04.ANNEX-C4.APP3.2.TABLE-U1", "caption_id": null}
+{"region_id": "p657-r1", "kind": "figure", "unit_id": "REG154.04.ANNEX-C5.APP1.6", "page": 657, "node_id": "REG154.04.ANNEX-C5.APP1.FIG-C5", "caption_id": "Figure C5"}

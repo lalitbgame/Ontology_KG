@@ -1,0 +1,25 @@
+{"unit_id": "GTR22.FRONT", "spans": [[242, 255, "EXT:ECE.TRANS.132"], [312, 361, "self"]]}
+{"unit_id": "GTR22.RATIONALE.6", "spans": [[143, 166, "EXT:ECE.TRANS.WP29.AC.3.32"]]}
+{"unit_id": "GTR22.RATIONALE.8", "spans": [[48, 71, "EXT:ECE.TRANS.WP29.AC.3.40"]]}
+{"unit_id": "GTR22.RATIONALE.11", "spans": [[36, 59, "EXT:ECE.TRANS.WP29.AC.3.57"]]}
+{"unit_id": "GTR22.RATIONALE.18", "spans": [[685, 694, "EXT:SAE.J1711"]]}
+{"unit_id": "GTR22.RATIONALE.35", "spans": [[756, 761, "self"]]}
+{"unit_id": "GTR22.RATIONALE.36", "spans": [[939, 944, "self"]]}
+{"unit_id": "GTR22.RATIONALE.43", "spans": [[381, 386, "self"]]}
+{"unit_id": "GTR22.RATIONALE.46", "spans": [[851, 872, "EXT:UNR-154"]]}
+{"unit_id": "GTR22.BODY.3.21", "spans": [[97, 110, "EXT:UNGTR-15"]]}
+{"unit_id": "GTR22.BODY.3.22", "spans": [[64, 76, "EXT:UNGTR-15"]]}
+{"unit_id": "GTR22.BODY.5.2", "spans": [[739, 744, "self"], [976, 981, "self"], [1823, 1828, "self"]]}
+{"unit_id": "GTR22.BODY.6.3.2", "spans": [[708, 713, "self"], [735, 740, "self"]]}
+{"unit_id": "GTR22.BODY.6.3.3", "spans": [[573, 578, "self"], [771, 776, "self"], [802, 807, "self"], [953, 958, "self"], [984, 989, "self"], [1044, 1049, "self"], [1152, 1157, "self"]]}
+{"unit_id": "GTR22.BODY.6.5", "spans": [[131, 136, "self"], [157, 162, "self"]]}
+{"unit_id": "GTR22.ANNEX-1", "spans": [[332, 337, "self"], [449, 454, "self"], [480, 485, "self"], [511, 516, "self"], [679, 684, "self"], [710, 715, "self"], [741, 746, "self"], [960, 965, "self"], [991, 996, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.1", "spans": [[633, 646, "EXT:UNGTR-15"], [648, 653, "EXT:UNGTR-15"], [658, 679, "EXT:UNR-154"]]}
+{"unit_id": "GTR22.ANNEX-3.2.1.1", "spans": [[7, 12, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.2.1.2", "spans": [[7, 12, "self"], [41, 46, "self"], [74, 79, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.2.2.1", "spans": [[7, 12, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.2.2.2", "spans": [[7, 12, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.3.1.1", "spans": [[7, 12, "self"], [41, 46, "self"], [164, 169, "self"], [194, 199, "self"], [224, 229, "self"], [365, 370, "self"], [395, 400, "self"], [635, 640, "self"], [743, 756, "EXT:UNGTR-15"]]}
+{"unit_id": "GTR22.ANNEX-3.3.1.2", "spans": [[7, 12, "self"], [41, 46, "self"], [71, 76, "self"], [101, 106, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.3.2.1", "spans": [[7, 12, "self"], [41, 46, "self"]]}
+{"unit_id": "GTR22.ANNEX-3.3.2.2", "spans": [[7, 12, "self"]]}

@@ -125,3 +125,30 @@ depth-0 division-root pseudo-node standing in for `Division`),
 - Structured extraction of table *contents* (numeric WLTC cycle data etc.) — captions + defining-clause links only
 - OCR
 - Automated multi-version diffing logic (schema supports it; the diff engine itself is a later project)
+
+---
+
+# v2 — Generalization to all documents (plan.md, 2026-10-12)
+
+Everything above is the v1 (Reg 154 only) build log. v2 implements `plan.md`
+(the limitations it fixes are in `limitation.md`). Defaults taken for every
+open decision in plan.md §13 (no math OCR, `REG154.04` id kept, numbered EU
+points only, GTR rationale included as non-normative, `pyyaml` + `sympy`,
+table `cell_text` stored, standard ids keep the part).
+
+- [x] **M1 Plumbing** — `documents.yaml` registry, `pipeline/profiles/*.yaml` (unece_regulation, un_gtr, eu_oj_act, generic) + `pipeline/profile.py` loader/validator/detector, `python -m pipeline.run`, per-document `output/<doc_id>/` + `manifest.json`, `Document`/`Standard` nodes. Tests no longer hard-code `REG154`.
+- [x] **M2 Layout v2** — span-level lines, same-baseline fragment merge (justified text), sub/superscript markup, footnote-ref markers, header/footer detection by odd/even/landscape group, footnote separator rule, unicode normalisation, body statistics, outline capture, OCR check.
+- [x] **M3 Regions** — `phase1b_regions.py`: TOC, captioned/uncaptioned tables (+ caption-anchored fallback), layout tables, figures, display/inline/image equations, "where:" glossaries.
+- [x] **M4 Structure v2** — profile-driven stack parser (`phase2_parse.py`): Parts, Sections, Chapters, Articles, article paragraphs, points, recitals, annexes, appendices, forms, decimal clauses with numbering-column + successor plausibility, title vs body, id scheme v2, footnote nodes, region anchors/placeholders. 0 dedupe merges on the three new documents.
+- [x] **M5 Terms v2** — sections located by title, quote-agnostic definition patterns, learned column split, inline abbreviations, imported definitions, definition scope. GTR 23/23 + 11 abbreviations; Euro 7 77/77.
+- [x] **M6 Equations** — `phase3b_equations.py`: 2-D reconstruction (fractions, radicals, sums/integrals with limits, sub/superscripts) → linear + LaTeX, sympy validation, glossary → variables with units, DEPENDS_ON chains, decision rules with outcomes, PNG crop for every equation.
+- [x] **M7a External citations** — `phase4a_external.py` (plan §9a): every external document kind, canonical ids + aliases, self-citation filter, pinpoint chains, back-references, footnote metadata (title/date/OJ/ELI), roles, document-level AMENDS/REPEALS/IMPLEMENTS/LEGAL_BASIS, mask for Phase 4, `external_citations.csv`.
+- [x] **M7 Tables/Figures + References v2** — `phase3c_tables.py`; `phase4_references.py` resolves by index lookup (articles, roman/numeric annexes, appendix-of-annex, paragraph scope, tables, figures, equations, recitals, chapters, lists, ranges).
+- [x] **M8 Viz + app** — per-document `kg_explorer.html` (KaTeX equations next to their crops, external documents, relations by type) + `output/index.html`; `kg_illustrate.py --doc`; Streamlit document selector; prompts include equations and cited external provisions.
+- [x] **M9 QA** — `phase6_qa.py` writes `output/<doc_id>/qa_report.md`; `tests/expectations/<doc_id>.yaml` hand-verified facts gate `tests/test_integration.py`.
+
+Not done / known gaps (see each `qa_report.md` and limitation.md "Status after v2"):
+- [ ] Reg 154 equation reconstruction is ~52% `parsed`; deeply nested formulas come out `partial` (always with the PDF crop beside them). No 30-equation hand audit yet (plan §7.7).
+- [ ] Image-only equations: only those framed by a lead-in/"where" are detected; their formula text needs the (declined) math-OCR option.
+- [ ] Reg 154 still has 15 dedupe merges (wrapped-reference class, down from ~30 in v1).
+- [ ] Structured table values / Constraints, cross-document graphs, Neo4j - out of scope.

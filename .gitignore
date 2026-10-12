@@ -1,2 +1,5 @@
 .venv/
 __pycache__/
+# Phase 1 intermediates: large, and regenerated from the PDF in seconds
+output/*/lines.jsonl
+output/*/page_meta.jsonl

@@ -1,0 +1,75 @@
+# Commission Implementing Regulation (EU) 2026/1762 - hand-verified facts
+# (2026-10-12), checked against the PDF: 7 recitals; Articles 1-9; Annexes
+# I-IV; appendices I:1-3, II:1-2, III:1-3 (8); Annex IV Tables 1-2; Annex II
+# Appendix 2 is the type-approval certificate (a form). It implements
+# Regulation (EU) 2024/1257 and cites UN Regulation No 179 throughout.
+units_by_type:
+  Recital: 7
+  Article: 9
+  Annex: 4
+  Appendix: 8
+max_counts:
+  dedupe_merges: 0
+  orphans: 0
+exists:
+  - EU2026-1762.ANNEX-IV.TABLE-1
+  - EU2026-1762.ANNEX-IV.TABLE-2
+  - EU2026-1762.ART-1.PT-2
+parents:
+  EU2026-1762.ANNEX-I.APP-1: EU2026-1762.ANNEX-I
+  EU2026-1762.ANNEX-II.APP-2: EU2026-1762.ANNEX-II
+  EU2026-1762.ANNEX-III.APP-3: EU2026-1762.ANNEX-III
+  EU2026-1762.ART-4.3: EU2026-1762.ART-4
+titles:
+  EU2026-1762.ART-9: Entry into force
+  EU2026-1762.ANNEX-IV: TRANSPARENCY LIST
+unit_props:
+  EU2026-1762.ANNEX-II.APP-2: {is_form: true}
+external_docs_include:
+  - EXT:UNR-179
+  - EXT:UNR-83
+  - EXT:EU.REG.2024-1257
+  - EXT:EU.REG.2018-858
+  - EXT:EU.REG.2020-683
+  - EXT:EU.REG.2025-1706
+  - EXT:EU.REG.2016-679
+  - EXT:EU.REG.2018-1725
+  - EXT:TFEU
+external_docs_exclude:
+  - EXT:EU.REG.2026-1762   # itself
+doc_edges_include:
+  - [IMPLEMENTS, EXT:EU.REG.2024-1257]
+provisions_include:
+  - EXT:UNR-179#3.0
+  - EXT:UNR-179#4.4
+  - EXT:UNR-179#7
+  - EXT:UNR-179#7.1
+  - EXT:UNR-179#7.1.3
+  - EXT:UNR-179#7.2
+  - EXT:UNR-179#8
+  - EXT:UNR-179#9.1
+  - EXT:UNR-179#9.4
+  - EXT:UNR-179#10
+  - EXT:UNR-179#PT-3.7.19
+  - EXT:UNR-179#ANNEX-1
+  - EXT:UNR-179#ANNEX-1.APP-1
+  - EXT:UNR-179#ANNEX-1.APP-2
+  - EXT:UNR-179#ANNEX-1.APP-3
+  - EXT:UNR-179#ANNEX-4.APP-1
+  - EXT:UNR-179#ANNEX-4.APP-2
+  - EXT:UNR-179#ANNEX-5
+  - EXT:EU.REG.2024-1257#ART-4.2
+  - EXT:EU.REG.2024-1257#ART-4.5
+  - EXT:EU.REG.2024-1257#ART-5
+  - EXT:EU.REG.2024-1257#ART-7.1
+  - EXT:EU.REG.2024-1257#ART-10.1
+  - EXT:EU.REG.2024-1257#ART-14.1
+  - EXT:EU.REG.2024-1257#ART-14.3.PT-i
+  - EXT:EU.REG.2024-1257#ART-14.4.PT-a
+  - EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11
+internal_resolved_max:
+  # "Annex 1/4/5/12 to UN Regulation No 179/83" are external: the act's
+  # own annexes are roman (I-IV), so any internal resolution would be wrong
+  - {pattern: '^Annex (?:1|4|5|12)$', max: 0}
+reference_rate_min:
+  all: 0.9

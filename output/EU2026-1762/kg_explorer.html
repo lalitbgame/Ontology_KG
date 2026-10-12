@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EU2026-1762 knowledge graph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --bg: #EEF1F5;
+    --surface: #FFFFFF;
+    --rail: #F5F7FA;
+    --ink: #1B2430;
+    --ink-muted: #5B6774;
+    --ink-faint: #8993A0;
+    --line: #D7DEE4;
+    --line-strong: #C1CBD3;
+    --accent: #1D5DA8;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #E4EDF8;
+    --ok: #2F7D5E;
+    --ok-soft: #E4F2EC;
+    --warn: #A9670C;
+    --warn-soft: #FBF0DD;
+    --clause: #1D5DA8;
+    --abbr: #7452C7;
+    --abbr-soft: #EEE8FB;
+    --def: #B23A6B;
+    --def-soft: #FBE8EF;
+    --eq: #0F7C8C;
+    --var: #6B8E23;
+    --tab: #8A5A00;
+    --fig: #9C4DCC;
+    --foot: #7A7F87;
+    --ext: #C2410C;
+    --doc: #334155;
+    --shadow: 0 1px 2px rgba(27, 36, 48, 0.06), 0 8px 24px rgba(27, 36, 48, 0.08);
+    --radius: 10px;
+    --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F171F;
+      --surface: #16212C;
+      --rail: #121B23;
+      --ink: #E5EAEF;
+      --ink-muted: #93A2AF;
+      --ink-faint: #667684;
+      --line: #263441;
+      --line-strong: #34434F;
+      --accent: #5FA0E8;
+      --accent-ink: #0B1620;
+      --accent-soft: #1C2C3D;
+      --ok: #56C09E;
+      --ok-soft: #16332A;
+      --warn: #E0A238;
+      --warn-soft: #362A12;
+      --clause: #5FA0E8;
+      --abbr: #B39AEF;
+      --abbr-soft: #26203B;
+      --def: #E58AAE;
+      --def-soft: #3A1F2A;
+      --eq: #3CC4D6;
+      --var: #A3C76A;
+      --tab: #E0B35A;
+      --fig: #C99AF0;
+      --foot: #A0A6AE;
+      --ext: #F59E6B;
+      --doc: #CBD5E1;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F171F;
+    --surface: #16212C;
+    --rail: #121B23;
+    --ink: #E5EAEF;
+    --ink-muted: #93A2AF;
+    --ink-faint: #667684;
+    --line: #263441;
+    --line-strong: #34434F;
+    --accent: #5FA0E8;
+    --accent-ink: #0B1620;
+    --accent-soft: #1C2C3D;
+    --ok: #56C09E;
+    --ok-soft: #16332A;
+    --warn: #E0A238;
+    --warn-soft: #362A12;
+    --clause: #5FA0E8;
+    --abbr: #B39AEF;
+    --abbr-soft: #26203B;
+    --def: #E58AAE;
+    --def-soft: #3A1F2A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.35);
+  }
+
+  /* ---------- Base ---------- */
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+    font-family: var(--font-ui); font-size: 14.5px; line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { display: flex; flex-direction: column; overflow: hidden; }
+  ::selection { background: var(--accent-soft); }
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  button { font-family: inherit; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 20px;
+    padding: 12px 20px; border-bottom: 1px solid var(--line);
+    background: var(--surface); box-shadow: var(--shadow); z-index: 5;
+    flex-wrap: wrap; row-gap: 10px;
+  }
+  .brand { display: flex; flex-direction: column; gap: 1px; margin-right: 4px; }
+  .brand .kicker {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .brand h1 {
+    margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .stats { display: flex; gap: 10px; flex-wrap: wrap; margin-left: auto; }
+  .stat {
+    display: flex; align-items: baseline; gap: 6px; padding: 6px 12px;
+    background: var(--rail); border: 1px solid var(--line); border-radius: 999px;
+  }
+  .stat .n {
+    font-family: var(--font-mono); font-weight: 600; font-size: 13.5px;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+  }
+  .stat .lbl { font-size: 11.5px; color: var(--ink-muted); }
+  .stat .dot { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; }
+  .theme-toggle {
+    border: 1px solid var(--line); background: var(--rail); color: var(--ink-muted);
+    border-radius: 999px; padding: 6px 12px; font-size: 12px; cursor: pointer;
+  }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--line-strong); }
+
+  /* ---------- Layout ---------- */
+  .layout { flex: 1 1 auto; display: grid; grid-template-columns: 380px 1fr; min-height: 0; }
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; }
+    .rail { position: fixed; inset: 0; z-index: 20; transform: translateX(-100%); transition: transform 180ms ease; }
+    .rail.open { transform: translateX(0); }
+    .rail-toggle { display: inline-flex !important; }
+  }
+
+  .rail { display: flex; flex-direction: column; background: var(--rail); border-right: 1px solid var(--line); min-height: 0; }
+  .rail-toggle { display: none; }
+  .search-wrap { padding: 12px; border-bottom: 1px solid var(--line); position: relative; flex: 0 0 auto; }
+  .search-input {
+    width: 100%; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--line-strong);
+    background: var(--surface); color: var(--ink); font-family: var(--font-ui); font-size: 13.5px;
+  }
+  .search-input::placeholder { color: var(--ink-faint); }
+  .search-results {
+    position: absolute; left: 12px; right: 12px; top: calc(100% - 2px);
+    background: var(--surface); border: 1px solid var(--line-strong); border-radius: 8px;
+    box-shadow: var(--shadow); max-height: 360px; overflow-y: auto; z-index: 10; display: none;
+  }
+  .search-results.show { display: block; }
+  .search-result {
+    display: flex; align-items: center; gap: 8px; padding: 8px 10px; cursor: pointer;
+    border-bottom: 1px solid var(--line); font-size: 12.5px;
+  }
+  .search-result:last-child { border-bottom: none; }
+  .search-result:hover, .search-result.active { background: var(--accent-soft); }
+  .search-result .snip { color: var(--ink-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .search-empty { padding: 14px 10px; color: var(--ink-faint); font-size: 12.5px; }
+
+  .tree-scroll { flex: 1 1 auto; overflow-y: auto; padding: 8px 0 24px; }
+  ul.tree, ul.tree ul { list-style: none; margin: 0; padding: 0; }
+  ul.tree ul { display: block; }
+  ul.tree ul.collapsed { display: none; }
+  .row {
+    display: flex; align-items: center; gap: 6px; padding: 5px 10px 5px 0;
+    cursor: pointer; border-radius: 6px; margin: 1px 8px; user-select: none;
+  }
+  .row:hover { background: var(--accent-soft); }
+  .row.selected { background: var(--accent); color: var(--accent-ink); }
+  .row.selected .row-label { color: var(--accent-ink); }
+  .row.selected .twisty { color: var(--accent-ink); }
+  .twisty {
+    flex: 0 0 auto; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;
+    color: var(--ink-faint); font-size: 10px; transition: transform 120ms ease;
+  }
+  .twisty.leaf { visibility: hidden; }
+  .row.expanded > .twisty { transform: rotate(90deg); }
+  .dot { flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; }
+  .row-label {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.8px;
+  }
+  .row-label .num { font-family: var(--font-mono); color: var(--ink-muted); margin-right: 2px; }
+  .row.selected .row-label .num { color: var(--accent-ink); opacity: 0.85; }
+
+  /* ---------- Main ---------- */
+  .main { min-height: 0; overflow-y: auto; }
+  .main-inner { max-width: 880px; margin: 0 auto; padding: 28px 32px 64px; }
+  .empty-state {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+    padding: 60px 32px; color: var(--ink-muted); max-width: 640px;
+  }
+  .empty-state h2 { color: var(--ink); font-size: 20px; margin: 0; }
+  .empty-state p { margin: 0; line-height: 1.65; }
+
+  .crumbs { display: flex; flex-wrap: wrap; gap: 4px; font-size: 12px; color: var(--ink-faint); margin-bottom: 14px; }
+  .crumbs button {
+    background: none; border: none; color: var(--ink-muted); cursor: pointer; padding: 2px 4px;
+    font-family: var(--font-ui); font-size: 12px; border-radius: 4px;
+  }
+  .crumbs button:hover { color: var(--accent); background: var(--accent-soft); }
+  .crumbs span.sep { color: var(--line-strong); }
+
+  .detail-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+  .type-badge {
+    flex: 0 0 auto; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px;
+    margin-top: 3px;
+  }
+  .badge-C { background: var(--accent-soft); color: var(--clause); }
+  .badge-A { background: var(--abbr-soft); color: var(--abbr); }
+  .badge-D { background: var(--def-soft); color: var(--def); }
+  .detail-title { font-size: 21px; font-weight: 700; line-height: 1.35; text-wrap: balance; margin: 0; }
+  .qid {
+    font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted);
+    margin: 6px 0 20px; word-break: break-all;
+  }
+  .meta-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px;
+    overflow: hidden; margin-bottom: 22px;
+  }
+  .meta-cell { background: var(--surface); padding: 9px 12px; }
+  .meta-cell .k { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+  .meta-cell .v { font-family: var(--font-mono); font-size: 13px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .label-chip {
+    display: inline-block; font-family: var(--font-mono); font-size: 10.5px; padding: 2px 7px;
+    border-radius: 5px; background: var(--rail); border: 1px solid var(--line); margin: 0 4px 4px 0;
+  }
+
+  .prose {
+    font-size: 15px; line-height: 1.7; max-width: 68ch; color: var(--ink);
+    white-space: pre-wrap;
+  }
+  .prose.empty { color: var(--ink-faint); font-style: italic; }
+  .section-heading {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint);
+    margin: 28px 0 10px; padding-top: 20px; border-top: 1px solid var(--line);
+  }
+  .section-heading:first-of-type { border-top: none; padding-top: 0; margin-top: 22px; }
+
+  .rel-list { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .rel-row {
+    display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: var(--surface);
+    cursor: pointer; border-bottom: 1px solid var(--line);
+  }
+  .rel-row:last-child { border-bottom: none; }
+  .rel-row:hover { background: var(--accent-soft); }
+  .rel-row .dot { flex: 0 0 auto; }
+  .rel-row .rl-main { min-width: 0; flex: 1 1 auto; }
+  .rel-row .rl-label { font-size: 12.8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rel-row .rl-sub { font-size: 11px; color: var(--ink-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rel-row .rl-arrow { color: var(--ink-faint); font-size: 12px; }
+  .status-pill {
+    flex: 0 0 auto; font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+    padding: 3px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .status-pill.resolved { background: var(--ok-soft); color: var(--ok); }
+  .status-pill.unresolved { background: var(--warn-soft); color: var(--warn); }
+  .rel-empty { color: var(--ink-faint); font-size: 12.5px; padding: 10px 2px; }
+
+  /* ---------- Local graph ---------- */
+  .graph-wrap { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: hidden; }
+  .graph-svg { display: block; width: 100%; height: auto; }
+  .g-line { stroke: var(--line-strong); stroke-width: 1.4; fill: none; }
+  .g-line.ref-out { stroke: var(--accent); }
+  .g-line.ref-in { stroke: var(--ink-faint); stroke-dasharray: 3 3; }
+  .g-node rect {
+    fill: var(--surface); stroke: var(--line-strong); stroke-width: 1.2; rx: 7;
+  }
+  .g-node.self rect { fill: var(--accent); stroke: var(--accent); }
+  .g-node.self text { fill: var(--accent-ink); }
+  .g-node text { fill: var(--ink); font-family: var(--font-ui); font-size: 10.5px; }
+  .g-node .g-type { fill: var(--ink-faint); font-family: var(--font-mono); font-size: 8.5px; }
+  .g-node.self .g-type { fill: var(--accent-ink); opacity: 0.75; }
+  .g-node { cursor: pointer; }
+  .g-node.self { cursor: default; }
+  .g-node:hover rect { stroke: var(--accent); }
+  .g-more { fill: var(--ink-faint); font-family: var(--font-mono); font-size: 10px; }
+  .g-axis-label {
+    fill: var(--ink-faint); font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  footer.credit {
+    max-width: 880px; margin: 40px auto 0; padding: 0 32px 40px; color: var(--ink-faint); font-size: 11.5px;
+  }
+
+  .badge-U { background: var(--accent-soft); color: var(--clause); }
+  .badge-E, .badge-V, .badge-T, .badge-F, .badge-N, .badge-X, .badge-P, .badge-R {
+    background: var(--rail); border: 1px solid var(--line); color: var(--ink);
+  }
+  .eq-box { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 14px 16px; overflow-x: auto; }
+  .eq-img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; margin-top: 10px; }
+  .mono { font-family: var(--font-mono); font-size: 12.5px; white-space: pre-wrap; word-break: break-word; }
+  .doc-switch { font-size: 12px; color: var(--ink-muted); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+  .doc-switch:hover { color: var(--ink); border-color: var(--line-strong); }
+  table.gloss { border-collapse: collapse; width: 100%; font-size: 13px; }
+  table.gloss td { border-bottom: 1px solid var(--line); padding: 6px 8px; vertical-align: top; }
+  table.gloss td:first-child { font-family: var(--font-mono); white-space: nowrap; }
+  .note { font-size: 12px; color: var(--ink-faint); margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<button class="rail-toggle" id="railToggle" aria-label="Toggle navigation" style="position:fixed; bottom:18px; left:18px; z-index:30; width:46px; height:46px; border-radius:50%; border:1px solid var(--line-strong); background:var(--accent); color:var(--accent-ink); font-size:18px; box-shadow:var(--shadow); align-items:center; justify-content:center;">☰</button>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="kicker">Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)</span>
+    <h1>Knowledge&nbsp;Graph&nbsp;Explorer</h1>
+  </div>
+  <a class="doc-switch" href="../index.html">All documents</a>
+  <div class="stats" id="statsRow"></div>
+  <button class="theme-toggle" id="themeToggle">Theme: System</button>
+</div>
+
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="search-wrap">
+      <input class="search-input" id="searchInput" type="text" placeholder="Search clauses, terms, equations, external documents…" autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="tree-scroll">
+      <ul class="tree" id="treeRoot"></ul>
+    </div>
+  </nav>
+
+  <main class="main" id="main">
+    <div class="main-inner" id="mainInner">
+      <div class="empty-state">
+        <h2>Select a node to explore</h2>
+        <p>This graph holds one document's structure (parts, chapters, articles, annexes, appendices, clauses), its definitions and abbreviations, footnotes, tables, figures, equations with their variables, every resolved internal cross-reference, and every external document and provision it cites. Search on the left, or open a branch in the tree.</p>
+        <p id="legend"></p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+const DATA = {"doc_id":"EU2026-1762","nodes":{"EU2026-1762.STANDARD":{"t":"R","ty":"Standard","lb":"Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)","meta":[["region","European Union"],["family","eu_oj_act"]]},"EU2026-1762":{"t":"R","ty":"Document","lb":"Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)","meta":[["number","2026/1762"],["issuer","European Commission"],["region","European Union"],["family","eu_oj_act"],["page_count",17]]},"EU2026-1762.PREAMBLE":{"t":"U","ty":"Preamble","lb":"Preamble — COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 lay…","body":"COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 laying down rules, procedures, testing methodologies and administrative requirements for the application of Regulation (EU) 2024/1257 of the European Parliament and of the Council as regards brake particle emissions of motor vehicles of categories M1 and N1 (Text with EEA relevance) THE EUROPEAN COMMISSION, Having regard to the Treaty on the Functioning of the European Union, Having regard to Regulation (EU) 2024/1257 of the European Parliament and of the Council of 24 April 2024 on typeapproval of motor vehicles and engines and of systems, components and separate technical units intended for such vehicles, with respect to their emissions and battery durability (Euro 7), amending Regulation (EU) 2018/858 of the European Parliament and of the Council and repealing Regulations (EC) No 715/2007 and (EC) No 595/2009 of the European Parliament and of the Council, Commission Regulation (EU) No 582/2011, Commission Regulation (EU) 2017/1151, Commission Regulation (EU) 2017/2400 and Commission Implementing Regulation (EU) 2022/1362 (1), and in particular Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof, Whereas:","foot":"OJ L, 2024/1257, 8.5.2024, ELI: http://data.europa.eu/eli/reg/2024/1257/oj.","labels":["Preamble","Paragraph"],"meta":[["Division","PREAMBLE"],["Depth",0],["Page",1],["Normative","yes"]]},"EU2026-1762.RECITAL-1":{"t":"U","ty":"Recital","lb":"Recital 1 — This Regulation aims at setting the technical requirements necessary …","body":"This Regulation aims at setting the technical requirements necessary for the emission type-approval of brake systems for vehicles that are to be designated as ‘Euro 7’ vehicles, ‘Euro 7G’ vehicles, ‘Euro 7ext’ vehicles or ‘Euro 7Gext’ vehicles in accordance with Articles 4 and 5 of Regulation (EU) 2024/1257 and using friction braking, which involves a combination of dry friction materials and a mating brake disc or brake drum or using some form of friction braking in their service. Such technical requirements should be based on the work performed in the United Nations World Forum for Harmonization of Vehicle Regulations (2) (UN WP.29) and more specifically UN Regulation No 179 (3).","foot":"In the case of a UN Regulation the series of amendments indicated reflects the version that has been published in the Official Journal of the European Union. Supplements to the series of amendments indicated in the Official Journal publication shall apply irrespective of publication in the Official Journal of the European Union. New series of amendments adopted after the series of amendments indicated in the Official Journal publication shall be accepted as an alternative. UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-1"],["Depth",1],["Page",1],["Normative","no"]]},"EU2026-1762.RECITAL-2":{"t":"U","ty":"Recital","lb":"Recital 2 — To reduce testing costs and administrative burdens for manufacturers,…","body":"To reduce testing costs and administrative burdens for manufacturers, thereby enhancing the competitiveness of the Union’s automotive industry while maintaining its high environmental and safety standards, streamlined testing procedures, methodologies, and checks should be established. To avoid redundant testing and ensure consistency with global best practices, it is appropriate to align with internationally harmonised technical requirements, tests, and methodologies arising from UN Regulations No 83 (4) and No 179.","foot":"UN Regulation No 83 – Uniform provisions concerning the approval of vehicles with regard to the emission of pollutants according to engine fuel requirements [2026/1086] (OJ L, 2026/1086, 29.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1086/oj).","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-2"],["Depth",1],["Page",1],["Normative","no"]]},"EU2026-1762.RECITAL-3":{"t":"U","ty":"Recital","lb":"Recital 3 — The testing procedures for brake system emissions should include the …","body":"The testing procedures for brake system emissions should include the contribution of friction brakes under varied operating conditions, in order to ensure that real-world emissions are accurately reflected, thereby protecting health and the environment while providing legal certainty for manufacturers. In order to encourage innovation while ensuring the achievement of stringent emission standards, the testing procedures for brake emissions should also take into account different brake materials and technologies, including regenerative and hybrid braking systems. Official Journal of the European Union L series 22.7.2026","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-3"],["Depth",1],["Page",1],["Normative","no"]]},"EU2026-1762.RECITAL-4":{"t":"U","ty":"Recital","lb":"Recital 4 — The roles and responsibilities of manufacturers, type-approval author…","body":"The roles and responsibilities of manufacturers, type-approval authorities, and market surveillance authorities should be set out to ensure effective enforcement of brake particle emission standards, enhance legal certainty for economic operators, and guarantee the proper functioning of the internal market. That should include documentation obligations for brake system performance over the vehicles’ lifetime, compliance with emission limits, and the use of standardised templates, including the Model Information Document, the EU Type-Approval Certificate for declarations of compliance, as laid down in Annex V to Regulation (EU) 2024/1257, as well as applicable test reports. Those test reports should cover type-approval, and in-service conformity testing – including procedures detailed in UN Regulations No 83 and No 179. This should reduce administrative burdens and minimise compliance costs, thereby supporting both innovation and rigorous environmental protection.","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-4"],["Depth",1],["Page",2],["Normative","no"]]},"EU2026-1762.RECITAL-5":{"t":"U","ty":"Recital","lb":"Recital 5 — In order to allow sufficient time for manufacturers and approval auth…","body":"In order to allow sufficient time for manufacturers and approval authorities to adapt to the new requirements laid down in Article 7(2) and Annex IV, the application of Article 7(2) and Annex IV shall be deferred. Those provisions shall therefore apply from 18 months after the entry into force of this Regulation.","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-5"],["Depth",1],["Page",2],["Normative","no"]]},"EU2026-1762.RECITAL-6":{"t":"U","ty":"Recital","lb":"Recital 6 — Whenever the measures provided for in this Regulation entail the proc…","body":"Whenever the measures provided for in this Regulation entail the processing of personal data, that processing should be carried out in accordance with Regulations (EU) 2016/679 (5) and (EU) 2018/1725 (6) of the European Parliament and of the Council, as well as the relevant national law in accordance with those Regulations.","foot":"Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L 119, 4.5.2016, p. 1, ELI: http://data.europa.eu/eli/reg/2016/679/oj). Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39, ELI: http://data. europa.eu/eli/reg/2018/1725/oj).","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-6"],["Depth",1],["Page",2],["Normative","no"]]},"EU2026-1762.RECITAL-7":{"t":"U","ty":"Recital","lb":"Recital 7 — The measures provided for in this Regulation are in accordance with t…","body":"The measures provided for in this Regulation are in accordance with the opinion of the Technical Committee – Motor vehicles (TCMV),","labels":["Recital","Paragraph"],"meta":[["Division","RECITAL-7"],["Depth",1],["Page",2],["Normative","no"]]},"EU2026-1762.BODY":{"t":"U","ty":"Body","lb":"Body — HAS ADOPTED THIS REGULATION:","title":"HAS ADOPTED THIS REGULATION:","labels":["Body"],"meta":[["Division","BODY"],["Depth",0],["Page",2],["Normative","yes"]]},"EU2026-1762.ART-1":{"t":"U","ty":"Article","lb":"Article 1 — Scope","title":"Scope","body":"This Regulation applies to the emission type-approval with regard to brake systems of the motor vehicles belonging to the following vehicle categories:","labels":["Article","Paragraph"],"meta":[["Division","ART-1"],["Depth",1],["Page",2],["Normative","yes"]]},"EU2026-1762.ART-1.PT-1":{"t":"U","ty":"Point","lb":"Point 1 — M1 and N1;","body":"M1 and N1;","labels":["Point","Paragraph"],"meta":[["Division","ART-1"],["Depth",2],["Page",2],["Normative","yes"]]},"EU2026-1762.ART-1.PT-2":{"t":"U","ty":"Point","lb":"Point 2 — N2 designated as ‘Euro 7ext’ and ‘Euro 7Gext’ in accordance with Arti…","body":"N2 designated as ‘Euro 7ext’ and ‘Euro 7Gext’ in accordance with Article 5 of Regulation (EU) 2024/1257.","labels":["Point","Paragraph"],"meta":[["Division","ART-1"],["Depth",2],["Page",2],["Normative","yes"]]},"EU2026-1762.ART-2":{"t":"U","ty":"Article","lb":"Article 2 — Requirements for emission type-approval as regards the brake system","title":"Requirements for emission type-approval as regards the brake system","labels":["Article"],"meta":[["Division","ART-2"],["Depth",1],["Page",2],["Normative","yes"]]},"EU2026-1762.ART-2.1":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 1 — For the purposes of emission type-approval under Article 4(2) of Regu…","body":"For the purposes of emission type-approval under Article 4(2) of Regulation (EU) 2024/1257, the manufacturer shall demonstrate that the brake system complies with all of the following: (a) the combination of brake corner emission families on a front and rear axle forms part of the same vehicle type with regard to brake emissions, as defined in paragraph 3.0 of UN Regulation No 179; (b) the brake system meets the requirements set out in: (i) Annexes I, II and III to this Regulation; (ii) paragraphs 7 and 8 of UN Regulation No 179.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-2"],["Depth",2],["Page",2],["Normative","yes"]]},"EU2026-1762.ART-2.2":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 2 — The manufacturer shall test the brake system in accordance with Annex…","body":"The manufacturer shall test the brake system in accordance with Annex III.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-2"],["Depth",2],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-3":{"t":"U","ty":"Article","lb":"Article 3 — Application for emission type-approval of a brake system","title":"Application for emission type-approval of a brake system","body":"The manufacturer shall submit to the granting type-approval authority an application for emission type-approval of a brake system under Article 14(1) of Regulation (EU) 2024/1257 and Table 11 of Annex V thereto, drawn up in accordance with the model information document set out in Appendix 1 of Annex II to this Regulation.","labels":["Article","Paragraph"],"meta":[["Division","ART-3"],["Depth",1],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-4":{"t":"U","ty":"Article","lb":"Article 4 — Administrative provisions for emission type-approval of a brake system","title":"Administrative provisions for emission type-approval of a brake system","labels":["Article"],"meta":[["Division","ART-4"],["Depth",1],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-4.1":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 1 — For the purpose of testing in accordance with Articles 7(1) and 10(1)…","body":"For the purpose of testing in accordance with Articles 7(1) and 10(1) of Regulation (EU) 2024/1257, manufacturers, the technical services and the granting type-approval authorities shall use the templates and models, test procedures and test reports set out in Annexes I, II and III to this Regulation.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-4"],["Depth",2],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-4.2":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 2 — For the purpose of granting an emission type-approval in accordance w…","body":"For the purpose of granting an emission type-approval in accordance with Article 10(1) of Regulation (EU) 2024/1257 and issuing the corresponding certificate, the approval authority shall use the model set out in Appendix 2 to Annex II to this Regulation.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-4"],["Depth",2],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-4.3":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 3 — The granting type-approval authority shall assign an emission type-ap…","body":"The granting type-approval authority shall assign an emission type-approval number in accordance with Annex IV to Commission Implementing Regulation (EU) 2020/683 (7) and the sub-character table set out in Table 4 of Annex I to Commission Implementing Regulation (EU) 2025/1706 (8).","foot":"Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles (OJ L 163, 26.5.2020, p. 1, ELI: http://data.europa.eu/eli/reg_impl/2020/683/oj). Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-4"],["Depth",2],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-5":{"t":"U","ty":"Article","lb":"Article 5 — Amendments to emission type-approvals","title":"Amendments to emission type-approvals","body":"When applying Articles 27, 33 and 34 of Regulation (EU) 2018/858 of the European Parliament and of the Council (9) concerning amendments, revisions and extensions of type-approvals with regard to brake systems, manufacturers and type-approval authorities shall also comply with paragraphs 9.1 and 9.4 of UN Regulation No 179.","foot":"Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/eli/reg/2018/858/oj).","labels":["Article","Paragraph"],"meta":[["Division","ART-5"],["Depth",1],["Page",3],["Normative","yes"]]},"EU2026-1762.ART-6":{"t":"U","ty":"Article","lb":"Article 6 — Conformity of production","title":"Conformity of production","labels":["Article"],"meta":[["Division","ART-6"],["Depth",1],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-6.1":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 1 — When applying tests at conformity of production in accordance with An…","body":"When applying tests at conformity of production in accordance with Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257, manufacturers and granting type-approval authorities shall comply with the requirements laid down in paragraph 10 of UN Regulation No 179.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-6"],["Depth",2],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-6.2":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 2 — Approval authorities shall check the conformity of production on the …","body":"Approval authorities shall check the conformity of production on the basis of the description in the type-approval certificate set out in Appendix 2 to Annex II.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-6"],["Depth",2],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-7":{"t":"U","ty":"Article","lb":"Article 7 — In-service conformity","title":"In-service conformity","labels":["Article"],"meta":[["Division","ART-7"],["Depth",1],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-7.1":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 1 — When performing tests to verify the share of individual friction brak…","body":"When performing tests to verify the share of individual friction braking in approvals where friction share braking coefficients have been measured according to Annex 5 to UN Regulation No 179 for in-service conformity purposes on an optional basis in accordance with Annex V to Regulation (EU) 2024/1257, Member States and recognised third parties shall apply the in-service conformity requirements set out in Annex 12 to UN Regulation No 83.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-7"],["Depth",2],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-7.2":{"t":"U","ty":"ArticleParagraph","lb":"ArticleParagraph 2 — For type-approved brake systems in accordance with Article 3, the man…","body":"For type-approved brake systems in accordance with Article 3, the manufacturer shall upload to the electronic platform for in-service conformity (ISC) all the in-service conformity related data referred to under Annexes 4 and 12 to UN Regulation No 83 as well as meet the specific requirements for transparency list applying to brake particle emission in Annex IV.","labels":["ArticleParagraph","Paragraph"],"meta":[["Division","ART-7"],["Depth",2],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-8":{"t":"U","ty":"Article","lb":"Article 8 — Manipulation devices and manipulation strategies for brake systems","title":"Manipulation devices and manipulation strategies for brake systems","body":"The requirement on the absence of manipulation devices and strategies related to brake systems laid down in Article 4(5) of Regulation (EU) 2024/1257 shall be complied with if the documentation provided by the manufacturer for type approval purposes in accordance with paragraph 4.4 of UN Regulation No 179 regarding emission-increase braking functions, as defined in point 3.7.19 of UN Regulation No 179, is approved by the granting type-approval authority.","labels":["Article","Paragraph"],"meta":[["Division","ART-8"],["Depth",1],["Page",4],["Normative","yes"]]},"EU2026-1762.ART-9":{"t":"U","ty":"Article","lb":"Article 9 — Entry into force","title":"Entry into force","body":"This Regulation shall enter into force on the day following that of its publication in the Official Journal of the European Union.. It shall apply from that date. However, Article 7, point (2) and Annex IV shall apply 18 months after the date of entry into force of this Regulation. This Regulation shall be binding in its entirety and directly applicable in all Member States. Done at Brussels, 13 July 2026. For the Commission The President Ursula VON DER LEYEN","labels":["Article","Paragraph"],"meta":[["Division","ART-9"],["Depth",1],["Page",4],["Normative","yes"]]},"EU2026-1762.ANNEX-I":{"t":"U","ty":"Annex","lb":"Annex I — TEST REPORTS REFERRED TO IN ARTICLE 4","title":"TEST REPORTS REFERRED TO IN ARTICLE 4","labels":["Annex"],"meta":[["Division","ANNEX-I"],["Depth",0],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.1":{"t":"U","ty":"Clause","lb":"1. INTRODUCTION","title":"INTRODUCTION","labels":["Section"],"meta":[["Division","ANNEX-I"],["Depth",1],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.1.1":{"t":"U","ty":"Clause","lb":"1.1. This Annex lays down the general and technical requirements for test reports re…","body":"This Annex lays down the general and technical requirements for test reports relating to brake particle emissions.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",2],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.2":{"t":"U","ty":"Clause","lb":"2. GENERAL REQUIREMENTS","title":"GENERAL REQUIREMENTS","labels":["Section"],"meta":[["Division","ANNEX-I"],["Depth",1],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.2.1":{"t":"U","ty":"Clause","lb":"2.1. UN Regulation No 179 (1) shall apply to test reports referred to in Article 4(1…","body":"UN Regulation No 179 (1) shall apply to test reports referred to in Article 4(1).","foot":"UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",2],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.2.2":{"t":"U","ty":"Clause","lb":"2.2. The information specified in Annex 1 to UN Regulation No 179, shall be included…","body":"The information specified in Annex 1 to UN Regulation No 179, shall be included at the various stages of the brake emission approval as described in Figure A1/1 thereof (‘Overview of the different reports during brake emission approval’).","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",2],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.3":{"t":"U","ty":"Clause","lb":"3. TECHNICAL REQUIREMENTS","title":"TECHNICAL REQUIREMENTS","labels":["Section"],"meta":[["Division","ANNEX-I"],["Depth",1],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.3.1":{"t":"U","ty":"Clause","lb":"3.1. The test reports issued by the granting type-approval authority and the technic…","body":"The test reports issued by the granting type-approval authority and the technical service responsible for conducting the tests under Article 4(1) of this Regulation shall comply with the requirements set out in this Annex.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",2],["Page",5],["Normative","yes"]]},"EU2026-1762.ANNEX-I.APP-1":{"t":"U","ty":"Appendix","lb":"Appendix 1 — Brake Corner Emission Family Test Report","title":"Brake Corner Emission Family Test Report","body":"Appendix 1 of Annex 1 to UN Regulation No 179 shall apply to the brake corner emission family test report. The brake corner emission family test report shall be repeated for both the front and the rear axle.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",1],["Page",6],["Normative","yes"]]},"EU2026-1762.ANNEX-I.APP-2":{"t":"U","ty":"Appendix","lb":"Appendix 2 — Individual Friction Braking Share Coefficient (c-factor) Test Report","title":"Individual Friction Braking Share Coefficient (c-factor) Test Report","body":"Appendix 2 of Annex 1 to UN Regulation No 179 shall apply to individual friction braking share coefficient (c-factor) test report. The individual friction braking share coefficient (c-factor) test report shall be repeated as applicable for each individual vehicle measurement.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",1],["Page",7],["Normative","yes"]]},"EU2026-1762.ANNEX-I.APP-3":{"t":"U","ty":"Appendix","lb":"Appendix 3 — Vehicle Type Compliance Demonstration Report","title":"Vehicle Type Compliance Demonstration Report","body":"Appendix 3 of Annex 1 to UN Regulation No 179 shall apply to vehicle type compliance demonstration report.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-I"],["Depth",1],["Page",8],["Normative","yes"]]},"EU2026-1762.ANNEX-II":{"t":"U","ty":"Annex","lb":"Annex II — TYPE-APPROVAL","title":"TYPE-APPROVAL","labels":["Annex"],"meta":[["Division","ANNEX-II"],["Depth",0],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.1":{"t":"U","ty":"Clause","lb":"1. INTRODUCTION","title":"INTRODUCTION","labels":["Section"],"meta":[["Division","ANNEX-II"],["Depth",1],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.1.1":{"t":"U","ty":"Clause","lb":"1.1. This Annex lays down the general and technical requirements applicable to the e…","body":"This Annex lays down the general and technical requirements applicable to the emission type-approval of brake systems.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-II"],["Depth",2],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.2":{"t":"U","ty":"Clause","lb":"2. GENERAL REQUIREMENTS","title":"GENERAL REQUIREMENTS","labels":["Section"],"meta":[["Division","ANNEX-II"],["Depth",1],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.2.1":{"t":"U","ty":"Clause","lb":"2.1. Paragraphs 4 and 7 of UN Regulation No 179 shall apply to emission type-approva…","body":"Paragraphs 4 and 7 of UN Regulation No 179 shall apply to emission type-approval of brake systems referred to in Article 4(1).","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-II"],["Depth",2],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.3":{"t":"U","ty":"Clause","lb":"3. TECHNICAL REQUIREMENTS","title":"TECHNICAL REQUIREMENTS","labels":["Section"],"meta":[["Division","ANNEX-II"],["Depth",1],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.3.1":{"t":"U","ty":"Clause","lb":"3.1. Paragraph 8 of UN Regulation No 179 shall apply to the technical requirements f…","body":"Paragraph 8 of UN Regulation No 179 shall apply to the technical requirements for the emission type-approval of brake systems.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-II"],["Depth",2],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.3.2":{"t":"U","ty":"Clause","lb":"3.2. The emission type-approval procedure of brake systems shall comply with the req…","body":"The emission type-approval procedure of brake systems shall comply with the requirements set out in the Appendices to this Annex.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-II"],["Depth",2],["Page",9],["Normative","yes"]]},"EU2026-1762.ANNEX-II.APP-1":{"t":"U","ty":"Appendix","lb":"Appendix 1 — Model Information Document No relating to the EU type-approval of bra…","title":"Model Information Document No relating to the EU type-approval of brake systems","body":"This Model Information Document relating to EU type-approval of brake systems shall reflect the Model Information Document template and information laid down in Annex 1 to UN Regulation No 179. The information laid down in Annex 1 to UN Regulation No 179, where applicable, shall be supplied in triplicate and include a list of contents. Any drawings shall be supplied in appropriate scale and in sufficient detail on size A4 or on a folder of A4 format. Photographs, if any, shall show sufficient detail.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-II"],["Depth",1],["Page",10],["Normative","yes"]]},"EU2026-1762.ANNEX-II.APP-2":{"t":"U","ty":"Appendix","lb":"Appendix 2 — MODEL OF EU TYPE-APPROVAL CERTIFICATE","title":"MODEL OF EU TYPE-APPROVAL CERTIFICATE","body":"(Maximum format: A4 (210 × 297 mm)) EU TYPE-APPROVAL CERTIFICATE FOR BRAKE SYSTEMS Stamp of administration Communication concerning the: — EU type-approval (1), — extension of EU type-approval (1), — refusal of EU type-approval (1), — withdrawal of EU type-approval (1). EU type-approval number: ... Reason for extension: ... SECTION I 0.1. Make (trade name of manufacturer): ... 0.2. Type: ... 0.2.1. Commercial name(s) (if available): ... 0.3. Means of identification of type if marked on the vehicle (2) 0.3.1. Location of that marking: ... 0.4. Category of vehicle (3) 0.5. Name and address of manufacturer: ... 0.8. Name(s) and address(es) of assembly plant(s): ... 0.9. If applicable, name and address of manufacturer’s representative (5): ... SECTION II 0. Brake corner emission family identifier(s) as defined in paragraph 7 of UN Regulation No 179 1. Additional information (where applicable): 2. Technical service responsible for issuing the vehicle type compliance demonstration report: ... 3. Date of vehicle type compliance demonstration report: ... 4. Number of vehicle type compliance demonstration report: ... 5. Remarks (if any): 6. Place: ... 7. Date: ... 8. Signature: ... Explanatory Notes (1) Delete what is not applicable (there are cases where nothing needs to be deleted when more than one entry is applicable). (2) If the means of identification of type contains characters not relevant to describe the vehicle, component or separate technical unit types covered by this information, such characters shall be represented in the documentation by the symbol ‘?’ (e.g. ABC??123??). (3) As defined in Article 4 of Regulation (EU) 2018/858. (4) As defined in Article 3(24) of Regulation (EU) 2018/858. (5) ‘Manufacturer’s representative’ as defined in Article 3(41) of Regulation (EU) 2018/858","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-II"],["Depth",1],["Page",11],["Normative","yes"],["Form","yes"]]},"EU2026-1762.ANNEX-III":{"t":"U","ty":"Annex","lb":"Annex III — TEST PROCEDURES","title":"TEST PROCEDURES","labels":["Annex"],"meta":[["Division","ANNEX-III"],["Depth",0],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.1":{"t":"U","ty":"Clause","lb":"1. INTRODUCTION","title":"INTRODUCTION","labels":["Section"],"meta":[["Division","ANNEX-III"],["Depth",1],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.1.1":{"t":"U","ty":"Clause","lb":"1.1. This Annex lays down the general and technical requirements for test procedures…","body":"This Annex lays down the general and technical requirements for test procedures relating to brake particle emissions.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-III"],["Depth",2],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.2":{"t":"U","ty":"Clause","lb":"2. GENERAL REQUIREMENTS","title":"GENERAL REQUIREMENTS","labels":["Section"],"meta":[["Division","ANNEX-III"],["Depth",1],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.2.1":{"t":"U","ty":"Clause","lb":"2.1. UN Regulation No 179 shall apply to the test procedures referred to in Article …","body":"UN Regulation No 179 shall apply to the test procedures referred to in Article 4(1).","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-III"],["Depth",2],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.3":{"t":"U","ty":"Clause","lb":"3. TECHNICAL REQUIREMENTS","title":"TECHNICAL REQUIREMENTS","labels":["Section"],"meta":[["Division","ANNEX-III"],["Depth",1],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.3.1":{"t":"U","ty":"Clause","lb":"3.1. The test procedures and methodologies shall comply with the requirements set ou…","body":"The test procedures and methodologies shall comply with the requirements set out in the Appendices to this Annex.","labels":["Subsection","Paragraph"],"meta":[["Division","ANNEX-III"],["Depth",2],["Page",13],["Normative","yes"]]},"EU2026-1762.ANNEX-III.APP-1":{"t":"U","ty":"Appendix","lb":"Appendix 1 — WLTP-Brake Cycle Events","title":"WLTP-Brake Cycle Events","body":"WLTP-Brake Cycle Events shall reflect the WLTP-Brake Cycle Procedure in accordance with Appendix 1 of Annex 4 to UN Regulation No 179.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-III"],["Depth",1],["Page",14],["Normative","yes"]]},"EU2026-1762.ANNEX-III.APP-2":{"t":"U","ty":"Appendix","lb":"Appendix 2 — WLTP-Brake Cycle Brake Events","title":"WLTP-Brake Cycle Brake Events","body":"WLTP-Brake Cycle Events shall reflect the WLTP-Brake Cycle Brake Events Procedure in accordance with Appendix 2 of Annex 4 to UN Regulation No 179.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-III"],["Depth",1],["Page",15],["Normative","yes"]]},"EU2026-1762.ANNEX-III.APP-3":{"t":"U","ty":"Appendix","lb":"Appendix 3 — Method for Measuring and Calculating Vehicle-Specific Friction Brakin…","title":"Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients","body":"Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients shall reflect the Method for Measuring and Calculating Vehicle-Specific Friction Braking Share Coefficients in accordance with Annex 5 to UN Regulation No 179.","labels":["Appendix","Paragraph"],"meta":[["Division","ANNEX-III"],["Depth",1],["Page",16],["Normative","yes"]]},"EU2026-1762.ANNEX-IV":{"t":"U","ty":"Annex","lb":"Annex IV — TRANSPARENCY LIST","title":"TRANSPARENCY LIST","body":"[TABLE:EU2026-1762.ANNEX-IV.TABLE-1] 1 2 3 4 [TABLE:EU2026-1762.ANNEX-IV.TABLE-2] Field Type of data Description Brake Corner Emission (‘BCE’) ID front axle text As defined in paragraph 7.2 of UN Regulation BCE ID rear axle text As defined in paragraph 7.2 of UN Regulation No 179","labels":["Annex","Paragraph"],"meta":[["Division","ANNEX-IV"],["Depth",0],["Page",17],["Normative","yes"]]},"EU2026-1762.ABBR:ISC":{"t":"A","ty":"Abbreviation","lb":"ISC — in-service conformity","body":"in-service conformity","meta":[["Category","Inline"],["Source","inline"],["Defined in","EU2026-1762.ART-7.2"]]},"EU2026-1762.FN-1-p0":{"t":"N","ty":"Footnote","lb":"Footnote 1","body":"OJ L, 2024/1257, 8.5.2024, ELI: http://data.europa.eu/eli/reg/2024/1257/oj.","meta":[["Page",1]]},"EU2026-1762.FN-2":{"t":"N","ty":"Footnote","lb":"Footnote 2","body":"In the case of a UN Regulation the series of amendments indicated reflects the version that has been published in the Official Journal of the European Union. Supplements to the series of amendments indicated in the Official Journal publication shall apply irrespective of publication in the Official Journal of the European Union. New series of amendments adopted after the series of amendments indicated in the Official Journal publication shall be accepted as an alternative.","meta":[["Page",1]]},"EU2026-1762.FN-3":{"t":"N","ty":"Footnote","lb":"Footnote 3","body":"UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).","meta":[["Page",1]]},"EU2026-1762.FN-4":{"t":"N","ty":"Footnote","lb":"Footnote 4","body":"UN Regulation No 83 – Uniform provisions concerning the approval of vehicles with regard to the emission of pollutants according to engine fuel requirements [2026/1086] (OJ L, 2026/1086, 29.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1086/oj).","meta":[["Page",1]]},"EU2026-1762.FN-5":{"t":"N","ty":"Footnote","lb":"Footnote 5","body":"Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L 119, 4.5.2016, p. 1, ELI: http://data.europa.eu/eli/reg/2016/679/oj).","meta":[["Page",2]]},"EU2026-1762.FN-6":{"t":"N","ty":"Footnote","lb":"Footnote 6","body":"Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No 1247/2002/EC (OJ L 295, 21.11.2018, p. 39, ELI: http://data. europa.eu/eli/reg/2018/1725/oj).","meta":[["Page",2]]},"EU2026-1762.FN-7":{"t":"N","ty":"Footnote","lb":"Footnote 7","body":"Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 implementing Regulation (EU) 2018/858 of the European Parliament and of the Council with regards to the administrative requirements for the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles (OJ L 163, 26.5.2020, p. 1, ELI: http://data.europa.eu/eli/reg_impl/2020/683/oj).","meta":[["Page",3]]},"EU2026-1762.FN-8":{"t":"N","ty":"Footnote","lb":"Footnote 8","body":"Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 laying down rules, procedures and testing methodologies for the application of Regulation (EU) 2024/1257 as regards exhaust and evaporative emission type-approval of vehicles of categories M1 and N1 and amending Implementing Regulation (EU) 2020/683 (OJ L, 2025/1706, 5.9.2025, ELI: http://data.europa.eu/eli/reg_impl/ 2025/1706/oj).","meta":[["Page",3]]},"EU2026-1762.FN-9":{"t":"N","ty":"Footnote","lb":"Footnote 9","body":"Regulation (EU) 2018/858 of the European Parliament and of the Council of 30 May 2018 on the approval and market surveillance of motor vehicles and their trailers, and of systems, components and separate technical units intended for such vehicles, amending Regulations (EC) No 715/2007 and (EC) No 595/2009 and repealing Directive 2007/46/EC (OJ L 151, 14.6.2018, p. 1, ELI: http:// data.europa.eu/eli/reg/2018/858/oj).","meta":[["Page",3]]},"EU2026-1762.FN-1-p4":{"t":"N","ty":"Footnote","lb":"Footnote 1","body":"UN Regulation No 179 – Uniform provisions concerning the approval of light duty vehicles with regards to the laboratory measurement of brake emissions [2026/1044] (OJ L, 2026/1044, 18.5.2026, ELI: http://data.europa.eu/eli/reg/2026/1044/oj).","meta":[["Page",5]]},"EU2026-1762.ANNEX-IV.TABLE-1":{"t":"T","ty":"Table","lb":"Table 1 Transparency list 1 for brake systems","body":"Brake Corner Emission | text | -- | As referred to in paragraph 7.2 of UN Regulation No 179 (‘BCE’) ID front axle BCE ID rear axle | text | -- | As referred to in paragraph 7.2 of UN Regulation No 179 Friction braking share | number -- | As referred to in paragraphs 7.1 and 7.2 of UN Regulation coefficient (c-factor) | No 179 Laboratory settings | text | -- | As referred to in paragraph 7.1.3 and paragraph 8 of UN Regulation No 179","meta":[["Pages","17"],["Division","ANNEX-IV"]]},"EU2026-1762.ANNEX-IV.TABLE-2":{"t":"T","ty":"Table","lb":"Table 2 Transparency list 2 for brake systems","body":"No 179","meta":[["Pages","17"],["Division","ANNEX-IV"]]},"EU2026-1762/EXT:EC.REG.45-2001":{"t":"X","ty":"ExternalDocument","lb":"EC.REG.45-2001 — Regulation (EC) No 45/2001","extra":"Also written as: Regulation (EC) No 45/2001","meta":[["Kind","ec_regulation"],["Issuer","European Union"],["Year",2001],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EC.REG.595-2009":{"t":"X","ty":"ExternalDocument","lb":"EC.REG.595-2009 — (EC) No 595/2009","extra":"Also written as: (EC) No 595/2009","meta":[["Kind","ec_regulation"],["Issuer","European Union"],["Year",2009],["Mentions",2],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EC.REG.715-2007":{"t":"X","ty":"ExternalDocument","lb":"EC.REG.715-2007 — Regulations (EC) No 715/2007","extra":"Also written as: Regulations (EC) No 715/2007","meta":[["Kind","ec_regulation"],["Issuer","European Union"],["Year",2007],["Mentions",2],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EC.DIR.1995-46":{"t":"X","ty":"ExternalDocument","lb":"EC.DIR.1995-46 — Directive 95/46/EC","extra":"Also written as: Directive 95/46/EC","meta":[["Kind","eu_directive"],["Issuer","European Union"],["Year",1995],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EC.DIR.2007-46":{"t":"X","ty":"ExternalDocument","lb":"EC.DIR.2007-46 — Directive 2007/46/EC","extra":"Also written as: Directive 2007/46/EC","meta":[["Kind","eu_directive"],["Issuer","European Union"],["Year",2007],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2016-679":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2016-679 — Regulation (EU) 2016/679 of the European Parliament and of the Counci…","extra":"Also written as: Regulations (EU) 2016/679; Regulation (EU) 2016/679\nELI: http://data.europa.eu/eli/reg/2016/679/oj","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2016],["Mentions",2],["Adopted","27 April 2016"],["OJ","OJ L 119, 4.5.2016, p. 1"],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2017-1151":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2017-1151 — Commission Regulation (EU) 2017/1151","extra":"Also written as: Commission Regulation (EU) 2017/1151","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2017],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2017-2400":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2017-2400 — Commission Regulation (EU) 2017/2400","extra":"Also written as: Commission Regulation (EU) 2017/2400","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2017],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2018-1725":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2018-1725 — Regulation (EU) 2018/1725 of the European Parliament and of the Counc…","extra":"Also written as: (EU) 2018/1725; Regulation (EU) 2018/1725\nELI: http://data.europa.eu/eli/reg/2018/1725/oj","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2018],["Mentions",2],["Adopted","23 October 2018"],["OJ","OJ L 295, 21.11.2018, p. 39"],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2018-858":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2018-858 — Regulation (EU) 2018/858 of the European Parliament and of the Counci…","extra":"Also written as: Regulation (EU) 2018/858\nELI: http://data.europa.eu/eli/reg/2018/858/oj","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2018],["Mentions",7],["Adopted","30 May 2018"],["OJ","OJ L 151, 14.6.2018, p. 1"],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2020-683":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2020-683 — Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 imp…","extra":"Also written as: Commission Implementing Regulation (EU) 2020/683; Implementing Regulation (EU) 2020/683\nELI: http://data.europa.eu/eli/reg_impl/2020/683/oj","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2020],["Mentions",3],["Adopted","15 April 2020"],["OJ","OJ L 163, 26.5.2020, p. 1"],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2022-1362":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2022-1362 — Commission Implementing Regulation (EU) 2022/1362","extra":"Also written as: Commission Implementing Regulation (EU) 2022/1362","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2022],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2024-1257":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2024-1257 — Regulation (EU) 2024/1257","extra":"Also written as: Regulation (EU) 2024/1257","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2024],["Mentions",15],["Adopted",null],["OJ",null],["Also in Document/","EU2024-1257"]]},"EU2026-1762/EXT:EU.REG.2025-1706":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.2025-1706 — Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 lay…","extra":"Also written as: Commission Implementing Regulation (EU) 2025/1706\nELI: http://data.europa.eu/eli/reg_impl/2025/1706/oj","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2025],["Mentions",2],["Adopted","25 July 2025"],["OJ","OJ L, 2025/1706, 5.9.2025"],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.582-2011":{"t":"X","ty":"ExternalDocument","lb":"EU.REG.582-2011 — Commission Regulation (EU) No 582/2011","extra":"Also written as: Commission Regulation (EU) No 582/2011","meta":[["Kind","eu_regulation"],["Issuer","European Union"],["Year",2011],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:TFEU":{"t":"X","ty":"ExternalDocument","lb":"TFEU — Treaty on the Functioning of the European Union","extra":"Also written as: Treaty on the Functioning of the European Union","meta":[["Kind","treaty"],["Issuer","European Union"],["Year",null],["Mentions",1],["Adopted",null],["OJ",null],["Also in Document/","no"]]},"EU2026-1762/EXT:UNR-179":{"t":"X","ty":"ExternalDocument","lb":"UNR-179 — Uniform provisions concerning the approval of light duty vehicles wit…","extra":"Also written as: UN Regulation No 179; No 179\nELI: http://data.europa.eu/eli/reg/2026/1044/oj","meta":[["Kind","un_regulation"],["Issuer","UNECE WP.29 (1958 Agreement)"],["Year",null],["Mentions",32],["Adopted",null],["OJ","OJ L, 2026/1044, 18.5.2026"],["Also in Document/","no"]]},"EU2026-1762/EXT:UNR-83":{"t":"X","ty":"ExternalDocument","lb":"UNR-83 — Uniform provisions concerning the approval of vehicles with regard to…","extra":"Also written as: UN Regulations No 83; UN Regulation No 83\nELI: http://data.europa.eu/eli/reg/2026/1086/oj","meta":[["Kind","un_regulation"],["Issuer","UNECE WP.29 (1958 Agreement)"],["Year",null],["Mentions",5],["Adopted",null],["OJ","OJ L, 2026/1086, 29.5.2026"],["Also in Document/","no"]]},"EU2026-1762/EXT:EU.REG.2018-858#ART-27":{"t":"P","ty":"ExternalProvision","lb":"Article 27 — EU.REG.2018-858","body":"Articles 27, 33 and 34 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2018-858#ART-3.24":{"t":"P","ty":"ExternalProvision","lb":"Article 3, paragraph 24 — EU.REG.2018-858","body":"Article 3(24) of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2018-858#ART-3.41":{"t":"P","ty":"ExternalProvision","lb":"Article 3, paragraph 41 — EU.REG.2018-858","body":"Article 3(41) of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2018-858#ART-33":{"t":"P","ty":"ExternalProvision","lb":"Article 33 — EU.REG.2018-858","body":"Articles 27, 33 and 34 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2018-858#ART-34":{"t":"P","ty":"ExternalProvision","lb":"Article 34 — EU.REG.2018-858","body":"Articles 27, 33 and 34 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2018-858#ART-4":{"t":"P","ty":"ExternalProvision","lb":"Article 4 — EU.REG.2018-858","body":"Article 4 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2020-683#ANNEX-IV":{"t":"P","ty":"ExternalProvision","lb":"Annex IV — EU.REG.2020-683","body":"Annex IV to","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V":{"t":"P","ty":"ExternalProvision","lb":"Annex V — EU.REG.2024-1257","body":"Annex V to","meta":[["Mentions",2]]},"EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11":{"t":"P","ty":"ExternalProvision","lb":"Annex V, Table 11 — EU.REG.2024-1257","body":"Table 11 of Annex V","meta":[["Mentions",2]]},"EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12":{"t":"P","ty":"ExternalProvision","lb":"Annex V, Table 12 — EU.REG.2024-1257","body":"Annex V, Tables 11 and 12 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1":{"t":"P","ty":"ExternalProvision","lb":"Article 10, paragraph 1 — EU.REG.2024-1257","body":"Articles 7(1) and 10(1) of","meta":[["Mentions",2]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.1":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 1 — EU.REG.2024-1257","body":"Article 14(1) of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.3.PT-i":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 3, point i — EU.REG.2024-1257","body":"Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-a":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 4, point a — EU.REG.2024-1257","body":"Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-q":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 4, point q — EU.REG.2024-1257","body":"Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-s":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 4, point s — EU.REG.2024-1257","body":"Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-u":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 4, point u — EU.REG.2024-1257","body":"Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-v":{"t":"P","ty":"ExternalProvision","lb":"Article 14, paragraph 4, point v — EU.REG.2024-1257","body":"Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v)","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-4":{"t":"P","ty":"ExternalProvision","lb":"Article 4 — EU.REG.2024-1257","body":"Articles 4 and 5 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-4.2":{"t":"P","ty":"ExternalProvision","lb":"Article 4, paragraph 2 — EU.REG.2024-1257","body":"Article 4(2) of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-4.5":{"t":"P","ty":"ExternalProvision","lb":"Article 4, paragraph 5 — EU.REG.2024-1257","body":"Article 4(5) of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-5":{"t":"P","ty":"ExternalProvision","lb":"Article 5 — EU.REG.2024-1257","body":"Articles 4 and 5 of","meta":[["Mentions",2]]},"EU2026-1762/EXT:EU.REG.2024-1257#ART-7.1":{"t":"P","ty":"ExternalProvision","lb":"Article 7, paragraph 1 — EU.REG.2024-1257","body":"Articles 7(1) and 10(1) of","meta":[["Mentions",1]]},"EU2026-1762/EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4":{"t":"P","ty":"ExternalProvision","lb":"Annex I, Table 4 — EU.REG.2025-1706","body":"Table 4 of Annex I to","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#10":{"t":"P","ty":"ExternalProvision","lb":"paragraph 10 — UNR-179","body":"paragraph 10 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#3.0":{"t":"P","ty":"ExternalProvision","lb":"paragraph 3.0 — UNR-179","body":"paragraph 3.0 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#4":{"t":"P","ty":"ExternalProvision","lb":"paragraph 4 — UNR-179","body":"Paragraphs 4 and 7 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#4.4":{"t":"P","ty":"ExternalProvision","lb":"paragraph 4.4 — UNR-179","body":"paragraph 4.4 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#7":{"t":"P","ty":"ExternalProvision","lb":"paragraph 7 — UNR-179","body":"paragraphs 7 and 8 of","meta":[["Mentions",3]]},"EU2026-1762/EXT:UNR-179#7.1":{"t":"P","ty":"ExternalProvision","lb":"paragraph 7.1 — UNR-179","body":"paragraphs 7.1 and 7.2 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#7.1.3":{"t":"P","ty":"ExternalProvision","lb":"paragraph 7.1.3 — UNR-179","body":"paragraph 7.1.3 and paragraph 8 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#7.2":{"t":"P","ty":"ExternalProvision","lb":"paragraph 7.2 — UNR-179","body":"paragraph 7.2 of","meta":[["Mentions",4]]},"EU2026-1762/EXT:UNR-179#8":{"t":"P","ty":"ExternalProvision","lb":"paragraph 8 — UNR-179","body":"paragraphs 7 and 8 of","meta":[["Mentions",3]]},"EU2026-1762/EXT:UNR-179#9.1":{"t":"P","ty":"ExternalProvision","lb":"paragraph 9.1 — UNR-179","body":"paragraphs 9.1 and 9.4 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#9.4":{"t":"P","ty":"ExternalProvision","lb":"paragraph 9.4 — UNR-179","body":"paragraphs 9.1 and 9.4 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#ANNEX-1":{"t":"P","ty":"ExternalProvision","lb":"Annex 1 — UNR-179","body":"Annex 1 to","meta":[["Mentions",3]]},"EU2026-1762/EXT:UNR-179#ANNEX-1.APP-1":{"t":"P","ty":"ExternalProvision","lb":"Annex 1, Appendix 1 — UNR-179","body":"Appendix 1 of Annex 1 to","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#ANNEX-1.APP-2":{"t":"P","ty":"ExternalProvision","lb":"Annex 1, Appendix 2 — UNR-179","body":"Appendix 2 of Annex 1 to","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#ANNEX-1.APP-3":{"t":"P","ty":"ExternalProvision","lb":"Annex 1, Appendix 3 — UNR-179","body":"Appendix 3 of Annex 1 to","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#ANNEX-4.APP-1":{"t":"P","ty":"ExternalProvision","lb":"Annex 4, Appendix 1 — UNR-179","body":"Appendix 1 of Annex 4 to","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#ANNEX-4.APP-2":{"t":"P","ty":"ExternalProvision","lb":"Annex 4, Appendix 2 — UNR-179","body":"Appendix 2 of Annex 4 to","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#ANNEX-5":{"t":"P","ty":"ExternalProvision","lb":"Annex 5 — UNR-179","body":"Annex 5 to","meta":[["Mentions",2]]},"EU2026-1762/EXT:UNR-179#FIGURE-A1/1":{"t":"P","ty":"ExternalProvision","lb":"Figure A1/1 — UNR-179","body":"Figure A1/1","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-179#PT-3.7.19":{"t":"P","ty":"ExternalProvision","lb":"point 3.7.19 — UNR-179","body":"point 3.7.19 of","meta":[["Mentions",1]]},"EU2026-1762/EXT:UNR-83#ANNEX-12":{"t":"P","ty":"ExternalProvision","lb":"Annex 12 — UNR-83","body":"Annex 12 to","meta":[["Mentions",2]]},"EU2026-1762/EXT:UNR-83#ANNEX-4":{"t":"P","ty":"ExternalProvision","lb":"Annex 4 — UNR-83","body":"Annexes 4 and 12 to","meta":[["Mentions",1]]}},"tree":{"id":"$root","label":"EU2026-1762","children":[{"id":"$group:Preamble & recitals","label":"Preamble & recitals","children":[{"id":"EU2026-1762.PREAMBLE","label":"Preamble — COMMISSION IMPLEMENTING REGULATION (EU) 2026/1762 of 13 July 2026 lay…","children":[{"id":"EU2026-1762.RECITAL-1","label":"Recital 1 — This Regulation aims at setting the technical requirements necessary …","children":[{"id":"EU2026-1762.FN-2","label":"Footnote 2","children":[]},{"id":"EU2026-1762.FN-3","label":"Footnote 3","children":[]}]},{"id":"EU2026-1762.RECITAL-2","label":"Recital 2 — To reduce testing costs and administrative burdens for manufacturers,…","children":[{"id":"EU2026-1762.FN-4","label":"Footnote 4","children":[]}]},{"id":"EU2026-1762.RECITAL-3","label":"Recital 3 — The testing procedures for brake system emissions should include the …","children":[]},{"id":"EU2026-1762.RECITAL-4","label":"Recital 4 — The roles and responsibilities of manufacturers, type-approval author…","children":[]},{"id":"EU2026-1762.RECITAL-5","label":"Recital 5 — In order to allow sufficient time for manufacturers and approval auth…","children":[]},{"id":"EU2026-1762.RECITAL-6","label":"Recital 6 — Whenever the measures provided for in this Regulation entail the proc…","children":[{"id":"EU2026-1762.FN-5","label":"Footnote 5","children":[]},{"id":"EU2026-1762.FN-6","label":"Footnote 6","children":[]}]},{"id":"EU2026-1762.RECITAL-7","label":"Recital 7 — The measures provided for in this Regulation are in accordance with t…","children":[]},{"id":"EU2026-1762.FN-1-p0","label":"Footnote 1","children":[]}]}]},{"id":"$group:Enacting terms","label":"Enacting terms","children":[{"id":"EU2026-1762.BODY","label":"Body — HAS ADOPTED THIS REGULATION:","children":[{"id":"EU2026-1762.ART-1","label":"Article 1 — Scope","children":[{"id":"EU2026-1762.ART-1.PT-1","label":"Point 1 — M1 and N1;","children":[]},{"id":"EU2026-1762.ART-1.PT-2","label":"Point 2 — N2 designated as ‘Euro 7ext’ and ‘Euro 7Gext’ in accordance with Arti…","children":[]}]},{"id":"EU2026-1762.ART-2","label":"Article 2 — Requirements for emission type-approval as regards the brake system","children":[{"id":"EU2026-1762.ART-2.1","label":"ArticleParagraph 1 — For the purposes of emission type-approval under Article 4(2) of Reg…","children":[]},{"id":"EU2026-1762.ART-2.2","label":"ArticleParagraph 2 — The manufacturer shall test the brake system in accordance with Anne…","children":[]}]},{"id":"EU2026-1762.ART-3","label":"Article 3 — Application for emission type-approval of a brake system","children":[]},{"id":"EU2026-1762.ART-4","label":"Article 4 — Administrative provisions for emission type-approval of a brake system","children":[{"id":"EU2026-1762.ART-4.1","label":"ArticleParagraph 1 — For the purpose of testing in accordance with Articles 7(1) and 10(1…","children":[]},{"id":"EU2026-1762.ART-4.2","label":"ArticleParagraph 2 — For the purpose of granting an emission type-approval in accordance …","children":[]},{"id":"EU2026-1762.ART-4.3","label":"ArticleParagraph 3 — The granting type-approval authority shall assign an emission type-a…","children":[{"id":"EU2026-1762.FN-7","label":"Footnote 7","children":[]},{"id":"EU2026-1762.FN-8","label":"Footnote 8","children":[]}]}]},{"id":"EU2026-1762.ART-5","label":"Article 5 — Amendments to emission type-approvals","children":[{"id":"EU2026-1762.FN-9","label":"Footnote 9","children":[]}]},{"id":"EU2026-1762.ART-6","label":"Article 6 — Conformity of production","children":[{"id":"EU2026-1762.ART-6.1","label":"ArticleParagraph 1 — When applying tests at conformity of production in accordance with A…","children":[]},{"id":"EU2026-1762.ART-6.2","label":"ArticleParagraph 2 — Approval authorities shall check the conformity of production on the…","children":[]}]},{"id":"EU2026-1762.ART-7","label":"Article 7 — In-service conformity","children":[{"id":"EU2026-1762.ART-7.1","label":"ArticleParagraph 1 — When performing tests to verify the share of individual friction bra…","children":[]},{"id":"EU2026-1762.ART-7.2","label":"ArticleParagraph 2 — For type-approved brake systems in accordance with Article 3, the ma…","children":[{"id":"EU2026-1762.ABBR:ISC","label":"ISC — in-service conformity","children":[]}]}]},{"id":"EU2026-1762.ART-8","label":"Article 8 — Manipulation devices and manipulation strategies for brake systems","children":[]},{"id":"EU2026-1762.ART-9","label":"Article 9 — Entry into force","children":[]}]}]},{"id":"$group:Annexes","label":"Annexes","children":[{"id":"EU2026-1762.ANNEX-I","label":"Annex I — TEST REPORTS REFERRED TO IN ARTICLE 4","children":[{"id":"EU2026-1762.ANNEX-I.1","label":"1. INTRODUCTION","children":[{"id":"EU2026-1762.ANNEX-I.1.1","label":"1.1. This Annex lays down the general and technical requirements for test reports re…","children":[]}]},{"id":"EU2026-1762.ANNEX-I.2","label":"2. GENERAL REQUIREMENTS","children":[{"id":"EU2026-1762.ANNEX-I.2.1","label":"2.1. UN Regulation No 179 (1) shall apply to test reports referred to in Article 4(1…","children":[{"id":"EU2026-1762.FN-1-p4","label":"Footnote 1","children":[]}]},{"id":"EU2026-1762.ANNEX-I.2.2","label":"2.2. The information specified in Annex 1 to UN Regulation No 179, shall be included…","children":[]}]},{"id":"EU2026-1762.ANNEX-I.3","label":"3. TECHNICAL REQUIREMENTS","children":[{"id":"EU2026-1762.ANNEX-I.3.1","label":"3.1. The test reports issued by the granting type-approval authority and the technic…","children":[]}]},{"id":"EU2026-1762.ANNEX-I.APP-1","label":"Appendix 1 — Brake Corner Emission Family Test Report","children":[]},{"id":"EU2026-1762.ANNEX-I.APP-2","label":"Appendix 2 — Individual Friction Braking Share Coefficient (c-factor) Test Report","children":[]},{"id":"EU2026-1762.ANNEX-I.APP-3","label":"Appendix 3 — Vehicle Type Compliance Demonstration Report","children":[]}]},{"id":"EU2026-1762.ANNEX-II","label":"Annex II — TYPE-APPROVAL","children":[{"id":"EU2026-1762.ANNEX-II.1","label":"1. INTRODUCTION","children":[{"id":"EU2026-1762.ANNEX-II.1.1","label":"1.1. This Annex lays down the general and technical requirements applicable to the e…","children":[]}]},{"id":"EU2026-1762.ANNEX-II.2","label":"2. GENERAL REQUIREMENTS","children":[{"id":"EU2026-1762.ANNEX-II.2.1","label":"2.1. Paragraphs 4 and 7 of UN Regulation No 179 shall apply to emission type-approva…","children":[]}]},{"id":"EU2026-1762.ANNEX-II.3","label":"3. TECHNICAL REQUIREMENTS","children":[{"id":"EU2026-1762.ANNEX-II.3.1","label":"3.1. Paragraph 8 of UN Regulation No 179 shall apply to the technical requirements f…","children":[]},{"id":"EU2026-1762.ANNEX-II.3.2","label":"3.2. The emission type-approval procedure of brake systems shall comply with the req…","children":[]}]},{"id":"EU2026-1762.ANNEX-II.APP-1","label":"Appendix 1 — Model Information Document No relating to the EU type-approval of bra…","children":[]},{"id":"EU2026-1762.ANNEX-II.APP-2","label":"Appendix 2 — MODEL OF EU TYPE-APPROVAL CERTIFICATE","children":[]}]},{"id":"EU2026-1762.ANNEX-III","label":"Annex III — TEST PROCEDURES","children":[{"id":"EU2026-1762.ANNEX-III.1","label":"1. INTRODUCTION","children":[{"id":"EU2026-1762.ANNEX-III.1.1","label":"1.1. This Annex lays down the general and technical requirements for test procedures…","children":[]}]},{"id":"EU2026-1762.ANNEX-III.2","label":"2. GENERAL REQUIREMENTS","children":[{"id":"EU2026-1762.ANNEX-III.2.1","label":"2.1. UN Regulation No 179 shall apply to the test procedures referred to in Article …","children":[]}]},{"id":"EU2026-1762.ANNEX-III.3","label":"3. TECHNICAL REQUIREMENTS","children":[{"id":"EU2026-1762.ANNEX-III.3.1","label":"3.1. The test procedures and methodologies shall comply with the requirements set ou…","children":[]}]},{"id":"EU2026-1762.ANNEX-III.APP-1","label":"Appendix 1 — WLTP-Brake Cycle Events","children":[]},{"id":"EU2026-1762.ANNEX-III.APP-2","label":"Appendix 2 — WLTP-Brake Cycle Brake Events","children":[]},{"id":"EU2026-1762.ANNEX-III.APP-3","label":"Appendix 3 — Method for Measuring and Calculating Vehicle-Specific Friction Brakin…","children":[]}]},{"id":"EU2026-1762.ANNEX-IV","label":"Annex IV — TRANSPARENCY LIST","children":[{"id":"EU2026-1762.ANNEX-IV.TABLE-1","label":"Table 1 Transparency list 1 for brake systems","children":[]},{"id":"EU2026-1762.ANNEX-IV.TABLE-2","label":"Table 2 Transparency list 2 for brake systems","children":[]}]}]},{"id":"$group:external","label":"External documents (18)","children":[{"id":"EU2026-1762/EXT:EC.REG.45-2001","label":"EC.REG.45-2001 — Regulation (EC) No 45/2001","children":[]},{"id":"EU2026-1762/EXT:EC.REG.595-2009","label":"EC.REG.595-2009 — (EC) No 595/2009","children":[]},{"id":"EU2026-1762/EXT:EC.REG.715-2007","label":"EC.REG.715-2007 — Regulations (EC) No 715/2007","children":[]},{"id":"EU2026-1762/EXT:EC.DIR.1995-46","label":"EC.DIR.1995-46 — Directive 95/46/EC","children":[]},{"id":"EU2026-1762/EXT:EC.DIR.2007-46","label":"EC.DIR.2007-46 — Directive 2007/46/EC","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2016-679","label":"EU.REG.2016-679 — Regulation (EU) 2016/679 of the European Parliament and of the Counci…","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2017-1151","label":"EU.REG.2017-1151 — Commission Regulation (EU) 2017/1151","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2017-2400","label":"EU.REG.2017-2400 — Commission Regulation (EU) 2017/2400","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-1725","label":"EU.REG.2018-1725 — Regulation (EU) 2018/1725 of the European Parliament and of the Counc…","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-858","label":"EU.REG.2018-858 — Regulation (EU) 2018/858 of the European Parliament and of the Counci…","children":[{"id":"EU2026-1762/EXT:EU.REG.2018-858#ART-27","label":"Article 27 — EU.REG.2018-858","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-858#ART-3.24","label":"Article 3, paragraph 24 — EU.REG.2018-858","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-858#ART-3.41","label":"Article 3, paragraph 41 — EU.REG.2018-858","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-858#ART-33","label":"Article 33 — EU.REG.2018-858","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-858#ART-34","label":"Article 34 — EU.REG.2018-858","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2018-858#ART-4","label":"Article 4 — EU.REG.2018-858","children":[]}]},{"id":"EU2026-1762/EXT:EU.REG.2020-683","label":"EU.REG.2020-683 — Commission Implementing Regulation (EU) 2020/683 of 15 April 2020 imp…","children":[{"id":"EU2026-1762/EXT:EU.REG.2020-683#ANNEX-IV","label":"Annex IV — EU.REG.2020-683","children":[]}]},{"id":"EU2026-1762/EXT:EU.REG.2022-1362","label":"EU.REG.2022-1362 — Commission Implementing Regulation (EU) 2022/1362","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257","label":"EU.REG.2024-1257 — Regulation (EU) 2024/1257","children":[{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V","label":"Annex V — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11","label":"Annex V, Table 11 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12","label":"Annex V, Table 12 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1","label":"Article 10, paragraph 1 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.1","label":"Article 14, paragraph 1 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.3.PT-i","label":"Article 14, paragraph 3, point i — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-a","label":"Article 14, paragraph 4, point a — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-q","label":"Article 14, paragraph 4, point q — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-s","label":"Article 14, paragraph 4, point s — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-u","label":"Article 14, paragraph 4, point u — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-v","label":"Article 14, paragraph 4, point v — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-4","label":"Article 4 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-4.2","label":"Article 4, paragraph 2 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-4.5","label":"Article 4, paragraph 5 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-5","label":"Article 5 — EU.REG.2024-1257","children":[]},{"id":"EU2026-1762/EXT:EU.REG.2024-1257#ART-7.1","label":"Article 7, paragraph 1 — EU.REG.2024-1257","children":[]}]},{"id":"EU2026-1762/EXT:EU.REG.2025-1706","label":"EU.REG.2025-1706 — Commission Implementing Regulation (EU) 2025/1706 of 25 July 2025 lay…","children":[{"id":"EU2026-1762/EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4","label":"Annex I, Table 4 — EU.REG.2025-1706","children":[]}]},{"id":"EU2026-1762/EXT:EU.REG.582-2011","label":"EU.REG.582-2011 — Commission Regulation (EU) No 582/2011","children":[]},{"id":"EU2026-1762/EXT:TFEU","label":"TFEU — Treaty on the Functioning of the European Union","children":[]},{"id":"EU2026-1762/EXT:UNR-179","label":"UNR-179 — Uniform provisions concerning the approval of light duty vehicles wit…","children":[{"id":"EU2026-1762/EXT:UNR-179#10","label":"paragraph 10 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#3.0","label":"paragraph 3.0 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#4","label":"paragraph 4 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#4.4","label":"paragraph 4.4 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#7","label":"paragraph 7 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#7.1","label":"paragraph 7.1 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#7.1.3","label":"paragraph 7.1.3 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#7.2","label":"paragraph 7.2 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#8","label":"paragraph 8 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#9.1","label":"paragraph 9.1 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#9.4","label":"paragraph 9.4 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-1","label":"Annex 1 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-1.APP-1","label":"Annex 1, Appendix 1 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-1.APP-2","label":"Annex 1, Appendix 2 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-1.APP-3","label":"Annex 1, Appendix 3 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-4.APP-1","label":"Annex 4, Appendix 1 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-4.APP-2","label":"Annex 4, Appendix 2 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#ANNEX-5","label":"Annex 5 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#FIGURE-A1/1","label":"Figure A1/1 — UNR-179","children":[]},{"id":"EU2026-1762/EXT:UNR-179#PT-3.7.19","label":"point 3.7.19 — UNR-179","children":[]}]},{"id":"EU2026-1762/EXT:UNR-83","label":"UNR-83 — Uniform provisions concerning the approval of vehicles with regard to…","children":[{"id":"EU2026-1762/EXT:UNR-83#ANNEX-12","label":"Annex 12 — UNR-83","children":[]},{"id":"EU2026-1762/EXT:UNR-83#ANNEX-4","label":"Annex 4 — UNR-83","children":[]}]}]}]},"edges":[["EU2026-1762.RECITAL-5","EU2026-1762.ART-7.2","REFERENCES","Article 7(2)"],["EU2026-1762.RECITAL-5","EU2026-1762.ART-7.2","REFERENCES","Article 7(2)"],["EU2026-1762.RECITAL-5","EU2026-1762.ANNEX-IV","REFERENCES","Annex IV"],["EU2026-1762.RECITAL-5","EU2026-1762.ANNEX-IV","REFERENCES","Annex IV"],["EU2026-1762.ART-2.1","EU2026-1762.ANNEX-I","REFERENCES","Annex I"],["EU2026-1762.ART-2.1","EU2026-1762.ANNEX-II","REFERENCES","Annex II"],["EU2026-1762.ART-2.1","EU2026-1762.ANNEX-III","REFERENCES","Annex III"],["EU2026-1762.ART-2.2","EU2026-1762.ANNEX-III","REFERENCES","Annex III"],["EU2026-1762.ART-3","EU2026-1762.ANNEX-II.APP-1","REFERENCES","Appendix 1 of Annex II"],["EU2026-1762.ART-4.1","EU2026-1762.ANNEX-I","REFERENCES","Annex I"],["EU2026-1762.ART-4.1","EU2026-1762.ANNEX-II","REFERENCES","Annex II"],["EU2026-1762.ART-4.1","EU2026-1762.ANNEX-III","REFERENCES","Annex III"],["EU2026-1762.ART-4.2","EU2026-1762.ANNEX-II.APP-2","REFERENCES","Appendix 2 to Annex II"],["EU2026-1762.ART-6.2","EU2026-1762.ANNEX-II.APP-2","REFERENCES","Appendix 2 to Annex II"],["EU2026-1762.ART-7.2","EU2026-1762.ART-3","REFERENCES","Article 3"],["EU2026-1762.ART-7.2","EU2026-1762.ANNEX-IV","REFERENCES","Annex IV"],["EU2026-1762.ART-9","EU2026-1762.ART-7","REFERENCES","Article 7, point (2)"],["EU2026-1762.ART-9","EU2026-1762.ANNEX-IV","REFERENCES","Annex IV"],["EU2026-1762.ANNEX-I.2.1","EU2026-1762.ART-4.1","REFERENCES","Article 4(1)"],["EU2026-1762.ANNEX-I.3.1","EU2026-1762.ART-4.1","REFERENCES","Article 4(1)"],["EU2026-1762.ANNEX-II.2.1","EU2026-1762.ART-4.1","REFERENCES","Article 4(1)"],["EU2026-1762.ANNEX-III.2.1","EU2026-1762.ART-4.1","REFERENCES","Article 4(1)"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257","CITES","Regulation (EU) 2024/1257"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:TFEU","CITES","Treaty on the Functioning of the European Union"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257","CITES","Regulation (EU) 2024/1257"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2018-858","CITES","Regulation (EU) 2018/858"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EC.REG.715-2007","CITES","Regulations (EC) No 715/2007"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EC.REG.595-2009","CITES","(EC) No 595/2009"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.582-2011","CITES","Commission Regulation (EU) No 582/2011"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2017-1151","CITES","Commission Regulation (EU) 2017/1151"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2017-2400","CITES","Commission Regulation (EU) 2017/2400"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2022-1362","CITES","Commission Implementing Regulation (EU) 2022/1362 (1)"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.3.PT-i","CITES","Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-a","CITES","Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-q","CITES","Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-s","CITES","Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-u","CITES","Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof"],["EU2026-1762.PREAMBLE","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.4.PT-v","CITES","Articles 14(3), point (i), and 14(4), points (a), (q), (s), (u) and (v), thereof"],["EU2026-1762.RECITAL-1","EU2026-1762/EXT:EU.REG.2024-1257#ART-4","CITES","Articles 4 and 5 of Regulation (EU) 2024/1257"],["EU2026-1762.RECITAL-1","EU2026-1762/EXT:EU.REG.2024-1257#ART-5","CITES","Articles 4 and 5 of Regulation (EU) 2024/1257"],["EU2026-1762.RECITAL-1","EU2026-1762/EXT:UNR-179","CITES","UN Regulation No 179 (3)"],["EU2026-1762.RECITAL-2","EU2026-1762/EXT:UNR-83","CITES","UN Regulations No 83 (4)"],["EU2026-1762.RECITAL-2","EU2026-1762/EXT:UNR-179","CITES","No 179"],["EU2026-1762.RECITAL-4","EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V","CITES","Annex V to Regulation (EU) 2024/1257"],["EU2026-1762.RECITAL-4","EU2026-1762/EXT:UNR-83","CITES","UN Regulations No 83"],["EU2026-1762.RECITAL-4","EU2026-1762/EXT:UNR-179","CITES","No 179"],["EU2026-1762.RECITAL-6","EU2026-1762/EXT:EU.REG.2016-679","CITES","Regulations (EU) 2016/679 (5)"],["EU2026-1762.RECITAL-6","EU2026-1762/EXT:EU.REG.2018-1725","CITES","(EU) 2018/1725 (6)"],["EU2026-1762.ART-1.PT-2","EU2026-1762/EXT:EU.REG.2024-1257#ART-5","CITES","Article 5 of Regulation (EU) 2024/1257"],["EU2026-1762.ART-2.1","EU2026-1762/EXT:EU.REG.2024-1257#ART-4.2","CITES","Article 4(2) of Regulation (EU) 2024/1257"],["EU2026-1762.ART-2.1","EU2026-1762/EXT:UNR-179#3.0","CITES","paragraph 3.0 of UN Regulation No 179"],["EU2026-1762.ART-2.1","EU2026-1762/EXT:UNR-179#7","CITES","paragraphs 7 and 8 of UN Regulation No 179"],["EU2026-1762.ART-2.1","EU2026-1762/EXT:UNR-179#8","CITES","paragraphs 7 and 8 of UN Regulation No 179"],["EU2026-1762.ART-3","EU2026-1762/EXT:EU.REG.2024-1257#ART-14.1","CITES","Article 14(1) of Regulation (EU) 2024/1257"],["EU2026-1762.ART-3","EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11","CITES","Table 11 of Annex V thereto"],["EU2026-1762.ART-4.1","EU2026-1762/EXT:EU.REG.2024-1257#ART-7.1","CITES","Articles 7(1) and 10(1) of Regulation (EU) 2024/1257"],["EU2026-1762.ART-4.1","EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1","CITES","Articles 7(1) and 10(1) of Regulation (EU) 2024/1257"],["EU2026-1762.ART-4.2","EU2026-1762/EXT:EU.REG.2024-1257#ART-10.1","CITES","Article 10(1) of Regulation (EU) 2024/1257"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2020-683#ANNEX-IV","CITES","Annex IV to Commission Implementing Regulation (EU) 2020/683 (7)"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2025-1706#ANNEX-I.TABLE-4","CITES","Table 4 of Annex I to Commission Implementing Regulation (EU) 2025/1706 (8)"],["EU2026-1762.ART-5","EU2026-1762/EXT:EU.REG.2018-858#ART-27","CITES","Articles 27, 33 and 34 of Regulation (EU) 2018/858"],["EU2026-1762.ART-5","EU2026-1762/EXT:EU.REG.2018-858#ART-33","CITES","Articles 27, 33 and 34 of Regulation (EU) 2018/858"],["EU2026-1762.ART-5","EU2026-1762/EXT:EU.REG.2018-858#ART-34","CITES","Articles 27, 33 and 34 of Regulation (EU) 2018/858"],["EU2026-1762.ART-5","EU2026-1762/EXT:UNR-179#9.1","CITES","paragraphs 9.1 and 9.4 of UN Regulation No 179"],["EU2026-1762.ART-5","EU2026-1762/EXT:UNR-179#9.4","CITES","paragraphs 9.1 and 9.4 of UN Regulation No 179"],["EU2026-1762.ART-6.1","EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-11","CITES","Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257"],["EU2026-1762.ART-6.1","EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V.TABLE-12","CITES","Annex V, Tables 11 and 12 of Regulation (EU) 2024/1257"],["EU2026-1762.ART-6.1","EU2026-1762/EXT:UNR-179#10","CITES","paragraph 10 of UN Regulation No 179"],["EU2026-1762.ART-7.1","EU2026-1762/EXT:UNR-179#ANNEX-5","CITES","Annex 5 to UN Regulation No 179"],["EU2026-1762.ART-7.1","EU2026-1762/EXT:EU.REG.2024-1257#ANNEX-V","CITES","Annex V to Regulation (EU) 2024/1257"],["EU2026-1762.ART-7.1","EU2026-1762/EXT:UNR-83#ANNEX-12","CITES","Annex 12 to UN Regulation No 83"],["EU2026-1762.ART-7.2","EU2026-1762/EXT:UNR-83#ANNEX-4","CITES","Annexes 4 and 12 to UN Regulation No 83"],["EU2026-1762.ART-7.2","EU2026-1762/EXT:UNR-83#ANNEX-12","CITES","Annexes 4 and 12 to UN Regulation No 83"],["EU2026-1762.ART-8","EU2026-1762/EXT:EU.REG.2024-1257#ART-4.5","CITES","Article 4(5) of Regulation (EU) 2024/1257"],["EU2026-1762.ART-8","EU2026-1762/EXT:UNR-179#4.4","CITES","paragraph 4.4 of UN Regulation No 179"],["EU2026-1762.ART-8","EU2026-1762/EXT:UNR-179#PT-3.7.19","CITES","point 3.7.19 of UN Regulation No 179"],["EU2026-1762.ANNEX-I.2.1","EU2026-1762/EXT:UNR-179","CITES","UN Regulation No 179 (1)"],["EU2026-1762.ANNEX-I.2.2","EU2026-1762/EXT:UNR-179#ANNEX-1","CITES","Annex 1 to UN Regulation No 179"],["EU2026-1762.ANNEX-I.2.2","EU2026-1762/EXT:UNR-179#FIGURE-A1/1","CITES","Figure A1/1 thereof"],["EU2026-1762.ANNEX-I.APP-1","EU2026-1762/EXT:UNR-179#ANNEX-1.APP-1","CITES","Appendix 1 of Annex 1 to UN Regulation No 179"],["EU2026-1762.ANNEX-I.APP-2","EU2026-1762/EXT:UNR-179#ANNEX-1.APP-2","CITES","Appendix 2 of Annex 1 to UN Regulation No 179"],["EU2026-1762.ANNEX-I.APP-3","EU2026-1762/EXT:UNR-179#ANNEX-1.APP-3","CITES","Appendix 3 of Annex 1 to UN Regulation No 179"],["EU2026-1762.ANNEX-II.2.1","EU2026-1762/EXT:UNR-179#4","CITES","Paragraphs 4 and 7 of UN Regulation No 179"],["EU2026-1762.ANNEX-II.2.1","EU2026-1762/EXT:UNR-179#7","CITES","Paragraphs 4 and 7 of UN Regulation No 179"],["EU2026-1762.ANNEX-II.3.1","EU2026-1762/EXT:UNR-179#8","CITES","Paragraph 8 of UN Regulation No 179"],["EU2026-1762.ANNEX-II.APP-1","EU2026-1762/EXT:UNR-179#ANNEX-1","CITES","Annex 1 to UN Regulation No 179"],["EU2026-1762.ANNEX-II.APP-1","EU2026-1762/EXT:UNR-179#ANNEX-1","CITES","Annex 1 to UN Regulation No 179"],["EU2026-1762.ANNEX-II.APP-2","EU2026-1762/EXT:UNR-179#7","CITES","paragraph 7 of UN Regulation No 179"],["EU2026-1762.ANNEX-II.APP-2","EU2026-1762/EXT:EU.REG.2018-858#ART-4","CITES","Article 4 of Regulation (EU) 2018/858"],["EU2026-1762.ANNEX-II.APP-2","EU2026-1762/EXT:EU.REG.2018-858#ART-3.24","CITES","Article 3(24) of Regulation (EU) 2018/858"],["EU2026-1762.ANNEX-II.APP-2","EU2026-1762/EXT:EU.REG.2018-858#ART-3.41","CITES","Article 3(41) of Regulation (EU) 2018/858"],["EU2026-1762.ANNEX-III.2.1","EU2026-1762/EXT:UNR-179","CITES","UN Regulation No 179"],["EU2026-1762.ANNEX-III.APP-1","EU2026-1762/EXT:UNR-179#ANNEX-4.APP-1","CITES","Appendix 1 of Annex 4 to UN Regulation No 179"],["EU2026-1762.ANNEX-III.APP-2","EU2026-1762/EXT:UNR-179#ANNEX-4.APP-2","CITES","Appendix 2 of Annex 4 to UN Regulation No 179"],["EU2026-1762.ANNEX-III.APP-3","EU2026-1762/EXT:UNR-179#ANNEX-5","CITES","Annex 5 to UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#7.2","CITES","paragraph 7.2 of UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#7.2","CITES","paragraph 7.2 of UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#7.2","CITES","paragraph 7.2 of UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#7.1","CITES","paragraphs 7.1 and 7.2 of UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#7.2","CITES","paragraphs 7.1 and 7.2 of UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#7.1.3","CITES","paragraph 7.1.3 and paragraph 8 of UN Regulation No 179"],["EU2026-1762.ANNEX-IV","EU2026-1762/EXT:UNR-179#8","CITES","paragraph 7.1.3 and paragraph 8 of UN Regulation No 179"],["EU2026-1762.RECITAL-1","EU2026-1762/EXT:UNR-179","CITES","UN Regulation No 179"],["EU2026-1762.RECITAL-2","EU2026-1762/EXT:UNR-83","CITES","UN Regulation No 83"],["EU2026-1762.RECITAL-6","EU2026-1762/EXT:EU.REG.2016-679","CITES","Regulation (EU) 2016/679"],["EU2026-1762.RECITAL-6","EU2026-1762/EXT:EC.DIR.1995-46","CITES","Directive 95/46/EC"],["EU2026-1762.RECITAL-6","EU2026-1762/EXT:EU.REG.2018-1725","CITES","Regulation (EU) 2018/1725"],["EU2026-1762.RECITAL-6","EU2026-1762/EXT:EC.REG.45-2001","CITES","Regulation (EC) No 45/2001"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2020-683","CITES","Commission Implementing Regulation (EU) 2020/683"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2018-858","CITES","Regulation (EU) 2018/858"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2025-1706","CITES","Commission Implementing Regulation (EU) 2025/1706"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2024-1257","CITES","Regulation (EU) 2024/1257"],["EU2026-1762.ART-4.3","EU2026-1762/EXT:EU.REG.2020-683","CITES","Implementing Regulation (EU) 2020/683"],["EU2026-1762.ART-5","EU2026-1762/EXT:EU.REG.2018-858","CITES","Regulation (EU) 2018/858"],["EU2026-1762.ART-5","EU2026-1762/EXT:EC.REG.715-2007","CITES","Regulations (EC) No 715/2007"],["EU2026-1762.ART-5","EU2026-1762/EXT:EC.REG.595-2009","CITES","(EC) No 595/2009"],["EU2026-1762.ART-5","EU2026-1762/EXT:EC.DIR.2007-46","CITES","Directive 2007/46/EC"],["EU2026-1762.ANNEX-I.2.1","EU2026-1762/EXT:UNR-179","CITES","UN Regulation No 179"],["EU2026-1762","EU2026-1762/EXT:EU.REG.2024-1257","IMPLEMENTS","Regulation (EU) 2024/1257"],["EU2026-1762","EU2026-1762/EXT:TFEU","LEGAL_BASIS","Treaty on the Functioning of the European Union"]],"stats":[[61,"Structural units","var(--clause)"],[0,"Definitions","var(--def)"],[1,"Abbreviations","var(--abbr)"],[0,"Equations","var(--eq)"],[2,"Tables","var(--tab)"],[18,"External docs","var(--ext)"],[22,"References","var(--ok)"],["96%","Resolved","var(--ok)"]]};
+</script>
+<script>
+(function () {
+  "use strict";
+
+  // Node type codes come from build_viz_data.py
+  var TYPE_COLOR = { U: "var(--clause)", A: "var(--abbr)", D: "var(--def)", E: "var(--eq)", V: "var(--var)",
+                     T: "var(--tab)", F: "var(--fig)", N: "var(--foot)", X: "var(--ext)", P: "var(--ext)",
+                     R: "var(--doc)", G: "var(--ink-faint)" };
+  var TYPE_NAME = { A: "Abbreviation", D: "Definition", E: "Equation", V: "Variable", T: "Table", F: "Figure",
+                    N: "Footnote", X: "External document", P: "Cited provision", R: "Document", G: "Group" };
+  var CONTAINS = { HAS_DIVISION: 1, HAS_CHILD: 1, HAS_ABBREVIATION: 1, HAS_DEFINITION: 1, HAS_TABLE: 1,
+                   HAS_FIGURE: 1, HAS_EQUATION: 1, HAS_FOOTNOTE: 1, HAS_PROVISION: 1, HAS_VERSION: 1 };
+
+  var nodes = DATA.nodes;
+  var parentOf = {}, rowEls = {}, childUlEls = {}, treeLabel = {};
+  var outRel = {}, inRel = {};
+  DATA.edges.forEach(function (e) {
+    (outRel[e[0]] = outRel[e[0]] || []).push({ id: e[1], ty: e[2], tx: e[3] });
+    (inRel[e[1]] = inRel[e[1]] || []).push({ id: e[0], ty: e[2], tx: e[3] });
+  });
+
+  function typeName(n) { return n.t === "U" ? (n.ty || "Unit") : (TYPE_NAME[n.t] || n.ty); }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function shortLabel(id, max) {
+    var n = nodes[id];
+    var s = n ? (n.lb || id) : (treeLabel[id] || id);
+    return max && s.length > max ? s.slice(0, max - 1) + "…" : s;
+  }
+
+  // ---------- Search index ----------
+  var searchIndex = Object.keys(nodes).map(function (id) {
+    var n = nodes[id];
+    return { id: id, text: ((n.lb || "") + " " + (n.title || "") + " " + (n.body || "") + " " + (n.extra || "")).toLowerCase() };
+  });
+
+  // ---------- Tree ----------
+  var treeRoot = document.getElementById("treeRoot");
+  function buildRow(meta) {
+    var row = document.createElement("div");
+    row.className = "row";
+    row.dataset.id = meta.id;
+    var tw = document.createElement("span");
+    tw.className = "twisty" + (meta.children.length ? "" : " leaf");
+    tw.textContent = meta.children.length ? "▸" : "";
+    row.appendChild(tw);
+    var n = nodes[meta.id];
+    if (n && n.t !== "G") {
+      var dot = document.createElement("span");
+      dot.className = "dot";
+      dot.style.background = TYPE_COLOR[n.t] || "var(--clause)";
+      row.appendChild(dot);
+    }
+    var label = document.createElement("span");
+    label.className = "row-label";
+    var lb = meta.label;
+    var m = lb.match(/^(\S+\.)\s(.*)$/);
+    label.innerHTML = (n && n.t === "U" && m) ? '<span class="num">' + esc(m[1]) + "</span>" + esc(m[2]) : esc(lb);
+    if (!n || n.t === "G") label.style.fontWeight = "600";
+    row.appendChild(label);
+    return row;
+  }
+  function buildTree(meta, container, depth) {
+    var li = document.createElement("li");
+    var row = buildRow(meta);
+    treeLabel[meta.id] = meta.label;
+    row.style.paddingLeft = (10 + depth * 16) + "px";
+    li.appendChild(row);
+    rowEls[meta.id] = row;
+    if (meta.children.length) {
+      var ul = document.createElement("ul");
+      ul.className = "collapsed";
+      meta.children.forEach(function (c) { parentOf[c.id] = meta.id; buildTree(c, ul, depth + 1); });
+      li.appendChild(ul);
+      childUlEls[meta.id] = ul;
+    } else {
+      childUlEls[meta.id] = null;
+    }
+    container.appendChild(li);
+  }
+  DATA.tree.children.forEach(function (top) { buildTree(top, treeRoot, 0); });
+  DATA.tree.children.forEach(function (top) { setExpanded(top.id, true); });
+
+  function setExpanded(id, on) {
+    var ul = childUlEls[id], row = rowEls[id];
+    if (!ul || !row) return;
+    ul.classList.toggle("collapsed", !on);
+    row.classList.toggle("expanded", on);
+  }
+  function isExpanded(id) { return rowEls[id] && rowEls[id].classList.contains("expanded"); }
+  treeRoot.addEventListener("click", function (e) {
+    var row = e.target.closest(".row");
+    if (!row) return;
+    var id = row.dataset.id;
+    if (childUlEls[id]) setExpanded(id, !isExpanded(id));
+    if (nodes[id]) select(id, false);
+  });
+  function revealPath(id) {
+    var chain = [], cur = parentOf[id];
+    while (cur) { chain.unshift(cur); cur = parentOf[cur]; }
+    chain.forEach(function (a) { setExpanded(a, true); });
+  }
+  function pathTo(id) {
+    var chain = [id], cur = parentOf[id];
+    while (cur) { chain.unshift(cur); cur = parentOf[cur]; }
+    return chain;
+  }
+  function childrenOf(id) {
+    var ul = childUlEls[id];
+    if (!ul) return [];
+    return Array.prototype.map.call(ul.querySelectorAll(":scope > li > .row"), function (r) { return r.dataset.id; });
+  }
+
+  // ---------- Detail ----------
+  var selectedId = null;
+  var mainInner = document.getElementById("mainInner");
+  function select(id, reveal) {
+    if (!nodes[id]) return;
+    if (selectedId && rowEls[selectedId]) rowEls[selectedId].classList.remove("selected");
+    selectedId = id;
+    if (reveal !== false) revealPath(id);
+    if (rowEls[id]) { rowEls[id].classList.add("selected"); rowEls[id].scrollIntoView({ block: "nearest" }); }
+    renderDetail(id);
+    if (window.innerWidth <= 760) document.getElementById("rail").classList.remove("open");
+    try { history.replaceState(null, "", "#" + encodeURIComponent(id)); } catch (e) {}
+  }
+  function metaCell(k, v) {
+    return '<div class="meta-cell"><div class="k">' + esc(k) + '</div><div class="v">' + esc(v == null || v === "" ? "—" : v) + "</div></div>";
+  }
+  function relRow(id, sub) {
+    var n = nodes[id];
+    if (!n) return "";
+    return '<div class="rel-row" data-id="' + esc(id) + '"><span class="dot" style="background:' + (TYPE_COLOR[n.t] || "var(--clause)") + '"></span>' +
+      '<div class="rl-main"><div class="rl-label">' + esc(shortLabel(id, 110)) + '</div><div class="rl-sub">' + esc(sub || typeName(n)) + "</div></div>" +
+      '<span class="rl-arrow">→</span></div>';
+  }
+  function relSection(title, list, incoming) {
+    var groups = {};
+    list.forEach(function (r) { (groups[r.ty] = groups[r.ty] || []).push(r); });
+    var html = "";
+    Object.keys(groups).sort().forEach(function (ty) {
+      if (CONTAINS[ty]) return;
+      var g = groups[ty];
+      html += '<div class="section-heading">' + esc(title) + " · " + esc(ty) + " (" + g.length + ")</div>";
+      html += '<div class="rel-list">' + g.slice(0, 200).map(function (r) {
+        return relRow(r.id, r.tx ? "“" + r.tx + "”" : typeName(nodes[r.id] || {}));
+      }).join("") + "</div>";
+      if (g.length > 200) html += '<div class="note">+' + (g.length - 200) + " more</div>";
+    });
+    return html;
+  }
+  function renderKatex(root) {
+    if (!window.katex) return;
+    root.querySelectorAll("[data-latex]").forEach(function (el) {
+      try { window.katex.render(el.dataset.latex, el, { throwOnError: false, displayMode: true }); } catch (e) {}
+    });
+  }
+
+  function renderDetail(id) {
+    var n = nodes[id];
+    var html = '<div class="crumbs">';
+    var crumbs = pathTo(id);
+    crumbs.forEach(function (cid, i) {
+      html += '<button data-jump="' + esc(cid) + '">' + esc(shortLabel(cid, 40)) + "</button>";
+      if (i < crumbs.length - 1) html += '<span class="sep">›</span>';
+    });
+    html += "</div>";
+    html += '<div class="detail-header"><span class="type-badge badge-' + n.t + '">' + esc(typeName(n)) + "</span>";
+    html += '<h2 class="detail-title">' + esc(n.lb || id) + "</h2></div>";
+    html += '<div class="qid">' + esc(id) + "</div>";
+
+    html += '<div class="meta-grid">';
+    (n.meta || []).forEach(function (kv) { html += metaCell(kv[0], kv[1]); });
+    html += "</div>";
+    if (n.labels && n.labels.length) {
+      html += n.labels.map(function (l) { return '<span class="label-chip">' + esc(l) + "</span>"; }).join("");
+    }
+    if (n.t === "E") {
+      html += '<div class="section-heading">Equation</div><div class="eq-box">';
+      if (n.latex) html += '<div data-latex="' + esc(n.latex) + '">' + esc(n.linear || "") + "</div>";
+      else html += '<p class="prose empty">Image-only equation — no text layer to reconstruct (see the crop).</p>';
+      if (n.linear) html += '<div class="note">linear: <span class="mono">' + esc(n.linear) + "</span></div>";
+      if (n.img) html += '<img class="eq-img" alt="Equation as printed in the PDF" src="' + esc(n.img) + '">';
+      html += '<div class="note">Rendered from the reconstructed layout; compare with the crop from the PDF.</div></div>';
+      if (n.gloss && n.gloss.length) {
+        html += '<div class="section-heading">Where</div><table class="gloss">' + n.gloss.map(function (g) {
+          return "<tr><td>" + esc(g[0]) + "</td><td>" + esc(g[1] || "") + (g[2] ? " <em>[" + esc(g[2]) + "]</em>" : "") + "</td></tr>";
+        }).join("") + "</table>";
+      }
+    }
+    if (n.title && n.t === "U") html += '<div class="section-heading">Title</div><p class="prose">' + esc(n.title) + "</p>";
+    if (n.body) {
+      html += '<div class="section-heading">' + (n.t === "T" ? "Cell text" : n.t === "U" ? "Body text" : "Text") + "</div>";
+      html += '<p class="prose' + (n.t === "T" ? " mono" : "") + '">' + esc(n.body) + "</p>";
+    } else if (n.t === "U") {
+      html += '<p class="prose empty">No body text — a structural heading.</p>';
+    }
+    if (n.foot) html += '<div class="section-heading">Footnote</div><p class="prose">' + esc(n.foot) + "</p>";
+    if (n.extra && n.t !== "U") html += '<div class="section-heading">Details</div><p class="prose">' + esc(n.extra) + "</p>";
+
+    var kids = childrenOf(id);
+    if (kids.length) {
+      html += '<div class="section-heading">Contains (' + kids.length + ")</div>";
+      html += '<div class="rel-list">' + kids.slice(0, 300).map(function (c) { return relRow(c); }).join("") + "</div>";
+    }
+    html += relSection("Outgoing", outRel[id] || [], false);
+    html += relSection("Incoming", inRel[id] || [], true);
+    html += '<div class="section-heading">Local graph</div><div class="graph-wrap">' + buildLocalGraphSvg(id) + "</div>";
+
+    mainInner.innerHTML = html;
+    renderKatex(mainInner);
+    mainInner.querySelectorAll("[data-jump]").forEach(function (b) { b.addEventListener("click", function () { select(b.dataset.jump, true); }); });
+    mainInner.querySelectorAll(".rel-row[data-id], .g-node[data-id]").forEach(function (r) {
+      r.addEventListener("click", function () { select(r.dataset.id, true); });
+    });
+  }
+
+  // ---------- Local graph (fixed compass layout) ----------
+  var GW = 900, GH = 460;
+  function box(id, cx, cy, isSelf) {
+    var n = nodes[id];
+    if (!n) return "";
+    var w = isSelf ? 220 : 150, h = isSelf ? 46 : 38;
+    return '<g class="g-node' + (isSelf ? " self" : "") + '" data-id="' + esc(id) + '" transform="translate(' + (cx - w / 2) + "," + (cy - h / 2) + ')">' +
+      '<rect width="' + w + '" height="' + h + '"></rect>' +
+      '<text x="10" y="' + (isSelf ? 19 : 16) + '">' + esc(shortLabel(id, isSelf ? 34 : 22)) + "</text>" +
+      '<text class="g-type" x="10" y="' + (isSelf ? 34 : 30) + '">' + esc(typeName(n)) + "</text></g>";
+  }
+  function spread(k, lo, hi) {
+    if (k <= 1) return [(lo + hi) / 2];
+    var out = [];
+    for (var i = 0; i < k; i++) out.push(lo + i * ((hi - lo) / (k - 1)));
+    return out;
+  }
+  function buildLocalGraphSvg(id) {
+    var parent = parentOf[id];
+    var kids = childrenOf(id);
+    var out = (outRel[id] || []).filter(function (r) { return !CONTAINS[r.ty] && nodes[r.id]; });
+    var inc = (inRel[id] || []).filter(function (r) { return !CONTAINS[r.ty] && nodes[r.id]; });
+    var cx = GW / 2, cy = GH / 2, lines = "", boxes = "";
+    if (parent && nodes[parent]) {
+      lines += '<line class="g-line" x1="' + cx + '" y1="' + (cy - 23) + '" x2="' + cx + '" y2="75"></line>';
+      boxes += box(parent, cx, 56, false) + '<text class="g-axis-label" x="' + cx + '" y="24" text-anchor="middle">Parent</text>';
+    }
+    var ks = kids.slice(0, 6);
+    if (ks.length) {
+      var kx = spread(ks.length, 110, GW - 110);
+      ks.forEach(function (k, i) {
+        lines += '<line class="g-line" x1="' + cx + '" y1="' + (cy + 23) + '" x2="' + kx[i] + '" y2="' + (GH - 65) + '"></line>';
+        boxes += box(k, kx[i], GH - 46, false);
+      });
+      boxes += '<text class="g-axis-label" x="' + cx + '" y="' + (GH - 76) + '" text-anchor="middle">Contains' + (kids.length > 6 ? " (+" + (kids.length - 6) + ")" : "") + "</text>";
+    }
+    var os = out.slice(0, 5);
+    if (os.length) {
+      var oy = spread(os.length, 120, GH - 120);
+      os.forEach(function (r, i) {
+        lines += '<line class="g-line ref-out" marker-end="url(#arrowOut)" x1="' + (cx + 110) + '" y1="' + cy + '" x2="' + (GW - 165) + '" y2="' + oy[i] + '"></line>';
+        boxes += box(r.id, GW - 90, oy[i], false);
+      });
+      boxes += '<text class="g-axis-label" x="' + (GW - 90) + '" y="24" text-anchor="middle">Outgoing →' + (out.length > 5 ? " (+" + (out.length - 5) + ")" : "") + "</text>";
+    }
+    var is = inc.slice(0, 5);
+    if (is.length) {
+      var iy = spread(is.length, 120, GH - 120);
+      is.forEach(function (r, i) {
+        lines += '<line class="g-line ref-in" x1="165" y1="' + iy[i] + '" x2="' + (cx - 110) + '" y2="' + cy + '"></line>';
+        boxes += box(r.id, 90, iy[i], false);
+      });
+      boxes += '<text class="g-axis-label" x="90" y="24" text-anchor="middle">← Incoming' + (inc.length > 5 ? " (+" + (inc.length - 5) + ")" : "") + "</text>";
+    }
+    boxes += box(id, cx, cy, true);
+    return '<svg class="graph-svg" viewBox="0 0 ' + GW + " " + GH + '" xmlns="http://www.w3.org/2000/svg">' +
+      '<defs><marker id="arrowOut" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--accent)"></path></marker></defs>' +
+      lines + boxes + "</svg>";
+  }
+
+  // ---------- Search ----------
+  var searchInput = document.getElementById("searchInput");
+  var searchResults = document.getElementById("searchResults");
+  var timer = null;
+  searchInput.addEventListener("input", function () {
+    clearTimeout(timer);
+    var q = searchInput.value.trim().toLowerCase();
+    timer = setTimeout(function () { runSearch(q); }, 90);
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".search-wrap")) searchResults.classList.remove("show"); });
+  function runSearch(q) {
+    if (!q) { searchResults.classList.remove("show"); return; }
+    var hits = [];
+    for (var i = 0; i < searchIndex.length && hits.length < 50; i++) if (searchIndex[i].text.indexOf(q) !== -1) hits.push(searchIndex[i].id);
+    if (!hits.length) {
+      searchResults.innerHTML = '<div class="search-empty">No matches for “' + esc(searchInput.value) + "”.</div>";
+    } else {
+      searchResults.innerHTML = hits.map(function (id) {
+        var n = nodes[id];
+        return '<div class="search-result" data-id="' + esc(id) + '"><span class="dot" style="background:' + (TYPE_COLOR[n.t] || "var(--clause)") + '"></span>' +
+          '<span class="snip">' + esc(typeName(n) + " · " + shortLabel(id, 90)) + "</span></div>";
+      }).join("");
+      searchResults.querySelectorAll(".search-result").forEach(function (r) {
+        r.addEventListener("click", function () { select(r.dataset.id, true); searchResults.classList.remove("show"); searchInput.value = ""; });
+      });
+    }
+    searchResults.classList.add("show");
+  }
+
+  // ---------- Stats + legend ----------
+  document.getElementById("statsRow").innerHTML = DATA.stats.map(function (s) {
+    return '<div class="stat"><span class="dot" style="background:' + s[2] + '"></span><span class="n">' + esc(s[0]) + '</span><span class="lbl">' + esc(s[1]) + "</span></div>";
+  }).join("");
+  var legend = document.getElementById("legend");
+  if (legend) legend.innerHTML = "Node colours: " + ["U", "A", "D", "E", "V", "T", "F", "N", "X"].map(function (t) {
+    return '<span style="color:' + TYPE_COLOR[t] + ';font-weight:600;">■</span> ' + (t === "U" ? "Structure" : TYPE_NAME[t]);
+  }).join(" &nbsp; ");
+
+  // ---------- Theme ----------
+  var themeToggle = document.getElementById("themeToggle");
+  var order = ["system", "light", "dark"], labels = { system: "Theme: System", light: "Theme: Light", dark: "Theme: Dark" };
+  var theme = "system";
+  try { theme = localStorage.getItem("kg-theme") || "system"; } catch (e) {}
+  applyTheme(theme);
+  themeToggle.addEventListener("click", function () {
+    theme = order[(order.indexOf(theme) + 1) % order.length];
+    applyTheme(theme);
+    try { localStorage.setItem("kg-theme", theme); } catch (e) {}
+  });
+  function applyTheme(t) {
+    if (t === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", t);
+    themeToggle.textContent = labels[t];
+  }
+  document.getElementById("railToggle").addEventListener("click", function () { document.getElementById("rail").classList.toggle("open"); });
+
+  // deep link: kg_explorer.html#<node id>
+  if (location.hash.length > 1) {
+    var target = decodeURIComponent(location.hash.slice(1));
+    window.addEventListener("load", function () { if (nodes[target]) select(target, true); });
+  }
+})();
+
+</script>
+</body>
+</html>

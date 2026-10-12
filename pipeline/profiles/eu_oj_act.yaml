@@ -1,0 +1,150 @@
+# EU legal act as published in the Official Journal (OJ L series):
+# citations + recitals ("Whereas: (1) ..."), enacting formula, CHAPTER <roman>,
+# "Article <n>" (numbered globally), article paragraphs "1." scoped to their
+# Article, numbered points "(1)", "ANNEX <roman>" with "Appendix <n>" children.
+# Headings are set in small italic/caps type, centred - never larger than body.
+family: eu_oj_act
+description: "EU regulation / directive / decision published in the Official Journal"
+
+detect:
+  any:
+    - 'Official Journal'
+    - 'ELI: http://data\.europa\.eu/eli'
+    - 'OJ L'
+    - 'Having regard to the Treaty'
+    - '\((?:EU|EC)\) \d{4}/\d+'
+  min_score: 2
+
+metadata:
+  number: '(?:REGULATION|DIRECTIVE|DECISION) \((?:EU|EC)\) (\d{4}/\d+)'
+  title: '^\s*((?:COMMISSION )?(?:IMPLEMENTING |DELEGATED )?(?:REGULATION|DIRECTIVE|DECISION) \((?:EU|EC)\) \d{4}/\d+[^(]{0,400})'
+  date: '\bof (\d{1,2} \w+ \d{4})'
+  issuer: '(THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION|THE EUROPEAN COMMISSION)'
+  doc_id: 'EU{number}'
+  self_id: 'EXT:EU.REG.{number}'
+  kind: eu_regulation
+
+layout:
+  chem_normalize: false
+  header_min_share: 0.6
+  footnote_marker: paren
+
+structure:
+  initial: {id: PREAMBLE, unit_type: Preamble, label: null}
+  levels:
+    - name: recital
+      unit_type: Recital
+      match: '^\((?P<num>\d+)\)(?:\s+(?P<rest>.*))?$'
+      style: any
+      id: 'RECITAL-{num}'
+      scope: root
+      parent: [initial]
+      within: [initial]
+      after: '^Whereas:?$'
+      sequence: sibling
+      label: '{num}'
+      normative: false
+    - name: enacting
+      unit_type: Body
+      match: '^(?P<title>(?:HAVE|HAS) ADOPTED THIS (?:REGULATION|DIRECTIVE|DECISION):?)$'
+      style: any
+      id: 'BODY'
+      scope: root
+      parent: [root]
+      title: group
+    - name: chapter
+      unit_type: Chapter
+      match: '^CHAPTER\s+(?P<num>[IVXLC]+)$'
+      style: centered
+      id: 'CH-{num}'
+      scope: root
+      parent: [enacting]
+      title: next
+      label: '{num}'
+    - name: section
+      unit_type: Section
+      match: '^SECTION\s+(?P<num>[IVXLC0-9]+)$'
+      style: centered
+      id: 'SEC-{num}'
+      scope: parent
+      parent: [chapter, enacting]
+      within: [chapter, enacting]
+      title: next
+      label: '{num}'
+    - name: article
+      unit_type: Article
+      match: '^Article\s+(?P<num>\d+[a-z]?)$'
+      style: centered
+      id: 'ART-{num}'
+      scope: root
+      parent: [section, chapter, enacting]
+      sequence: global
+      title: next
+      label: '{num}'
+    - name: article_paragraph
+      unit_type: ArticleParagraph
+      match: '^(?P<num>\d+)\.(?:\s+(?P<rest>.*))?$'
+      style: any
+      id: '{num}'
+      scope: parent
+      parent: [article]
+      within: [article]
+      sequence: sibling
+      label: '{num}'
+    - name: point
+      unit_type: Point
+      match: '^\((?P<num>\d+)\)(?:\s+(?P<rest>.*))?$'
+      style: any
+      id: 'PT-{num}'
+      scope: parent
+      parent: [article_paragraph, article]
+      within: [article]
+      sequence: sibling
+      label: '{num}'
+    - name: annex
+      unit_type: Annex
+      match: '^ANNEX(?:\s+(?P<num>[IVXLC]+))?$'
+      style: centered
+      id: 'ANNEX-{num}'
+      scope: root
+      parent: [root]
+      title: next
+      label: '{num}'
+    - name: appendix
+      unit_type: Appendix
+      match: '^Appendix\s+(?P<num>\d+)$'
+      style: centered
+      id: 'APP-{num}'
+      scope: parent
+      parent: [annex]
+      within: [annex]
+      title: next
+      label: '{num}'
+  decimal:
+    enabled: true
+    unit_type: Clause
+    within: [annex, appendix]
+    max_top_level: 60
+  labels:
+    decimal_by_depth: [Section, Subsection, Provision]
+  form_titles: ['(?i)certificate', '(?i)^model of ']
+
+terms:
+  definition_sections: ['^Definitions?\b']
+  abbreviation_sections: ['^Abbreviations']
+  scope_patterns: ['For the purposes? of this (Regulation|Directive|Decision|Annex|Article)']
+
+references:
+  self_words: ['this Regulation', 'this Directive', 'this Decision']
+  default_scope: document
+
+equations:
+  math_fonts: ['CambriaMath', 'Cambria Math', 'SymbolMT', 'Symbol']
+  glossary_trigger: '^[Ww]here\s*:?\s*$'
+
+viz:
+  root_label: null
+  groups:
+    - {label: 'Preamble & recitals', match: '^(PREAMBLE|RECITAL-)'}
+    - {label: 'Enacting terms', match: '^(BODY|CH-|ART-)'}
+    - {label: 'Annexes', match: '^ANNEX'}

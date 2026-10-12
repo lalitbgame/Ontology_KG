@@ -1,8 +1,8 @@
 """Streamlit app: requirement keyword -> knowledge graph -> structured LLM prompt.
 
 Pure retrieval + text formatting - NO LLM is called anywhere in this app.
-It reads the graph pipeline/phase5_assemble.py already built
-(output/nodes.jsonl + output/edges.jsonl), does a deterministic keyword
+It reads one document's graph as built by `python -m pipeline.run`
+(output/<doc_id>/nodes.jsonl + edges.jsonl), does a deterministic keyword
 search over it, and assembles a citation-backed structured prompt
 (Area of Requirement -> Requirement Hierarchy -> Citation Paragraphs)
 that you can copy/download and feed into an LLM chain later. Wiring that
@@ -20,10 +20,10 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app.kg_retrieval import (  # noqa: E402
-    EDGES_PATH,
-    NODES_PATH,
-    STANDARD_LABEL,
+    NON_UNIT_TYPES,
     build_structured_prompt,
+    document_label,
+    list_documents,
     load_graph,
     search,
 )
@@ -32,22 +32,22 @@ st.set_page_config(page_title="KG Requirement Prompt Builder", layout="wide")
 
 
 @st.cache_resource(show_spinner="Loading knowledge graph…")
-def get_graph(nodes_path: str, edges_path: str):
-    return load_graph(Path(nodes_path), Path(edges_path))
+def get_graph(doc_id: str):
+    return load_graph(doc_id)
 
 
 def main() -> None:
     st.title("Requirement → Knowledge Graph → Structured Prompt")
-    st.caption(
-        f"Source: {STANDARD_LABEL}. Retrieval is 100% deterministic keyword search + graph "
-        "traversal over the ontology KG — no LLM, embeddings, or NER is used to build this "
-        "prompt. The prompt is only assembled here; sending it to a model is a separate step."
-    )
+    docs = list_documents()
+    if not docs:
+        st.error("No document graphs found under output/ - run `python -m pipeline.run --all` first.")
+        st.stop()
+        return
 
     with st.sidebar:
-        st.header("Graph source")
-        nodes_path = st.text_input("nodes.jsonl path", str(NODES_PATH))
-        edges_path = st.text_input("edges.jsonl path", str(EDGES_PATH))
+        st.header("Document")
+        doc_id = st.selectbox("Knowledge graph", [d["doc_id"] for d in docs],
+                              format_func=lambda d: next(f"{x['doc_id']} — {x['title'][:60]}" for x in docs if x["doc_id"] == d))
 
         st.header("Search options")
         require_all = st.checkbox("Require all keywords present (AND)", value=True,
@@ -57,20 +57,26 @@ def main() -> None:
         include_references = st.checkbox("Include cross-references", value=True)
 
     try:
-        graph = get_graph(nodes_path, edges_path)
+        graph = get_graph(doc_id)
     except FileNotFoundError as e:
         st.error(f"Could not load graph: {e}")
         st.stop()
         return
 
+    st.caption(
+        f"Source: {document_label(graph)}. Retrieval is 100% deterministic keyword search + graph "
+        "traversal over the ontology KG — no LLM, embeddings, or NER is used to build this "
+        "prompt. The prompt is only assembled here; sending it to a model is a separate step."
+    )
+
     divisions = sorted({
         d.get("division") for _, d in graph.nodes(data=True)
-        if d.get("type") == "Clause" and d.get("division")
+        if d.get("type") not in NON_UNIT_TYPES and d.get("division")
     })
     with st.sidebar:
         chosen_divisions = st.multiselect(
             "Limit to divisions (optional)", divisions,
-            help="e.g. BODY, ANNEX-B1, APPENDIX-3 …",
+            help="e.g. BODY, ANNEX-B1, ART-4, ANNEX-IV …",
         )
 
     st.caption(f"Loaded {graph.number_of_nodes():,} nodes / {graph.number_of_edges():,} edges.")
@@ -113,7 +119,7 @@ def main() -> None:
     st.download_button(
         "Download prompt (.txt)",
         prompt_text,
-        file_name=f"kg_prompt_{'_'.join(query.strip().split())}.txt",
+        file_name=f"kg_prompt_{doc_id}_{'_'.join(query.strip().split())}.txt",
         mime="text/plain",
     )
 

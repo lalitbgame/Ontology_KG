@@ -1,0 +1,66 @@
+{"id": "GTR22.VAR:Virtual", "symbol": "Virtual", "display": "Virtual", "latex": "Virtual", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:km", "symbol": "km", "display": "km", "latex": "km", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:V2X", "symbol": "V2X", "display": "V2X", "latex": "V2X", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:PART", "symbol": "PART", "display": "PART", "latex": "PART", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:B", "symbol": "B", "display": "B", "latex": "B", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:Virtual_distance", "symbol": "Virtual_distance", "display": "Virtualdistance", "latex": "Virtual_{distance}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:total_discharge_energy_during_V2X", "symbol": "total_discharge_energy_during_V2X", "display": "totaldischargeenergyduringV2X", "latex": "total_{discharge_energy_during_V2X}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:worst_case_certified_energy_consumption_of_PART_B_family", "symbol": "worst_case_certified_energy_consumption_of_PART_B_family", "display": "worstcasecertifiedenergyconsumptionofPARTBfamily", "latex": "worst_{case_certified_energy_consumption_of_PART_B_family}", "equations": 2, "descriptions": ["the worst case certified energy consumption of a Part B family which needs to be provided according to Annex 2."]}
+{"id": "GTR22.VAR:SOCE_measured", "symbol": "SOCE_measured", "display": "SOCEmeasured", "latex": "SOCE_{measured}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:UBE_measured", "symbol": "UBE_measured", "display": "UBEmeasured", "latex": "UBE_{measured}", "equations": 7, "descriptions": ["the measured usable battery energy according to GTR15 Annex", "the measured usable battery energy according to paragraph 3.1.1. of this annex, Wh"]}
+{"id": "GTR22.VAR:UBE_certified", "symbol": "UBE_certified", "display": "UBEcertified", "latex": "UBE_{certified}", "equations": 5, "descriptions": []}
+{"id": "GTR22.VAR:SOCR_measured", "symbol": "SOCR_measured", "display": "SOCRmeasured", "latex": "SOCR_{measured}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:Range_measured", "symbol": "Range_measured", "display": "Rangemeasured", "latex": "Range_{measured}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:Range_certified", "symbol": "Range_certified", "display": "Rangecertified", "latex": "Range_{certified}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:x_i", "symbol": "x_i", "display": "xi", "latex": "x_{i}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:SOC_read,i", "symbol": "SOC_read,i", "display": "SOCread,i", "latex": "SOC_{read,i}", "equations": 2, "descriptions": ["the on-board SOCR/SOCE read from the vehicle i ; and"]}
+{"id": "GTR22.VAR:SOC_measured,i", "symbol": "SOC_measured,i", "display": "SOCmeasured,i", "latex": "SOC_{measured,i}", "equations": 2, "descriptions": ["the measured SOCR/SOCE of the vehicle i."]}
+{"id": "GTR22.VAR:X_tests", "symbol": "X_tests", "display": "Xtests", "latex": "X_{tests}", "equations": 5, "descriptions": []}
+{"id": "GTR22.VAR:x_1", "symbol": "x_1", "display": "x1", "latex": "x_{1}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:x_2", "symbol": "x_2", "display": "x2", "latex": "x_{2}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:x_3", "symbol": "x_3", "display": "x3", "latex": "x_{3}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:x_N", "symbol": "x_N", "display": "xN", "latex": "x_{N}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:N", "symbol": "N", "display": "N", "latex": "N", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:s", "symbol": "s", "display": "s", "latex": "s", "equations": 5, "descriptions": []}
+{"id": "GTR22.VAR:x_1-X_tests", "symbol": "x_1-X_tests", "display": "x1-Xtests", "latex": "x_{1-X_tests}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:x_2-X_tests", "symbol": "x_2-X_tests", "display": "x2-Xtests", "latex": "x_{2-X_tests}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:x_N-X_tests", "symbol": "x_N-X_tests", "display": "xN-Xtests", "latex": "x_{N-X_tests}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:A", "symbol": "A", "display": "A", "latex": "A", "equations": 3, "descriptions": []}
+{"id": "GTR22.VAR:t_P1,N", "symbol": "t_P1,N", "display": "tP1,N", "latex": "t_{P1,N}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:t_P2,N", "symbol": "t_P2,N", "display": "tP2,N", "latex": "t_{P2,N}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:t_F1,N", "symbol": "t_F1,N", "display": "tF1,N", "latex": "t_{F1,N}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:t_F2", "symbol": "t_F2", "display": "tF2", "latex": "t_{F2}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:AF_PER", "symbol": "AF_PER", "display": "AFPER", "latex": "AF_{PER}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:AF_PER_UBE_certified", "symbol": "AF_PER_UBE_certified", "display": "AFPERUBEcertified", "latex": "AF_{PER_UBE_certified}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:UBE_measured,nc", "symbol": "UBE_measured,nc", "display": "UBEmeasured,nc", "latex": "UBE_{measured,nc}", "equations": 4, "descriptions": ["the non-corrected usable battery energy of the charge-depleting test, Wh; ∆E_REESS,CC_ave is the average electric energy change of the confirmation cycle, Wh; CC means confirmation cycle as defined in GTR15 Annex 8, paragraph 3.2.4.4.."]}
+{"id": "GTR22.VAR:Delta_E_REESS,CC_ave", "symbol": "Delta_E_REESS,CC_ave", "display": "DeltaEREESS,CCave", "latex": "Delta_{E_REESS,CC_ave}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:sum_i=1", "symbol": "sum_i=1", "display": "sumi=1", "latex": "sum_{i=1}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:n", "symbol": "n", "display": "n", "latex": "n", "equations": 4, "descriptions": ["the total number of batteries"]}
+{"id": "GTR22.VAR:Delta_E_REESS,i", "symbol": "Delta_E_REESS,i", "display": "DeltaEREESS,i", "latex": "Delta_{E_REESS,i}", "equations": 4, "descriptions": ["the measured electric energy change of battery i, Wh"]}
+{"id": "GTR22.VAR:i", "symbol": "i", "display": "i", "latex": "i", "equations": 2, "descriptions": ["the index number of the considered battery", "the index number of considered battery"]}
+{"id": "GTR22.VAR:int_t_0", "symbol": "int_t_0", "display": "intt0", "latex": "int_{t_0}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:t_end", "symbol": "t_end", "display": "tend", "latex": "t_{end}", "equations": 2, "descriptions": ["the time at the end of the confirmation cycle of the chargedepleting test, s"]}
+{"id": "GTR22.VAR:U(t)_REESS,i", "symbol": "U(t)_REESS,i", "display": "U(t)REESS,i", "latex": "U(t)_{REESS,i}", "equations": 2, "descriptions": ["the voltage of battery i, V"]}
+{"id": "GTR22.VAR:I(t)_REESS,i", "symbol": "I(t)_REESS,i", "display": "I(t)REESS,i", "latex": "I(t)_{REESS,i}", "equations": 2, "descriptions": ["the electric current of battery i, A"]}
+{"id": "GTR22.VAR:int_t_0^t_end_U", "symbol": "int_t_0^t_end_U", "display": "intt0^tendU", "latex": "int_{t_0^t_end_U}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:t0", "symbol": "t0", "display": "t0", "latex": "t0", "equations": 1, "descriptions": ["the time at the beginning of the charge-depleting test, s"]}
+{"id": "GTR22.VAR:Delta_E_REESS.CC,ave", "symbol": "Delta_E_REESS.CC,ave", "display": "DeltaEREESS.CC,ave", "latex": "Delta_{E_REESS.CC,ave}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:Delta_E_REESS,avg,i,CC", "symbol": "Delta_E_REESS,avg,i,CC", "display": "DeltaEREESS,avg,i,CC", "latex": "Delta_{E_REESS,avg,i,CC}", "equations": 4, "descriptions": ["the average of the measured electric energy change of battery i during the confirmation cycle, Wh"]}
+{"id": "GTR22.VAR:1^n_Delta_E_REESS,avg,i,CC", "symbol": "1^n_Delta_E_REESS,avg,i,CC", "display": "1^nDeltaEREESS,avg,i,CC", "latex": "1^n_{Delta_E_REESS,avg,i,CC}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:int_t", "symbol": "int_t", "display": "intt", "latex": "int_{t}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:CC", "symbol": "CC", "display": "CC", "latex": "CC", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:t_end,CC_t", "symbol": "t_end,CC_t", "display": "tend,CCt", "latex": "t_{end,CC_t}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:t_start,CC", "symbol": "t_start,CC", "display": "tstart,CC", "latex": "t_{start,CC}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:U_REESS,i(t)", "symbol": "U_REESS,i(t)", "display": "UREESS,i(t)", "latex": "U_{REESS,i(t)}", "equations": 2, "descriptions": ["the voltage of battery i, in V"]}
+{"id": "GTR22.VAR:I_REESS,i(t)", "symbol": "I_REESS,i(t)", "display": "IREESS,i(t)", "latex": "I_{REESS,i(t)}", "equations": 2, "descriptions": ["the current of battery i, in A"]}
+{"id": "GTR22.VAR:end,CCt_end,CC_t_end,CC", "symbol": "end,CCt_end,CC_t_end,CC", "display": "end,CCtend,CCtend,CC", "latex": "end,CCt_{end,CC_t_end,CC}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:int_t__start,CCU_REESS,i", "symbol": "int_t__start,CCU_REESS,i", "display": "inttstart,CCUREESS,i", "latex": "int_{t__start,CCU_REESS,i}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:AF_OVC-HEV", "symbol": "AF_OVC-HEV", "display": "AFOVC-HEV", "latex": "AF_{OVC-HEV}", "equations": 4, "descriptions": ["the adjustment factor determined as described below."]}
+{"id": "GTR22.VAR:EC_measured", "symbol": "EC_measured", "display": "ECmeasured", "latex": "EC_{measured}", "equations": 3, "descriptions": ["the measured electric energy consumption ECAC,CD according to GTR15 Annex 8, Table A8/8, Step no. 13 at certification. Wh/km."]}
+{"id": "GTR22.VAR:EC_certified", "symbol": "EC_certified", "display": "ECcertified", "latex": "EC_{certified}", "equations": 4, "descriptions": ["the electric energy consumption ECAC.CD according to GTR15 Annex 8, Table A8/8, Step no. 14 at certification, Wh/km", "EC according to GTR15 Annex 8, Table A8/9, Step no. 8 at certification, Wh/km; EC_measured is measured EC according to GTR15 Annex 8, Table A8/9, Step no. 7 at certification. Wh/km."]}
+{"id": "GTR22.VAR:-_Adjustment_factor_2:", "symbol": "-_Adjustment_factor_2:", "display": "-Adjustmentfactor2:", "latex": "-_{Adjustment_factor_2:}", "equations": 1, "descriptions": []}
+{"id": "GTR22.VAR:AF_OVC.HEV", "symbol": "AF_OVC.HEV", "display": "AFOVC.HEV", "latex": "AF_{OVC.HEV}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:EAER_measured", "symbol": "EAER_measured", "display": "EAERmeasured", "latex": "EAER_{measured}", "equations": 2, "descriptions": []}
+{"id": "GTR22.VAR:M_CO2,CS", "symbol": "M_CO2,CS", "display": "MCO2,CS", "latex": "M_{CO2,CS}", "equations": 2, "descriptions": ["the charge-sustaining CO2 mass emission according to GTR15, Annex 8, Table A8/5 Step no. 5, g/km"]}
+{"id": "GTR22.VAR:M_CO2,CD,avg", "symbol": "M_CO2,CD,avg", "display": "MCO2,CD,avg", "latex": "M_{CO2,CD,avg}", "equations": 2, "descriptions": ["the arithmetic average charge-depleting CO2 mass emission according to GTR15, Annex 8, Paragraph 4.4.4.1., g/km"]}
+{"id": "GTR22.VAR:R_cdc", "symbol": "R_cdc", "display": "Rcdc", "latex": "R_{cdc}", "equations": 2, "descriptions": ["the measured length of the charge-depleting test according to GTR15, Annex 8, Table A8/8, Step no. 3, km"]}

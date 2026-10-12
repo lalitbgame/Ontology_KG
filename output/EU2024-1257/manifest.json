@@ -1,0 +1,302 @@
+{
+  "doc_id": "EU2024-1257",
+  "source_file": "OJ_L_202401257_EN_TXT.pdf",
+  "sha256": "fff8fbf43f80a79553f2ed4ef90b60921005a27e1010ca543f5381a0b374312b",
+  "profile": "eu_oj_act",
+  "registry_confirmed": true,
+  "registry_entry": {
+    "file": "OJ_L_202401257_EN_TXT.pdf",
+    "doc_id": "EU2024-1257",
+    "profile": "eu_oj_act",
+    "self_ids": [
+      "EXT:EU.REG.2024-1257"
+    ],
+    "metadata": {
+      "title": "Regulation (EU) 2024/1257 (Euro 7)",
+      "number": "2024/1257",
+      "issuer": "European Parliament and Council",
+      "region": "European Union"
+    }
+  },
+  "page_count": 49,
+  "metadata": {
+    "number": "2024/1257",
+    "title": "Regulation (EU) 2024/1257 (Euro 7)",
+    "date": "24 April 2024",
+    "issuer": "European Parliament and Council",
+    "region": "European Union"
+  },
+  "outline": [
+    [
+      1,
+      "Regulation (EU) 2024/1257 of the European Parliament and of the Council of 24 April 2024 on type-approval of motor vehicles and engines and of systems, components and separate technical units intended for such vehicles, with respect to their emissions and battery durability (Euro 7), amending Regulation (EU) 2018/858 of the European Parliament and of the Council and repealing Regulations (EC) No 715/2007 and (EC) No 595/2009 of the European Parliament and of the Council, Commission Regulation (EU) No 582/2011, Commission Regulation (EU) 2017/1151, Commission Regulation (EU) 2017/2400 and Commission Implementing Regulation (EU) 2022/1362Text with EEA relevance.",
+      1
+    ],
+    [
+      2,
+      "ANNEX I",
+      26
+    ],
+    [
+      2,
+      "ANNEX II",
+      31
+    ],
+    [
+      2,
+      "ANNEX III",
+      33
+    ],
+    [
+      2,
+      "ANNEX IV",
+      35
+    ],
+    [
+      2,
+      "ANNEX V",
+      36
+    ],
+    [
+      2,
+      "ANNEX VI",
+      48
+    ]
+  ],
+  "pipeline_commit": "7420169",
+  "run_at": "2026-10-12T19:29:52",
+  "phases": {
+    "phase1_extract": {
+      "header_footer_signatures": [
+        "#/#",
+        "eli: http://data.europa.eu/eli/reg/#/#/oj",
+        "en",
+        "oj l, #.#.#"
+      ],
+      "lines": 2495,
+      "header_footer_lines_stripped": 196,
+      "footnote_lines": 107,
+      "needs_ocr_pages": []
+    },
+    "phase1b_regions": {
+      "counts": {
+        "table": 42
+      },
+      "captioned_tables": 41,
+      "image_equations": 0,
+      "glossaries": 0
+    },
+    "phase2_parse": {
+      "units": 244,
+      "unit_types": {
+        "Preamble": 1,
+        "Recital": 44,
+        "Body": 1,
+        "Chapter": 7,
+        "Article": 21,
+        "ArticleParagraph": 82,
+        "Point": 80,
+        "Annex": 6,
+        "Clause": 2
+      },
+      "orphans": 0,
+      "dedupe_merges": 0,
+      "merges": [],
+      "warnings": {
+        "sequence_rejected:article_paragraph": 3
+      },
+      "footnotes": 30,
+      "anchors": 42,
+      "divisions": [
+        "ANNEX-I",
+        "ANNEX-II",
+        "ANNEX-III",
+        "ANNEX-IV",
+        "ANNEX-V",
+        "ANNEX-VI",
+        "BODY",
+        "PREAMBLE"
+      ]
+    },
+    "phase3_terms": {
+      "definitions": 77,
+      "abbreviations": 38,
+      "abbreviations_by_source": {
+        "definition": 30,
+        "inline": 8
+      },
+      "definition_imports": [
+        {
+          "unit_id": "EU2024-1257.ART-3",
+          "text": "relevant definitions in Regulation (EU) 2018/858 apply"
+        }
+      ],
+      "defined_by_reference": 1
+    },
+    "phase3b_equations": {
+      "equations": 0,
+      "variables": 0,
+      "parse_status": {},
+      "kinds": {},
+      "with_glossary": 0,
+      "with_lhs": 0,
+      "depends_on_edges": 0,
+      "crops": 0,
+      "numeric_fragments_dropped": 0
+    },
+    "phase3c_tables": {
+      "tables": 33,
+      "captioned_tables": 32,
+      "caption_only_tables": 5,
+      "figures": 0
+    },
+    "phase4a_external": {
+      "external_docs": 63,
+      "by_kind": {
+        "ec_regulation": 9,
+        "eu_decision": 2,
+        "eu_directive": 10,
+        "eu_regulation": 32,
+        "treaty": 1,
+        "un_gtr": 3,
+        "un_regulation": 5,
+        "unece_agreement": 1
+      },
+      "provisions": 21,
+      "citations": 175,
+      "roles": {
+        "amends": 28,
+        "repeals": 19,
+        "legal_basis": 1,
+        "cites": 82,
+        "requirement_source": 34,
+        "implements": 8,
+        "definition_source": 3
+      },
+      "document_edges": {
+        "AMENDS": 1,
+        "REPEALS": 6,
+        "LEGAL_BASIS": 1
+      },
+      "self_citations_filtered": 0,
+      "back_references": 2
+    },
+    "phase4_references": {
+      "references": 175,
+      "resolved": 166,
+      "rate": 0.949,
+      "by_kind": {
+        "article": {
+          "resolved": 27,
+          "total": 27,
+          "rate": 1.0
+        },
+        "annex": {
+          "resolved": 48,
+          "total": 48,
+          "rate": 1.0
+        },
+        "table": {
+          "resolved": 62,
+          "total": 66,
+          "rate": 0.939
+        },
+        "paragraph": {
+          "resolved": 29,
+          "total": 34,
+          "rate": 0.853
+        }
+      },
+      "masked_external_spans": 89
+    },
+    "phase5_assemble": {
+      "nodes": 508,
+      "edges": 793,
+      "node_types": {
+        "Standard": 1,
+        "Document": 1,
+        "Preamble": 1,
+        "Recital": 44,
+        "Body": 1,
+        "Chapter": 7,
+        "Article": 21,
+        "ArticleParagraph": 82,
+        "Point": 80,
+        "Annex": 6,
+        "Clause": 2,
+        "Definition": 77,
+        "Abbreviation": 38,
+        "Footnote": 30,
+        "Table": 33,
+        "ExternalDocument": 63,
+        "ExternalProvision": 21
+      },
+      "edge_types": {
+        "HAS_VERSION": 1,
+        "HAS_DIVISION": 8,
+        "HAS_CHILD": 236,
+        "HAS_DEFINITION": 77,
+        "HAS_ABBREVIATION": 38,
+        "HAS_FOOTNOTE": 30,
+        "HAS_TABLE": 33,
+        "REFERENCES": 166,
+        "HAS_PROVISION": 21,
+        "CITES": 175,
+        "AMENDS": 1,
+        "REPEALS": 6,
+        "LEGAL_BASIS": 1
+      },
+      "dropped_edges": 0,
+      "dropped_examples": [],
+      "duplicate_node_ids": []
+    },
+    "phase6_qa": {
+      "invariants_passed": 7,
+      "invariants": 7,
+      "expectations_passed": 62,
+      "expectations": 62,
+      "failed_expectations": [],
+      "coverage": 0.998
+    }
+  },
+  "layout": {
+    "body_size": 9.6,
+    "body_font": "EUAlbertina-Regu",
+    "text_left": [
+      67,
+      94,
+      89
+    ],
+    "number_columns": [
+      [
+        67,
+        85
+      ],
+      [
+        223,
+        4
+      ],
+      [
+        264,
+        4
+      ],
+      [
+        431,
+        4
+      ]
+    ]
+  },
+  "timings": {
+    "phase1_extract": 0.36,
+    "phase1b_regions": 4.47,
+    "phase2_parse": 0.03,
+    "phase3_terms": 0.15,
+    "phase3b_equations": 0.02,
+    "phase3c_tables": 0.01,
+    "phase4a_external": 0.06,
+    "phase4_references": 0.02,
+    "phase5_assemble": 0.07,
+    "phase6_qa": 0.03,
+    "build_viz_data": 0.03
+  }
+}

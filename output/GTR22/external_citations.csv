@@ -1,0 +1,27 @@
+external_doc,doc_kind,title,provision,mentions,roles,citing_units,in_corpus
+EXT:ECE.TRANS.132,unece_document,,,1,cites:1,GTR22.FRONT,False
+EXT:ECE.TRANS.WP29.AC.3.32,unece_document,,,1,cites:1,GTR22.RATIONALE.6,False
+EXT:ECE.TRANS.WP29.AC.3.40,unece_document,,,1,cites:1,GTR22.RATIONALE.8,False
+EXT:ECE.TRANS.WP29.AC.3.57,unece_document,,,1,cites:1,GTR22.RATIONALE.11,False
+EXT:SAE.J1711,standard,,,1,cites:1,GTR22.RATIONALE.18,False
+EXT:UNGTR-15,un_gtr,,,4,definition_source:2; cites:2,GTR22.ANNEX-3.1 GTR22.BODY.3.21 GTR22.BODY.3.22,False
+EXT:UNGTR-15,un_gtr,,Annex 8,1,definition_source:1,GTR22.ANNEX-3.3.1.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, paragraph 3.2.4.4",1,definition_source:1,GTR22.ANNEX-3.3.1.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, paragraph 4.4.4.1, paragraph g/km",1,requirement_source:1,GTR22.ANNEX-3.3.2.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/10",1,requirement_source:1,GTR22.ANNEX-3.2.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/10, Step 1",1,requirement_source:1,GTR22.ANNEX-3.2.1.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/10, Step 10",1,requirement_source:1,GTR22.ANNEX-3.2.2.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/10, Step 5",1,requirement_source:1,GTR22.ANNEX-3.2.2.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/10, Step 7",1,requirement_source:1,GTR22.ANNEX-3.2.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/11",1,requirement_source:1,GTR22.ANNEX-3.2.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/11, Step 1",1,requirement_source:1,GTR22.ANNEX-3.2.1.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/11, Step 4",1,requirement_source:1,GTR22.ANNEX-3.2.2.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/11, Step 6",1,requirement_source:1,GTR22.ANNEX-3.2.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/11, Step 9",1,requirement_source:1,GTR22.ANNEX-3.2.2.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/5, Step 5",1,requirement_source:1,GTR22.ANNEX-3.3.2.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/8, Step 13",1,requirement_source:1,GTR22.ANNEX-3.3.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/8, Step 14",1,requirement_source:1,GTR22.ANNEX-3.3.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/8, Step 3",1,requirement_source:1,GTR22.ANNEX-3.3.2.1,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/9, Step 7",1,requirement_source:1,GTR22.ANNEX-3.3.1.2,False
+EXT:UNGTR-15,un_gtr,,"Annex 8, Table A8/9, Step 8",1,requirement_source:1,GTR22.ANNEX-3.3.1.2,False
+EXT:UNR-154,un_regulation,,,3,cites:2; requirement_source:1,GTR22.ANNEX-3.1 GTR22.ANNEX-3.3.2.2 GTR22.RATIONALE.46,True

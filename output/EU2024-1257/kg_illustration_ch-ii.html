@@ -1,0 +1,568 @@
+<title>Chapter II — MANUFACTURERS’ OBLIGATIONS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  :root{
+    --bg:#f4f6f8;
+    --surface:#ffffff;
+    --surface-2:#eef1f4;
+    --border:#d8dee4;
+    --text:#182430;
+    --text-dim:#5b6b7a;
+    --text-faint:#8a97a3;
+    --accent:#2f6fb2;
+    --accent-soft:#8fb8dd;
+    --accent-wash:#e4edf6;
+    --ref:#b9791f;
+    --edge:#9aa4ad;
+    --edge-ref:#c99a4c;
+    --focus:#d1491f;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#10161d;
+      --surface:#181f27;
+      --surface-2:#1f2831;
+      --border:#2c3742;
+      --text:#e7edf3;
+      --text-dim:#96a5b3;
+      --text-faint:#697782;
+      --accent:#5b9bd9;
+      --accent-soft:#3c5b78;
+      --accent-wash:#1c2b38;
+      --ref:#d9a44f;
+      --edge:#47535f;
+      --edge-ref:#7a6237;
+      --focus:#e8703f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10161d;
+    --surface:#181f27;
+    --surface-2:#1f2831;
+    --border:#2c3742;
+    --text:#e7edf3;
+    --text-dim:#96a5b3;
+    --text-faint:#697782;
+    --accent:#5b9bd9;
+    --accent-soft:#3c5b78;
+    --accent-wash:#1c2b38;
+    --ref:#d9a44f;
+    --edge:#47535f;
+    --edge-ref:#7a6237;
+    --focus:#e8703f;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:11px 18px;
+    border-bottom:1px solid var(--border);
+    background:var(--surface);
+    flex:0 0 auto;
+    z-index:5;
+  }
+  .brand{
+    display:flex;
+    flex-direction:column;
+    line-height:1.15;
+    min-width:0;
+  }
+  .brand .doc{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    color:var(--text-faint);
+    text-transform:uppercase;
+  }
+  .brand .title{
+    font-size:16px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .searchwrap{
+    position:relative;
+    flex:0 1 300px;
+  }
+  .searchwrap input{
+    width:100%;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:7px 10px 7px 30px;
+    font-family:"IBM Plex Sans",sans-serif;
+    font-size:13px;
+    color:var(--text);
+  }
+  .searchwrap input:focus{
+    outline:2px solid var(--accent);
+    outline-offset:-1px;
+  }
+  .searchwrap svg{
+    position:absolute;
+    left:9px;
+    top:50%;
+    transform:translateY(-50%);
+    width:14px;
+    height:14px;
+    stroke:var(--text-faint);
+    pointer-events:none;
+  }
+  .legend{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    font-size:12px;
+    color:var(--text-dim);
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+  .legend .item{display:flex;align-items:center;gap:6px;}
+  .legend .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto;}
+  .legend .ln{width:18px;height:0;border-top:2px solid var(--edge);flex:0 0 auto;}
+  .legend .ln.ref{border-top:2px dashed var(--edge-ref);}
+  .spacer{flex:1 1 auto;}
+  .stats{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;
+    color:var(--text-faint);
+    flex:0 0 auto;
+  }
+  button.reset{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text-dim);
+    font-family:"IBM Plex Sans",sans-serif;
+    font-size:12px;
+    padding:6px 11px;
+    border-radius:6px;
+    cursor:pointer;
+    flex:0 0 auto;
+  }
+  button.reset:hover{color:var(--text);border-color:var(--text-faint);}
+  button.reset:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+
+  main{
+    position:relative;
+    flex:1 1 auto;
+    min-height:0;
+  }
+  svg#graph{
+    width:100%;
+    height:100%;
+    display:block;
+    cursor:grab;
+  }
+  svg#graph:active{cursor:grabbing;}
+
+  .node circle{
+    stroke:var(--bg);
+    stroke-width:1.4px;
+  }
+  .node text{
+    font-family:"IBM Plex Sans",sans-serif;
+    fill:var(--text);
+    pointer-events:none;
+    paint-order:stroke;
+    stroke:var(--bg);
+    stroke-width:3px;
+    stroke-linejoin:round;
+  }
+  .node.dim circle{opacity:.16;}
+  .node.dim text{opacity:.12;}
+  .node.hover circle,.node.match circle{stroke:var(--focus);stroke-width:2.5px;}
+  .node.selected circle{stroke:var(--focus);stroke-width:3px;}
+
+  .link{fill:none;}
+  .link.dim{opacity:.06;}
+
+  #tooltip{
+    position:absolute;
+    pointer-events:none;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:6px 9px;
+    font-size:12px;
+    color:var(--text-dim);
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    max-width:260px;
+    z-index:20;
+    display:none;
+  }
+  #tooltip .t-label{color:var(--text);font-weight:600;font-size:12.5px;}
+
+  #panel{
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:320px;
+    max-height:calc(100% - 28px);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    box-shadow:0 8px 28px rgba(0,0,0,.16);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:15;
+  }
+  #panel.open{display:flex;}
+  #panel .p-head{
+    padding:13px 14px 10px;
+    border-bottom:1px solid var(--border);
+    flex:0 0 auto;
+  }
+  #panel .p-kind{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:4px;
+  }
+  #panel .p-title{
+    font-size:15px;
+    font-weight:600;
+    line-height:1.3;
+  }
+  #panel .p-id{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    color:var(--text-faint);
+    margin-top:3px;
+  }
+  #panel .p-close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:none;
+    border:none;
+    color:var(--text-faint);
+    font-size:16px;
+    line-height:1;
+    cursor:pointer;
+    padding:4px;
+  }
+  #panel .p-close:hover{color:var(--text);}
+  #panel .p-body{
+    padding:12px 14px 14px;
+    overflow-y:auto;
+    font-size:13px;
+    line-height:1.55;
+    color:var(--text-dim);
+  }
+  #panel .p-section-label{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--text-faint);
+    margin:12px 0 6px;
+  }
+  #panel .p-section-label:first-child{margin-top:0;}
+  #panel .chiplist{display:flex;flex-wrap:wrap;gap:6px;}
+  #panel .chip{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:5px;
+    padding:3px 8px;
+    font-size:11.5px;
+    color:var(--text-dim);
+    cursor:pointer;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  #panel .chip:hover{border-color:var(--accent);color:var(--text);}
+  #panel .chip.ref{border-color:var(--edge-ref);}
+
+  #hint{
+    position:absolute;
+    left:14px;
+    bottom:14px;
+    font-size:11.5px;
+    color:var(--text-faint);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:6px 10px;
+    z-index:10;
+  }
+
+  ::-webkit-scrollbar{width:9px;height:9px;}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:5px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+</style>
+
+<header>
+  <div class="brand">
+    <div class="doc">Regulation (EU) 2024/1257 (Euro 7)</div>
+    <div class="title">Chapter II — MANUFACTURERS’ OBLIGATIONS</div>
+  </div>
+  <div class="searchwrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input id="search" type="text" placeholder="Find a term or clause…" autocomplete="off">
+  </div>
+  <div class="legend">
+    <div class="item"><span class="dot" style="background:var(--accent)"></span>clause in scope</div>
+    <div class="item"><span class="dot" style="background:var(--accent-soft)"></span>referenced clause</div>
+    <div class="item"><span class="ln"></span>hierarchy</div>
+    <div class="item"><span class="ln ref"></span>cross-reference</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="stats" id="stats"></div>
+  <button class="reset" id="resetBtn">Reset view</button>
+</header>
+
+<main>
+  <svg id="graph"></svg>
+  <div id="tooltip"></div>
+  <div id="panel">
+    <button class="p-close" id="panelClose">&times;</button>
+    <div class="p-head">
+      <div class="p-kind" id="p-kind"></div>
+      <div class="p-title" id="p-title"></div>
+      <div class="p-id" id="p-id"></div>
+    </div>
+    <div class="p-body" id="p-body"></div>
+  </div>
+  <div id="hint">Scroll to zoom · drag canvas to pan · drag a node to reposition · click a node for details</div>
+</main>
+
+<script type="application/json" id="graph-data">{"root":"EU2024-1257.CH-II","nodes":[{"id":"EU2024-1257.ANNEX-I","label":"Annex I","core":false,"term":null,"text":"[TABLE:EU2024-1257.ANNEX-I.TABLE-1] Note: PI = positive ignition. CI = compression ignition. [TABLE:EU2024-1257.ANNEX-I.TABLE-2] Note: PI = positive ignition. CI = compression ignition. [TABLE:EU2024-1257.ANNEX-I.TABLE-3] [TABLE:EU2024-1257.ANNEX-I.TABLE-4] Powertrain technology ICEV Brake particle emissions (PM10) 7 (*) For N1, Class III vehicles, the applicable limits are as follows: PEV 5 mg/km; OVC-HEV, NOVC-HEV, FCV/FCHV and ICEV 11 mg/km. [TABLE:EU2024-1257.ANNEX-I.TABLE-5] [TABLE:EU2024-1257.ANNEX-I.TABLE-6] Powertrain technology ICEV Brake particle emissions (PM10) Brake particle nu...","local":"I","labels":["Annex","Paragraph"],"degree":6},{"id":"EU2024-1257.ANNEX-II","label":"Annex II","core":false,"term":null,"text":"[TABLE:EU2024-1257.ANNEX-II.TABLE-1] (*) As specified in Annex IV. [TABLE:EU2024-1257.ANNEX-II.TABLE-2] Range based MPR [TABLE:EU2024-1257.ANNEX-II.TABLE-2] Vehicles up to additional lifetime (*) OVC-HEV PEV (*) As specified in Annex IV. [TABLE:EU2024-1257.ANNEX-II.TABLE-3] OVC-HEV PEV (*) As specified in Annex IV.","local":"II","labels":["Annex","Paragraph"],"degree":1},{"id":"EU2024-1257.ANNEX-III","label":"Annex III","core":false,"term":null,"text":"[TABLE:EU2024-1257.ANNEX-III.TABLE-1] (*) UN Regulation No 154 \u2014 Uniform provisions concerning the approval of light duty passenger and commercial vehicles with regards to criteria emissions, emissions of carbon dioxide and fuel consumption and/or the measurement of electric energy consumption and electric range (WLTP), 02 series of amendments. (**) UN Regulation No 168, Original version. [TABLE:EU2024-1257.ANNEX-III.TABLE-2] (*) UN Regulation No 49, 07 series of amendments. [TABLE:EU2024-1257.ANNEX-III.TABLE-3] (*) SHED: Sealed housing for evaporative determination. (**) UN Regulation No 1...","local":"III","labels":["Annex","Paragraph"],"degree":3},{"id":"EU2024-1257.ANNEX-IV","label":"Annex IV","core":false,"term":null,"text":"[TABLE:EU2024-1257.ANNEX-IV.TABLE-1] Lifetime of vehicles, engines and replacement pollution control devices N3>16 t (*), M3>7,5 t (*) Main lifetime Additional lifetime After main lifetime and up to 875 000 km or 15 years, whichever comes first (*) Maximum mass. [TABLE:EU2024-1257.ANNEX-IV.TABLE-2] (*) Maximum mass.","local":"IV","labels":["Annex","Paragraph"],"degree":5},{"id":"EU2024-1257.ANNEX-IV.TABLE-1","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":2},{"id":"EU2024-1257.ANNEX-IV.TABLE-2","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V","label":"Annex V","core":false,"term":null,"text":"[TABLE:EU2024-1257.ANNEX-V.TABLE-1] (*) The approval authority may require a test to be performed. [TABLE:EU2024-1257.ANNEX-V.TABLE-2] (*) The approval authority may require a test to be performed. [TABLE:EU2024-1257.ANNEX-V.TABLE-3] (*) Supported by data of engine testing of all power ratings. (**) In the case of a vehicle with an emission type-approved engine system, the engine manufacturer is responsible for demonstrating compliance of the vehicle in this test (the engine is type-approved as a separate technical unit). (***) In the case of a vehicle with an emission type-approved engine ...","local":"V","labels":["Annex","Paragraph"],"degree":9},{"id":"EU2024-1257.ANNEX-V.TABLE-1","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":2},{"id":"EU2024-1257.ANNEX-V.TABLE-10","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V.TABLE-11","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":2},{"id":"EU2024-1257.ANNEX-V.TABLE-12","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V.TABLE-2","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V.TABLE-3","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":3},{"id":"EU2024-1257.ANNEX-V.TABLE-4","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V.TABLE-5","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":2},{"id":"EU2024-1257.ANNEX-V.TABLE-6","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V.TABLE-7","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":2},{"id":"EU2024-1257.ANNEX-V.TABLE-8","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":1},{"id":"EU2024-1257.ANNEX-V.TABLE-9","label":"Table","core":false,"term":null,"text":null,"local":null,"labels":[],"degree":2},{"id":"EU2024-1257.ART-14.4","label":"ArticleParagraph 4","core":false,"term":null,"text":"The Commission shall adopt implementing acts for the emission type-approval, in-service conformity, conformity of production and market surveillance, to lay down the following: (a) the methods to measure exhaust emissions in the laboratory and on the road as per usual use for real world driving and the use of portable emissions measurement systems for verifying real driving emissions; (b) the methods to determine the CO2 emissions, fuel and electric energy consumption, zero-emission range, electric range and power of a motor vehicle; (c) the methods, requirements and technical specification...","local":"4","labels":["ArticleParagraph","Paragraph"],"degree":4},{"id":"EU2024-1257.ART-15.1","label":"ArticleParagraph 1","core":false,"term":null,"text":"The Commission shall be empowered to adopt delegated acts in accordance with Article 16 in order to take into account technical progress to amend this Regulation as follows: (a) Article 5 by introducing additional options and designations based on innovative technologies for manufacturers; (b) setting out special rules for small-volume manufacturers for vehicles of categories M2, M3, N2 and N3 under Articles 3 and 8; (c) where appropriate, setting out emission limits for formaldehyde from vehicles of categories M2, M3, N2 and N3 in Table 2 of Annex I, following and based on the review in ac...","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-4","label":"Article 4","core":true,"term":null,"text":null,"local":"4","labels":["Article"],"degree":12},{"id":"EU2024-1257.ART-4.1","label":"ArticleParagraph 1","core":true,"term":null,"text":"Manufacturers shall ensure that the new vehicles that they manufacture, which are sold, registered or enter into service in the Union, are type-approved in accordance with this Regulation. From the specific dates of application set out in this Regulation, manufacturers shall ensure that the new systems, components or separate technical units, including engines, traction batteries, brake systems, tyres and replacement pollution control systems requiring type-approval which they manufacture and which are sold or enter into service in the Union are type-approved in accordance with this Regulat...","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-4.10","label":"ArticleParagraph 10","core":true,"term":null,"text":"Environmental data about the vehicle type and the environmental performance of individual vehicles shall be made available to users and, where appropriate, displayed inside the vehicle. Those data shall cover data from the EVP, the OBM system and the OBFCM device, including lifetime values, and the state of health of the traction battery.","local":"10","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-4.11","label":"ArticleParagraph 11","core":true,"term":null,"text":"Manufacturers shall ensure the secure transmission of data related to emissions and battery durability by taking cybersecurity measures in accordance with UN Regulation No 155 (28).","local":"11","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-4.2","label":"ArticleParagraph 2","core":true,"term":null,"text":"Manufacturers shall design, construct and assemble vehicles to comply with this Regulation, including complying with the emission limits set out in Annex I under the conditions set out in Annex III and respecting the values declared in the certificate of conformity and in the type-approval documentation for the lifetime of the vehicle, as set out in Table 1 of Annex IV. Those vehicles shall be designated as \u2018Euro 7\u2019 vehicles.","local":"2","labels":["ArticleParagraph","Paragraph"],"degree":5},{"id":"EU2024-1257.ART-4.3","label":"ArticleParagraph 3","core":true,"term":null,"text":"Where applicable, when manufacturers, national authorities, Commission or recognised third parties are verifying compliance with the exhaust emission limits, where the testing is performed in extended driving conditions, the emissions shall be divided by the extended driving divider set out in UN Regulation No 168 (25).","local":"3","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-4.4","label":"ArticleParagraph 4","core":true,"term":null,"text":"Manufacturers shall design and construct systems, components or separate technical units, including engines, electric motors, traction batteries, brake systems, tyres and replacement pollution control systems to comply with this Regulation, including with the emission limits set out in Annex I under the testing conditions set out in Annex III.","local":"4","labels":["ArticleParagraph","Paragraph"],"degree":3},{"id":"EU2024-1257.ART-4.5","label":"ArticleParagraph 5","core":true,"term":null,"text":"Manufacturers shall not design, construct and assemble vehicles with manipulation devices or manipulation strategies.","local":"5","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-4.6","label":"ArticleParagraph 6","core":true,"term":null,"text":"Manufacturers shall design, construct and assemble vehicles of categories M1, M2, M3, N1, N2 and N3 with: (a) OBD systems that can detect malfunctioning systems which lead to exhaust emission exceedances or the malfunctioning of components related to emission performance in order to facilitate repairs; (b) OBM systems capable of monitoring exhaust emissions; (c) OBFCM devices to monitor their real-world fuel and electric energy consumption and other relevant parameters, which are needed to determine their real-world fuel and energy efficiency; (d) SOH monitors of the traction battery; (e) e...","local":"6","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-4.7","label":"ArticleParagraph 7","core":true,"term":null,"text":"Manufacturers shall design, construct and assemble vehicles of categories M1, M2, M3, N1, N2 and N3 in such a way as to minimise vulnerabilities, arising in all phases of their life-cycle, that may lead to tampering with the following: (a) fuel and reagent injection system, (b) engine and engine control units, (c) traction batteries and related management systems, (d) odometer, (e) pollution control systems, (f) electric motor and related control units, (g) OBFCM device, (h) OBD system, (i) OBM system, and (j) EVP.","local":"7","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-4.8","label":"ArticleParagraph 8","core":true,"term":null,"text":"Manufacturers shall prevent the possibility of the exploitation of the vulnerabilities referred to in paragraph 7 to the fullest extent possible based on the best available knowledge at the time of type-approval. When such a vulnerability is found, manufacturers shall take all the possible measures, taking into account the state of technology, to remove the vulnerability, by software update or any other appropriate means.","local":"8","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-4.9","label":"ArticleParagraph 9","core":true,"term":null,"text":"Manufacturers shall not deny access on anti-tampering grounds to information, tools or processes required to develop, install and activate compatible aftermarket replacement parts meeting the technical requirements of the manufacturer unless they can demonstrate that withholding information, tools and processes in question is a proportionate means in addressing the antitampering concerns at issue.","local":"9","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-5","label":"Article 5","core":true,"term":null,"text":null,"local":"5","labels":["Article"],"degree":7},{"id":"EU2024-1257.ART-5.1","label":"ArticleParagraph 1","core":true,"term":null,"text":"Manufacturers may designate vehicles as \u2018Euro 7G\u2019 vehicles where those vehicles are equipped with internal combustion engines with geofencing technologies. The manufacturer shall install on those vehicles a driver warning system to inform the user when the traction batteries are nearly empty and to stop the vehicle if not charged within 5 kilometres from the first warning while on zero-emission mode inside the geofencing area. The application of such geofencing technologies shall be demonstrated to the approval authority during type- approval and verified during the lifetime of the vehicle.","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-5.2","label":"ArticleParagraph 2","core":true,"term":null,"text":"At the request of the manufacturer, for vehicles of category N2 between 3,5 and 5 tonnes maximum mass originating from a type of vehicle of category N1, the approval authority may grant an emission type-approval if the vehicle meets the requirements for a type of vehicle of category N1. Such vehicles shall be designated as \u2018Euro 7ext\u2019 vehicles.","local":"2","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-5.3","label":"ArticleParagraph 3","core":true,"term":null,"text":"Manufacturers may construct vehicles combining the characteristics referred to in paragraphs 1 and 2 and designate them as \u2018Euro 7Gext\u2019 vehicles.","local":"3","labels":["ArticleParagraph","Paragraph"],"degree":3},{"id":"EU2024-1257.ART-6","label":"Article 6","core":true,"term":null,"text":null,"local":"6","labels":["Article"],"degree":9},{"id":"EU2024-1257.ART-6.1","label":"ArticleParagraph 1","core":true,"term":null,"text":"Manufacturers shall ensure that the vehicles that they manufacture, which are sold, registered or enter into service in the Union, comply with the emission limits set out in Annex I when those vehicles are driven under test conditions as set out in Annex III, for the lifetime of the vehicle, as set out in table 1 of Annex IV, and comply with the minimum performance requirements on battery durability as set out in Annex II.","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":10},{"id":"EU2024-1257.ART-6.2","label":"ArticleParagraph 2","core":true,"term":null,"text":"Manufacturers shall ensure that the vehicles referred to in paragraph 1 comply with the values regarding CO2 emissions, fuel and electric energy consumption and energy efficiency declared under this Regulation for the lifetime of the vehicle, as set out in Annex IV.","local":"2","labels":["ArticleParagraph","Paragraph"],"degree":4},{"id":"EU2024-1257.ART-6.3","label":"ArticleParagraph 3","core":true,"term":null,"text":"Manufacturers shall ensure that the design and functionality of OBFCM devices and OBD and OBM systems and anti-tampering measures installed in the vehicles referred to in paragraph 1 comply with this Regulation and that those devices, systems and measures cannot be deactivated as long as those vehicles are in use.","local":"3","labels":["ArticleParagraph","Paragraph"],"degree":3},{"id":"EU2024-1257.ART-6.4","label":"ArticleParagraph 4","core":true,"term":null,"text":"The requirements referred to in paragraphs 1, 2 and 3 shall apply irrespective of the type of fuel or energy source by which the vehicles are powered. Those requirements shall also apply to all separate technical units and components intended for such vehicles.","local":"4","labels":["ArticleParagraph","Paragraph"],"degree":4},{"id":"EU2024-1257.ART-6.5","label":"ArticleParagraph 5","core":true,"term":null,"text":"In order to verify compliance with the requirements referred to in the paragraph 1 during the additional lifetime of a vehicle, the gaseous pollutants limits set out in Annex I shall be adjusted by using the durability multipliers set out in Table 2 of Annex IV.","local":"5","labels":["ArticleParagraph","Paragraph"],"degree":5},{"id":"EU2024-1257.ART-6.6","label":"ArticleParagraph 6","core":true,"term":null,"text":"The OBM systems installed by the manufacturer in the vehicles shall be capable of: (a) monitoring and registering all exhaust emissions of NOx, NH3 and PM from vehicles of categories M2, M3, N2 and N3 and of NOx and PM from vehicles of categories M1 and N1 and detecting exceedances of at least 2,5 times the relevant exhaust emission limit values set out in Annex I; (b) communicating data on exhaust emission performance and battery durability data of the vehicle via the OBD port, including for the purpose of roadworthiness tests in accordance with Directive 2014/45/EU and technical roadside ...","local":"6","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-6.7","label":"ArticleParagraph 7","core":true,"term":null,"text":"The OBFCM devices installed by the manufacturers in the vehicles referred to in paragraph 1 shall be capable of communicating all legally required relevant vehicle data they record, via the OBD port and over the air.","local":"7","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-6.8","label":"ArticleParagraph 8","core":true,"term":null,"text":"Where a vehicle, system, component or separate technical unit presents a serious risk or non-compliance with the requirements of this Regulation, manufacturers, from the moment they are aware of it, shall immediately take the necessary corrective measures, including repairs or modifications of that vehicle, system, component or separate technical unit, as appropriate, to eliminate the serious risk or to ensure compliance with this Regulation. Manufacturers and any other economic operators shall apply Regulation (EU) 2018/858 accordingly. Manufacturers shall immediately inform the approval a...","local":"8","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-7","label":"Article 7","core":true,"term":null,"text":null,"local":"7","labels":["Article"],"degree":6},{"id":"EU2024-1257.ART-7.1","label":"ArticleParagraph 1","core":true,"term":null,"text":"In order to demonstrate compliance with the emission type-approval rules during emission type-approval, manufacturers shall perform the tests specified in Tables 1, 3, 5, 7, 9 and 11 of Annex V. For the purpose of verifying the conformity of production with the requirements of this Regulation, vehicles, components and separate technical units shall be selected at the premises of the manufacturer by the approval authority or the manufacturer. In-service conformity shall be checked for the lifetime of the vehicle, as set out in Table 1 of Annex IV.","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":10},{"id":"EU2024-1257.ART-7.2","label":"ArticleParagraph 2","core":true,"term":null,"text":"Manufacturers shall provide the approval authority with a signed declaration of compliance as regards the RDE, CO2 ambient temperature correction, OBD and OBM systems, emissions and battery durability, continuous or periodic regeneration, anti-tampering and crankcase emissions requirements as specified in Annex V. Manufacturers shall provide to the approval authority a signed declaration of compliance on the use of the geofencing option where that option has been selected.","local":"2","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-7.3","label":"ArticleParagraph 3","core":true,"term":null,"text":"The national authorities may test the vehicle type to verify its conformity during conformity of production, in-service conformity or market surveillance as specified in Annex V.","local":"3","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-7.4","label":"ArticleParagraph 4","core":true,"term":null,"text":"Manufacturers shall issue an EVP for each vehicle and deliver that passport to the purchaser together with the vehicle, extracting the relevant data from sources, such as the certificate of conformity and the type-approval documentation. Manufacturers shall ensure that EVP data are available for display in the vehicle electronic systems or through a QR code, or any similar method, and that EVP data can be transmitted from on- to off- board.","local":"4","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-7.5","label":"ArticleParagraph 5","core":true,"term":null,"text":"In the case of multi-stage type-approval, Article 13(2) of Regulation (EU) 2018/858 shall apply to the emission type-approval, conformity of production and in-service conformity.","local":"5","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-8","label":"Article 8","core":true,"term":null,"text":null,"local":"8","labels":["Article"],"degree":5},{"id":"EU2024-1257.ART-8.1","label":"ArticleParagraph 1","core":true,"term":null,"text":"As regards pollutant emissions, small-volume manufacturers may substitute tests set out in Tables 1, 3, 5, 7, 9 and 11 of Annex V with declarations of compliance. The compliance of vehicles constructed and placed on the market by small-volume manufacturers may be tested for in-service conformity and market surveillance in accordance with Tables 2, 4, 6, 8, 10 and 12 of Annex V. Conformity of production tests set out in Annex V shall not be required. Article 4(6), points (b), (c) and (e), shall not apply to small-volume manufacturers of vehicles of category M1 or N1.","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":17},{"id":"EU2024-1257.ART-8.2","label":"ArticleParagraph 2","core":true,"term":null,"text":"Ultra-small-volume manufacturers shall demonstrate compliance with the emission limits set out in Annex I either on road or in laboratory tests based on real-driving cycles for in-service conformity and market surveillance purposes.","local":"2","labels":["ArticleParagraph","Paragraph"],"degree":2},{"id":"EU2024-1257.ART-9","label":"Article 9","core":true,"term":null,"text":null,"local":"9","labels":["Article"],"degree":7},{"id":"EU2024-1257.ART-9.1","label":"ArticleParagraph 1","core":true,"term":null,"text":"In the event of approval of a type of vehicle of category M2, M3, N2 or N3 with a type-approved engine, the vehicle manufacturer shall be responsible for the emission type-approval. That obligation shall also cover the engine installation on the vehicle. Where the engine installation is in accordance with the engine installation specifications delivered by the engine manufacturer and subject to a prior agreement between the vehicle manufacturer and the engine manufacturer, the engine manufacturer can be made responsible for demonstrating compliance with the in-service conformity requirements.","local":"1","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.ART-9.2","label":"ArticleParagraph 2","core":true,"term":null,"text":"In the event of a vehicle with an approved engine, the engine manufacturer shall perform the vehicle related type-approval and conformity of production tests specified in Table 3 of Annex V, from which the vehicle manufacturer is exempted. The engine manufacturer shall also perform the in-service conformity related tests, where the engine manufacturer is made responsible for demonstrating compliance with the vehicle in-service conformity requirements, except for the CO2 determination for which the vehicle manufacturer remains responsible.","local":"2","labels":["ArticleParagraph","Paragraph"],"degree":3},{"id":"EU2024-1257.ART-9.3","label":"ArticleParagraph 3","core":true,"term":null,"text":"The administrative requirements for the type-approval and in-service conformity testing of vehicles in which a type-approved engine is installed shall cover in particular the characteristics of the engine type-approval to be taken into consideration, the information to be provided by the engine manufacturer to the vehicle manufacturer and the attribution of responsibility for in-service conformity.","local":"3","labels":["ArticleParagraph","Paragraph"],"degree":1},{"id":"EU2024-1257.CH-II","label":"Chapter II","core":true,"term":null,"text":null,"local":"II","labels":["Chapter"],"degree":6},{"id":"EU2024-1257.RECITAL-44","label":"Recital 44","core":false,"term":null,"text":"Since the objectives of this Regulation, namely to lay down common technical requirements and administrative provisions for the emission type-approval and market surveillance of vehicles of categories M and N, and of systems, components and separate technical units intended for such vehicles, with respect to their emissions, as well as to pursue a high level of environmental and health protection, cannot be sufficiently achieved by the Member States, but can rather, by reason of its scale and effects, be better achieved at Union level, the Union may adopt measures in accordance with the pri...","local":"44","labels":["Recital","Paragraph"],"degree":1}],"edges":[{"source":"EU2024-1257.CH-II","target":"EU2024-1257.ART-4","kind":"child"},{"source":"EU2024-1257.CH-II","target":"EU2024-1257.ART-5","kind":"child"},{"source":"EU2024-1257.CH-II","target":"EU2024-1257.ART-6","kind":"child"},{"source":"EU2024-1257.CH-II","target":"EU2024-1257.ART-7","kind":"child"},{"source":"EU2024-1257.CH-II","target":"EU2024-1257.ART-8","kind":"child"},{"source":"EU2024-1257.CH-II","target":"EU2024-1257.ART-9","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.1","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.2","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.3","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.4","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.5","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.6","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.7","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.8","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.9","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.10","kind":"child"},{"source":"EU2024-1257.ART-4","target":"EU2024-1257.ART-4.11","kind":"child"},{"source":"EU2024-1257.ART-5","target":"EU2024-1257.ART-5.1","kind":"child"},{"source":"EU2024-1257.ART-5","target":"EU2024-1257.ART-5.2","kind":"child"},{"source":"EU2024-1257.ART-5","target":"EU2024-1257.ART-5.3","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.1","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.2","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.3","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.4","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.5","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.6","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.7","kind":"child"},{"source":"EU2024-1257.ART-6","target":"EU2024-1257.ART-6.8","kind":"child"},{"source":"EU2024-1257.ART-7","target":"EU2024-1257.ART-7.1","kind":"child"},{"source":"EU2024-1257.ART-7","target":"EU2024-1257.ART-7.2","kind":"child"},{"source":"EU2024-1257.ART-7","target":"EU2024-1257.ART-7.3","kind":"child"},{"source":"EU2024-1257.ART-7","target":"EU2024-1257.ART-7.4","kind":"child"},{"source":"EU2024-1257.ART-7","target":"EU2024-1257.ART-7.5","kind":"child"},{"source":"EU2024-1257.ART-8","target":"EU2024-1257.ART-8.1","kind":"child"},{"source":"EU2024-1257.ART-8","target":"EU2024-1257.ART-8.2","kind":"child"},{"source":"EU2024-1257.ART-9","target":"EU2024-1257.ART-9.1","kind":"child"},{"source":"EU2024-1257.ART-9","target":"EU2024-1257.ART-9.2","kind":"child"},{"source":"EU2024-1257.ART-9","target":"EU2024-1257.ART-9.3","kind":"child"},{"source":"EU2024-1257.RECITAL-44","target":"EU2024-1257.ART-5","kind":"ref","raw":"Article 5"},{"source":"EU2024-1257.ART-4.2","target":"EU2024-1257.ANNEX-I","kind":"ref","raw":"Annex I"},{"source":"EU2024-1257.ART-4.2","target":"EU2024-1257.ANNEX-III","kind":"ref","raw":"Annex III"},{"source":"EU2024-1257.ART-4.2","target":"EU2024-1257.ANNEX-IV","kind":"ref","raw":"Annex IV"},{"source":"EU2024-1257.ART-4.2","target":"EU2024-1257.ANNEX-IV.TABLE-1","kind":"ref","raw":"Table 1"},{"source":"EU2024-1257.ART-4.4","target":"EU2024-1257.ANNEX-I","kind":"ref","raw":"Annex I"},{"source":"EU2024-1257.ART-4.4","target":"EU2024-1257.ANNEX-III","kind":"ref","raw":"Annex III"},{"source":"EU2024-1257.ART-4.8","target":"EU2024-1257.ART-4.7","kind":"ref","raw":"paragraph 7"},{"source":"EU2024-1257.ART-5.3","target":"EU2024-1257.ART-5.1","kind":"ref","raw":"paragraph 1"},{"source":"EU2024-1257.ART-5.3","target":"EU2024-1257.ART-5.2","kind":"ref","raw":"paragraph 2"},{"source":"EU2024-1257.ART-6.1","target":"EU2024-1257.ANNEX-I","kind":"ref","raw":"Annex I"},{"source":"EU2024-1257.ART-6.1","target":"EU2024-1257.ANNEX-III","kind":"ref","raw":"Annex III"},{"source":"EU2024-1257.ART-6.1","target":"EU2024-1257.ANNEX-IV","kind":"ref","raw":"Annex IV"},{"source":"EU2024-1257.ART-6.1","target":"EU2024-1257.ANNEX-II","kind":"ref","raw":"Annex II"},{"source":"EU2024-1257.ART-6.2","target":"EU2024-1257.ART-6.1","kind":"ref","raw":"paragraph 1"},{"source":"EU2024-1257.ART-6.2","target":"EU2024-1257.ANNEX-IV","kind":"ref","raw":"Annex IV"},{"source":"EU2024-1257.ART-6.3","target":"EU2024-1257.ART-6.1","kind":"ref","raw":"paragraph 1"},{"source":"EU2024-1257.ART-6.4","target":"EU2024-1257.ART-6.1","kind":"ref","raw":"paragraph 1"},{"source":"EU2024-1257.ART-6.4","target":"EU2024-1257.ART-6.2","kind":"ref","raw":"paragraph 2"},{"source":"EU2024-1257.ART-6.4","target":"EU2024-1257.ART-6.3","kind":"ref","raw":"paragraph 3"},{"source":"EU2024-1257.ART-6.5","target":"EU2024-1257.ART-6.1","kind":"ref","raw":"paragraph 1"},{"source":"EU2024-1257.ART-6.5","target":"EU2024-1257.ANNEX-I","kind":"ref","raw":"Annex I"},{"source":"EU2024-1257.ART-6.5","target":"EU2024-1257.ANNEX-IV","kind":"ref","raw":"Annex IV"},{"source":"EU2024-1257.ART-6.5","target":"EU2024-1257.ANNEX-IV.TABLE-2","kind":"ref","raw":"Table 2"},{"source":"EU2024-1257.ART-6.6","target":"EU2024-1257.ANNEX-I","kind":"ref","raw":"Annex I"},{"source":"EU2024-1257.ART-6.7","target":"EU2024-1257.ART-6.1","kind":"ref","raw":"paragraph 1"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-IV","kind":"ref","raw":"Annex IV"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V.TABLE-1","kind":"ref","raw":"Table 1"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V.TABLE-3","kind":"ref","raw":"Table 3"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V.TABLE-5","kind":"ref","raw":"Table 5"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V.TABLE-7","kind":"ref","raw":"Table 7"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V.TABLE-9","kind":"ref","raw":"Table 9"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-V.TABLE-11","kind":"ref","raw":"Table 11"},{"source":"EU2024-1257.ART-7.1","target":"EU2024-1257.ANNEX-IV.TABLE-1","kind":"ref","raw":"Table 1"},{"source":"EU2024-1257.ART-7.2","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-7.3","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ART-4.6","kind":"ref","raw":"Article 4(6), points (b)"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-1","kind":"ref","raw":"Table 1"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-3","kind":"ref","raw":"Table 3"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-5","kind":"ref","raw":"Table 5"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-7","kind":"ref","raw":"Table 7"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-9","kind":"ref","raw":"Table 9"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-11","kind":"ref","raw":"Table 11"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-2","kind":"ref","raw":"Table 2"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-4","kind":"ref","raw":"Table 4"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-6","kind":"ref","raw":"Table 6"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-8","kind":"ref","raw":"Table 8"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-10","kind":"ref","raw":"Table 10"},{"source":"EU2024-1257.ART-8.1","target":"EU2024-1257.ANNEX-V.TABLE-12","kind":"ref","raw":"Table 12"},{"source":"EU2024-1257.ART-8.2","target":"EU2024-1257.ANNEX-I","kind":"ref","raw":"Annex I"},{"source":"EU2024-1257.ART-9.2","target":"EU2024-1257.ANNEX-V","kind":"ref","raw":"Annex V"},{"source":"EU2024-1257.ART-9.2","target":"EU2024-1257.ANNEX-V.TABLE-3","kind":"ref","raw":"Table 3"},{"source":"EU2024-1257.ART-14.4","target":"EU2024-1257.ART-4.5","kind":"ref","raw":"Article 4(5)"},{"source":"EU2024-1257.ART-14.4","target":"EU2024-1257.ART-8","kind":"ref","raw":"Article 8"},{"source":"EU2024-1257.ART-14.4","target":"EU2024-1257.ART-5","kind":"ref","raw":"Article 5"},{"source":"EU2024-1257.ART-14.4","target":"EU2024-1257.ART-9","kind":"ref","raw":"Article 9"},{"source":"EU2024-1257.ART-15.1","target":"EU2024-1257.ART-5","kind":"ref","raw":"Article 5"},{"source":"EU2024-1257.ART-15.1","target":"EU2024-1257.ART-8","kind":"ref","raw":"Article 8"},{"source":"EU2024-1257.ANNEX-V","target":"EU2024-1257.ART-9","kind":"ref","raw":"Article 9"},{"source":"EU2024-1257.ANNEX-V","target":"EU2024-1257.ART-9","kind":"ref","raw":"Article 9"}]}</script>
+<script>
+(function(){
+  const DATA = JSON.parse(document.getElementById('graph-data').textContent);
+  const nodesById = new Map(DATA.nodes.map(d => [d.id, d]));
+
+  const svg = d3.select('#graph');
+  const main = document.querySelector('main');
+
+  const zoomLayer = svg.append('g');
+  const linkLayer = zoomLayer.append('g').attr('class', 'links');
+  const nodeLayer = zoomLayer.append('g').attr('class', 'nodes');
+
+  const nodes = DATA.nodes.map(d => Object.assign({}, d));
+  const links = DATA.edges.map(d => Object.assign({}, d));
+
+  document.getElementById('stats').textContent =
+    nodes.length + ' nodes · ' + links.length + ' edges';
+
+  const maxDeg = d3.max(nodes, d => d.degree) || 1;
+  const rScale = d3.scaleSqrt().domain([1, maxDeg]).range([5, 30]).clamp(true);
+  const fontScale = d3.scaleSqrt().domain([1, maxDeg]).range([8.5, 15]).clamp(true);
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id)
+      .distance(l => l.kind === 'ref' ? 130 : 46)
+      .strength(l => l.kind === 'ref' ? 0.15 : 0.75))
+    .force('charge', d3.forceManyBody().strength(d => -60 - d.degree * 14))
+    .force('collide', d3.forceCollide().radius(d => rScale(d.degree) + 14))
+    .force('center', d3.forceCenter(0, 0))
+    .force('x', d3.forceX(0).strength(0.03))
+    .force('y', d3.forceY(0).strength(0.03));
+
+  const link = linkLayer.selectAll('line')
+    .data(links)
+    .join('line')
+    .attr('class', d => 'link ' + d.kind)
+    .attr('stroke', d => d.kind === 'ref' ? 'var(--edge-ref)' : 'var(--edge)')
+    .attr('stroke-width', d => d.kind === 'ref' ? 1.1 : 1)
+    .attr('stroke-dasharray', d => d.kind === 'ref' ? '3,3' : null)
+    .attr('opacity', d => d.kind === 'ref' ? 0.55 : 0.5);
+
+  const node = nodeLayer.selectAll('g.node')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'node')
+    .call(drag(sim));
+
+  node.append('circle')
+    .attr('r', d => rScale(d.degree))
+    .attr('fill', d => d.core ? 'var(--accent)' : 'var(--accent-soft)');
+
+  node.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', d => rScale(d.degree) + fontScale(d.degree) + 1)
+    .attr('font-size', d => fontScale(d.degree))
+    .attr('font-weight', d => d.degree > maxDeg * 0.4 ? 600 : 400)
+    .text(d => d.label);
+
+  const linkedNeighbors = new Map();
+  links.forEach(l => {
+    const s = typeof l.source === 'object' ? l.source.id : l.source;
+    const t = typeof l.target === 'object' ? l.target.id : l.target;
+    if (!linkedNeighbors.has(s)) linkedNeighbors.set(s, new Set());
+    if (!linkedNeighbors.has(t)) linkedNeighbors.set(t, new Set());
+    linkedNeighbors.get(s).add(t);
+    linkedNeighbors.get(t).add(s);
+  });
+
+  sim.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+  const zoom = d3.zoom().scaleExtent([0.15, 6]).on('zoom', ev => {
+    zoomLayer.attr('transform', ev.transform);
+  });
+  svg.call(zoom);
+
+  function initialFit(){
+    const width = main.clientWidth, height = main.clientHeight;
+    svg.attr('viewBox', [-width/2, -height/2, width, height]);
+  }
+  initialFit();
+  window.addEventListener('resize', initialFit);
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  });
+
+  // ---- tooltip ----
+  const tooltip = document.getElementById('tooltip');
+  node.on('mousemove', (ev, d) => {
+    tooltip.style.display = 'block';
+    tooltip.style.left = (ev.offsetX + 16) + 'px';
+    tooltip.style.top = (ev.offsetY + 12) + 'px';
+    tooltip.innerHTML = '<div class="t-label">' + escapeHtml(d.label) + '</div>' +
+      (d.local ? '<div>§' + escapeHtml(d.local) + ' · degree ' + d.degree + '</div>' : '<div>degree ' + d.degree + '</div>');
+  }).on('mouseleave', () => { tooltip.style.display = 'none'; })
+    .on('mouseenter', (ev, d) => highlight(d.id))
+    .on('mouseout', () => highlight(null));
+
+  function highlight(id){
+    if (!id){
+      node.classed('dim', false).classed('hover', false);
+      link.classed('dim', false);
+      return;
+    }
+    const neigh = linkedNeighbors.get(id) || new Set();
+    node.classed('dim', d => d.id !== id && !neigh.has(d.id));
+    node.classed('hover', d => d.id === id);
+    link.classed('dim', l => {
+      const s = typeof l.source === 'object' ? l.source.id : l.source;
+      const t = typeof l.target === 'object' ? l.target.id : l.target;
+      return s !== id && t !== id;
+    });
+  }
+
+  // ---- click -> detail panel ----
+  const panel = document.getElementById('panel');
+  node.on('click', (ev, d) => { ev.stopPropagation(); openPanel(d); node.classed('selected', n => n.id === d.id); });
+  document.getElementById('panelClose').addEventListener('click', closePanel);
+  svg.on('click', closePanel);
+
+  function closePanel(){ panel.classList.remove('open'); node.classed('selected', false); }
+
+  function openPanel(d){
+    panel.classList.add('open');
+    const kindLabels = (d.labels || []).join(' · ') || (d.core ? 'Clause' : 'Referenced clause');
+    document.getElementById('p-kind').textContent = d.term ? 'Definition · ' + kindLabels : kindLabels;
+    document.getElementById('p-title').textContent = d.label;
+    document.getElementById('p-id').textContent = d.id;
+    const body = document.getElementById('p-body');
+    body.innerHTML = '';
+
+    if (d.text){
+      const p = document.createElement('div');
+      p.textContent = d.text;
+      body.appendChild(p);
+    } else {
+      const p = document.createElement('div');
+      p.style.color = 'var(--text-faint)';
+      p.textContent = 'No extracted text for this node.';
+      body.appendChild(p);
+    }
+
+    const neighIds = Array.from(linkedNeighbors.get(d.id) || []);
+    if (neighIds.length){
+      const label = document.createElement('div');
+      label.className = 'p-section-label';
+      label.textContent = 'Connected (' + neighIds.length + ')';
+      body.appendChild(label);
+      const list = document.createElement('div');
+      list.className = 'chiplist';
+      neighIds.forEach(nid => {
+        const n = nodesById.get(nid);
+        if (!n) return;
+        const chip = document.createElement('div');
+        const isRef = links.some(l => {
+          const s = typeof l.source === 'object' ? l.source.id : l.source;
+          const t = typeof l.target === 'object' ? l.target.id : l.target;
+          return l.kind === 'ref' && ((s === d.id && t === nid) || (t === d.id && s === nid));
+        });
+        chip.className = 'chip' + (isRef ? ' ref' : '');
+        chip.textContent = n.label;
+        chip.title = n.id;
+        chip.addEventListener('click', () => {
+          openPanel(n);
+          node.classed('selected', nn => nn.id === n.id);
+          focusNode(n);
+        });
+        list.appendChild(chip);
+      });
+      body.appendChild(list);
+    }
+  }
+
+  function focusNode(d){
+    const scale = 1.6;
+    const t = d3.zoomIdentity.translate(-d.x * scale, -d.y * scale).scale(scale);
+    svg.transition().duration(500).call(zoom.transform, t);
+  }
+
+  // ---- search ----
+  const search = document.getElementById('search');
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    if (!q){ node.classed('match', false); node.classed('dim', false); return; }
+    let firstMatch = null;
+    node.each(function(d){
+      const hit = d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q);
+      if (hit && !firstMatch) firstMatch = d;
+      d._match = hit;
+    });
+    node.classed('match', d => d._match);
+    node.classed('dim', d => !d._match);
+    link.classed('dim', true);
+    if (firstMatch) focusNode(firstMatch);
+  });
+
+  function drag(simulation){
+    function started(ev, d){
+      if (!ev.active) simulation.alphaTarget(0.25).restart();
+      d.fx = d.x; d.fy = d.y;
+    }
+    function dragged(ev, d){ d.fx = ev.x; d.fy = ev.y; }
+    function ended(ev, d){
+      if (!ev.active) simulation.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    }
+    return d3.drag().on('start', started).on('drag', dragged).on('end', ended);
+  }
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  setTimeout(() => sim.alpha(0.6).restart(), 50);
+})();
+</script>

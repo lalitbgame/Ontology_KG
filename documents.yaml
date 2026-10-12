@@ -1,0 +1,53 @@
+# Document registry (plan.md §2.1).
+#
+# One entry per PDF in Document/. `doc_id` is the id namespace for every node
+# of that document's graph; `profile` names pipeline/profiles/<profile>.yaml;
+# `self_ids` are the canonical external-document ids under which OTHER
+# documents would cite this one - a citation of a self id is treated as an
+# internal reference, never as an ExternalDocument node (plan.md §9a.2 step 3).
+#
+# A PDF without an entry is still processed: its profile is auto-detected and
+# a doc_id derived from metadata, flagged `registry_confirmed: false` in its
+# manifest until someone adds it here.
+
+documents:
+  - file: "154-04 without 1C 1.pdf"
+    doc_id: REG154.04
+    profile: unece_regulation
+    self_ids: [EXT:UNR-154, EXT:ECE.TRANS.WP29.GRPE.2025.15]
+    metadata:
+      title: "UN Regulation No. 154 (WLTP), 04 series of amendments (GRPE working document)"
+      number: "154"
+      series: "04"
+      issuer: "UNECE WP.29 / GRPE"
+      region: "UNECE 1958 Agreement Contracting Parties"
+
+  - file: "ECE_TRANS_180a22e.pdf"
+    doc_id: GTR22
+    profile: un_gtr
+    self_ids: [EXT:UNGTR-22, EXT:ECE.TRANS.180.ADD.22]
+    metadata:
+      title: "UN Global Technical Regulation No. 22 on In-vehicle Battery Durability for Electrified Vehicles"
+      number: "22"
+      issuer: "UNECE WP.29 (1998 Agreement)"
+      region: "1998 Agreement Contracting Parties"
+
+  - file: "OJ_L_202401257_EN_TXT.pdf"
+    doc_id: EU2024-1257
+    profile: eu_oj_act
+    self_ids: [EXT:EU.REG.2024-1257]
+    metadata:
+      title: "Regulation (EU) 2024/1257 (Euro 7)"
+      number: "2024/1257"
+      issuer: "European Parliament and Council"
+      region: "European Union"
+
+  - file: "OJ_L_202601762_EN_TXT.pdf"
+    doc_id: EU2026-1762
+    profile: eu_oj_act
+    self_ids: [EXT:EU.REG.2026-1762]
+    metadata:
+      title: "Commission Implementing Regulation (EU) 2026/1762 (brake particle emissions)"
+      number: "2026/1762"
+      issuer: "European Commission"
+      region: "European Union"

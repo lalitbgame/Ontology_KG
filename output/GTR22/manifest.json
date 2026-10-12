@@ -1,0 +1,350 @@
+{
+  "doc_id": "GTR22",
+  "source_file": "ECE_TRANS_180a22e.pdf",
+  "sha256": "2cb5fae9dfc1c6383ba0d3dd3f0bd54ddc6acdc3a5b5d8515fef6e29274a78bf",
+  "profile": "un_gtr",
+  "registry_confirmed": true,
+  "registry_entry": {
+    "file": "ECE_TRANS_180a22e.pdf",
+    "doc_id": "GTR22",
+    "profile": "un_gtr",
+    "self_ids": [
+      "EXT:UNGTR-22",
+      "EXT:ECE.TRANS.180.ADD.22"
+    ],
+    "metadata": {
+      "title": "UN Global Technical Regulation No. 22 on In-vehicle Battery Durability for Electrified Vehicles",
+      "number": "22",
+      "issuer": "UNECE WP.29 (1998 Agreement)",
+      "region": "1998 Agreement Contracting Parties"
+    }
+  },
+  "page_count": 32,
+  "metadata": {
+    "number": "22",
+    "title": "UN Global Technical Regulation No. 22 on In-vehicle Battery Durability for Electrified Vehicles",
+    "date": "9 March 2022",
+    "issuer": "UNECE WP.29 (1998 Agreement)",
+    "region": "1998 Agreement Contracting Parties"
+  },
+  "outline": [
+    [
+      1,
+      "1. Purpose",
+      13
+    ],
+    [
+      1,
+      "2. Scope and application",
+      13
+    ],
+    [
+      1,
+      "3. Definitions",
+      13
+    ],
+    [
+      1,
+      "4.  Abbreviations",
+      15
+    ],
+    [
+      1,
+      "5.  Requirements",
+      15
+    ],
+    [
+      1,
+      "5.1. State-of-Certified Range and State-of Certified Energy (SOCR and SOCE) monitors",
+      15
+    ],
+    [
+      2,
+      "5.2. Battery Performance Requirements",
+      15
+    ],
+    [
+      2,
+      "6.  In-Use Verification",
+      17
+    ],
+    [
+      2,
+      "6.2. Information gathering",
+      18
+    ],
+    [
+      2,
+      "6.3. Part A: Verification of SOCR/SOCE monitors",
+      18
+    ],
+    [
+      2,
+      "6.3.1. Frequency of verifications",
+      18
+    ],
+    [
+      2,
+      "6.3.2. Verification procedure",
+      18
+    ],
+    [
+      2,
+      "In cases where UBEmeasured is higher than the UBEcertified, the SOCEmeasured shall be set to 100 per cent. In cases where Rangemeasured is higher than the Rangecertified, the SOCRmeasured shall be set to 100 per cent.",
+      19
+    ],
+    [
+      3,
+      "6.3.3. Statistical Method for Pass/Fail decision for a sample of vehicles",
+      19
+    ],
+    [
+      1,
+      "Table 3",
+      20
+    ],
+    [
+      2,
+      "6.3.4. Corrective measures for the SOCR and SOCE monitors",
+      20
+    ],
+    [
+      2,
+      "7. Rounding",
+      22
+    ]
+  ],
+  "pipeline_commit": "7420169",
+  "run_at": "2026-10-12T19:29:48",
+  "phases": {
+    "phase1_extract": {
+      "header_footer_signatures": [
+        "#",
+        "ece/trans/#/add.#"
+      ],
+      "lines": 1802,
+      "header_footer_lines_stripped": 63,
+      "footnote_lines": 2,
+      "needs_ocr_pages": []
+    },
+    "phase1b_regions": {
+      "counts": {
+        "toc": 1,
+        "figure": 5,
+        "table": 21,
+        "equation": 21,
+        "layout_table": 2
+      },
+      "captioned_tables": 3,
+      "image_equations": 0,
+      "glossaries": 12
+    },
+    "phase2_parse": {
+      "units": 146,
+      "unit_types": {
+        "FrontMatter": 1,
+        "Part": 2,
+        "Section": 6,
+        "Clause": 134,
+        "Annex": 3
+      },
+      "orphans": 0,
+      "dedupe_merges": 0,
+      "merges": [],
+      "warnings": {},
+      "footnotes": 2,
+      "anchors": 47,
+      "divisions": [
+        "ANNEX-1",
+        "ANNEX-2",
+        "ANNEX-3",
+        "BODY",
+        "FRONT",
+        "RATIONALE"
+      ]
+    },
+    "phase3_terms": {
+      "definitions": 23,
+      "abbreviations": 36,
+      "abbreviations_by_source": {
+        "table": 11,
+        "definition": 9,
+        "inline": 16
+      },
+      "definition_imports": [],
+      "defined_by_reference": 2
+    },
+    "phase3b_equations": {
+      "equations": 19,
+      "variables": 66,
+      "parse_status": {
+        "parsed": 16,
+        "partial": 3
+      },
+      "kinds": {
+        "equation": 16,
+        "decision_rule": 3
+      },
+      "with_glossary": 12,
+      "with_lhs": 16,
+      "depends_on_edges": 15,
+      "crops": 19,
+      "numeric_fragments_dropped": 2
+    },
+    "phase3c_tables": {
+      "tables": 21,
+      "captioned_tables": 3,
+      "caption_only_tables": 0,
+      "figures": 5
+    },
+    "phase4a_external": {
+      "external_docs": 7,
+      "by_kind": {
+        "standard": 1,
+        "un_gtr": 1,
+        "un_regulation": 1,
+        "unece_document": 4
+      },
+      "provisions": 19,
+      "citations": 31,
+      "roles": {
+        "cites": 9,
+        "definition_source": 4,
+        "requirement_source": 18
+      },
+      "document_edges": {},
+      "self_citations_filtered": 48,
+      "back_references": 0
+    },
+    "phase4_references": {
+      "references": 31,
+      "resolved": 30,
+      "rate": 0.968,
+      "by_kind": {
+        "article": {
+          "resolved": 0,
+          "total": 1,
+          "rate": 0.0
+        },
+        "paragraph": {
+          "resolved": 13,
+          "total": 13,
+          "rate": 1.0
+        },
+        "figure": {
+          "resolved": 5,
+          "total": 5,
+          "rate": 1.0
+        },
+        "annex": {
+          "resolved": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "equation": {
+          "resolved": 1,
+          "total": 1,
+          "rate": 1.0
+        },
+        "table": {
+          "resolved": 3,
+          "total": 3,
+          "rate": 1.0
+        }
+      },
+      "masked_external_spans": 60
+    },
+    "phase5_assemble": {
+      "nodes": 346,
+      "edges": 479,
+      "node_types": {
+        "Standard": 1,
+        "Document": 1,
+        "FrontMatter": 1,
+        "Part": 2,
+        "Section": 6,
+        "Clause": 134,
+        "Annex": 3,
+        "Definition": 23,
+        "Abbreviation": 36,
+        "Footnote": 2,
+        "Table": 21,
+        "Figure": 5,
+        "Variable": 66,
+        "Equation": 19,
+        "ExternalDocument": 7,
+        "ExternalProvision": 19
+      },
+      "edge_types": {
+        "HAS_VERSION": 1,
+        "HAS_DIVISION": 6,
+        "HAS_CHILD": 140,
+        "HAS_DEFINITION": 23,
+        "HAS_ABBREVIATION": 36,
+        "HAS_FOOTNOTE": 2,
+        "HAS_TABLE": 21,
+        "HAS_FIGURE": 5,
+        "HAS_EQUATION": 19,
+        "DEFINES": 16,
+        "USES": 73,
+        "DESCRIBED_AS": 26,
+        "DEPENDS_ON": 15,
+        "SAME_TERM_AS": 16,
+        "REFERENCES": 30,
+        "HAS_PROVISION": 19,
+        "CITES": 31
+      },
+      "dropped_edges": 0,
+      "dropped_examples": [],
+      "duplicate_node_ids": []
+    },
+    "phase6_qa": {
+      "invariants_passed": 7,
+      "invariants": 7,
+      "expectations_passed": 61,
+      "expectations": 61,
+      "failed_expectations": [],
+      "coverage": 1.004
+    }
+  },
+  "layout": {
+    "body_size": 10.0,
+    "body_font": "TimesNewRomanPSMT",
+    "text_left": [
+      113,
+      170,
+      142
+    ],
+    "number_columns": [
+      [
+        113,
+        140
+      ],
+      [
+        529,
+        16
+      ],
+      [
+        117,
+        14
+      ],
+      [
+        223,
+        14
+      ]
+    ]
+  },
+  "timings": {
+    "phase1_extract": 0.39,
+    "phase1b_regions": 3.14,
+    "phase2_parse": 0.02,
+    "phase3_terms": 0.1,
+    "phase3b_equations": 0.15,
+    "phase3c_tables": 0.0,
+    "phase4a_external": 0.03,
+    "phase4_references": 0.01,
+    "phase5_assemble": 0.04,
+    "phase6_qa": 0.02,
+    "build_viz_data": 0.02
+  }
+}

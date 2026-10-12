@@ -1,0 +1,98 @@
+# UN Global Technical Regulation (1998 Agreement), as published in the
+# Global Registry (ECE/TRANS/180/Add.N). Two parts with independent
+# numbering: "I. Statement of technical rationale and justification"
+# (lettered sections A.-F., paragraphs 1.-n.) and "II. Text of the GTR"
+# (decimal clauses), followed by numeric annexes "Annex 1".
+family: un_gtr
+description: "UN Global Technical Regulation (1998 Agreement), Global Registry addendum"
+
+detect:
+  any:
+    - 'Global Technical Regulation'
+    - 'Global Registry'
+    - 'ECE/TRANS/180'
+    - 'Text of the GTR'
+  min_score: 2
+
+metadata:
+  number: 'Global Technical Regulation\s+No\.?\s*(\d+)'
+  title: '(United Nations Global Technical Regulation on [^.]{5,120}?)\s+Established'
+  date: 'Established in the Global Registry on (\d{1,2} \w+ \d{4})'
+  doc_id: 'GTR{number}'
+  self_id: 'EXT:UNGTR-{number}'
+  kind: un_gtr
+
+layout:
+  chem_normalize: true
+  header_min_share: 0.6
+  footnote_marker: star
+
+structure:
+  initial: {id: FRONT, unit_type: FrontMatter, label: null}
+  levels:
+    - name: part_rationale
+      unit_type: Part
+      match: '^I\.(?:\s+(?P<title>Statement.*))?$'
+      style: heading
+      id: 'RATIONALE'
+      scope: root
+      parent: [root]
+      title: next
+      label: 'I'
+      normative: false
+    - name: part_text
+      unit_type: Part
+      match: '^II\.(?:\s+(?P<title>Text of the GTR.*))?$'
+      style: heading
+      id: 'BODY'
+      scope: root
+      parent: [root]
+      title: next
+      label: 'II'
+    - name: rationale_section
+      unit_type: Section
+      match: '^(?P<num>[A-H])\.(?:\s+(?P<title>\S.*))?$'
+      style: heading
+      id: 'SEC-{num}'
+      scope: parent
+      parent: [part_rationale]
+      within: [part_rationale]
+      transparent: true
+      title: next
+      label: '{num}'
+      normative: false
+    - name: annex
+      unit_type: Annex
+      match: '^Annex\s+(?P<num>\d+)$'
+      style: heading
+      id: 'ANNEX-{num}'
+      scope: root
+      parent: [root]
+      title: next
+      label: '{num}'
+  decimal:
+    enabled: true
+    unit_type: Clause
+    max_top_level: 120
+  labels:
+    decimal_by_depth: [Section, Subsection, Provision]
+  form_titles: ['(?i)^vehicle survey']
+
+terms:
+  definition_sections: ['^Definitions?\b']
+  abbreviation_sections: ['^Abbreviations']
+  scope_patterns: ['For the purposes? of this (annex|Annex|GTR|Global Technical Regulation)']
+
+references:
+  self_words: ['this GTR', 'this Global Technical Regulation', 'this regulation']
+  default_scope: division
+
+equations:
+  math_fonts: ['CambriaMath', 'Cambria Math', 'SymbolMT', 'Symbol']
+  glossary_trigger: '^(?:[Ww]here|[Aa]nd)\s*:?\s*$|^[Ww]here\s*:'
+
+viz:
+  root_label: 'UN GTR No. 22 — In-vehicle Battery Durability'
+  groups:
+    - {label: 'Statement of technical rationale (Part I)', match: '^RATIONALE'}
+    - {label: 'Annexes', match: '^ANNEX-'}

@@ -1,0 +1,53 @@
+# Fallback for documents no family profile recognises: decimal clauses,
+# "Annex"/"Appendix" in any numbering, headings detected by relative size /
+# weight only. Expect a coarser graph - add a real profile for a new family.
+family: generic
+description: "Fallback profile: decimal clauses + Annex/Appendix in any numbering"
+
+detect:
+  any: []
+  min_score: 99
+
+layout:
+  chem_normalize: false
+  header_min_share: 0.6
+
+structure:
+  initial: {id: BODY, unit_type: Body, label: null}
+  levels:
+    - name: annex
+      unit_type: Annex
+      match: '^(?:ANNEX|Annex)\s+(?P<num>[A-Z]?\d+[a-z]?|[IVXLC]+)$'
+      style: heading
+      id: 'ANNEX-{num}'
+      scope: root
+      parent: [root]
+      title: next
+      label: '{num}'
+    - name: appendix
+      unit_type: Appendix
+      match: '^Appendix\s+(?P<num>\d+)$'
+      style: heading
+      id: 'APP-{num}'
+      scope: parent
+      parent: [annex, root]
+      title: next
+      label: '{num}'
+  decimal:
+    enabled: true
+    unit_type: Clause
+    max_top_level: 200
+  labels:
+    decimal_by_depth: [Section, Subsection, Provision]
+
+terms:
+  definition_sections: ['^Definitions?\b']
+  abbreviation_sections: ['^Abbreviations']
+
+references:
+  self_words: ['this Regulation', 'this Standard', 'this document']
+  default_scope: division
+
+equations:
+  math_fonts: ['CambriaMath', 'Cambria Math', 'SymbolMT', 'Symbol']
+  glossary_trigger: '^[Ww]here\s*:?\s*$'

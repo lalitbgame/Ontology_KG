@@ -1,0 +1,36 @@
+{"surface_form": "DPR", "expansion": "Declared Performance Requirement", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:DPR", "occurrences": 3}
+{"surface_form": "MPR", "expansion": "Minimum Performance Requirement", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:MPR", "occurrences": 3}
+{"surface_form": "OTA", "expansion": "Over the Air", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:OTA", "occurrences": 2}
+{"surface_form": "REESS", "expansion": "Rechargeable Electrical Energy Storage System", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:REESS", "occurrences": 2}
+{"surface_form": "SOC", "expansion": "State of Charge", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:SOC", "occurrences": 3}
+{"surface_form": "SOCE", "expansion": "State of Certified Energy", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:SOCE", "occurrences": 3}
+{"surface_form": "SOCR", "expansion": "State of Certified Range", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:SOCR", "occurrences": 3}
+{"surface_form": "UBE", "expansion": "Usable Battery Energy", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:UBE", "occurrences": 5}
+{"surface_form": "V2G", "expansion": "Vehicle to Grid", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:V2G", "occurrences": 2}
+{"surface_form": "V2H", "expansion": "Vehicle to Home", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:V2H", "occurrences": 1}
+{"surface_form": "V2L", "expansion": "Vehicle to Load", "category": "Abbreviations", "source": "table", "source_clause": "GTR22.BODY.4", "id": "GTR22.ABBR:V2L", "occurrences": 1}
+{"surface_form": "UBE_certified", "expansion": "Certified usable battery energy", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.4", "id": "GTR22.ABBR:UBE_certified", "occurrences": 1}
+{"surface_form": "UBE_measured", "expansion": "Measured usable battery energy", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.5", "id": "GTR22.ABBR:UBE_measured", "occurrences": 1}
+{"surface_form": "Range_certified", "expansion": "Certified range", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.7", "id": "GTR22.ABBR:Range_certified", "occurrences": 1}
+{"surface_form": "Range_measured", "expansion": "Measured range", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.8", "id": "GTR22.ABBR:Range_measured", "occurrences": 1}
+{"surface_form": "SOCR_read", "expansion": "On-board SOCR", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.15", "id": "GTR22.ABBR:SOCR_read", "occurrences": 1}
+{"surface_form": "SOCE_read", "expansion": "On-board SOCE", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.16", "id": "GTR22.ABBR:SOCE_read", "occurrences": 1}
+{"surface_form": "SOCR_measured", "expansion": "Measured SOCR", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.17", "id": "GTR22.ABBR:SOCR_measured", "occurrences": 1}
+{"surface_form": "OVC-HEV", "expansion": "Off-vehicle charging hybrid electric vehicle", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.21", "id": "GTR22.ABBR:OVC-HEV", "occurrences": 1}
+{"surface_form": "PEV", "expansion": "Pure electric vehicle", "category": "Defined term", "source": "definition", "source_clause": "GTR22.BODY.3.22", "id": "GTR22.ABBR:PEV", "occurrences": 1}
+{"surface_form": "GHG", "expansion": "greenhouse gases", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.1", "id": "GTR22.ABBR:GHG", "occurrences": 2}
+{"surface_form": "IWG", "expansion": "Informal Working Group", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.6", "id": "GTR22.ABBR:IWG", "occurrences": 1}
+{"surface_form": "EVE", "expansion": "Electric Vehicle and the Environment", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.6", "id": "GTR22.ABBR:EVE", "occurrences": 1}
+{"surface_form": "EVs", "expansion": "Electric Vehicles", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.6", "id": "GTR22.ABBR:EVs", "occurrences": 1}
+{"surface_form": "EVS", "expansion": "Electric Vehicle Safety", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.6", "id": "GTR22.ABBR:EVS", "occurrences": 1}
+{"surface_form": "NUI", "expansion": "Normal Usage Indices", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.11", "id": "GTR22.ABBR:NUI", "occurrences": 1}
+{"surface_form": "BMS", "expansion": "battery management systems", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.19", "id": "GTR22.ABBR:BMS", "occurrences": 2}
+{"surface_form": "SOH", "expansion": "State of Health", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.27", "id": "GTR22.ABBR:SOH", "occurrences": 1}
+{"surface_form": "JRC", "expansion": "Joint Research Centre", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.33", "id": "GTR22.ABBR:JRC", "occurrences": 1}
+{"surface_form": "TEMA", "expansion": "Transport tEchnology and Mobility Assessment’", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.33", "id": "GTR22.ABBR:TEMA", "occurrences": 1}
+{"surface_form": "CoP", "expansion": "conformity of production", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.46", "id": "GTR22.ABBR:CoP", "occurrences": 1}
+{"surface_form": "NUIs", "expansion": "Normal Usage Indices", "category": "Inline", "source": "inline", "source_clause": "GTR22.RATIONALE.57", "id": "GTR22.ABBR:NUIs", "occurrences": 1}
+{"surface_form": "PEVs", "expansion": "Pure Electric Vehicles", "category": "Inline", "source": "inline", "source_clause": "GTR22.BODY.1", "id": "GTR22.ABBR:PEVs", "occurrences": 1}
+{"surface_form": "OVC-HEVs", "expansion": "Off-vehicle Charging Hybrid Electric Vehicles", "category": "Inline", "source": "inline", "source_clause": "GTR22.BODY.1", "id": "GTR22.ABBR:OVC-HEVs", "occurrences": 1}
+{"surface_form": "MPRi", "expansion": "Minimum Performance Requirements", "category": "Inline", "source": "inline", "source_clause": "GTR22.BODY.5.2", "id": "GTR22.ABBR:MPRi", "occurrences": 2}
+{"surface_form": "DPRi", "expansion": "declare a Declared Performance Requirement", "category": "Inline", "source": "inline", "source_clause": "GTR22.BODY.5.2", "id": "GTR22.ABBR:DPRi", "occurrences": 1}

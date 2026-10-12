@@ -1,4 +1,4 @@
-"""No-LLM retrieval layer over the UN Reg. 154 knowledge graph.
+"""No-LLM retrieval layer over the per-document regulation knowledge graphs.
 
 Turns a plain requirement keyword/phrase into a structured, citation-backed
 context block ready to be handed to an LLM as a prompt. Everything here is
@@ -8,24 +8,20 @@ embeddings, no NER, no LLM call - consistent with the pipeline's own
 This module only *builds* the prompt text; sending it to a model is left to
 whatever chain is added later.
 
-Graph shape this module actually walks (the graph pipeline/phase5_assemble.py
-produces today, not the full aspirational schema.yaml - see that module's
-docstring for what's deferred):
+One graph per document: output/<doc_id>/nodes.jsonl + edges.jsonl, as built
+by `python -m pipeline.run` (see pipeline/phase5_assemble.py for the full
+node/edge model). This module walks:
 
-  Nodes
-    Clause        id = qualified_id (e.g. "REG154.04.BODY.6.3.2")
-                  division, depth, parent_id, local_number, page,
-                  body_text, footnote_text, has_body, labels
-    Abbreviation  id = "ABBR:<surface_form>"
-                  surface_form, expansion, category, source_clause
-    Definition    id = "DEF:<source_clause>"
-                  quoted_term, abbreviation, gloss, source_clause
+  Structural units  Clause / Article / ArticleParagraph / Point / Annex /
+                    Appendix / Recital / Part / ... (id = qualified id,
+                    e.g. "REG154.04.BODY.6.3.2", "EU2024-1257.ART-4.2")
+  Definition, Abbreviation, Equation (+ Variable glossary), Table,
+  ExternalDocument / ExternalProvision (cited outside text)
 
-  Edges
-    HAS_CHILD          Clause -> Clause          containment / hierarchy
-    HAS_ABBREVIATION   Clause -> Abbreviation     clause defines an abbreviation
-    HAS_DEFINITION     Clause -> Definition       clause defines a term
-    REFERENCES         Clause -> Clause           resolved cross-reference, raw_text
+  HAS_CHILD / HAS_DIVISION     containment
+  HAS_DEFINITION / HAS_ABBREVIATION / HAS_EQUATION / HAS_TABLE
+  REFERENCES                   resolved internal cross-reference
+  CITES                        unit -> external document / provision (role, raw_text)
 """
 
 from __future__ import annotations
@@ -40,10 +36,33 @@ from typing import Iterable, Optional
 import networkx as nx
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-NODES_PATH = REPO_ROOT / "output" / "nodes.jsonl"
-EDGES_PATH = REPO_ROOT / "output" / "edges.jsonl"
+OUTPUT_DIR = REPO_ROOT / "output"
+DEFAULT_DOC = "REG154.04"
 
-STANDARD_LABEL = "UN Regulation No. 154 (WLTP), 04 series of amendments"
+# Node types that are not structural units of the document
+NON_UNIT_TYPES = {"Standard", "Document", "Definition", "Abbreviation", "Footnote", "Table", "Figure",
+                  "Equation", "Variable", "ExternalDocument", "ExternalProvision"}
+
+
+def list_documents(output_dir: Path = OUTPUT_DIR) -> list[dict]:
+    """Every document with a built graph: [{doc_id, title, profile, pages}]."""
+    docs = []
+    for m in sorted(Path(output_dir).glob("*/manifest.json")):
+        if not (m.parent / "nodes.jsonl").exists():
+            continue
+        man = json.loads(m.read_text(encoding="utf-8"))
+        docs.append({"doc_id": man.get("doc_id", m.parent.name),
+                     "title": (man.get("metadata") or {}).get("title") or m.parent.name,
+                     "profile": man.get("profile"), "pages": man.get("page_count")})
+    return docs
+
+
+def document_label(graph: nx.MultiDiGraph) -> str:
+    """Human label of the document a graph was built from (its Document node)."""
+    for _, d in graph.nodes(data=True):
+        if d.get("type") == "Document":
+            return d.get("title") or d.get("doc_id") or "document"
+    return "document"
 
 
 # ----------------------------------------------------------------------------
@@ -58,18 +77,21 @@ def _iter_jsonl(path: Path):
                 yield json.loads(line)
 
 
-def load_graph(nodes_path: Path = NODES_PATH, edges_path: Path = EDGES_PATH) -> nx.MultiDiGraph:
-    """Rebuild the MultiDiGraph straight from nodes.jsonl / edges.jsonl.
+def load_graph(doc_id: str = DEFAULT_DOC, nodes_path: Optional[Path] = None,
+               edges_path: Optional[Path] = None) -> nx.MultiDiGraph:
+    """Rebuild one document's MultiDiGraph straight from its nodes.jsonl /
+    edges.jsonl (output/<doc_id>/ unless explicit paths are given).
 
     Deliberately does NOT unpickle output/graph.pickle: jsonl is portable
     across networkx versions and doesn't execute arbitrary code on load,
     which matters more for a Streamlit app someone else might point at
     their own output/ directory.
     """
-    nodes_path, edges_path = Path(nodes_path), Path(edges_path)
+    nodes_path = Path(nodes_path or OUTPUT_DIR / doc_id / "nodes.jsonl")
+    edges_path = Path(edges_path or OUTPUT_DIR / doc_id / "edges.jsonl")
     for p in (nodes_path, edges_path):
         if not p.exists():
-            raise FileNotFoundError(f"{p} not found - run the pipeline first (pipeline/phase5_assemble.py).")
+            raise FileNotFoundError(f"{p} not found - run the pipeline first (python -m pipeline.run --all).")
 
     g = nx.MultiDiGraph()
     for n in _iter_jsonl(nodes_path):
@@ -114,12 +136,18 @@ class Match:
     snippet: str = ""
 
 
-# node type -> searchable text fields on that node's own data dict
+# node type -> searchable text fields on that node's own data dict; every
+# structural unit type (Clause, Article, Recital, ...) uses _UNIT_FIELDS
+_UNIT_FIELDS = ("title", "body_text")
 _SEARCH_FIELDS = {
-    "Clause": ("body_text",),
     "Definition": ("quoted_term", "gloss"),
     "Abbreviation": ("surface_form", "expansion"),
+    "Equation": ("linear", "context_before"),
+    "Table": ("caption_id", "caption", "cell_text"),
 }
+# where a non-unit match is cited from
+_CITATION_FIELD = {"Definition": "source_clause", "Abbreviation": "source_clause",
+                   "Equation": "unit_id", "Table": "defining_unit"}
 
 
 def search(
@@ -130,7 +158,8 @@ def search(
     divisions: Optional[Iterable[str]] = None,
     max_results: int = 10,
 ) -> list[Match]:
-    """Deterministic keyword search across Clause / Definition / Abbreviation text.
+    """Deterministic keyword search across structural units, definitions,
+    abbreviations, equations and tables.
 
     Scoring = sum of whole-word occurrence counts of each query term across
     the node's searchable fields, plus a bonus for an exact multi-word
@@ -146,18 +175,22 @@ def search(
     results: list[Match] = []
     for node_id, data in graph.nodes(data=True):
         ntype = data.get("type")
-        if ntype not in _SEARCH_FIELDS:
-            continue
-        if ntype == "Clause":
-            if not data.get("has_body"):
+        if ntype in _SEARCH_FIELDS:
+            citation_id = data.get(_CITATION_FIELD[ntype])
+            field_names = _SEARCH_FIELDS[ntype]
+        elif ntype not in NON_UNIT_TYPES:
+            if not (data.get("has_body") or data.get("title")):
                 continue
             citation_id = node_id
+            field_names = _UNIT_FIELDS
         else:
-            citation_id = data.get("source_clause")
+            continue
+        if not citation_id:
+            continue
         if division_filter and graph.nodes.get(citation_id, {}).get("division") not in division_filter:
             continue
 
-        fields = {k: data.get(k) or "" for k in _SEARCH_FIELDS[ntype]}
+        fields = {k: data.get(k) or "" for k in field_names}
         hits: dict[str, int] = {}
         for term, pat in zip(terms, patterns):
             count = sum(len(pat.findall(v)) for v in fields.values())
@@ -203,8 +236,10 @@ def ancestor_chain(graph: nx.MultiDiGraph, clause_id: str) -> list[str]:
 def clause_label(graph: nx.MultiDiGraph, clause_id: str, width: int = 110) -> str:
     """Short human-readable label for a clause: its number + a text snippet."""
     data = graph.nodes.get(clause_id, {})
-    local = data.get("local_number")
-    text = (data.get("body_text") or "").strip()
+    local = data.get("local_number") or data.get("local_label")
+    if data.get("type") and data.get("type") not in ("Clause",) and data.get("level") != "decimal":
+        local = f"{data['type']} {local}" if local else data["type"]
+    text = (data.get("title") or re.sub(r"\[(?:TABLE|FIGURE|EQ|FORM):[^\]]+\]", "", data.get("body_text") or "")).strip()
     if not text:
         return f"{local or clause_id} (heading, no body text)"
     return f"{local}. {textwrap.shorten(text, width=width, placeholder='…')}" if local \
@@ -214,7 +249,8 @@ def clause_label(graph: nx.MultiDiGraph, clause_id: str, width: int = 110) -> st
 def area_of_requirement(graph: nx.MultiDiGraph, clause_id: str) -> dict:
     """Division + nearest depth==1 'Section' ancestor - the top-level area a clause sits under."""
     chain = ancestor_chain(graph, clause_id)
-    section_id = next((n for n in chain if graph.nodes[n].get("depth") == 1), None)
+    section_id = next((n for n in chain if graph.nodes[n].get("type") == "Article"
+                       or (graph.nodes[n].get("level") == "decimal" and graph.nodes[n].get("depth") == 1)), None)
     return {
         "division": graph.nodes.get(clause_id, {}).get("division"),
         "division_root": chain[0] if chain else None,
@@ -238,6 +274,30 @@ def cross_references(graph: nx.MultiDiGraph, clause_id: str):
     outgoing = [(t, d.get("raw_text")) for _, t, d in graph.out_edges(clause_id, data=True) if d.get("type") == "REFERENCES"]
     incoming = [(s, d.get("raw_text")) for s, _, d in graph.in_edges(clause_id, data=True) if d.get("type") == "REFERENCES"]
     return outgoing, incoming
+
+
+def _json_list(v):
+    """Graph properties may be lists (jsonl) or JSON strings (GraphML)."""
+    if isinstance(v, str):
+        try:
+            return json.loads(v)
+        except ValueError:
+            return []
+    return v or []
+
+
+def equations_of(graph: nx.MultiDiGraph, clause_id: str) -> list[tuple[str, dict]]:
+    """Equation nodes attached to this unit (HAS_EQUATION)."""
+    if clause_id not in graph.nodes:
+        return []
+    return [(t, graph.nodes[t]) for _, t, d in graph.out_edges(clause_id, data=True) if d.get("type") == "HAS_EQUATION"]
+
+
+def external_provisions(graph: nx.MultiDiGraph, clause_id: str) -> list[tuple[str, dict, dict]]:
+    """External documents / provisions this unit CITES, with the edge data."""
+    if clause_id not in graph.nodes:
+        return []
+    return [(t, graph.nodes[t], d) for _, t, d in graph.out_edges(clause_id, data=True) if d.get("type") == "CITES"]
 
 
 def build_abbreviation_index(graph: nx.MultiDiGraph) -> dict[str, tuple[str, dict]]:
@@ -330,6 +390,34 @@ def _match_lines(
             lines += [f"- {surface} — {expansion}  [{tid}]" for surface, expansion, tid in mentioned]
             lines.append("")
 
+    eqs = equations_of(graph, citation_id)
+    if eqs:
+        lines.append("### Equations in This Clause")
+        for eid, e in eqs:
+            lines.append(f"- [{eid}] ({e.get('kind')}, parse {e.get('parse_status')}): {e.get('linear') or '(image only - see crop)'}")
+            if e.get("latex"):
+                lines.append(f"  LaTeX: {e['latex']}")
+            for g in _json_list(e.get("glossary")):
+                unit = f" [{g.get('unit')}]" if g.get("unit") else ""
+                lines.append(f"  where {g.get('symbol_text')} = {g.get('description') or '?'}{unit}")
+        lines.append("")
+
+    ext = external_provisions(graph, citation_id)
+    if ext:
+        lines.append("### External Provisions Referenced (text not in this graph)")
+        for target, data, edge in ext:
+            if data.get("type") == "ExternalProvision":
+                prefix = target[: target.index("/EXT:")]          # node ids are "<doc_id>/EXT:..."
+                doc = graph.nodes.get(f"{prefix}/{data.get('external_doc')}", {})
+            else:
+                doc = data
+            name = doc.get("title") or (_json_list(doc.get("aliases")) or [doc.get("ext_id")])[0]
+            where = data.get("label") if data.get("type") == "ExternalProvision" else "(whole document)"
+            eli = f"  ELI: {doc['eli']}" if doc.get("eli") else ""
+            lines.append(f"- {where} of {name}  [{data.get('ext_id')}]  role={edge.get('role')}  "
+                         f'(as "{edge.get("raw_text")}"){eli}')
+        lines.append("")
+
     if include_references:
         out_refs, in_refs = cross_references(graph, citation_id)
         if out_refs:
@@ -356,9 +444,10 @@ def build_structured_prompt(
     """Assemble the final structured, citation-backed prompt text. Pure string
     formatting over graph data - no LLM call."""
     abbr_index = build_abbreviation_index(graph) if include_glossary else {}
+    example_id = matches[0].citation_id if matches else "<paragraph id>"
 
     lines = [
-        f"# STRUCTURED REQUIREMENT CONTEXT — {STANDARD_LABEL}",
+        f"# STRUCTURED REQUIREMENT CONTEXT — {document_label(graph)}",
         f'# Query keyword(s): "{query}"',
         "# Retrieval method: deterministic keyword search + graph traversal over the",
         "#   ontology knowledge graph (no LLM, embeddings, or NER used to build this prompt)",
@@ -368,8 +457,9 @@ def build_structured_prompt(
         (f'You are a regulatory-compliance assistant. Using ONLY the context provided below '
          f'(do not use outside knowledge), answer the requirement described by the keyword(s) '
          f'"{query}". Every factual claim must cite the paragraph id(s) it is based on in square '
-         f'brackets, e.g. [REG154.04.BODY.6.3.2]. If the context below does not fully cover the '
-         f'requirement, say so explicitly instead of guessing.'),
+         f'brackets, e.g. [{example_id}]. External provisions are listed by reference only - their '
+         f'text is not included; if the requirement depends on them, say which ones. If the context '
+         f'below does not fully cover the requirement, say so explicitly instead of guessing.'),
         "",
     ]
     for i, m in enumerate(matches, 1):
